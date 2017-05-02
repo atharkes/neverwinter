@@ -29,10 +29,10 @@
             this.editButton = new System.Windows.Forms.Label();
             this.selectAllButton = new System.Windows.Forms.Label();
             this.deselectAllButton = new System.Windows.Forms.Label();
-            this.toolCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tool = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filter = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tool = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.toolCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.professionsGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,31 +110,6 @@
             this.deselectAllButton.TabIndex = 5;
             this.deselectAllButton.Text = "Deselect All";
             // 
-            // toolCost
-            // 
-            this.toolCost.DataPropertyName = "toolCost";
-            this.toolCost.HeaderText = "Tool Cost";
-            this.toolCost.Name = "toolCost";
-            this.toolCost.ReadOnly = true;
-            this.toolCost.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // tool
-            // 
-            this.tool.DataPropertyName = "tool";
-            this.tool.HeaderText = "Tool";
-            this.tool.Name = "tool";
-            this.tool.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tool.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.tool.Width = 50;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Profession";
-            this.name.Name = "name";
-            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.name.Width = 150;
-            // 
             // filter
             // 
             this.filter.DataPropertyName = "filter";
@@ -143,6 +118,33 @@
             this.filter.ReadOnly = true;
             this.filter.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.filter.Width = 40;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Profession";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.name.Width = 150;
+            // 
+            // tool
+            // 
+            this.tool.DataPropertyName = "tool";
+            this.tool.HeaderText = "Tool";
+            this.tool.Name = "tool";
+            this.tool.ReadOnly = true;
+            this.tool.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tool.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tool.Width = 50;
+            // 
+            // toolCost
+            // 
+            this.toolCost.DataPropertyName = "toolCost";
+            this.toolCost.HeaderText = "Tool Cost";
+            this.toolCost.Name = "toolCost";
+            this.toolCost.ReadOnly = true;
+            this.toolCost.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Main
             // 
