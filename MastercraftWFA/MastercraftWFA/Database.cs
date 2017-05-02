@@ -74,7 +74,7 @@ namespace MastercraftWFA {
                 default:
                     throw new NotImplementedException();
             }
-            string sql = "INSERT INTO " + table + " " + columns + " values " + values;
+            string sql = "INSERT OR REPLACE INTO " + table + " " + columns + " values " + values;
             SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
             command.ExecuteNonQuery();
         }
