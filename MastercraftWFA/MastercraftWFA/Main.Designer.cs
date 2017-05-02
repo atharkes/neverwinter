@@ -23,11 +23,11 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewProfessions = new System.Windows.Forms.DataGridView();
             this.filter_Professions = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,9 +59,6 @@
             this.price_Resources = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.updated_Resources = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewResourcesResults = new System.Windows.Forms.DataGridView();
-            this.tier_Results = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.resource_Results = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.amount_Results = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleResources = new System.Windows.Forms.Label();
             this.titleResourcesConsumed = new System.Windows.Forms.Label();
             this.titleResourcesResults = new System.Windows.Forms.Label();
@@ -73,6 +70,9 @@
             this.insertButton_Consumed = new System.Windows.Forms.Label();
             this.editButton_Results = new System.Windows.Forms.Label();
             this.insertButton_Results = new System.Windows.Forms.Label();
+            this.tier_Results = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.resource_Results = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.amount_Results = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfessions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResourcesConsumed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRecipes)).BeginInit();
@@ -91,14 +91,14 @@
             this.tool,
             this.toolCost,
             this.upgrade3});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProfessions.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewProfessions.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewProfessions.Location = new System.Drawing.Point(12, 32);
             this.dataGridViewProfessions.Name = "dataGridViewProfessions";
             this.dataGridViewProfessions.RowHeadersVisible = false;
@@ -218,14 +218,14 @@
             this.dataGridViewResourcesConsumed.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.resource_Consumed,
             this.amount_Consumed});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewResourcesConsumed.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewResourcesConsumed.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewResourcesConsumed.Location = new System.Drawing.Point(329, 359);
             this.dataGridViewResourcesConsumed.Name = "dataGridViewResourcesConsumed";
             this.dataGridViewResourcesConsumed.RowHeadersVisible = false;
@@ -268,14 +268,14 @@
             this.tier1,
             this.tier2,
             this.tier3});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRecipes.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRecipes.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewRecipes.Location = new System.Drawing.Point(402, 32);
             this.dataGridViewRecipes.Name = "dataGridViewRecipes";
             this.dataGridViewRecipes.RowHeadersVisible = false;
@@ -398,14 +398,14 @@
             this.name_Resources,
             this.price_Resources,
             this.updated_Resources});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewResources.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewResources.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewResources.Location = new System.Drawing.Point(12, 359);
             this.dataGridViewResources.Name = "dataGridViewResources";
             this.dataGridViewResources.RowHeadersVisible = false;
@@ -449,48 +449,20 @@
             this.tier_Results,
             this.resource_Results,
             this.amount_Results});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewResourcesResults.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewResourcesResults.DefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewResourcesResults.Location = new System.Drawing.Point(562, 359);
             this.dataGridViewResourcesResults.Name = "dataGridViewResourcesResults";
             this.dataGridViewResourcesResults.RowHeadersVisible = false;
             this.dataGridViewResourcesResults.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewResourcesResults.Size = new System.Drawing.Size(260, 290);
             this.dataGridViewResourcesResults.TabIndex = 12;
-            // 
-            // tier_Results
-            // 
-            this.tier_Results.HeaderText = "Tier";
-            this.tier_Results.Name = "tier_Results";
-            this.tier_Results.ReadOnly = true;
-            this.tier_Results.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.tier_Results.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.tier_Results.Width = 50;
-            // 
-            // resource_Results
-            // 
-            this.resource_Results.DataPropertyName = "resource";
-            this.resource_Results.HeaderText = "Resource";
-            this.resource_Results.Name = "resource_Results";
-            this.resource_Results.ReadOnly = true;
-            this.resource_Results.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.resource_Results.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.resource_Results.Width = 140;
-            // 
-            // amount_Results
-            // 
-            this.amount_Results.DataPropertyName = "amount";
-            this.amount_Results.HeaderText = "Amount";
-            this.amount_Results.Name = "amount_Results";
-            this.amount_Results.ReadOnly = true;
-            this.amount_Results.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.amount_Results.Width = 65;
             // 
             // titleResources
             // 
@@ -561,6 +533,7 @@
             this.editButton_Resources.Size = new System.Drawing.Size(25, 13);
             this.editButton_Resources.TabIndex = 18;
             this.editButton_Resources.Text = "Edit";
+            this.editButton_Resources.Click += new System.EventHandler(this.EditButton_Resources_Click);
             // 
             // insertButton_Resources
             // 
@@ -573,6 +546,7 @@
             this.insertButton_Resources.TabIndex = 19;
             this.insertButton_Resources.Text = "Insert";
             this.insertButton_Resources.Visible = false;
+            this.insertButton_Resources.Click += new System.EventHandler(this.InsertButton_Resources_Click);
             // 
             // editButton_Consumed
             // 
@@ -617,6 +591,35 @@
             this.insertButton_Results.TabIndex = 23;
             this.insertButton_Results.Text = "Insert";
             this.insertButton_Results.Visible = false;
+            // 
+            // tier_Results
+            // 
+            this.tier_Results.DataPropertyName = "tier";
+            this.tier_Results.HeaderText = "Tier";
+            this.tier_Results.Name = "tier_Results";
+            this.tier_Results.ReadOnly = true;
+            this.tier_Results.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tier_Results.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tier_Results.Width = 50;
+            // 
+            // resource_Results
+            // 
+            this.resource_Results.DataPropertyName = "resource";
+            this.resource_Results.HeaderText = "Resource";
+            this.resource_Results.Name = "resource_Results";
+            this.resource_Results.ReadOnly = true;
+            this.resource_Results.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.resource_Results.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.resource_Results.Width = 140;
+            // 
+            // amount_Results
+            // 
+            this.amount_Results.DataPropertyName = "amount";
+            this.amount_Results.HeaderText = "Amount";
+            this.amount_Results.Name = "amount_Results";
+            this.amount_Results.ReadOnly = true;
+            this.amount_Results.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.amount_Results.Width = 65;
             // 
             // Main
             // 
@@ -693,9 +696,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn upgrade3;
         private System.Windows.Forms.DataGridViewComboBoxColumn resource_Consumed;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount_Consumed;
-        private System.Windows.Forms.DataGridViewComboBoxColumn tier_Results;
-        private System.Windows.Forms.DataGridViewComboBoxColumn resource_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amount_Results;
         private System.Windows.Forms.Label editButton_Recipes;
         private System.Windows.Forms.Label insertButton_Recipes;
         private System.Windows.Forms.Label editButton_Resources;
@@ -704,6 +704,9 @@
         private System.Windows.Forms.Label insertButton_Consumed;
         private System.Windows.Forms.Label editButton_Results;
         private System.Windows.Forms.Label insertButton_Results;
+        private System.Windows.Forms.DataGridViewComboBoxColumn tier_Results;
+        private System.Windows.Forms.DataGridViewComboBoxColumn resource_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amount_Results;
     }
 }
 

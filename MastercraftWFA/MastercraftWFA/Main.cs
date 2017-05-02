@@ -44,9 +44,11 @@ namespace MastercraftWFA {
             dataGridViewProfessions.Columns["name"].ReadOnly = true;
             dataGridViewProfessions.Columns["tool"].ReadOnly = true;
             foreach (DataGridViewRow row in dataGridViewProfessions.Rows) {
-                if (row.Cells["name"].Value == null || row.Cells["name"].Value == DBNull.Value || String.IsNullOrWhiteSpace(row.Cells["name"].Value.ToString()))
+                DataGridViewCell cellName = row.Cells["name"];
+                DataGridViewCell cellTool = row.Cells["tool"];
+                if (cellName.Value == null || cellName.Value == DBNull.Value || String.IsNullOrWhiteSpace(cellName.Value.ToString()))
                     continue;
-                string insertRow = "('" + row.Cells["name"].Value + "', " + row.Cells["tool"].Value + ")";
+                string insertRow = "('" + cellName.Value + "', " + cellTool.Value + ")";
                 Database.AddRow("professions", insertRow);
             }
             editButton_Professions.Show();
@@ -118,7 +120,7 @@ namespace MastercraftWFA {
                 if (cell.Value == null || cell.Value == DBNull.Value || String.IsNullOrWhiteSpace(cell.Value.ToString()))
                     continue;
                 string insertRow = "('" + cell.Value + "', '" + activeProfession + "')";
-                Database.AddRow("recipes", insertRow);
+                Database.AddRow(Database.Tables.recipes, insertRow);
             }
             editButton_Recipes.Show();
             insertButton_Recipes.Hide();
@@ -132,6 +134,28 @@ namespace MastercraftWFA {
                 "SELECT name, price, date(updated) AS updated " +
                 "FROM resources"
             );
+        }
+
+        private void EditButton_Resources_Click(object sender, EventArgs e) {
+            dataGridViewResources.Columns["name_Resources"].ReadOnly = false;
+            dataGridViewResources.Columns["price_Resources"].ReadOnly = false;
+            insertButton_Resources.Show();
+            editButton_Resources.Hide();
+        }
+
+        private void InsertButton_Resources_Click(object sender, EventArgs e) {
+            dataGridViewResources.Columns["name_Resources"].ReadOnly = true;
+            dataGridViewResources.Columns["price_Resources"].ReadOnly = true;
+            foreach (DataGridViewRow row in dataGridViewResources.Rows) {
+                DataGridViewCell cellResource = row.Cells["name_Resources"];
+                DataGridViewCell cellPrice = row.Cells["price_Resources"];
+                if (cellResource.Value == null || cellResource.Value == DBNull.Value || String.IsNullOrWhiteSpace(cellResource.Value.ToString()))
+                    continue;
+                string insertRow = "('" + cellResource.Value + "', " + cellPrice.Value + ", '" + Database.DateTimeSQLite(DateTime.Now) + "')";
+                Database.AddRow(Database.Tables.resources, insertRow);
+            }
+            editButton_Resources.Show();
+            insertButton_Resources.Hide();
         }
         #endregion
 
@@ -159,7 +183,20 @@ namespace MastercraftWFA {
 
         #region Resources Results Methods
         void FillDataResourcesResults(string recipe) {
-            dataGridViewResourcesConsumed.DataSource = Database.Query(
+            // Set Comboboxes
+            DataTable results = Database.Query("SELECT name FROM resources");
+            List<string> options = new List<string>();
+            foreach (DataRow row in results.Rows) {
+                options.Add(row.Field<string>("name"));
+            }
+            DataGridViewComboBoxColumn toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewResourcesResults.Columns["resource_Results"];
+            toolComboBoxColumn.DataSource = options;
+
+            List<int> tierOptions = new List<int>() { 1, 2, 3 };
+            toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewResourcesResults.Columns["tier_Results"];
+            toolComboBoxColumn.DataSource = tierOptions;
+            // Query Data
+            dataGridViewResourcesResults.DataSource = Database.Query(
                 "SELECT tier, resource, amount " +
                 "FROM results " +
                 "INNER JOIN resources " +
@@ -167,8 +204,11 @@ namespace MastercraftWFA {
                 "WHERE recipe = '" + recipe + "'");
         }
 
+
         #endregion
 
+
         
+
     }
 }
