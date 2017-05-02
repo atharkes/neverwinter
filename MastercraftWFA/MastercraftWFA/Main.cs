@@ -5,14 +5,17 @@ using System.Windows.Forms;
 
 namespace MastercraftWFA {
     public partial class Main : Form {
+
+        string activeProfession;
+
         public Main() {
             InitializeComponent();
-            insertButtonProfessions.Hide();
             FillDataProfessions();
+            FillDataResources();
         }
 
-        #region Professions Methods
 
+        #region Professions Methods
         void FillDataProfessions() {
             List<int> toolOptions = new List<int>() { 0, 1 };
             DataGridViewComboBoxColumn toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewProfessions.Columns["tool"];
@@ -26,14 +29,15 @@ namespace MastercraftWFA {
                 DataGridViewCell field = dataGridViewProfessions[e.ColumnIndex, e.RowIndex];
                 string query = field.Value.ToString();
                 FillDataRecipes(query);
+                activeProfession = query;
             }
         }
 
         private void EditButtonProfessions_Click(object sender, EventArgs e) {
             dataGridViewProfessions.Columns["name"].ReadOnly = false;
             dataGridViewProfessions.Columns["tool"].ReadOnly = false;
-            insertButtonProfessions.Show();
-            editButtonProfessions.Hide();
+            insertButton_Professions.Show();
+            editButton_Professions.Hide();
         }
 
         private void InsertButtonProfessions_Click(object sender, System.EventArgs e) {
@@ -45,14 +49,13 @@ namespace MastercraftWFA {
                 string insertRow = "('" + row.Cells["name"].Value + "', " + row.Cells["tool"].Value + ")";
                 Database.AddRow("professions", insertRow);
             }
-            editButtonProfessions.Show();
-            insertButtonProfessions.Hide();
+            editButton_Professions.Show();
+            insertButton_Professions.Hide();
         }
-
         #endregion
 
-        #region Recipes Methods
 
+        #region Recipes Methods
         void FillDataRecipes(string profession) {
             DataTable costTable = Database.Query(
                 "SELECT recipe, SUM(price * amount) AS cost " +
@@ -92,19 +95,80 @@ namespace MastercraftWFA {
             dataGridViewRecipes.DataSource = costTable;
         }
 
+        private void DataGridViewRecipes_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            if (dataGridViewRecipes.Columns["name_Recipes"].Index == e.ColumnIndex && e.RowIndex >= 0 && e.RowIndex < dataGridViewRecipes.RowCount - 1) {
+                // Filter on Recipe
+                DataGridViewCell field = dataGridViewRecipes[e.ColumnIndex, e.RowIndex];
+                string query = field.Value.ToString();
+                FillDataResourcesConsumed(query);
+                FillDataResourcesResults(query);
+            }
+        }
+
+        private void EditButton_Recipes_Click(object sender, EventArgs e) {
+            dataGridViewRecipes.Columns["name_Recipes"].ReadOnly = false;
+            insertButton_Recipes.Show();
+            editButton_Recipes.Hide();
+        }
+
+        private void InsertButton_Recipes_Click(object sender, EventArgs e) {
+            dataGridViewRecipes.Columns["name_Recipes"].ReadOnly = true;
+            foreach (DataGridViewRow row in dataGridViewRecipes.Rows) {
+                DataGridViewCell cell = row.Cells["name_Recipes"];
+                if (cell.Value == null || cell.Value == DBNull.Value || String.IsNullOrWhiteSpace(cell.Value.ToString()))
+                    continue;
+                string insertRow = "('" + cell.Value + "', '" + activeProfession + "')";
+                Database.AddRow("recipes", insertRow);
+            }
+            editButton_Recipes.Show();
+            insertButton_Recipes.Hide();
+        }
         #endregion
+
 
         #region Resources Methods
-
+        void FillDataResources() {
+            dataGridViewResources.DataSource = Database.Query(
+                "SELECT name, price, date(updated) AS updated " +
+                "FROM resources"
+            );
+        }
         #endregion
+
 
         #region Resources Consumed Methods
-
+        void FillDataResourcesConsumed(string recipe) {
+            // Set Comboboxes
+            DataTable results = Database.Query("SELECT name FROM resources");
+            List<string> options = new List<string>();
+            foreach (DataRow row in results.Rows) {
+                options.Add(row.Field<string>("name"));
+            }
+            DataGridViewComboBoxColumn toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewResourcesConsumed.Columns["resource_Consumed"];
+            toolComboBoxColumn.DataSource = options;
+            // Query Data
+            dataGridViewResourcesConsumed.DataSource = Database.Query(
+                "SELECT resource, amount " +
+                "FROM consumedResources " +
+                "INNER JOIN resources " +
+                "ON consumedResources.resource = resources.name " +
+                "WHERE recipe = '" + recipe + "'");
+        }
         #endregion
+
 
         #region Resources Results Methods
+        void FillDataResourcesResults(string recipe) {
+            dataGridViewResourcesConsumed.DataSource = Database.Query(
+                "SELECT tier, resource, amount " +
+                "FROM results " +
+                "INNER JOIN resources " +
+                "ON results.resource = resources.name " +
+                "WHERE recipe = '" + recipe + "'");
+        }
 
         #endregion
 
+        
     }
 }
