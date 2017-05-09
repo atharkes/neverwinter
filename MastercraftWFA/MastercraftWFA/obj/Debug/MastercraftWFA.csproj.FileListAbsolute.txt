@@ -38,3 +38,9 @@ C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWF
 C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.csproj.GenerateResource.Cache
 C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.exe
 C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.pdb
+C:\Users\Theo\Desktop\SourceTree Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.csprojResolveAssemblyReference.cache
+C:\Users\Theo\Desktop\SourceTree Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.Profession.resources
+C:\Users\Theo\Desktop\SourceTree Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.Recipe.resources
+C:\Users\Theo\Desktop\SourceTree Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.Main.resources
+C:\Users\Theo\Desktop\SourceTree Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.Properties.Resources.resources
+C:\Users\Theo\Desktop\SourceTree Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.csproj.GenerateResource.Cache
