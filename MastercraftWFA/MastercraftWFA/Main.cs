@@ -48,8 +48,7 @@ namespace MastercraftWFA {
                 DataGridViewCell cellTool = row.Cells["tool"];
                 if (cellName.Value == null || cellName.Value == DBNull.Value || String.IsNullOrWhiteSpace(cellName.Value.ToString()))
                     continue;
-                string insertRow = "('" + cellName.Value + "', " + cellTool.Value + ")";
-                Database.AddRow("professions", insertRow);
+                Database.InsertProfession((string)cellName.Value, (int)cellTool.Value);
             }
             editButton_Professions.Show();
             insertButton_Professions.Hide();
@@ -119,8 +118,7 @@ namespace MastercraftWFA {
                 DataGridViewCell cell = row.Cells["name_Recipes"];
                 if (cell.Value == null || cell.Value == DBNull.Value || String.IsNullOrWhiteSpace(cell.Value.ToString()))
                     continue;
-                string insertRow = "('" + cell.Value + "', '" + activeProfession + "')";
-                Database.AddRow(Database.Tables.recipes, insertRow);
+                Database.InsertRecipe((string)cell.Value, activeProfession);
             }
             editButton_Recipes.Show();
             insertButton_Recipes.Hide();
@@ -151,8 +149,7 @@ namespace MastercraftWFA {
                 DataGridViewCell cellPrice = row.Cells["price_Resources"];
                 if (cellResource.Value == null || cellResource.Value == DBNull.Value || String.IsNullOrWhiteSpace(cellResource.Value.ToString()))
                     continue;
-                string insertRow = "('" + cellResource.Value + "', " + cellPrice.Value + ", '" + Database.DateTimeSQLite(DateTime.Now) + "')";
-                Database.AddRow(Database.Tables.resources, insertRow);
+                Database.InsertResource((string)cellResource.Value, (int)cellPrice.Value);
             }
             editButton_Resources.Show();
             insertButton_Resources.Hide();
@@ -206,9 +203,6 @@ namespace MastercraftWFA {
 
 
         #endregion
-
-
-        
 
     }
 }

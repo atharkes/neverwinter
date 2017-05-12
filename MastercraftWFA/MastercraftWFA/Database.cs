@@ -15,7 +15,7 @@ namespace MastercraftWFA {
             priceHistory,
             consumedResources,
             results,
-            getTool
+            upgrades
         };
 
         public static Dictionary<Tables, string> TableName = new Dictionary<Tables, string>() {
@@ -25,17 +25,17 @@ namespace MastercraftWFA {
             { Tables.priceHistory, "priceHistory" },
             { Tables.consumedResources, "consumedResources" },
             { Tables.results, "results" },
-            { Tables.getTool, "getTool" }
+            { Tables.upgrades, "upgrades" }
         };
 
         public static Dictionary<Tables, string> TableColumns = new Dictionary<Tables, string>() {
-            { Tables.professions, "(name, tool)" },
+            { Tables.professions, "(name, grade)" },
             { Tables.recipes, "(name, profession)" },
             { Tables.resources, "(name, price, updated)" },
             { Tables.priceHistory, "(resource, price, date)" },
             { Tables.consumedResources, "(recipe, resource, amount)" },
             { Tables.results, "(recipe, tier, resource, amount)" },
-            { Tables.getTool, "(profession, resource, amount)" }
+            { Tables.upgrades, "(profession, grade, resource, amount)" }
         };
 
 
@@ -91,7 +91,7 @@ namespace MastercraftWFA {
 
         #region Populate Methods
         static void AddTables() {
-            AddTable("professions", "(name STRING, tool INT, " +
+            AddTable("professions", "(name STRING, grade INT, " +
                 "PRIMARY KEY (name))");
             AddTable("recipes", "(name STRING, profession STRING, " +
                 "FOREIGN KEY (profession) REFERENCES professions (name), " +
@@ -109,18 +109,18 @@ namespace MastercraftWFA {
                 "FOREIGN KEY (recipe) REFERENCES recipes (name), " +
                 "FOREIGN KEY (resource) REFERENCES resources (name), " +
                 "PRIMARY KEY (recipe, tier, resource))");
-            AddTable("getTool", "(profession STRING, resource STRING, amount INT, " +
+            AddTable("upgrades", "(profession STRING, grade INT, resource STRING, amount INT, " +
                 "FOREIGN KEY (profession) REFERENCES professions (name), " +
                 "FOREIGN KEY (resource) REFERENCES resources (name), " +
-                "PRIMARY KEY (profession, resource))");
+                "PRIMARY KEY (profession, grade, resource))");
         }
         #endregion
 
 
         #region Queries
         public static bool HasTool(string profession) {
-            DataTable result = Query("SELECT tool FROM professions WHERE name = '" + profession + "'");
-            if (result.Rows[0].Field<int>("tool") == 1)
+            DataTable result = Query("SELECT grade FROM professions WHERE name = '" + profession + "'");
+            if (result.Rows[0].Field<int>("grade") >= 2)
                 return true;
             return false;
         }
@@ -142,14 +142,9 @@ namespace MastercraftWFA {
 
 
         #region Insert Methods
-        public static void InsertProfession(string profession, int tool = 0) {
-            string values = "('" + profession + "', " + tool + ")";
+        public static void InsertProfession(string profession, int grade = 0) {
+            string values = "('" + profession + "', " + grade + ")";
             AddRow(Tables.professions, values);
-        }
-
-        public static void InsertRecipe(string name, string profesion) {
-            string values = "('" + name + "', '" + profesion + "')";
-            AddRow(Tables.recipes, values);
         }
 
         public static void InsertResource(string resource, int cost) {
@@ -158,14 +153,34 @@ namespace MastercraftWFA {
             AddRow(Tables.resources, values);
         }
 
-        public static void InsertConsumedResource(string recipe, string resource, int amount) {
+        public static void InsertRecipe(string name, string profession, List<Tuple<string, int>> consumedResources = null, List<Tuple<string, int, int>> results = null) {
+            InsertRecipeName(name, profession);
+            foreach (Tuple<string, int> consumedResource in consumedResources) {
+                InsertRecipeConsumedResource(name, consumedResource.Item1, consumedResource.Item2);
+            }
+            foreach (Tuple<string, int, int> result in results) {
+                InsertRecipeResult(name, result.Item1, result.Item2, result.Item3);
+            }
+        }
+
+        public static void InsertRecipeName(string name, string profession) {
+            string values = "('" + name + "', '" + profession + "')";
+            AddRow(Tables.recipes, values);
+        }
+
+        public static void InsertRecipeConsumedResource(string recipe, string resource, int amount) {
             string values = "('" + recipe + "', '" + resource + "', " + amount + ")";
             AddRow(Tables.consumedResources, values);
         }
 
-        public static void InsertResult(string recipe, string resource, int amount, int tier) {
+        public static void InsertRecipeResult(string recipe, string resource, int amount, int tier) {
             string values = "('" + recipe + "', '" + resource + "', " + amount + ", " + tier + ")";
             AddRow(Tables.results, values);
+        }
+
+        public static void InsertUpgradeRequirement(string profession, int grade, string resource, int amount) {
+            string values = "('" + profession + "', " + grade + ", '" + resource + "', " + amount + ")";
+            AddRow(Tables.upgrades, values);
         }
         #endregion
 
