@@ -17,10 +17,10 @@ namespace MastercraftWFA {
 
         #region Professions Methods
         void FillDataProfessions() {
-            List<int> toolOptions = new List<int>() { 0, 1 };
-            DataGridViewComboBoxColumn toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewProfessions.Columns["tool"];
-            toolComboBoxColumn.DataSource = toolOptions;
-            dataGridViewProfessions.DataSource = Database.Query("SELECT * FROM professions");
+            List<int> gradeOptions = new List<int>() { 0, 1, 2, 3 };
+            DataGridViewComboBoxColumn toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewProfessions.Columns["grade"];
+            toolComboBoxColumn.DataSource = gradeOptions;
+            dataGridViewProfessions.DataSource = Database.GetProfessions();
         }
 
         private void DataGridViewProfessions_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
@@ -58,21 +58,10 @@ namespace MastercraftWFA {
 
         #region Recipes Methods
         void FillDataRecipes(string profession) {
-            DataTable costTable = Database.Query(
-                "SELECT recipe, SUM(price * amount) AS cost " +
-                "FROM (" +
-                    "SELECT recipe, resource, price, amount " +
-                    "FROM recipes " +
-                    "INNER JOIN consumedResources " +
-                    "ON recipes.name = consumedResources.recipe " +
-                    "INNER JOIN resources " +
-                    "ON consumedResources.resource = resources.name " +
-                    "WHERE profession = '" + profession + "'" +
-                ") GROUP BY recipe"
-            );
-            DataTable tier1Table = Database.Query(Database.GetResultsQuery(profession, 1));
-            DataTable tier2Table = Database.Query(Database.GetResultsQuery(profession, 2));
-            DataTable tier3Table = Database.Query(Database.GetResultsQuery(profession, 3));
+            DataTable costTable = Database.GetRecipesWithCost(profession);
+            DataTable tier1Table = Database.GetRecipeResults(profession, 1);
+            DataTable tier2Table = Database.GetRecipeResults(profession, 2);
+            DataTable tier3Table = Database.GetRecipeResults(profession, 3);
             costTable.Merge(tier1Table);
             costTable.Merge(tier2Table);
             costTable.Merge(tier3Table);
@@ -84,9 +73,9 @@ namespace MastercraftWFA {
             for (int i = 0; i < costTable.Rows.Count; i++) {
                 bool tool = Database.HasTool(profession);
                 Int64 cost = costTable.Rows[i].Field<Int64>("cost");
-                Int64 tier1Reward = costTable.Rows[i].Field<Int64>("tier1");
-                Int64 tier2Reward = costTable.Rows[i].Field<Int64>("tier2");
-                Int64 tier3Reward = costTable.Rows[i].Field<Int64>("tier3");
+                Int64 tier1Reward = costTable.Rows[i].Field<int>("tier1");
+                Int64 tier2Reward = costTable.Rows[i].Field<int>("tier2");
+                Int64 tier3Reward = costTable.Rows[i].Field<int>("tier3");
                 Int64 tier3ChanceReward = (int)(tool ? 0.75 * tier3Reward + 0.25 * tier2Reward : 0.35 * tier3Reward + 0.65 * tier2Reward);
                 Int64 profit = Math.Max(tier1Reward, tier2Reward);
                 profit = Math.Max(profit, tier3ChanceReward);
@@ -128,10 +117,7 @@ namespace MastercraftWFA {
 
         #region Resources Methods
         void FillDataResources() {
-            dataGridViewResources.DataSource = Database.Query(
-                "SELECT name, price, date(updated) AS updated " +
-                "FROM resources"
-            );
+            dataGridViewResources.DataSource = Database.GetAllResources();
         }
 
         private void EditButton_Resources_Click(object sender, EventArgs e) {

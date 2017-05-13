@@ -22,9 +22,9 @@ namespace MastercraftWFA {
                     "WHERE profession = '" + profession + "'" +
                 ") GROUP BY recipe"
             );
-            DataTable tier1Table = Database.Query(Database.GetResultsQuery(profession, 1));
-            DataTable tier2Table = Database.Query(Database.GetResultsQuery(profession, 2));
-            DataTable tier3Table = Database.Query(Database.GetResultsQuery(profession, 3));
+            DataTable tier1Table = Database.GetRecipeResults(profession, 1);
+            DataTable tier2Table = Database.GetRecipeResults(profession, 2);
+            DataTable tier3Table = Database.GetRecipeResults(profession, 3);
             costTable.Merge(tier1Table);
             costTable.Merge(tier2Table);
             costTable.Merge(tier3Table);

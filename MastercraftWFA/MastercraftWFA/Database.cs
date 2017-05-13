@@ -44,6 +44,7 @@ namespace MastercraftWFA {
                 CreateDatabase(source);
                 OpenDatabase(source);
                 AddTables();
+                AddData();
             } else {
                 OpenDatabase(source);
             }
@@ -114,6 +115,35 @@ namespace MastercraftWFA {
                 "FOREIGN KEY (resource) REFERENCES resources (name), " +
                 "PRIMARY KEY (profession, grade, resource))");
         }
+
+        static void AddData() {
+            InsertProfession("Artificing", 2);
+            InsertProfession("Leatherworking", 2);
+            InsertProfession("Weaponsmithing", 3);
+            InsertProfession("Tailoring", 2);
+            InsertProfession("Platesmithing", 2);
+            InsertProfession("Mailsmithing", 2);
+            InsertProfession("Jewelcrafting", 2);
+            InsertProfession("Alchemy", 2);
+            InsertResource("Lacquer Branch", 9000);
+            InsertResource("Charcoal", 10);
+            InsertResource("Dark Lacquer", 45000);
+            InsertResource("Ebony Wood", 25);
+            InsertResource("Lacquered Ebony", 150000);
+            InsertRecipeName("Extract Dark Lacquer", "Artificing");
+            InsertRecipeName("Lacquer Ebony", "Artificing");
+            InsertRecipeConsumedResource("Extract Dark Lacquer", "Lacquer Branch", 4);
+            InsertRecipeConsumedResource("Extract Dark Lacquer", "Charcoal", 2);
+            InsertRecipeConsumedResource("Lacquer Ebony", "Dark Lacquer", 4);
+            InsertRecipeConsumedResource("Lacquer Ebony", "Ebony Wood", 2);
+            InsertRecipeResult("Extract Dark Lacquer", 1, "Charcoal", 1);
+            InsertRecipeResult("Extract Dark Lacquer", 2, "Lacquer Branch", 2);
+            InsertRecipeResult("Extract Dark Lacquer", 3, "Dark Lacquer", 1);
+            InsertRecipeResult("Lacquer Ebony", 1, "Ebony Wood", 1);
+            InsertRecipeResult("Lacquer Ebony", 2, "Ebony Wood", 1);
+            InsertRecipeResult("Lacquer Ebony", 2, "Dark Lacquer", 1);
+            InsertRecipeResult("Lacquer Ebony", 3, "Lacquered Ebony", 1);
+        }
         #endregion
 
 
@@ -125,8 +155,34 @@ namespace MastercraftWFA {
             return false;
         }
 
-        public static string GetResultsQuery(string profession, int tier) {
-            return
+        public static DataTable GetProfessions() {
+            return Query("SELECT * FROM professions");
+        }
+
+        public static DataTable GetAllResources() {
+            return Query(
+                "SELECT name, price, date(updated) AS updated " +
+                "FROM resources"
+            );
+        }
+
+        public static DataTable GetRecipesWithCost(string profession) {
+            return Query(
+                "SELECT recipe, SUM(price * amount) AS cost " +
+                "FROM (" +
+                    "SELECT recipe, resource, price, amount " +
+                    "FROM recipes " +
+                    "INNER JOIN consumedResources " +
+                    "ON recipes.name = consumedResources.recipe " +
+                    "INNER JOIN resources " +
+                    "ON consumedResources.resource = resources.name " +
+                    "WHERE profession = '" + profession + "'" +
+                ") GROUP BY recipe"
+            );
+        }
+
+        public static DataTable GetRecipeResults(string profession, int tier) {
+            return Query(
                 "SELECT recipe, SUM(price * amount) AS tier" + tier + " " +
                 "FROM (" +
                     "SELECT recipe, resource, price, amount " +
@@ -135,8 +191,8 @@ namespace MastercraftWFA {
                     "ON recipes.name = results.recipe " +
                     "INNER JOIN resources " +
                     "ON results.resource = resources.name " +
-                    "WHERE profession = '" + profession + "' AND tier = " + tier +
-                ") GROUP BY recipe";
+                    "WHERE recipes.profession = '" + profession + "' AND results.tier = " + tier +
+                ") GROUP BY recipe");
         }
         #endregion
 
@@ -153,12 +209,12 @@ namespace MastercraftWFA {
             AddRow(Tables.resources, values);
         }
 
-        public static void InsertRecipe(string name, string profession, List<Tuple<string, int>> consumedResources = null, List<Tuple<string, int, int>> results = null) {
+        public static void InsertRecipe(string name, string profession, List<Tuple<string, int>> consumedResources = null, List<Tuple<int, string, int>> results = null) {
             InsertRecipeName(name, profession);
             foreach (Tuple<string, int> consumedResource in consumedResources) {
                 InsertRecipeConsumedResource(name, consumedResource.Item1, consumedResource.Item2);
             }
-            foreach (Tuple<string, int, int> result in results) {
+            foreach (Tuple<int, string, int> result in results) {
                 InsertRecipeResult(name, result.Item1, result.Item2, result.Item3);
             }
         }
@@ -173,7 +229,7 @@ namespace MastercraftWFA {
             AddRow(Tables.consumedResources, values);
         }
 
-        public static void InsertRecipeResult(string recipe, string resource, int amount, int tier) {
+        public static void InsertRecipeResult(string recipe, int tier, string resource, int amount) {
             string values = "('" + recipe + "', '" + resource + "', " + amount + ", " + tier + ")";
             AddRow(Tables.results, values);
         }
@@ -185,7 +241,7 @@ namespace MastercraftWFA {
         #endregion
 
 
-        #region Extra Methods
+        #region Utils
         public static string DateTimeSQLite(DateTime datetime) {
             string dateTimeFormat = "{0}-{1}-{2} {3}:{4}:{5}.{6}";
             return string.Format(dateTimeFormat,
