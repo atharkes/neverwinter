@@ -93,18 +93,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataDrawIO.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Profession.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Profession.Designer.cs">
-      <DependentUpon>Profession.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Recipe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Recipe.Designer.cs">
-      <DependentUpon>Recipe.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,12 +101,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Profession.resx">
-      <DependentUpon>Profession.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Recipe.resx">
-      <DependentUpon>Recipe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
