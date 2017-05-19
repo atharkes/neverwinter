@@ -166,6 +166,10 @@ namespace MastercraftWFA {
             );
         }
 
+        public static DataTable GetResources(List<string> recipes) {
+            return new DataTable();
+        }
+
         public static DataTable GetRecipesWithCost(string profession) {
             return Query(
                 "SELECT recipe, SUM(price * amount) AS cost " +
@@ -181,18 +185,32 @@ namespace MastercraftWFA {
             );
         }
 
-        public static DataTable GetRecipeResults(string profession, int tier) {
+        public static DataTable GetRecipesWithCost(List<string> professions) {
+            return new DataTable();
+        }
+
+        public static DataTable GetRecipeConsumedResources(string recipe) {
             return Query(
-                "SELECT recipe, SUM(price * amount) AS tier" + tier + " " +
-                "FROM (" +
-                    "SELECT recipe, resource, price, amount " +
-                    "FROM recipes " +
-                    "INNER JOIN results " +
-                    "ON recipes.name = results.recipe " +
-                    "INNER JOIN resources " +
-                    "ON results.resource = resources.name " +
-                    "WHERE recipes.profession = '" + profession + "' AND results.tier = " + tier +
-                ") GROUP BY recipe");
+                "SELECT resource " +
+                "FROM consumedResources " +
+                "WHERE recipes = '" + recipe + "'"
+            );
+        }
+
+        public static DataTable GetRecipeConsumedResources(List<string> recipes) {
+            return new DataTable();
+        }
+
+        public static DataTable GetRecipeResults(string recipe) {
+            return Query(
+                "SELECT resource " +
+                "FROM results " +
+                "WHERE recipes = '" + recipe + "'"
+            );
+        }
+
+        public static DataTable GetRecipeResults(List<string> recipes) {
+            return new DataTable();
         }
         #endregion
 
