@@ -23,7 +23,7 @@ namespace MastercraftWFA {
             dataGridViewProfessions.DataSource = Database.GetProfessions();
         }
 
-        private void DataGridViewProfessions_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
+        private void DataGridViewProfessions_CellClick(object sender, DataGridViewCellEventArgs e) {
             if (dataGridViewProfessions.Columns["name"].Index == e.ColumnIndex && e.RowIndex >= 0 && e.RowIndex < dataGridViewProfessions.RowCount - 1) {
                 // Filter on Profession
                 DataGridViewCell field = dataGridViewProfessions[e.ColumnIndex, e.RowIndex];
@@ -85,7 +85,7 @@ namespace MastercraftWFA {
             dataGridViewRecipes.DataSource = costTable;
         }
 
-        private void DataGridViewRecipes_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
+        private void DataGridViewRecipes_CellClick(object sender, DataGridViewCellEventArgs e) {
             if (dataGridViewRecipes.Columns["name_Recipes"].Index == e.ColumnIndex && e.RowIndex >= 0 && e.RowIndex < dataGridViewRecipes.RowCount - 1) {
                 // Filter on Recipe
                 DataGridViewCell field = dataGridViewRecipes[e.ColumnIndex, e.RowIndex];
@@ -117,7 +117,7 @@ namespace MastercraftWFA {
 
         #region Resources Methods
         void FillDataResources() {
-            dataGridViewResources.DataSource = Database.GetAllResources();
+            dataGridViewResources.DataSource = Database.GetResources();
         }
 
         private void EditButton_Resources_Click(object sender, EventArgs e) {

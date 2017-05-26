@@ -43,6 +43,15 @@
             this.resource_Consumed = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.amount_Consumed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewRecipes = new System.Windows.Forms.DataGridView();
+            this.name_Recipes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tier1profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tier2profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tier3profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tier1reward = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tier2reward = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tier3reward = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleRecipes = new System.Windows.Forms.Label();
             this.dataGridViewResources = new System.Windows.Forms.DataGridView();
             this.name_Resources = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,15 +72,6 @@
             this.insertButton_Consumed = new System.Windows.Forms.Label();
             this.editButton_Results = new System.Windows.Forms.Label();
             this.insertButton_Results = new System.Windows.Forms.Label();
-            this.name_Recipes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tier1profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tier2profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tier3profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tier1reward = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tier2reward = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tier3reward = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfessions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResourcesConsumed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRecipes)).BeginInit();
@@ -106,7 +106,7 @@
             this.dataGridViewProfessions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewProfessions.Size = new System.Drawing.Size(360, 267);
             this.dataGridViewProfessions.TabIndex = 0;
-            this.dataGridViewProfessions.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewProfessions_CellDoubleClick);
+            this.dataGridViewProfessions.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewProfessions_CellClick);
             // 
             // name
             // 
@@ -278,7 +278,92 @@
             this.dataGridViewRecipes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewRecipes.Size = new System.Drawing.Size(420, 267);
             this.dataGridViewRecipes.TabIndex = 9;
-            this.dataGridViewRecipes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewRecipes_CellDoubleClick);
+            this.dataGridViewRecipes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewRecipes_CellClick);
+            // 
+            // name_Recipes
+            // 
+            this.name_Recipes.DataPropertyName = "recipe";
+            this.name_Recipes.HeaderText = "Recipe";
+            this.name_Recipes.Name = "name_Recipes";
+            this.name_Recipes.ReadOnly = true;
+            this.name_Recipes.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.name_Recipes.Width = 120;
+            // 
+            // cost
+            // 
+            this.cost.DataPropertyName = "cost";
+            this.cost.HeaderText = "Cost";
+            this.cost.Name = "cost";
+            this.cost.ReadOnly = true;
+            this.cost.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cost.Visible = false;
+            this.cost.Width = 50;
+            // 
+            // profit
+            // 
+            this.profit.DataPropertyName = "profit";
+            this.profit.HeaderText = "Profit";
+            this.profit.Name = "profit";
+            this.profit.ReadOnly = true;
+            this.profit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.profit.Width = 60;
+            // 
+            // tier1profit
+            // 
+            this.tier1profit.DataPropertyName = "tier1profit";
+            this.tier1profit.HeaderText = "Tier 1";
+            this.tier1profit.Name = "tier1profit";
+            this.tier1profit.ReadOnly = true;
+            this.tier1profit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tier1profit.Width = 60;
+            // 
+            // tier2profit
+            // 
+            this.tier2profit.DataPropertyName = "tier2profit";
+            this.tier2profit.HeaderText = "Tier 2";
+            this.tier2profit.Name = "tier2profit";
+            this.tier2profit.ReadOnly = true;
+            this.tier2profit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tier2profit.Width = 60;
+            // 
+            // tier3profit
+            // 
+            this.tier3profit.DataPropertyName = "tier3profit";
+            this.tier3profit.HeaderText = "Tier 3";
+            this.tier3profit.Name = "tier3profit";
+            this.tier3profit.ReadOnly = true;
+            this.tier3profit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tier3profit.Width = 60;
+            // 
+            // tier1reward
+            // 
+            this.tier1reward.DataPropertyName = "tier1reward";
+            this.tier1reward.HeaderText = "Tier 1 (reward)";
+            this.tier1reward.Name = "tier1reward";
+            this.tier1reward.ReadOnly = true;
+            this.tier1reward.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tier1reward.Visible = false;
+            this.tier1reward.Width = 60;
+            // 
+            // tier2reward
+            // 
+            this.tier2reward.DataPropertyName = "tier2reward";
+            this.tier2reward.HeaderText = "Tier 2 (reward)";
+            this.tier2reward.Name = "tier2reward";
+            this.tier2reward.ReadOnly = true;
+            this.tier2reward.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tier2reward.Visible = false;
+            this.tier2reward.Width = 60;
+            // 
+            // tier3reward
+            // 
+            this.tier3reward.DataPropertyName = "tier3reward";
+            this.tier3reward.HeaderText = "Tier 3 (reward)";
+            this.tier3reward.Name = "tier3reward";
+            this.tier3reward.ReadOnly = true;
+            this.tier3reward.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tier3reward.Visible = false;
+            this.tier3reward.Width = 60;
             // 
             // titleRecipes
             // 
@@ -523,91 +608,6 @@
             this.insertButton_Results.TabIndex = 23;
             this.insertButton_Results.Text = "Insert";
             this.insertButton_Results.Visible = false;
-            // 
-            // name_Recipes
-            // 
-            this.name_Recipes.DataPropertyName = "recipe";
-            this.name_Recipes.HeaderText = "Recipe";
-            this.name_Recipes.Name = "name_Recipes";
-            this.name_Recipes.ReadOnly = true;
-            this.name_Recipes.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.name_Recipes.Width = 120;
-            // 
-            // cost
-            // 
-            this.cost.DataPropertyName = "cost";
-            this.cost.HeaderText = "Cost";
-            this.cost.Name = "cost";
-            this.cost.ReadOnly = true;
-            this.cost.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cost.Visible = false;
-            this.cost.Width = 50;
-            // 
-            // profit
-            // 
-            this.profit.DataPropertyName = "profit";
-            this.profit.HeaderText = "Profit";
-            this.profit.Name = "profit";
-            this.profit.ReadOnly = true;
-            this.profit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.profit.Width = 60;
-            // 
-            // tier1profit
-            // 
-            this.tier1profit.DataPropertyName = "tier1profit";
-            this.tier1profit.HeaderText = "Tier 1";
-            this.tier1profit.Name = "tier1profit";
-            this.tier1profit.ReadOnly = true;
-            this.tier1profit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tier1profit.Width = 60;
-            // 
-            // tier2profit
-            // 
-            this.tier2profit.DataPropertyName = "tier2profit";
-            this.tier2profit.HeaderText = "Tier 2";
-            this.tier2profit.Name = "tier2profit";
-            this.tier2profit.ReadOnly = true;
-            this.tier2profit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tier2profit.Width = 60;
-            // 
-            // tier3profit
-            // 
-            this.tier3profit.DataPropertyName = "tier3profit";
-            this.tier3profit.HeaderText = "Tier 3";
-            this.tier3profit.Name = "tier3profit";
-            this.tier3profit.ReadOnly = true;
-            this.tier3profit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tier3profit.Width = 60;
-            // 
-            // tier1reward
-            // 
-            this.tier1reward.DataPropertyName = "tier1reward";
-            this.tier1reward.HeaderText = "Tier 1 (reward)";
-            this.tier1reward.Name = "tier1reward";
-            this.tier1reward.ReadOnly = true;
-            this.tier1reward.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tier1reward.Visible = false;
-            this.tier1reward.Width = 60;
-            // 
-            // tier2reward
-            // 
-            this.tier2reward.DataPropertyName = "tier2reward";
-            this.tier2reward.HeaderText = "Tier 2 (reward)";
-            this.tier2reward.Name = "tier2reward";
-            this.tier2reward.ReadOnly = true;
-            this.tier2reward.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tier2reward.Visible = false;
-            this.tier2reward.Width = 60;
-            // 
-            // tier3reward
-            // 
-            this.tier3reward.DataPropertyName = "tier3reward";
-            this.tier3reward.HeaderText = "Tier 3 (reward)";
-            this.tier3reward.Name = "tier3reward";
-            this.tier3reward.ReadOnly = true;
-            this.tier3reward.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tier3reward.Visible = false;
-            this.tier3reward.Width = 60;
             // 
             // Main
             // 

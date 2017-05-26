@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="DatabaseInterface.cs" />
     <Compile Include="DataDrawIO.cs">
       <DependentUpon>DataDrawIO.xsd</DependentUpon>
     </Compile>

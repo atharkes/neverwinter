@@ -159,7 +159,7 @@ namespace MastercraftWFA {
             return Query("SELECT * FROM professions");
         }
 
-        public static DataTable GetAllResources() {
+        public static DataTable GetResources() {
             return Query(
                 "SELECT name, price, date(updated) AS updated " +
                 "FROM resources"
