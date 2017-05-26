@@ -170,7 +170,19 @@ namespace MastercraftWFA {
             return new DataTable();
         }
 
-        public static DataTable GetRecipesWithCost(string profession) {
+        public static DataTable GetRecipesConsumedResources(string recipe) {
+            return Query(
+                "SELECT resource " +
+                "FROM consumedResources " +
+                "WHERE recipes = '" + recipe + "'"
+            );
+        }
+
+        public static DataTable GetRecipesConsumedResources(List<string> recipes) {
+            return new DataTable();
+        }
+
+        public static DataTable GetRecipesCost(string profession) {
             return Query(
                 "SELECT recipe, SUM(price * amount) AS cost " +
                 "FROM (" +
@@ -180,37 +192,24 @@ namespace MastercraftWFA {
                     "ON recipes.name = consumedResources.recipe " +
                     "INNER JOIN resources " +
                     "ON consumedResources.resource = resources.name " +
-                    "WHERE profession = '" + profession + "'" +
+                    "WHERE recipes.profession = '" + profession + "'" +
                 ") GROUP BY recipe"
             );
         }
 
-        public static DataTable GetRecipesWithCost(List<string> professions) {
-            return new DataTable();
-        }
-
-        public static DataTable GetRecipeConsumedResources(string recipe) {
+        public static DataTable GetRecipesReward(string profession, int tier) {
             return Query(
-                "SELECT resource " +
-                "FROM consumedResources " +
-                "WHERE recipes = '" + recipe + "'"
+                "SELECT recipe, SUM(price * amount) AS tier" + tier + "reward " +
+                "FROM (" +
+                    "SELECT recipe, resource, price, amount " +
+                    "FROM recipes " +
+                    "INNER JOIN results " +
+                    "ON recipes.name = results.recipe " +
+                    "INNER JOIN resources " +
+                    "ON results.resource = resources.name " +
+                    "WHERE recipes.profession = '" + profession + "' AND tier = " + tier +
+                ") GROUP BY recipe"
             );
-        }
-
-        public static DataTable GetRecipeConsumedResources(List<string> recipes) {
-            return new DataTable();
-        }
-
-        public static DataTable GetRecipeResults(string recipe) {
-            return Query(
-                "SELECT resource " +
-                "FROM results " +
-                "WHERE recipes = '" + recipe + "'"
-            );
-        }
-
-        public static DataTable GetRecipeResults(List<string> recipes) {
-            return new DataTable();
         }
         #endregion
 

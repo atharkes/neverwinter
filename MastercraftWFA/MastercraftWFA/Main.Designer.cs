@@ -29,6 +29,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewProfessions = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grade = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.upgrade1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.upgrade2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.upgrade3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleProfessions = new System.Windows.Forms.Label();
             this.insertButton_Professions = new System.Windows.Forms.Label();
             this.editButton_Professions = new System.Windows.Forms.Label();
@@ -58,20 +63,15 @@
             this.insertButton_Consumed = new System.Windows.Forms.Label();
             this.editButton_Results = new System.Windows.Forms.Label();
             this.insertButton_Results = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grade = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.upgrade1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.upgrade2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.upgrade3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name_Recipes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tier1profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tier2profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tier3profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tier1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tier2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tier3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tier1reward = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tier2reward = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tier3reward = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfessions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResourcesConsumed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRecipes)).BeginInit();
@@ -107,6 +107,49 @@
             this.dataGridViewProfessions.Size = new System.Drawing.Size(360, 267);
             this.dataGridViewProfessions.TabIndex = 0;
             this.dataGridViewProfessions.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewProfessions_CellDoubleClick);
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Profession";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.name.Width = 120;
+            // 
+            // grade
+            // 
+            this.grade.DataPropertyName = "grade";
+            this.grade.HeaderText = "Grade";
+            this.grade.Name = "grade";
+            this.grade.ReadOnly = true;
+            this.grade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.grade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.grade.Width = 50;
+            // 
+            // upgrade1
+            // 
+            this.upgrade1.DataPropertyName = "upgrade1";
+            this.upgrade1.HeaderText = "I";
+            this.upgrade1.Name = "upgrade1";
+            this.upgrade1.ReadOnly = true;
+            this.upgrade1.Width = 60;
+            // 
+            // upgrade2
+            // 
+            this.upgrade2.DataPropertyName = "upgrade2";
+            this.upgrade2.HeaderText = "II";
+            this.upgrade2.Name = "upgrade2";
+            this.upgrade2.ReadOnly = true;
+            this.upgrade2.Width = 60;
+            // 
+            // upgrade3
+            // 
+            this.upgrade3.DataPropertyName = "upgrade3";
+            this.upgrade3.HeaderText = "III";
+            this.upgrade3.Name = "upgrade3";
+            this.upgrade3.ReadOnly = true;
+            this.upgrade3.Width = 60;
             // 
             // titleProfessions
             // 
@@ -218,9 +261,9 @@
             this.tier1profit,
             this.tier2profit,
             this.tier3profit,
-            this.tier1,
-            this.tier2,
-            this.tier3});
+            this.tier1reward,
+            this.tier2reward,
+            this.tier3reward});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -481,49 +524,6 @@
             this.insertButton_Results.Text = "Insert";
             this.insertButton_Results.Visible = false;
             // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Profession";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.name.Width = 120;
-            // 
-            // grade
-            // 
-            this.grade.DataPropertyName = "grade";
-            this.grade.HeaderText = "Grade";
-            this.grade.Name = "grade";
-            this.grade.ReadOnly = true;
-            this.grade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.grade.Width = 50;
-            // 
-            // upgrade1
-            // 
-            this.upgrade1.DataPropertyName = "upgrade1";
-            this.upgrade1.HeaderText = "I";
-            this.upgrade1.Name = "upgrade1";
-            this.upgrade1.ReadOnly = true;
-            this.upgrade1.Width = 60;
-            // 
-            // upgrade2
-            // 
-            this.upgrade2.DataPropertyName = "upgrade2";
-            this.upgrade2.HeaderText = "II";
-            this.upgrade2.Name = "upgrade2";
-            this.upgrade2.ReadOnly = true;
-            this.upgrade2.Width = 60;
-            // 
-            // upgrade3
-            // 
-            this.upgrade3.DataPropertyName = "upgrade3";
-            this.upgrade3.HeaderText = "III";
-            this.upgrade3.Name = "upgrade3";
-            this.upgrade3.ReadOnly = true;
-            this.upgrade3.Width = 60;
-            // 
             // name_Recipes
             // 
             this.name_Recipes.DataPropertyName = "recipe";
@@ -579,35 +579,35 @@
             this.tier3profit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.tier3profit.Width = 60;
             // 
-            // tier1
+            // tier1reward
             // 
-            this.tier1.DataPropertyName = "tier1";
-            this.tier1.HeaderText = "Tier 1 (reward)";
-            this.tier1.Name = "tier1";
-            this.tier1.ReadOnly = true;
-            this.tier1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tier1.Visible = false;
-            this.tier1.Width = 60;
+            this.tier1reward.DataPropertyName = "tier1reward";
+            this.tier1reward.HeaderText = "Tier 1 (reward)";
+            this.tier1reward.Name = "tier1reward";
+            this.tier1reward.ReadOnly = true;
+            this.tier1reward.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tier1reward.Visible = false;
+            this.tier1reward.Width = 60;
             // 
-            // tier2
+            // tier2reward
             // 
-            this.tier2.DataPropertyName = "tier2";
-            this.tier2.HeaderText = "Tier 2 (reward)";
-            this.tier2.Name = "tier2";
-            this.tier2.ReadOnly = true;
-            this.tier2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tier2.Visible = false;
-            this.tier2.Width = 60;
+            this.tier2reward.DataPropertyName = "tier2reward";
+            this.tier2reward.HeaderText = "Tier 2 (reward)";
+            this.tier2reward.Name = "tier2reward";
+            this.tier2reward.ReadOnly = true;
+            this.tier2reward.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tier2reward.Visible = false;
+            this.tier2reward.Width = 60;
             // 
-            // tier3
+            // tier3reward
             // 
-            this.tier3.DataPropertyName = "tier3";
-            this.tier3.HeaderText = "Tier 3 (reward)";
-            this.tier3.Name = "tier3";
-            this.tier3.ReadOnly = true;
-            this.tier3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tier3.Visible = false;
-            this.tier3.Width = 60;
+            this.tier3reward.DataPropertyName = "tier3reward";
+            this.tier3reward.HeaderText = "Tier 3 (reward)";
+            this.tier3reward.Name = "tier3reward";
+            this.tier3reward.ReadOnly = true;
+            this.tier3reward.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tier3reward.Visible = false;
+            this.tier3reward.Width = 60;
             // 
             // Main
             // 
@@ -691,9 +691,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tier1profit;
         private System.Windows.Forms.DataGridViewTextBoxColumn tier2profit;
         private System.Windows.Forms.DataGridViewTextBoxColumn tier3profit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tier1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tier2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tier3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tier1reward;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tier2reward;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tier3reward;
     }
 }
 
