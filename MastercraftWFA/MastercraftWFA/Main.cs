@@ -12,7 +12,6 @@ namespace MastercraftWFA {
             InitializeComponent();
             database = new DatabaseInterface();
             FillDataProfessions();
-            FillDataResources();
         }
 
 
@@ -31,6 +30,21 @@ namespace MastercraftWFA {
                 FillDataRecipes(query);
                 activeProfession = query;
             }
+        }
+
+        private void DataGridViewProfessions_SelectionChanged(object sender, EventArgs e) {
+            List<string> query = new List<string>();
+
+            DataGridViewSelectedCellCollection selectedCells = dataGridViewProfessions.SelectedCells;
+            foreach (DataGridViewCell cell in selectedCells) {
+                if (dataGridViewProfessions.Columns["name"].Index == cell.ColumnIndex && cell.RowIndex >= 0 && cell.RowIndex < dataGridViewProfessions.RowCount - 1)
+                    query.Add(cell.Value.ToString());
+            }
+
+            if (query.Count == 0)
+                return;
+
+            FillDataRecipes(query);
         }
 
         private void EditButtonProfessions_Click(object sender, EventArgs e) {
@@ -61,6 +75,10 @@ namespace MastercraftWFA {
             dataGridViewRecipes.DataSource = database.GetRecipesTable(profession);
         }
 
+        void FillDataRecipes(List<string> professions) {
+            dataGridViewRecipes.DataSource = database.GetRecipesTable(professions);
+        }
+
         private void DataGridViewRecipes_CellClick(object sender, DataGridViewCellEventArgs e) {
             if (dataGridViewRecipes.Columns["name_Recipes"].Index == e.ColumnIndex && e.RowIndex >= 0 && e.RowIndex < dataGridViewRecipes.RowCount - 1) {
                 // Filter on Recipe
@@ -68,7 +86,25 @@ namespace MastercraftWFA {
                 string query = field.Value.ToString();
                 FillDataResourcesConsumed(query);
                 FillDataResourcesResults(query);
+                FillDataResources(query);
             }
+        }
+
+        private void DataGridViewRecipes_SelectionChanged(object sender, EventArgs e) {
+            List<string> query = new List<string>();
+
+            DataGridViewSelectedCellCollection selectedCells = dataGridViewRecipes.SelectedCells;
+            foreach (DataGridViewCell cell in selectedCells) {
+                if (dataGridViewRecipes.Columns["name_Recipes"].Index == cell.ColumnIndex && cell.RowIndex >= 0 && cell.RowIndex < dataGridViewRecipes.RowCount - 1)
+                    query.Add(cell.Value.ToString());
+            }
+
+            if (query.Count == 0)
+                return;
+            
+            FillDataResourcesConsumed(query[0]);
+            FillDataResourcesResults(query[0]);
+            FillDataResources(query);
         }
 
         private void EditButton_Recipes_Click(object sender, EventArgs e) {
@@ -92,8 +128,12 @@ namespace MastercraftWFA {
 
 
         #region Resources Methods
-        void FillDataResources() {
-            dataGridViewResources.DataSource = Database.GetResources();
+        void FillDataResources(List<string> recipes) {
+            dataGridViewResources.DataSource = Database.GetResources(recipes);
+        }
+
+        void FillDataResources(string recipe) {
+            dataGridViewResources.DataSource = Database.GetResources(recipe);
         }
 
         private void EditButton_Resources_Click(object sender, EventArgs e) {
@@ -130,12 +170,7 @@ namespace MastercraftWFA {
             DataGridViewComboBoxColumn toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewResourcesConsumed.Columns["resource_Consumed"];
             toolComboBoxColumn.DataSource = options;
             // Query Data
-            dataGridViewResourcesConsumed.DataSource = Database.Query(
-                "SELECT resource, amount " +
-                "FROM consumedResources " +
-                "INNER JOIN resources " +
-                "ON consumedResources.resource = resources.name " +
-                "WHERE recipe = '" + recipe + "'");
+            dataGridViewResourcesConsumed.DataSource = Database.GetRecipesConsumedResources(recipe);
         }
         #endregion
 
@@ -155,12 +190,7 @@ namespace MastercraftWFA {
             toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewResourcesResults.Columns["tier_Results"];
             toolComboBoxColumn.DataSource = tierOptions;
             // Query Data
-            dataGridViewResourcesResults.DataSource = Database.Query(
-                "SELECT tier, resource, amount " +
-                "FROM results " +
-                "INNER JOIN resources " +
-                "ON results.resource = resources.name " +
-                "WHERE recipe = '" + recipe + "'");
+            dataGridViewResourcesResults.DataSource = Database.GetRecipesResults(recipe);
         }
 
 

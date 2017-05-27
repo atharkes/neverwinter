@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.IO;
+using System.Linq;
 
 namespace MastercraftWFA {
     static class Database {
@@ -166,19 +167,62 @@ namespace MastercraftWFA {
             );
         }
 
+        public static DataTable GetResources(string recipe) {
+            return Query(
+                "SELECT name, price, date(updated) AS updated " +
+                "FROM resources " +
+                "INNER JOIN (" +
+                    "SELECT resource " +
+                    "FROM consumedResources " +
+                    "WHERE recipe = '" + recipe + "'" +
+                    "UNION " +
+                    "SELECT resource " +
+                    "FROM results " +
+                    "WHERE recipe = '" + recipe + "'" +
+                ") ON resources.name = resource"
+            );
+        }
+
         public static DataTable GetResources(List<string> recipes) {
-            return new DataTable();
+            string recipesConstraint = "recipe = '" + recipes[0] + "'";
+            foreach (string recipe in recipes.Skip(1))
+                recipesConstraint += " OR recipe = '" + recipe + "'";
+            return Query(
+                "SELECT name, price, date(updated) AS updated " +
+                "FROM resources " +
+                "INNER JOIN (" +
+                    "SELECT resource " +
+                    "FROM consumedResources " +
+                    "WHERE " + recipesConstraint +
+                    "UNION " +
+                    "SELECT resource " +
+                    "FROM results " +
+                    "WHERE " + recipesConstraint +
+                ") ON resources.name = resource"
+            );
         }
 
         public static DataTable GetRecipesConsumedResources(string recipe) {
             return Query(
-                "SELECT resource " +
+                "SELECT resource, amount " +
                 "FROM consumedResources " +
-                "WHERE recipes = '" + recipe + "'"
+                "WHERE recipe = '" + recipe + "'"
             );
         }
 
         public static DataTable GetRecipesConsumedResources(List<string> recipes) {
+            return new DataTable();
+        }
+
+        public static DataTable GetRecipesResults(string recipe) {
+            return Query(
+                "SELECT tier, resource, amount " +
+                "FROM results " +
+                "WHERE recipe = '" + recipe + "'"
+            );
+        }
+
+        public static DataTable GetRecipesResults(List<string> recipes) {
             return new DataTable();
         }
 
@@ -193,6 +237,24 @@ namespace MastercraftWFA {
                     "INNER JOIN resources " +
                     "ON consumedResources.resource = resources.name " +
                     "WHERE recipes.profession = '" + profession + "'" +
+                ") GROUP BY recipe"
+            );
+        }
+
+        public static DataTable GetRecipesCost(List<string> professions) {
+            string professionConstraint = "profession = '" + professions[0] + "'";
+            foreach (string profession in professions.Skip(1))
+                professionConstraint += " OR profession = '" + profession + "'";
+            return Query(
+                "SELECT recipe, SUM(price * amount) AS cost " +
+                "FROM (" +
+                    "SELECT recipe, resource, price, amount " +
+                    "FROM recipes " +
+                    "INNER JOIN consumedResources " +
+                    "ON recipes.name = consumedResources.recipe " +
+                    "INNER JOIN resources " +
+                    "ON consumedResources.resource = resources.name " +
+                    "WHERE " + professionConstraint +
                 ") GROUP BY recipe"
             );
         }

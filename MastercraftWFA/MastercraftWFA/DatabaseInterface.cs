@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MastercraftWFA {
@@ -36,6 +37,17 @@ namespace MastercraftWFA {
                 costTable.Rows[i].SetField("profit", profit);
             }
             return costTable;
+        }
+
+        public DataTable GetRecipesTable(List<string> professions) {
+            DataTable recipesTable = GetRecipesTable(professions[0]);
+            foreach (string profession in professions.Skip(1)) {
+                DataTable professionTable = GetRecipesTable(profession);
+                if (professionTable.Rows.Count == 0)
+                    continue;
+                recipesTable = recipesTable.AsEnumerable().Union(professionTable.AsEnumerable()).CopyToDataTable();
+            }
+            return recipesTable;
         }
 
         public DataTable GetResourcesTable(List<string> recipes) {
