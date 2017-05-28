@@ -61,5 +61,18 @@ namespace MastercraftWFA {
         public DataTable GetConsumedResourcesTable(List<string> recipes) {
             return new DataTable();
         }
+
+        public List<object> GetResourceList() {
+            DataTable resources = Database.Query("SELECT name FROM resources");
+            return resources.AsEnumerable().Select(x => x["name"]).ToList();
+        }
+
+        public List<int> GetTiers() {
+            return new List<int>() { 1, 2, 3 };
+        }
+
+        public List<int> GetGrades() {
+            return new List<int>() { 0, 1, 2, 3 };
+        }
     }
 }

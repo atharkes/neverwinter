@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MastercraftWFA {
@@ -17,8 +18,10 @@ namespace MastercraftWFA {
 
         #region Professions Methods
         void FillDataProfessions() {
-            DataGridViewComboBoxColumn toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewProfessions.Columns["grade"];
-            toolComboBoxColumn.DataSource = new List<int>() { 0, 1, 2, 3 };
+            // Set Comboboxes
+            DataGridViewComboBoxColumn toolComboBoxColumn = dataGridViewProfessions.Columns["grade"] as DataGridViewComboBoxColumn;
+            toolComboBoxColumn.DataSource = database.GetGrades();
+            // Query Data
             dataGridViewProfessions.DataSource = database.GetProfessionsTable();
         }
 
@@ -162,13 +165,8 @@ namespace MastercraftWFA {
         #region Resources Consumed Methods
         void FillDataResourcesConsumed(string recipe) {
             // Set Comboboxes
-            DataTable results = Database.Query("SELECT name FROM resources");
-            List<string> options = new List<string>();
-            foreach (DataRow row in results.Rows) {
-                options.Add(row.Field<string>("name"));
-            }
-            DataGridViewComboBoxColumn toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewResourcesConsumed.Columns["resource_Consumed"];
-            toolComboBoxColumn.DataSource = options;
+            DataGridViewComboBoxColumn toolComboBoxColumn = dataGridViewResourcesConsumed.Columns["resource_Consumed"] as DataGridViewComboBoxColumn;
+            toolComboBoxColumn.DataSource = database.GetResourceList();
             // Query Data
             dataGridViewResourcesConsumed.DataSource = Database.GetRecipesConsumedResources(recipe);
         }
@@ -178,17 +176,11 @@ namespace MastercraftWFA {
         #region Resources Results Methods
         void FillDataResourcesResults(string recipe) {
             // Set Comboboxes
-            DataTable results = Database.Query("SELECT name FROM resources");
-            List<string> options = new List<string>();
-            foreach (DataRow row in results.Rows) {
-                options.Add(row.Field<string>("name"));
-            }
-            DataGridViewComboBoxColumn toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewResourcesResults.Columns["resource_Results"];
-            toolComboBoxColumn.DataSource = options;
+            DataGridViewComboBoxColumn toolComboBoxColumn = dataGridViewResourcesResults.Columns["resource_Results"] as DataGridViewComboBoxColumn;
+            toolComboBoxColumn.DataSource = database.GetResourceList();
 
-            List<int> tierOptions = new List<int>() { 1, 2, 3 };
             toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewResourcesResults.Columns["tier_Results"];
-            toolComboBoxColumn.DataSource = tierOptions;
+            toolComboBoxColumn.DataSource = database.GetTiers();
             // Query Data
             dataGridViewResourcesResults.DataSource = Database.GetRecipesResults(recipe);
         }
