@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace MastercraftWFA {
@@ -13,6 +11,11 @@ namespace MastercraftWFA {
             InitializeComponent();
             database = new DatabaseInterface();
             FillDataProfessions();
+            dataGridViewProfessions.AutoGenerateColumns = false;
+            dataGridViewRecipes.AutoGenerateColumns = false;
+            dataGridViewResources.AutoGenerateColumns = false;
+            dataGridViewResourcesConsumed.AutoGenerateColumns = false;
+            dataGridViewResourcesResults.AutoGenerateColumns = false;
         }
 
 
@@ -94,20 +97,19 @@ namespace MastercraftWFA {
         }
 
         private void DataGridViewRecipes_SelectionChanged(object sender, EventArgs e) {
-            List<string> query = new List<string>();
-
+            List<string> recipes = new List<string>();
             DataGridViewSelectedCellCollection selectedCells = dataGridViewRecipes.SelectedCells;
             foreach (DataGridViewCell cell in selectedCells) {
                 if (dataGridViewRecipes.Columns["name_Recipes"].Index == cell.ColumnIndex && cell.RowIndex >= 0 && cell.RowIndex < dataGridViewRecipes.RowCount - 1)
-                    query.Add(cell.Value.ToString());
+                    recipes.Add(cell.Value.ToString());
             }
 
-            if (query.Count == 0)
+            if (recipes.Count == 0)
                 return;
             
-            FillDataResourcesConsumed(query[0]);
-            FillDataResourcesResults(query[0]);
-            FillDataResources(query);
+            FillDataResourcesConsumed(recipes);
+            FillDataResourcesResults(recipes);
+            FillDataResources(recipes);
         }
 
         private void EditButton_Recipes_Click(object sender, EventArgs e) {
@@ -131,12 +133,12 @@ namespace MastercraftWFA {
 
 
         #region Resources Methods
-        void FillDataResources(List<string> recipes) {
-            dataGridViewResources.DataSource = Database.GetResources(recipes);
-        }
-
         void FillDataResources(string recipe) {
             dataGridViewResources.DataSource = Database.GetResources(recipe);
+        }
+
+        void FillDataResources(List<string> recipes) {
+            dataGridViewResources.DataSource = Database.GetResources(recipes);
         }
 
         private void EditButton_Resources_Click(object sender, EventArgs e) {
@@ -165,10 +167,18 @@ namespace MastercraftWFA {
         #region Resources Consumed Methods
         void FillDataResourcesConsumed(string recipe) {
             // Set Comboboxes
-            DataGridViewComboBoxColumn toolComboBoxColumn = dataGridViewResourcesConsumed.Columns["resource_Consumed"] as DataGridViewComboBoxColumn;
-            toolComboBoxColumn.DataSource = database.GetResourceList();
+            DataGridViewComboBoxColumn resourcesComboBox = dataGridViewResourcesConsumed.Columns["resource_Consumed"] as DataGridViewComboBoxColumn;
+            resourcesComboBox.DataSource = database.GetResourceList();
             // Query Data
             dataGridViewResourcesConsumed.DataSource = Database.GetRecipesConsumedResources(recipe);
+        }
+
+        void FillDataResourcesConsumed(List<string> recipes) {
+            if (recipes.Count == 1) {
+                FillDataResourcesConsumed(recipes[0]);
+            } else {
+                dataGridViewResourcesConsumed.DataSource = "";
+            }
         }
         #endregion
 
@@ -176,16 +186,21 @@ namespace MastercraftWFA {
         #region Resources Results Methods
         void FillDataResourcesResults(string recipe) {
             // Set Comboboxes
-            DataGridViewComboBoxColumn toolComboBoxColumn = dataGridViewResourcesResults.Columns["resource_Results"] as DataGridViewComboBoxColumn;
-            toolComboBoxColumn.DataSource = database.GetResourceList();
-
-            toolComboBoxColumn = (DataGridViewComboBoxColumn)dataGridViewResourcesResults.Columns["tier_Results"];
-            toolComboBoxColumn.DataSource = database.GetTiers();
+            DataGridViewComboBoxColumn resourceComboBox = dataGridViewResourcesResults.Columns["resource_Results"] as DataGridViewComboBoxColumn;
+            resourceComboBox.DataSource = database.GetResourceList();
+            DataGridViewComboBoxColumn tierComboBox = (DataGridViewComboBoxColumn)dataGridViewResourcesResults.Columns["tier_Results"];
+            tierComboBox.DataSource = database.GetTiers();
             // Query Data
             dataGridViewResourcesResults.DataSource = Database.GetRecipesResults(recipe);
         }
 
-
+        void FillDataResourcesResults(List<string> recipes) {
+            if (recipes.Count == 1) {
+                FillDataResourcesResults(recipes[0]);
+            } else {
+                dataGridViewResourcesResults.DataSource = "";
+            }
+        }
         #endregion
 
     }

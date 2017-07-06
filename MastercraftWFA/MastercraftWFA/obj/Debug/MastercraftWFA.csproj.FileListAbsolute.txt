@@ -31,8 +31,6 @@ C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWF
 C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWFA\bin\Debug\System.Data.SQLite.xml
 C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWFA\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.csprojResolveAssemblyReference.cache
-C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.Profession.resources
-C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.Recipe.resources
 C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.Main.resources
 C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.Properties.Resources.resources
 C:\Users\Theo Harkes\Desktop\Repository\Neverwinter\MastercraftWFA\MastercraftWFA\obj\Debug\MastercraftWFA.csproj.GenerateResource.Cache
