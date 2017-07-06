@@ -50,16 +50,20 @@ namespace MastercraftWFA {
             return recipesTable;
         }
 
+        public DataTable GetResourcesTable(string recipe) {
+            return Database.GetResources(recipe);
+        }
+
         public DataTable GetResourcesTable(List<string> recipes) {
-            return new DataTable();
+            return Database.GetResources(recipes);
         }
 
-        public DataTable GetResultsTable(List<string> recipes) {
-            return new DataTable();
+        public DataTable GetResultsTable(string recipe) {
+            return Database.GetRecipesResults(recipe);
         }
 
-        public DataTable GetConsumedResourcesTable(List<string> recipes) {
-            return new DataTable();
+        public DataTable GetConsumedResourcesTable(string recipe) {
+            return Database.GetRecipesConsumedResources(recipe);
         }
 
         public List<object> GetResourceList() {
