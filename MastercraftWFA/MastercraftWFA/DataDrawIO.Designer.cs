@@ -22,27 +22,27 @@ namespace MastercraftWFA {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("DataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataDrawIO : global::System.Data.DataSet {
+    public partial class DataSet1 : global::System.Data.DataSet {
         
-        private professionsDataTable tableprofessions;
+        private ProfessionsDataTable tableProfessions;
         
-        private recipesDataTable tablerecipes;
+        private RecipesDataTable tableRecipes;
         
-        private resourcesDataTable tableresources;
+        private ResourcesDataTable tableResources;
         
-        private priceHistoryDataTable tablepriceHistory;
+        private PriceHistoryDataTable tablePriceHistory;
         
-        private consumedResourcesDataTable tableconsumedResources;
+        private RecipeCostsDataTable tableRecipeCosts;
         
-        private resultsDataTable tableresults;
+        private RecipeResultsDataTable tableRecipeResults;
         
-        private getToolDataTable tablegetTool;
+        private UpgradesDataTable tableUpgrades;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DataDrawIO() {
+        public DataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -53,7 +53,7 @@ namespace MastercraftWFA {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DataDrawIO(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -66,26 +66,26 @@ namespace MastercraftWFA {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["professions"] != null)) {
-                    base.Tables.Add(new professionsDataTable(ds.Tables["professions"]));
+                if ((ds.Tables["Professions"] != null)) {
+                    base.Tables.Add(new ProfessionsDataTable(ds.Tables["Professions"]));
                 }
-                if ((ds.Tables["recipes"] != null)) {
-                    base.Tables.Add(new recipesDataTable(ds.Tables["recipes"]));
+                if ((ds.Tables["Recipes"] != null)) {
+                    base.Tables.Add(new RecipesDataTable(ds.Tables["Recipes"]));
                 }
-                if ((ds.Tables["resources"] != null)) {
-                    base.Tables.Add(new resourcesDataTable(ds.Tables["resources"]));
+                if ((ds.Tables["Resources"] != null)) {
+                    base.Tables.Add(new ResourcesDataTable(ds.Tables["Resources"]));
                 }
-                if ((ds.Tables["priceHistory"] != null)) {
-                    base.Tables.Add(new priceHistoryDataTable(ds.Tables["priceHistory"]));
+                if ((ds.Tables["PriceHistory"] != null)) {
+                    base.Tables.Add(new PriceHistoryDataTable(ds.Tables["PriceHistory"]));
                 }
-                if ((ds.Tables["consumedResources"] != null)) {
-                    base.Tables.Add(new consumedResourcesDataTable(ds.Tables["consumedResources"]));
+                if ((ds.Tables["RecipeCosts"] != null)) {
+                    base.Tables.Add(new RecipeCostsDataTable(ds.Tables["RecipeCosts"]));
                 }
-                if ((ds.Tables["results"] != null)) {
-                    base.Tables.Add(new resultsDataTable(ds.Tables["results"]));
+                if ((ds.Tables["RecipeResults"] != null)) {
+                    base.Tables.Add(new RecipeResultsDataTable(ds.Tables["RecipeResults"]));
                 }
-                if ((ds.Tables["getTool"] != null)) {
-                    base.Tables.Add(new getToolDataTable(ds.Tables["getTool"]));
+                if ((ds.Tables["Upgrades"] != null)) {
+                    base.Tables.Add(new UpgradesDataTable(ds.Tables["Upgrades"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -109,9 +109,9 @@ namespace MastercraftWFA {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public professionsDataTable professions {
+        public ProfessionsDataTable Professions {
             get {
-                return this.tableprofessions;
+                return this.tableProfessions;
             }
         }
         
@@ -119,9 +119,9 @@ namespace MastercraftWFA {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public recipesDataTable recipes {
+        public RecipesDataTable Recipes {
             get {
-                return this.tablerecipes;
+                return this.tableRecipes;
             }
         }
         
@@ -129,9 +129,9 @@ namespace MastercraftWFA {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public resourcesDataTable resources {
+        public ResourcesDataTable Resources {
             get {
-                return this.tableresources;
+                return this.tableResources;
             }
         }
         
@@ -139,9 +139,9 @@ namespace MastercraftWFA {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public priceHistoryDataTable priceHistory {
+        public PriceHistoryDataTable PriceHistory {
             get {
-                return this.tablepriceHistory;
+                return this.tablePriceHistory;
             }
         }
         
@@ -149,9 +149,9 @@ namespace MastercraftWFA {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public consumedResourcesDataTable consumedResources {
+        public RecipeCostsDataTable RecipeCosts {
             get {
-                return this.tableconsumedResources;
+                return this.tableRecipeCosts;
             }
         }
         
@@ -159,9 +159,9 @@ namespace MastercraftWFA {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public resultsDataTable results {
+        public RecipeResultsDataTable RecipeResults {
             get {
-                return this.tableresults;
+                return this.tableRecipeResults;
             }
         }
         
@@ -169,9 +169,9 @@ namespace MastercraftWFA {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public getToolDataTable getTool {
+        public UpgradesDataTable Upgrades {
             get {
-                return this.tablegetTool;
+                return this.tableUpgrades;
             }
         }
         
@@ -217,7 +217,7 @@ namespace MastercraftWFA {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataDrawIO cln = ((DataDrawIO)(base.Clone()));
+            DataSet1 cln = ((DataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -242,26 +242,26 @@ namespace MastercraftWFA {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["professions"] != null)) {
-                    base.Tables.Add(new professionsDataTable(ds.Tables["professions"]));
+                if ((ds.Tables["Professions"] != null)) {
+                    base.Tables.Add(new ProfessionsDataTable(ds.Tables["Professions"]));
                 }
-                if ((ds.Tables["recipes"] != null)) {
-                    base.Tables.Add(new recipesDataTable(ds.Tables["recipes"]));
+                if ((ds.Tables["Recipes"] != null)) {
+                    base.Tables.Add(new RecipesDataTable(ds.Tables["Recipes"]));
                 }
-                if ((ds.Tables["resources"] != null)) {
-                    base.Tables.Add(new resourcesDataTable(ds.Tables["resources"]));
+                if ((ds.Tables["Resources"] != null)) {
+                    base.Tables.Add(new ResourcesDataTable(ds.Tables["Resources"]));
                 }
-                if ((ds.Tables["priceHistory"] != null)) {
-                    base.Tables.Add(new priceHistoryDataTable(ds.Tables["priceHistory"]));
+                if ((ds.Tables["PriceHistory"] != null)) {
+                    base.Tables.Add(new PriceHistoryDataTable(ds.Tables["PriceHistory"]));
                 }
-                if ((ds.Tables["consumedResources"] != null)) {
-                    base.Tables.Add(new consumedResourcesDataTable(ds.Tables["consumedResources"]));
+                if ((ds.Tables["RecipeCosts"] != null)) {
+                    base.Tables.Add(new RecipeCostsDataTable(ds.Tables["RecipeCosts"]));
                 }
-                if ((ds.Tables["results"] != null)) {
-                    base.Tables.Add(new resultsDataTable(ds.Tables["results"]));
+                if ((ds.Tables["RecipeResults"] != null)) {
+                    base.Tables.Add(new RecipeResultsDataTable(ds.Tables["RecipeResults"]));
                 }
-                if ((ds.Tables["getTool"] != null)) {
-                    base.Tables.Add(new getToolDataTable(ds.Tables["getTool"]));
+                if ((ds.Tables["Upgrades"] != null)) {
+                    base.Tables.Add(new UpgradesDataTable(ds.Tables["Upgrades"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -296,46 +296,46 @@ namespace MastercraftWFA {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableprofessions = ((professionsDataTable)(base.Tables["professions"]));
+            this.tableProfessions = ((ProfessionsDataTable)(base.Tables["Professions"]));
             if ((initTable == true)) {
-                if ((this.tableprofessions != null)) {
-                    this.tableprofessions.InitVars();
+                if ((this.tableProfessions != null)) {
+                    this.tableProfessions.InitVars();
                 }
             }
-            this.tablerecipes = ((recipesDataTable)(base.Tables["recipes"]));
+            this.tableRecipes = ((RecipesDataTable)(base.Tables["Recipes"]));
             if ((initTable == true)) {
-                if ((this.tablerecipes != null)) {
-                    this.tablerecipes.InitVars();
+                if ((this.tableRecipes != null)) {
+                    this.tableRecipes.InitVars();
                 }
             }
-            this.tableresources = ((resourcesDataTable)(base.Tables["resources"]));
+            this.tableResources = ((ResourcesDataTable)(base.Tables["Resources"]));
             if ((initTable == true)) {
-                if ((this.tableresources != null)) {
-                    this.tableresources.InitVars();
+                if ((this.tableResources != null)) {
+                    this.tableResources.InitVars();
                 }
             }
-            this.tablepriceHistory = ((priceHistoryDataTable)(base.Tables["priceHistory"]));
+            this.tablePriceHistory = ((PriceHistoryDataTable)(base.Tables["PriceHistory"]));
             if ((initTable == true)) {
-                if ((this.tablepriceHistory != null)) {
-                    this.tablepriceHistory.InitVars();
+                if ((this.tablePriceHistory != null)) {
+                    this.tablePriceHistory.InitVars();
                 }
             }
-            this.tableconsumedResources = ((consumedResourcesDataTable)(base.Tables["consumedResources"]));
+            this.tableRecipeCosts = ((RecipeCostsDataTable)(base.Tables["RecipeCosts"]));
             if ((initTable == true)) {
-                if ((this.tableconsumedResources != null)) {
-                    this.tableconsumedResources.InitVars();
+                if ((this.tableRecipeCosts != null)) {
+                    this.tableRecipeCosts.InitVars();
                 }
             }
-            this.tableresults = ((resultsDataTable)(base.Tables["results"]));
+            this.tableRecipeResults = ((RecipeResultsDataTable)(base.Tables["RecipeResults"]));
             if ((initTable == true)) {
-                if ((this.tableresults != null)) {
-                    this.tableresults.InitVars();
+                if ((this.tableRecipeResults != null)) {
+                    this.tableRecipeResults.InitVars();
                 }
             }
-            this.tablegetTool = ((getToolDataTable)(base.Tables["getTool"]));
+            this.tableUpgrades = ((UpgradesDataTable)(base.Tables["Upgrades"]));
             if ((initTable == true)) {
-                if ((this.tablegetTool != null)) {
-                    this.tablegetTool.InitVars();
+                if ((this.tableUpgrades != null)) {
+                    this.tableUpgrades.InitVars();
                 }
             }
         }
@@ -348,74 +348,74 @@ namespace MastercraftWFA {
             this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableprofessions = new professionsDataTable();
-            base.Tables.Add(this.tableprofessions);
-            this.tablerecipes = new recipesDataTable();
-            base.Tables.Add(this.tablerecipes);
-            this.tableresources = new resourcesDataTable();
-            base.Tables.Add(this.tableresources);
-            this.tablepriceHistory = new priceHistoryDataTable();
-            base.Tables.Add(this.tablepriceHistory);
-            this.tableconsumedResources = new consumedResourcesDataTable();
-            base.Tables.Add(this.tableconsumedResources);
-            this.tableresults = new resultsDataTable();
-            base.Tables.Add(this.tableresults);
-            this.tablegetTool = new getToolDataTable();
-            base.Tables.Add(this.tablegetTool);
+            this.tableProfessions = new ProfessionsDataTable();
+            base.Tables.Add(this.tableProfessions);
+            this.tableRecipes = new RecipesDataTable();
+            base.Tables.Add(this.tableRecipes);
+            this.tableResources = new ResourcesDataTable();
+            base.Tables.Add(this.tableResources);
+            this.tablePriceHistory = new PriceHistoryDataTable();
+            base.Tables.Add(this.tablePriceHistory);
+            this.tableRecipeCosts = new RecipeCostsDataTable();
+            base.Tables.Add(this.tableRecipeCosts);
+            this.tableRecipeResults = new RecipeResultsDataTable();
+            base.Tables.Add(this.tableRecipeResults);
+            this.tableUpgrades = new UpgradesDataTable();
+            base.Tables.Add(this.tableUpgrades);
             global::System.Data.ForeignKeyConstraint fkc;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_professions_recipes", new global::System.Data.DataColumn[] {
-                        this.tableprofessions.nameColumn}, new global::System.Data.DataColumn[] {
-                        this.tablerecipes.professionColumn});
-            this.tablerecipes.Constraints.Add(fkc);
+                        this.tableProfessions.profession_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRecipes.profession_idColumn});
+            this.tableRecipes.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_resources_priceHistory", new global::System.Data.DataColumn[] {
-                        this.tableresources.nameColumn}, new global::System.Data.DataColumn[] {
-                        this.tablepriceHistory.resourceColumn});
-            this.tablepriceHistory.Constraints.Add(fkc);
+                        this.tableResources.resource_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePriceHistory.resource_idColumn});
+            this.tablePriceHistory.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_recipes_consumedResources", new global::System.Data.DataColumn[] {
-                        this.tablerecipes.nameColumn}, new global::System.Data.DataColumn[] {
-                        this.tableconsumedResources.recipeColumn});
-            this.tableconsumedResources.Constraints.Add(fkc);
+                        this.tableRecipes.recipe_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRecipeCosts.recipe_idColumn});
+            this.tableRecipeCosts.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_resources_consumedResources", new global::System.Data.DataColumn[] {
-                        this.tableresources.nameColumn}, new global::System.Data.DataColumn[] {
-                        this.tableconsumedResources.resourceColumn});
-            this.tableconsumedResources.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_resources_results", new global::System.Data.DataColumn[] {
-                        this.tableresources.nameColumn}, new global::System.Data.DataColumn[] {
-                        this.tableresults.resourceColumn});
-            this.tableresults.Constraints.Add(fkc);
+                        this.tableResources.resource_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRecipeCosts.resource_idColumn});
+            this.tableRecipeCosts.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_results_recipes", new global::System.Data.DataColumn[] {
-                        this.tablerecipes.nameColumn}, new global::System.Data.DataColumn[] {
-                        this.tableresults.recipeColumn});
-            this.tableresults.Constraints.Add(fkc);
+                        this.tableRecipes.recipe_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRecipeResults.recipe_idColumn});
+            this.tableRecipeResults.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_resources_getTool", new global::System.Data.DataColumn[] {
-                        this.tableresources.nameColumn}, new global::System.Data.DataColumn[] {
-                        this.tablegetTool.resourceColumn});
-            this.tablegetTool.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_resources_results", new global::System.Data.DataColumn[] {
+                        this.tableResources.resource_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRecipeResults.resource_idColumn});
+            this.tableRecipeResults.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_professions_getTool", new global::System.Data.DataColumn[] {
-                        this.tableprofessions.nameColumn}, new global::System.Data.DataColumn[] {
-                        this.tablegetTool.professionColumn});
-            this.tablegetTool.Constraints.Add(fkc);
+                        this.tableProfessions.profession_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableUpgrades.profession_idColumn});
+            this.tableUpgrades.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_resources_getTool", new global::System.Data.DataColumn[] {
+                        this.tableResources.resource_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableUpgrades.resource_idColumn});
+            this.tableUpgrades.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
@@ -423,43 +423,43 @@ namespace MastercraftWFA {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeprofessions() {
+        private bool ShouldSerializeProfessions() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializerecipes() {
+        private bool ShouldSerializeRecipes() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeresources() {
+        private bool ShouldSerializeResources() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializepriceHistory() {
+        private bool ShouldSerializePriceHistory() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeconsumedResources() {
+        private bool ShouldSerializeRecipeCosts() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeresults() {
+        private bool ShouldSerializeRecipeResults() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializegetTool() {
+        private bool ShouldSerializeUpgrades() {
             return false;
         }
         
@@ -474,7 +474,7 @@ namespace MastercraftWFA {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataDrawIO ds = new DataDrawIO();
+            DataSet1 ds = new DataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -519,313 +519,43 @@ namespace MastercraftWFA {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void professionsRowChangeEventHandler(object sender, professionsRowChangeEvent e);
+        public delegate void ProfessionsRowChangeEventHandler(object sender, ProfessionsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void recipesRowChangeEventHandler(object sender, recipesRowChangeEvent e);
+        public delegate void RecipesRowChangeEventHandler(object sender, RecipesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void resourcesRowChangeEventHandler(object sender, resourcesRowChangeEvent e);
+        public delegate void ResourcesRowChangeEventHandler(object sender, ResourcesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void priceHistoryRowChangeEventHandler(object sender, priceHistoryRowChangeEvent e);
+        public delegate void PriceHistoryRowChangeEventHandler(object sender, PriceHistoryRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void consumedResourcesRowChangeEventHandler(object sender, consumedResourcesRowChangeEvent e);
+        public delegate void RecipeCostsRowChangeEventHandler(object sender, RecipeCostsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void resultsRowChangeEventHandler(object sender, resultsRowChangeEvent e);
+        public delegate void RecipeResultsRowChangeEventHandler(object sender, RecipeResultsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void getToolRowChangeEventHandler(object sender, getToolRowChangeEvent e);
+        public delegate void UpgradesRowChangeEventHandler(object sender, UpgradesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class professionsDataTable : global::System.Data.TypedTableBase<professionsRow> {
+        public partial class ProfessionsDataTable : global::System.Data.TypedTableBase<ProfessionsRow> {
             
-            private global::System.Data.DataColumn columnname;
-            
-            private global::System.Data.DataColumn columntool;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public professionsDataTable() {
-                this.TableName = "professions";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal professionsDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected professionsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nameColumn {
-                get {
-                    return this.columnname;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn toolColumn {
-                get {
-                    return this.columntool;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public professionsRow this[int index] {
-                get {
-                    return ((professionsRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event professionsRowChangeEventHandler professionsRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event professionsRowChangeEventHandler professionsRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event professionsRowChangeEventHandler professionsRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event professionsRowChangeEventHandler professionsRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddprofessionsRow(professionsRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public professionsRow AddprofessionsRow(string name, bool tool) {
-                professionsRow rowprofessionsRow = ((professionsRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        name,
-                        tool};
-                rowprofessionsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowprofessionsRow);
-                return rowprofessionsRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public professionsRow FindByname(string name) {
-                return ((professionsRow)(this.Rows.Find(new object[] {
-                            name})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                professionsDataTable cln = ((professionsDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new professionsDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnname = base.Columns["name"];
-                this.columntool = base.Columns["tool"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname);
-                this.columntool = new global::System.Data.DataColumn("tool", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntool);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnname}, true));
-                this.columnname.AllowDBNull = false;
-                this.columnname.Unique = true;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public professionsRow NewprofessionsRow() {
-                return ((professionsRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new professionsRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(professionsRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.professionsRowChanged != null)) {
-                    this.professionsRowChanged(this, new professionsRowChangeEvent(((professionsRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.professionsRowChanging != null)) {
-                    this.professionsRowChanging(this, new professionsRowChangeEvent(((professionsRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.professionsRowDeleted != null)) {
-                    this.professionsRowDeleted(this, new professionsRowChangeEvent(((professionsRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.professionsRowDeleting != null)) {
-                    this.professionsRowDeleting(this, new professionsRowChangeEvent(((professionsRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveprofessionsRow(professionsRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataDrawIO ds = new DataDrawIO();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "professionsDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class recipesDataTable : global::System.Data.TypedTableBase<recipesRow> {
-            
-            private global::System.Data.DataColumn columnname;
+            private global::System.Data.DataColumn columnprofession_id;
             
             private global::System.Data.DataColumn columnprofession;
             
+            private global::System.Data.DataColumn columngrade;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public recipesDataTable() {
-                this.TableName = "recipes";
+            public ProfessionsDataTable() {
+                this.TableName = "Professions";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -833,7 +563,7 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal recipesDataTable(global::System.Data.DataTable table) {
+            internal ProfessionsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -850,16 +580,16 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected recipesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ProfessionsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nameColumn {
+            public global::System.Data.DataColumn profession_idColumn {
                 get {
-                    return this.columnname;
+                    return this.columnprofession_id;
                 }
             }
             
@@ -873,6 +603,14 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn gradeColumn {
+                get {
+                    return this.columngrade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -882,53 +620,54 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public recipesRow this[int index] {
+            public ProfessionsRow this[int index] {
                 get {
-                    return ((recipesRow)(this.Rows[index]));
+                    return ((ProfessionsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event recipesRowChangeEventHandler recipesRowChanging;
+            public event ProfessionsRowChangeEventHandler ProfessionsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event recipesRowChangeEventHandler recipesRowChanged;
+            public event ProfessionsRowChangeEventHandler ProfessionsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event recipesRowChangeEventHandler recipesRowDeleting;
+            public event ProfessionsRowChangeEventHandler ProfessionsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event recipesRowChangeEventHandler recipesRowDeleted;
+            public event ProfessionsRowChangeEventHandler ProfessionsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddrecipesRow(recipesRow row) {
+            public void AddProfessionsRow(ProfessionsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public recipesRow AddrecipesRow(string name, string profession) {
-                recipesRow rowrecipesRow = ((recipesRow)(this.NewRow()));
+            public ProfessionsRow AddProfessionsRow(string profession_id, bool profession, string grade) {
+                ProfessionsRow rowProfessionsRow = ((ProfessionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        name,
-                        profession};
-                rowrecipesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowrecipesRow);
-                return rowrecipesRow;
+                        profession_id,
+                        profession,
+                        grade};
+                rowProfessionsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProfessionsRow);
+                return rowProfessionsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public recipesRow FindByname(string name) {
-                return ((recipesRow)(this.Rows.Find(new object[] {
-                            name})));
+            public ProfessionsRow FindByprofession_id(string profession_id) {
+                return ((ProfessionsRow)(this.Rows.Find(new object[] {
+                            profession_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                recipesDataTable cln = ((recipesDataTable)(base.Clone()));
+                ProfessionsDataTable cln = ((ProfessionsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -936,53 +675,56 @@ namespace MastercraftWFA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new recipesDataTable();
+                return new ProfessionsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnname = base.Columns["name"];
+                this.columnprofession_id = base.Columns["profession_id"];
                 this.columnprofession = base.Columns["profession"];
+                this.columngrade = base.Columns["grade"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname);
-                this.columnprofession = new global::System.Data.DataColumn("profession", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnprofession_id = new global::System.Data.DataColumn("profession_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprofession_id);
+                this.columnprofession = new global::System.Data.DataColumn("profession", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprofession);
+                this.columngrade = new global::System.Data.DataColumn("grade", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngrade);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnname}, true));
-                this.columnname.AllowDBNull = false;
-                this.columnname.Unique = true;
+                                this.columnprofession_id}, true));
+                this.columnprofession_id.AllowDBNull = false;
+                this.columnprofession_id.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public recipesRow NewrecipesRow() {
-                return ((recipesRow)(this.NewRow()));
+            public ProfessionsRow NewProfessionsRow() {
+                return ((ProfessionsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new recipesRow(builder);
+                return new ProfessionsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(recipesRow);
+                return typeof(ProfessionsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.recipesRowChanged != null)) {
-                    this.recipesRowChanged(this, new recipesRowChangeEvent(((recipesRow)(e.Row)), e.Action));
+                if ((this.ProfessionsRowChanged != null)) {
+                    this.ProfessionsRowChanged(this, new ProfessionsRowChangeEvent(((ProfessionsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -990,8 +732,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.recipesRowChanging != null)) {
-                    this.recipesRowChanging(this, new recipesRowChangeEvent(((recipesRow)(e.Row)), e.Action));
+                if ((this.ProfessionsRowChanging != null)) {
+                    this.ProfessionsRowChanging(this, new ProfessionsRowChangeEvent(((ProfessionsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -999,8 +741,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.recipesRowDeleted != null)) {
-                    this.recipesRowDeleted(this, new recipesRowChangeEvent(((recipesRow)(e.Row)), e.Action));
+                if ((this.ProfessionsRowDeleted != null)) {
+                    this.ProfessionsRowDeleted(this, new ProfessionsRowChangeEvent(((ProfessionsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1008,14 +750,14 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.recipesRowDeleting != null)) {
-                    this.recipesRowDeleting(this, new recipesRowChangeEvent(((recipesRow)(e.Row)), e.Action));
+                if ((this.ProfessionsRowDeleting != null)) {
+                    this.ProfessionsRowDeleting(this, new ProfessionsRowChangeEvent(((ProfessionsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoverecipesRow(recipesRow row) {
+            public void RemoveProfessionsRow(ProfessionsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1024,7 +766,7 @@ namespace MastercraftWFA {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataDrawIO ds = new DataDrawIO();
+                DataSet1 ds = new DataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1042,7 +784,7 @@ namespace MastercraftWFA {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "recipesDataTable";
+                attribute2.FixedValue = "ProfessionsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1088,18 +830,20 @@ namespace MastercraftWFA {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class resourcesDataTable : global::System.Data.TypedTableBase<resourcesRow> {
+        public partial class RecipesDataTable : global::System.Data.TypedTableBase<RecipesRow> {
             
-            private global::System.Data.DataColumn columnname;
+            private global::System.Data.DataColumn columnrecipe_id;
             
-            private global::System.Data.DataColumn columnprice;
+            private global::System.Data.DataColumn columnrecipe;
             
-            private global::System.Data.DataColumn columnupdated;
+            private global::System.Data.DataColumn columnprofession_id;
+            
+            private global::System.Data.DataColumn columngrade;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resourcesDataTable() {
-                this.TableName = "resources";
+            public RecipesDataTable() {
+                this.TableName = "Recipes";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1107,7 +851,7 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal resourcesDataTable(global::System.Data.DataTable table) {
+            internal RecipesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1124,32 +868,40 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected resourcesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected RecipesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nameColumn {
+            public global::System.Data.DataColumn recipe_idColumn {
                 get {
-                    return this.columnname;
+                    return this.columnrecipe_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn priceColumn {
+            public global::System.Data.DataColumn recipeColumn {
                 get {
-                    return this.columnprice;
+                    return this.columnrecipe;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn updatedColumn {
+            public global::System.Data.DataColumn profession_idColumn {
                 get {
-                    return this.columnupdated;
+                    return this.columnprofession_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn gradeColumn {
+                get {
+                    return this.columngrade;
                 }
             }
             
@@ -1164,54 +916,55 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resourcesRow this[int index] {
+            public RecipesRow this[int index] {
                 get {
-                    return ((resourcesRow)(this.Rows[index]));
+                    return ((RecipesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event resourcesRowChangeEventHandler resourcesRowChanging;
+            public event RecipesRowChangeEventHandler RecipesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event resourcesRowChangeEventHandler resourcesRowChanged;
+            public event RecipesRowChangeEventHandler RecipesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event resourcesRowChangeEventHandler resourcesRowDeleting;
+            public event RecipesRowChangeEventHandler RecipesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event resourcesRowChangeEventHandler resourcesRowDeleted;
+            public event RecipesRowChangeEventHandler RecipesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddresourcesRow(resourcesRow row) {
+            public void AddRecipesRow(RecipesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resourcesRow AddresourcesRow(string name, int price, System.DateTime updated) {
-                resourcesRow rowresourcesRow = ((resourcesRow)(this.NewRow()));
+            public RecipesRow AddRecipesRow(string recipe_id, string recipe, string profession_id, string grade) {
+                RecipesRow rowRecipesRow = ((RecipesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        name,
-                        price,
-                        updated};
-                rowresourcesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowresourcesRow);
-                return rowresourcesRow;
+                        recipe_id,
+                        recipe,
+                        profession_id,
+                        grade};
+                rowRecipesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRecipesRow);
+                return rowRecipesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resourcesRow FindByname(string name) {
-                return ((resourcesRow)(this.Rows.Find(new object[] {
-                            name})));
+            public RecipesRow FindByrecipe_id(string recipe_id) {
+                return ((RecipesRow)(this.Rows.Find(new object[] {
+                            recipe_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                resourcesDataTable cln = ((resourcesDataTable)(base.Clone()));
+                RecipesDataTable cln = ((RecipesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1219,56 +972,59 @@ namespace MastercraftWFA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new resourcesDataTable();
+                return new RecipesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnname = base.Columns["name"];
-                this.columnprice = base.Columns["price"];
-                this.columnupdated = base.Columns["updated"];
+                this.columnrecipe_id = base.Columns["recipe_id"];
+                this.columnrecipe = base.Columns["recipe"];
+                this.columnprofession_id = base.Columns["profession_id"];
+                this.columngrade = base.Columns["grade"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname);
-                this.columnprice = new global::System.Data.DataColumn("price", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprice);
-                this.columnupdated = new global::System.Data.DataColumn("updated", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnupdated);
+                this.columnrecipe_id = new global::System.Data.DataColumn("recipe_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrecipe_id);
+                this.columnrecipe = new global::System.Data.DataColumn("recipe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrecipe);
+                this.columnprofession_id = new global::System.Data.DataColumn("profession_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprofession_id);
+                this.columngrade = new global::System.Data.DataColumn("grade", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngrade);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnname}, true));
-                this.columnname.AllowDBNull = false;
-                this.columnname.Unique = true;
+                                this.columnrecipe_id}, true));
+                this.columnrecipe_id.AllowDBNull = false;
+                this.columnrecipe_id.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resourcesRow NewresourcesRow() {
-                return ((resourcesRow)(this.NewRow()));
+            public RecipesRow NewRecipesRow() {
+                return ((RecipesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new resourcesRow(builder);
+                return new RecipesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(resourcesRow);
+                return typeof(RecipesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.resourcesRowChanged != null)) {
-                    this.resourcesRowChanged(this, new resourcesRowChangeEvent(((resourcesRow)(e.Row)), e.Action));
+                if ((this.RecipesRowChanged != null)) {
+                    this.RecipesRowChanged(this, new RecipesRowChangeEvent(((RecipesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1276,8 +1032,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.resourcesRowChanging != null)) {
-                    this.resourcesRowChanging(this, new resourcesRowChangeEvent(((resourcesRow)(e.Row)), e.Action));
+                if ((this.RecipesRowChanging != null)) {
+                    this.RecipesRowChanging(this, new RecipesRowChangeEvent(((RecipesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1285,8 +1041,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.resourcesRowDeleted != null)) {
-                    this.resourcesRowDeleted(this, new resourcesRowChangeEvent(((resourcesRow)(e.Row)), e.Action));
+                if ((this.RecipesRowDeleted != null)) {
+                    this.RecipesRowDeleted(this, new RecipesRowChangeEvent(((RecipesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1294,14 +1050,14 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.resourcesRowDeleting != null)) {
-                    this.resourcesRowDeleting(this, new resourcesRowChangeEvent(((resourcesRow)(e.Row)), e.Action));
+                if ((this.RecipesRowDeleting != null)) {
+                    this.RecipesRowDeleting(this, new RecipesRowChangeEvent(((RecipesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveresourcesRow(resourcesRow row) {
+            public void RemoveRecipesRow(RecipesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1310,7 +1066,7 @@ namespace MastercraftWFA {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataDrawIO ds = new DataDrawIO();
+                DataSet1 ds = new DataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1328,7 +1084,7 @@ namespace MastercraftWFA {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "resourcesDataTable";
+                attribute2.FixedValue = "RecipesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1374,7 +1130,9 @@ namespace MastercraftWFA {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class priceHistoryDataTable : global::System.Data.TypedTableBase<priceHistoryRow> {
+        public partial class ResourcesDataTable : global::System.Data.TypedTableBase<ResourcesRow> {
+            
+            private global::System.Data.DataColumn columnresource_id;
             
             private global::System.Data.DataColumn columnresource;
             
@@ -1384,8 +1142,8 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public priceHistoryDataTable() {
-                this.TableName = "priceHistory";
+            public ResourcesDataTable() {
+                this.TableName = "Resources";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1393,7 +1151,7 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal priceHistoryDataTable(global::System.Data.DataTable table) {
+            internal ResourcesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1410,9 +1168,17 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected priceHistoryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ResourcesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn resource_idColumn {
+                get {
+                    return this.columnresource_id;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1450,55 +1216,55 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public priceHistoryRow this[int index] {
+            public ResourcesRow this[int index] {
                 get {
-                    return ((priceHistoryRow)(this.Rows[index]));
+                    return ((ResourcesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event priceHistoryRowChangeEventHandler priceHistoryRowChanging;
+            public event ResourcesRowChangeEventHandler ResourcesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event priceHistoryRowChangeEventHandler priceHistoryRowChanged;
+            public event ResourcesRowChangeEventHandler ResourcesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event priceHistoryRowChangeEventHandler priceHistoryRowDeleting;
+            public event ResourcesRowChangeEventHandler ResourcesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event priceHistoryRowChangeEventHandler priceHistoryRowDeleted;
+            public event ResourcesRowChangeEventHandler ResourcesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddpriceHistoryRow(priceHistoryRow row) {
+            public void AddResourcesRow(ResourcesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public priceHistoryRow AddpriceHistoryRow(string resource, int price, System.DateTime date) {
-                priceHistoryRow rowpriceHistoryRow = ((priceHistoryRow)(this.NewRow()));
+            public ResourcesRow AddResourcesRow(string resource_id, int resource, System.DateTime price, string date) {
+                ResourcesRow rowResourcesRow = ((ResourcesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        resource_id,
                         resource,
                         price,
                         date};
-                rowpriceHistoryRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowpriceHistoryRow);
-                return rowpriceHistoryRow;
+                rowResourcesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowResourcesRow);
+                return rowResourcesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public priceHistoryRow FindByresourcedate(string resource, System.DateTime date) {
-                return ((priceHistoryRow)(this.Rows.Find(new object[] {
-                            resource,
-                            date})));
+            public ResourcesRow FindByresource_id(string resource_id) {
+                return ((ResourcesRow)(this.Rows.Find(new object[] {
+                            resource_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                priceHistoryDataTable cln = ((priceHistoryDataTable)(base.Clone()));
+                ResourcesDataTable cln = ((ResourcesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1506,12 +1272,13 @@ namespace MastercraftWFA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new priceHistoryDataTable();
+                return new ResourcesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnresource_id = base.Columns["resource_id"];
                 this.columnresource = base.Columns["resource"];
                 this.columnprice = base.Columns["price"];
                 this.columndate = base.Columns["date"];
@@ -1520,45 +1287,44 @@ namespace MastercraftWFA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnresource = new global::System.Data.DataColumn("resource", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnresource_id = new global::System.Data.DataColumn("resource_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnresource_id);
+                this.columnresource = new global::System.Data.DataColumn("resource", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnresource);
-                this.columnprice = new global::System.Data.DataColumn("price", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnprice = new global::System.Data.DataColumn("price", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprice);
-                this.columndate = new global::System.Data.DataColumn("date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndate = new global::System.Data.DataColumn("date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnresource,
-                                this.columndate}, true));
-                this.columnresource.AllowDBNull = false;
-                this.columnresource.Caption = "name";
-                this.columndate.AllowDBNull = false;
-                this.columndate.Caption = "updated";
+                                this.columnresource_id}, true));
+                this.columnresource_id.AllowDBNull = false;
+                this.columnresource_id.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public priceHistoryRow NewpriceHistoryRow() {
-                return ((priceHistoryRow)(this.NewRow()));
+            public ResourcesRow NewResourcesRow() {
+                return ((ResourcesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new priceHistoryRow(builder);
+                return new ResourcesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(priceHistoryRow);
+                return typeof(ResourcesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.priceHistoryRowChanged != null)) {
-                    this.priceHistoryRowChanged(this, new priceHistoryRowChangeEvent(((priceHistoryRow)(e.Row)), e.Action));
+                if ((this.ResourcesRowChanged != null)) {
+                    this.ResourcesRowChanged(this, new ResourcesRowChangeEvent(((ResourcesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1566,8 +1332,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.priceHistoryRowChanging != null)) {
-                    this.priceHistoryRowChanging(this, new priceHistoryRowChangeEvent(((priceHistoryRow)(e.Row)), e.Action));
+                if ((this.ResourcesRowChanging != null)) {
+                    this.ResourcesRowChanging(this, new ResourcesRowChangeEvent(((ResourcesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1575,8 +1341,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.priceHistoryRowDeleted != null)) {
-                    this.priceHistoryRowDeleted(this, new priceHistoryRowChangeEvent(((priceHistoryRow)(e.Row)), e.Action));
+                if ((this.ResourcesRowDeleted != null)) {
+                    this.ResourcesRowDeleted(this, new ResourcesRowChangeEvent(((ResourcesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1584,14 +1350,14 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.priceHistoryRowDeleting != null)) {
-                    this.priceHistoryRowDeleting(this, new priceHistoryRowChangeEvent(((priceHistoryRow)(e.Row)), e.Action));
+                if ((this.ResourcesRowDeleting != null)) {
+                    this.ResourcesRowDeleting(this, new ResourcesRowChangeEvent(((ResourcesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovepriceHistoryRow(priceHistoryRow row) {
+            public void RemoveResourcesRow(ResourcesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1600,7 +1366,7 @@ namespace MastercraftWFA {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataDrawIO ds = new DataDrawIO();
+                DataSet1 ds = new DataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1618,7 +1384,7 @@ namespace MastercraftWFA {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "priceHistoryDataTable";
+                attribute2.FixedValue = "ResourcesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1664,18 +1430,18 @@ namespace MastercraftWFA {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class consumedResourcesDataTable : global::System.Data.TypedTableBase<consumedResourcesRow> {
+        public partial class PriceHistoryDataTable : global::System.Data.TypedTableBase<PriceHistoryRow> {
             
-            private global::System.Data.DataColumn columnrecipe;
+            private global::System.Data.DataColumn columnresource_id;
             
-            private global::System.Data.DataColumn columnresource;
+            private global::System.Data.DataColumn columnprice;
             
-            private global::System.Data.DataColumn columnamount;
+            private global::System.Data.DataColumn columndate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public consumedResourcesDataTable() {
-                this.TableName = "consumedResources";
+            public PriceHistoryDataTable() {
+                this.TableName = "PriceHistory";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1683,7 +1449,7 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal consumedResourcesDataTable(global::System.Data.DataTable table) {
+            internal PriceHistoryDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1700,24 +1466,314 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected consumedResourcesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PriceHistoryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn recipeColumn {
+            public global::System.Data.DataColumn resource_idColumn {
                 get {
-                    return this.columnrecipe;
+                    return this.columnresource_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn resourceColumn {
+            public global::System.Data.DataColumn priceColumn {
                 get {
-                    return this.columnresource;
+                    return this.columnprice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dateColumn {
+                get {
+                    return this.columndate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PriceHistoryRow this[int index] {
+                get {
+                    return ((PriceHistoryRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PriceHistoryRowChangeEventHandler PriceHistoryRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PriceHistoryRowChangeEventHandler PriceHistoryRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PriceHistoryRowChangeEventHandler PriceHistoryRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PriceHistoryRowChangeEventHandler PriceHistoryRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddPriceHistoryRow(PriceHistoryRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PriceHistoryRow AddPriceHistoryRow(string resource_id, int price, System.DateTime date) {
+                PriceHistoryRow rowPriceHistoryRow = ((PriceHistoryRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        resource_id,
+                        price,
+                        date};
+                rowPriceHistoryRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPriceHistoryRow);
+                return rowPriceHistoryRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PriceHistoryRow FindByresource_iddate(string resource_id, System.DateTime date) {
+                return ((PriceHistoryRow)(this.Rows.Find(new object[] {
+                            resource_id,
+                            date})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                PriceHistoryDataTable cln = ((PriceHistoryDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new PriceHistoryDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnresource_id = base.Columns["resource_id"];
+                this.columnprice = base.Columns["price"];
+                this.columndate = base.Columns["date"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnresource_id = new global::System.Data.DataColumn("resource_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnresource_id);
+                this.columnprice = new global::System.Data.DataColumn("price", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprice);
+                this.columndate = new global::System.Data.DataColumn("date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnresource_id,
+                                this.columndate}, true));
+                this.columnresource_id.AllowDBNull = false;
+                this.columnresource_id.Caption = "name";
+                this.columndate.AllowDBNull = false;
+                this.columndate.Caption = "updated";
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PriceHistoryRow NewPriceHistoryRow() {
+                return ((PriceHistoryRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new PriceHistoryRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(PriceHistoryRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.PriceHistoryRowChanged != null)) {
+                    this.PriceHistoryRowChanged(this, new PriceHistoryRowChangeEvent(((PriceHistoryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.PriceHistoryRowChanging != null)) {
+                    this.PriceHistoryRowChanging(this, new PriceHistoryRowChangeEvent(((PriceHistoryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.PriceHistoryRowDeleted != null)) {
+                    this.PriceHistoryRowDeleted(this, new PriceHistoryRowChangeEvent(((PriceHistoryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.PriceHistoryRowDeleting != null)) {
+                    this.PriceHistoryRowDeleting(this, new PriceHistoryRowChangeEvent(((PriceHistoryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemovePriceHistoryRow(PriceHistoryRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSet1 ds = new DataSet1();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "PriceHistoryDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class RecipeCostsDataTable : global::System.Data.TypedTableBase<RecipeCostsRow> {
+            
+            private global::System.Data.DataColumn columnrecipe_id;
+            
+            private global::System.Data.DataColumn columnresource_id;
+            
+            private global::System.Data.DataColumn columnamount;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RecipeCostsDataTable() {
+                this.TableName = "RecipeCosts";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal RecipeCostsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected RecipeCostsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn recipe_idColumn {
+                get {
+                    return this.columnrecipe_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn resource_idColumn {
+                get {
+                    return this.columnresource_id;
                 }
             }
             
@@ -1740,55 +1796,55 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public consumedResourcesRow this[int index] {
+            public RecipeCostsRow this[int index] {
                 get {
-                    return ((consumedResourcesRow)(this.Rows[index]));
+                    return ((RecipeCostsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event consumedResourcesRowChangeEventHandler consumedResourcesRowChanging;
+            public event RecipeCostsRowChangeEventHandler RecipeCostsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event consumedResourcesRowChangeEventHandler consumedResourcesRowChanged;
+            public event RecipeCostsRowChangeEventHandler RecipeCostsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event consumedResourcesRowChangeEventHandler consumedResourcesRowDeleting;
+            public event RecipeCostsRowChangeEventHandler RecipeCostsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event consumedResourcesRowChangeEventHandler consumedResourcesRowDeleted;
+            public event RecipeCostsRowChangeEventHandler RecipeCostsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddconsumedResourcesRow(consumedResourcesRow row) {
+            public void AddRecipeCostsRow(RecipeCostsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public consumedResourcesRow AddconsumedResourcesRow(string recipe, string resource, int amount) {
-                consumedResourcesRow rowconsumedResourcesRow = ((consumedResourcesRow)(this.NewRow()));
+            public RecipeCostsRow AddRecipeCostsRow(string recipe_id, string resource_id, int amount) {
+                RecipeCostsRow rowRecipeCostsRow = ((RecipeCostsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        recipe,
-                        resource,
+                        recipe_id,
+                        resource_id,
                         amount};
-                rowconsumedResourcesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowconsumedResourcesRow);
-                return rowconsumedResourcesRow;
+                rowRecipeCostsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRecipeCostsRow);
+                return rowRecipeCostsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public consumedResourcesRow FindByreciperesource(string recipe, string resource) {
-                return ((consumedResourcesRow)(this.Rows.Find(new object[] {
-                            recipe,
-                            resource})));
+            public RecipeCostsRow FindByrecipe_idresource_id(string recipe_id, string resource_id) {
+                return ((RecipeCostsRow)(this.Rows.Find(new object[] {
+                            recipe_id,
+                            resource_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                consumedResourcesDataTable cln = ((consumedResourcesDataTable)(base.Clone()));
+                RecipeCostsDataTable cln = ((RecipeCostsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1796,57 +1852,57 @@ namespace MastercraftWFA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new consumedResourcesDataTable();
+                return new RecipeCostsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnrecipe = base.Columns["recipe"];
-                this.columnresource = base.Columns["resource"];
+                this.columnrecipe_id = base.Columns["recipe_id"];
+                this.columnresource_id = base.Columns["resource_id"];
                 this.columnamount = base.Columns["amount"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnrecipe = new global::System.Data.DataColumn("recipe", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrecipe);
-                this.columnresource = new global::System.Data.DataColumn("resource", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnresource);
+                this.columnrecipe_id = new global::System.Data.DataColumn("recipe_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrecipe_id);
+                this.columnresource_id = new global::System.Data.DataColumn("resource_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnresource_id);
                 this.columnamount = new global::System.Data.DataColumn("amount", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnamount);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnrecipe,
-                                this.columnresource}, true));
-                this.columnrecipe.AllowDBNull = false;
-                this.columnresource.AllowDBNull = false;
+                                this.columnrecipe_id,
+                                this.columnresource_id}, true));
+                this.columnrecipe_id.AllowDBNull = false;
+                this.columnresource_id.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public consumedResourcesRow NewconsumedResourcesRow() {
-                return ((consumedResourcesRow)(this.NewRow()));
+            public RecipeCostsRow NewRecipeCostsRow() {
+                return ((RecipeCostsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new consumedResourcesRow(builder);
+                return new RecipeCostsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(consumedResourcesRow);
+                return typeof(RecipeCostsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.consumedResourcesRowChanged != null)) {
-                    this.consumedResourcesRowChanged(this, new consumedResourcesRowChangeEvent(((consumedResourcesRow)(e.Row)), e.Action));
+                if ((this.RecipeCostsRowChanged != null)) {
+                    this.RecipeCostsRowChanged(this, new RecipeCostsRowChangeEvent(((RecipeCostsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1854,8 +1910,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.consumedResourcesRowChanging != null)) {
-                    this.consumedResourcesRowChanging(this, new consumedResourcesRowChangeEvent(((consumedResourcesRow)(e.Row)), e.Action));
+                if ((this.RecipeCostsRowChanging != null)) {
+                    this.RecipeCostsRowChanging(this, new RecipeCostsRowChangeEvent(((RecipeCostsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1863,8 +1919,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.consumedResourcesRowDeleted != null)) {
-                    this.consumedResourcesRowDeleted(this, new consumedResourcesRowChangeEvent(((consumedResourcesRow)(e.Row)), e.Action));
+                if ((this.RecipeCostsRowDeleted != null)) {
+                    this.RecipeCostsRowDeleted(this, new RecipeCostsRowChangeEvent(((RecipeCostsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1872,14 +1928,14 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.consumedResourcesRowDeleting != null)) {
-                    this.consumedResourcesRowDeleting(this, new consumedResourcesRowChangeEvent(((consumedResourcesRow)(e.Row)), e.Action));
+                if ((this.RecipeCostsRowDeleting != null)) {
+                    this.RecipeCostsRowDeleting(this, new RecipeCostsRowChangeEvent(((RecipeCostsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveconsumedResourcesRow(consumedResourcesRow row) {
+            public void RemoveRecipeCostsRow(RecipeCostsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1888,7 +1944,7 @@ namespace MastercraftWFA {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataDrawIO ds = new DataDrawIO();
+                DataSet1 ds = new DataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1906,7 +1962,7 @@ namespace MastercraftWFA {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "consumedResourcesDataTable";
+                attribute2.FixedValue = "RecipeCostsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1952,20 +2008,20 @@ namespace MastercraftWFA {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class resultsDataTable : global::System.Data.TypedTableBase<resultsRow> {
+        public partial class RecipeResultsDataTable : global::System.Data.TypedTableBase<RecipeResultsRow> {
             
-            private global::System.Data.DataColumn columnrecipe;
+            private global::System.Data.DataColumn columnrecipe_id;
             
             private global::System.Data.DataColumn columntier;
             
-            private global::System.Data.DataColumn columnresource;
+            private global::System.Data.DataColumn columnresource_id;
             
             private global::System.Data.DataColumn columnamount;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resultsDataTable() {
-                this.TableName = "results";
+            public RecipeResultsDataTable() {
+                this.TableName = "RecipeResults";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1973,7 +2029,7 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal resultsDataTable(global::System.Data.DataTable table) {
+            internal RecipeResultsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1990,16 +2046,16 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected resultsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected RecipeResultsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn recipeColumn {
+            public global::System.Data.DataColumn recipe_idColumn {
                 get {
-                    return this.columnrecipe;
+                    return this.columnrecipe_id;
                 }
             }
             
@@ -2013,9 +2069,9 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn resourceColumn {
+            public global::System.Data.DataColumn resource_idColumn {
                 get {
-                    return this.columnresource;
+                    return this.columnresource_id;
                 }
             }
             
@@ -2038,57 +2094,57 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resultsRow this[int index] {
+            public RecipeResultsRow this[int index] {
                 get {
-                    return ((resultsRow)(this.Rows[index]));
+                    return ((RecipeResultsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event resultsRowChangeEventHandler resultsRowChanging;
+            public event RecipeResultsRowChangeEventHandler RecipeResultsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event resultsRowChangeEventHandler resultsRowChanged;
+            public event RecipeResultsRowChangeEventHandler RecipeResultsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event resultsRowChangeEventHandler resultsRowDeleting;
+            public event RecipeResultsRowChangeEventHandler RecipeResultsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event resultsRowChangeEventHandler resultsRowDeleted;
+            public event RecipeResultsRowChangeEventHandler RecipeResultsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddresultsRow(resultsRow row) {
+            public void AddRecipeResultsRow(RecipeResultsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resultsRow AddresultsRow(string recipe, int tier, string resource, int amount) {
-                resultsRow rowresultsRow = ((resultsRow)(this.NewRow()));
+            public RecipeResultsRow AddRecipeResultsRow(string recipe_id, int tier, string resource_id, int amount) {
+                RecipeResultsRow rowRecipeResultsRow = ((RecipeResultsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        recipe,
+                        recipe_id,
                         tier,
-                        resource,
+                        resource_id,
                         amount};
-                rowresultsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowresultsRow);
-                return rowresultsRow;
+                rowRecipeResultsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRecipeResultsRow);
+                return rowRecipeResultsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resultsRow FindByrecipetierresource(string recipe, int tier, string resource) {
-                return ((resultsRow)(this.Rows.Find(new object[] {
-                            recipe,
+            public RecipeResultsRow FindByrecipe_idtierresource_id(string recipe_id, int tier, string resource_id) {
+                return ((RecipeResultsRow)(this.Rows.Find(new object[] {
+                            recipe_id,
                             tier,
-                            resource})));
+                            resource_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                resultsDataTable cln = ((resultsDataTable)(base.Clone()));
+                RecipeResultsDataTable cln = ((RecipeResultsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2096,67 +2152,67 @@ namespace MastercraftWFA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new resultsDataTable();
+                return new RecipeResultsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnrecipe = base.Columns["recipe"];
+                this.columnrecipe_id = base.Columns["recipe_id"];
                 this.columntier = base.Columns["tier"];
-                this.columnresource = base.Columns["resource"];
+                this.columnresource_id = base.Columns["resource_id"];
                 this.columnamount = base.Columns["amount"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnrecipe = new global::System.Data.DataColumn("recipe", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrecipe);
+                this.columnrecipe_id = new global::System.Data.DataColumn("recipe_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrecipe_id);
                 this.columntier = new global::System.Data.DataColumn("tier", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntier);
-                this.columnresource = new global::System.Data.DataColumn("resource", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnresource);
+                this.columnresource_id = new global::System.Data.DataColumn("resource_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnresource_id);
                 this.columnamount = new global::System.Data.DataColumn("amount", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnamount);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnrecipe,
+                                this.columnrecipe_id,
                                 this.columntier,
-                                this.columnresource}, true));
+                                this.columnresource_id}, true));
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
-                                this.columnrecipe}, false));
-                this.columnrecipe.AllowDBNull = false;
-                this.columnrecipe.Unique = true;
+                                this.columnrecipe_id}, false));
+                this.columnrecipe_id.AllowDBNull = false;
+                this.columnrecipe_id.Unique = true;
                 this.columntier.AllowDBNull = false;
                 this.columntier.Caption = "resource";
-                this.columnresource.AllowDBNull = false;
-                this.columnresource.Caption = "amount";
+                this.columnresource_id.AllowDBNull = false;
+                this.columnresource_id.Caption = "amount";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resultsRow NewresultsRow() {
-                return ((resultsRow)(this.NewRow()));
+            public RecipeResultsRow NewRecipeResultsRow() {
+                return ((RecipeResultsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new resultsRow(builder);
+                return new RecipeResultsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(resultsRow);
+                return typeof(RecipeResultsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.resultsRowChanged != null)) {
-                    this.resultsRowChanged(this, new resultsRowChangeEvent(((resultsRow)(e.Row)), e.Action));
+                if ((this.RecipeResultsRowChanged != null)) {
+                    this.RecipeResultsRowChanged(this, new RecipeResultsRowChangeEvent(((RecipeResultsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2164,8 +2220,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.resultsRowChanging != null)) {
-                    this.resultsRowChanging(this, new resultsRowChangeEvent(((resultsRow)(e.Row)), e.Action));
+                if ((this.RecipeResultsRowChanging != null)) {
+                    this.RecipeResultsRowChanging(this, new RecipeResultsRowChangeEvent(((RecipeResultsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2173,8 +2229,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.resultsRowDeleted != null)) {
-                    this.resultsRowDeleted(this, new resultsRowChangeEvent(((resultsRow)(e.Row)), e.Action));
+                if ((this.RecipeResultsRowDeleted != null)) {
+                    this.RecipeResultsRowDeleted(this, new RecipeResultsRowChangeEvent(((RecipeResultsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2182,14 +2238,14 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.resultsRowDeleting != null)) {
-                    this.resultsRowDeleting(this, new resultsRowChangeEvent(((resultsRow)(e.Row)), e.Action));
+                if ((this.RecipeResultsRowDeleting != null)) {
+                    this.RecipeResultsRowDeleting(this, new RecipeResultsRowChangeEvent(((RecipeResultsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveresultsRow(resultsRow row) {
+            public void RemoveRecipeResultsRow(RecipeResultsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2198,7 +2254,7 @@ namespace MastercraftWFA {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataDrawIO ds = new DataDrawIO();
+                DataSet1 ds = new DataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2216,7 +2272,7 @@ namespace MastercraftWFA {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "resultsDataTable";
+                attribute2.FixedValue = "RecipeResultsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2262,18 +2318,18 @@ namespace MastercraftWFA {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class getToolDataTable : global::System.Data.TypedTableBase<getToolRow> {
+        public partial class UpgradesDataTable : global::System.Data.TypedTableBase<UpgradesRow> {
             
-            private global::System.Data.DataColumn columnprofession;
+            private global::System.Data.DataColumn columnprofession_id;
             
-            private global::System.Data.DataColumn columnresource;
+            private global::System.Data.DataColumn columnresource_id;
             
             private global::System.Data.DataColumn columnamount;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public getToolDataTable() {
-                this.TableName = "getTool";
+            public UpgradesDataTable() {
+                this.TableName = "Upgrades";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2281,7 +2337,7 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal getToolDataTable(global::System.Data.DataTable table) {
+            internal UpgradesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2298,24 +2354,24 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected getToolDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected UpgradesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn professionColumn {
+            public global::System.Data.DataColumn profession_idColumn {
                 get {
-                    return this.columnprofession;
+                    return this.columnprofession_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn resourceColumn {
+            public global::System.Data.DataColumn resource_idColumn {
                 get {
-                    return this.columnresource;
+                    return this.columnresource_id;
                 }
             }
             
@@ -2338,55 +2394,55 @@ namespace MastercraftWFA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public getToolRow this[int index] {
+            public UpgradesRow this[int index] {
                 get {
-                    return ((getToolRow)(this.Rows[index]));
+                    return ((UpgradesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event getToolRowChangeEventHandler getToolRowChanging;
+            public event UpgradesRowChangeEventHandler UpgradesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event getToolRowChangeEventHandler getToolRowChanged;
+            public event UpgradesRowChangeEventHandler UpgradesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event getToolRowChangeEventHandler getToolRowDeleting;
+            public event UpgradesRowChangeEventHandler UpgradesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event getToolRowChangeEventHandler getToolRowDeleted;
+            public event UpgradesRowChangeEventHandler UpgradesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddgetToolRow(getToolRow row) {
+            public void AddUpgradesRow(UpgradesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public getToolRow AddgetToolRow(string profession, string resource, int amount) {
-                getToolRow rowgetToolRow = ((getToolRow)(this.NewRow()));
+            public UpgradesRow AddUpgradesRow(string profession_id, string resource_id, int amount) {
+                UpgradesRow rowUpgradesRow = ((UpgradesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        profession,
-                        resource,
+                        profession_id,
+                        resource_id,
                         amount};
-                rowgetToolRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowgetToolRow);
-                return rowgetToolRow;
+                rowUpgradesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUpgradesRow);
+                return rowUpgradesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public getToolRow FindByprofessionresource(string profession, string resource) {
-                return ((getToolRow)(this.Rows.Find(new object[] {
-                            profession,
-                            resource})));
+            public UpgradesRow FindByprofession_idresource_id(string profession_id, string resource_id) {
+                return ((UpgradesRow)(this.Rows.Find(new object[] {
+                            profession_id,
+                            resource_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                getToolDataTable cln = ((getToolDataTable)(base.Clone()));
+                UpgradesDataTable cln = ((UpgradesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2394,57 +2450,57 @@ namespace MastercraftWFA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new getToolDataTable();
+                return new UpgradesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnprofession = base.Columns["profession"];
-                this.columnresource = base.Columns["resource"];
+                this.columnprofession_id = base.Columns["profession_id"];
+                this.columnresource_id = base.Columns["resource_id"];
                 this.columnamount = base.Columns["amount"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnprofession = new global::System.Data.DataColumn("profession", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprofession);
-                this.columnresource = new global::System.Data.DataColumn("resource", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnresource);
+                this.columnprofession_id = new global::System.Data.DataColumn("profession_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprofession_id);
+                this.columnresource_id = new global::System.Data.DataColumn("resource_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnresource_id);
                 this.columnamount = new global::System.Data.DataColumn("amount", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnamount);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnprofession,
-                                this.columnresource}, true));
-                this.columnprofession.AllowDBNull = false;
-                this.columnresource.AllowDBNull = false;
+                                this.columnprofession_id,
+                                this.columnresource_id}, true));
+                this.columnprofession_id.AllowDBNull = false;
+                this.columnresource_id.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public getToolRow NewgetToolRow() {
-                return ((getToolRow)(this.NewRow()));
+            public UpgradesRow NewUpgradesRow() {
+                return ((UpgradesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new getToolRow(builder);
+                return new UpgradesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(getToolRow);
+                return typeof(UpgradesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.getToolRowChanged != null)) {
-                    this.getToolRowChanged(this, new getToolRowChangeEvent(((getToolRow)(e.Row)), e.Action));
+                if ((this.UpgradesRowChanged != null)) {
+                    this.UpgradesRowChanged(this, new UpgradesRowChangeEvent(((UpgradesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2452,8 +2508,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.getToolRowChanging != null)) {
-                    this.getToolRowChanging(this, new getToolRowChangeEvent(((getToolRow)(e.Row)), e.Action));
+                if ((this.UpgradesRowChanging != null)) {
+                    this.UpgradesRowChanging(this, new UpgradesRowChangeEvent(((UpgradesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2461,8 +2517,8 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.getToolRowDeleted != null)) {
-                    this.getToolRowDeleted(this, new getToolRowChangeEvent(((getToolRow)(e.Row)), e.Action));
+                if ((this.UpgradesRowDeleted != null)) {
+                    this.UpgradesRowDeleted(this, new UpgradesRowChangeEvent(((UpgradesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2470,14 +2526,14 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.getToolRowDeleting != null)) {
-                    this.getToolRowDeleting(this, new getToolRowChangeEvent(((getToolRow)(e.Row)), e.Action));
+                if ((this.UpgradesRowDeleting != null)) {
+                    this.UpgradesRowDeleting(this, new UpgradesRowChangeEvent(((UpgradesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovegetToolRow(getToolRow row) {
+            public void RemoveUpgradesRow(UpgradesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2486,7 +2542,7 @@ namespace MastercraftWFA {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataDrawIO ds = new DataDrawIO();
+                DataSet1 ds = new DataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2504,7 +2560,7 @@ namespace MastercraftWFA {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "getToolDataTable";
+                attribute2.FixedValue = "UpgradesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2548,215 +2604,327 @@ namespace MastercraftWFA {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class professionsRow : global::System.Data.DataRow {
+        public partial class ProfessionsRow : global::System.Data.DataRow {
             
-            private professionsDataTable tableprofessions;
+            private ProfessionsDataTable tableProfessions;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal professionsRow(global::System.Data.DataRowBuilder rb) : 
+            internal ProfessionsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableprofessions = ((professionsDataTable)(this.Table));
+                this.tableProfessions = ((ProfessionsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string name {
+            public string profession_id {
                 get {
-                    return ((string)(this[this.tableprofessions.nameColumn]));
+                    return ((string)(this[this.tableProfessions.profession_idColumn]));
                 }
                 set {
-                    this[this.tableprofessions.nameColumn] = value;
+                    this[this.tableProfessions.profession_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool tool {
+            public bool profession {
                 get {
                     try {
-                        return ((bool)(this[this.tableprofessions.toolColumn]));
+                        return ((bool)(this[this.tableProfessions.professionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tool\' in table \'professions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'profession\' in table \'Professions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableprofessions.toolColumn] = value;
+                    this[this.tableProfessions.professionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IstoolNull() {
-                return this.IsNull(this.tableprofessions.toolColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SettoolNull() {
-                this[this.tableprofessions.toolColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class recipesRow : global::System.Data.DataRow {
-            
-            private recipesDataTable tablerecipes;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal recipesRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablerecipes = ((recipesDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string name {
-                get {
-                    return ((string)(this[this.tablerecipes.nameColumn]));
-                }
-                set {
-                    this[this.tablerecipes.nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string profession {
+            public string grade {
                 get {
                     try {
-                        return ((string)(this[this.tablerecipes.professionColumn]));
+                        return ((string)(this[this.tableProfessions.gradeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'profession\' in table \'recipes\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'grade\' in table \'Professions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablerecipes.professionColumn] = value;
+                    this[this.tableProfessions.gradeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsprofessionNull() {
-                return this.IsNull(this.tablerecipes.professionColumn);
+                return this.IsNull(this.tableProfessions.professionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetprofessionNull() {
-                this[this.tablerecipes.professionColumn] = global::System.Convert.DBNull;
+                this[this.tableProfessions.professionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsgradeNull() {
+                return this.IsNull(this.tableProfessions.gradeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetgradeNull() {
+                this[this.tableProfessions.gradeColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class resourcesRow : global::System.Data.DataRow {
+        public partial class RecipesRow : global::System.Data.DataRow {
             
-            private resourcesDataTable tableresources;
+            private RecipesDataTable tableRecipes;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal resourcesRow(global::System.Data.DataRowBuilder rb) : 
+            internal RecipesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableresources = ((resourcesDataTable)(this.Table));
+                this.tableRecipes = ((RecipesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string name {
+            public string recipe_id {
                 get {
-                    return ((string)(this[this.tableresources.nameColumn]));
+                    return ((string)(this[this.tableRecipes.recipe_idColumn]));
                 }
                 set {
-                    this[this.tableresources.nameColumn] = value;
+                    this[this.tableRecipes.recipe_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int price {
-                get {
-                    try {
-                        return ((int)(this[this.tableresources.priceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'price\' in table \'resources\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableresources.priceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime updated {
+            public string recipe {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableresources.updatedColumn]));
+                        return ((string)(this[this.tableRecipes.recipeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'updated\' in table \'resources\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'recipe\' in table \'Recipes\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableresources.updatedColumn] = value;
+                    this[this.tableRecipes.recipeColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string profession_id {
+                get {
+                    try {
+                        return ((string)(this[this.tableRecipes.profession_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'profession_id\' in table \'Recipes\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRecipes.profession_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string grade {
+                get {
+                    try {
+                        return ((string)(this[this.tableRecipes.gradeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'grade\' in table \'Recipes\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRecipes.gradeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsrecipeNull() {
+                return this.IsNull(this.tableRecipes.recipeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetrecipeNull() {
+                this[this.tableRecipes.recipeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isprofession_idNull() {
+                return this.IsNull(this.tableRecipes.profession_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setprofession_idNull() {
+                this[this.tableRecipes.profession_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsgradeNull() {
+                return this.IsNull(this.tableRecipes.gradeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetgradeNull() {
+                this[this.tableRecipes.gradeColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ResourcesRow : global::System.Data.DataRow {
+            
+            private ResourcesDataTable tableResources;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ResourcesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableResources = ((ResourcesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string resource_id {
+                get {
+                    return ((string)(this[this.tableResources.resource_idColumn]));
+                }
+                set {
+                    this[this.tableResources.resource_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int resource {
+                get {
+                    try {
+                        return ((int)(this[this.tableResources.resourceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'resource\' in table \'Resources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableResources.resourceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime price {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableResources.priceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'price\' in table \'Resources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableResources.priceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string date {
+                get {
+                    try {
+                        return ((string)(this[this.tableResources.dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'date\' in table \'Resources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableResources.dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsresourceNull() {
+                return this.IsNull(this.tableResources.resourceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetresourceNull() {
+                this[this.tableResources.resourceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IspriceNull() {
-                return this.IsNull(this.tableresources.priceColumn);
+                return this.IsNull(this.tableResources.priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetpriceNull() {
-                this[this.tableresources.priceColumn] = global::System.Convert.DBNull;
+                this[this.tableResources.priceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsupdatedNull() {
-                return this.IsNull(this.tableresources.updatedColumn);
+            public bool IsdateNull() {
+                return this.IsNull(this.tableResources.dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetupdatedNull() {
-                this[this.tableresources.updatedColumn] = global::System.Convert.DBNull;
+            public void SetdateNull() {
+                this[this.tableResources.dateColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class priceHistoryRow : global::System.Data.DataRow {
+        public partial class PriceHistoryRow : global::System.Data.DataRow {
             
-            private priceHistoryDataTable tablepriceHistory;
+            private PriceHistoryDataTable tablePriceHistory;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal priceHistoryRow(global::System.Data.DataRowBuilder rb) : 
+            internal PriceHistoryRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablepriceHistory = ((priceHistoryDataTable)(this.Table));
+                this.tablePriceHistory = ((PriceHistoryDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string resource {
+            public string resource_id {
                 get {
-                    return ((string)(this[this.tablepriceHistory.resourceColumn]));
+                    return ((string)(this[this.tablePriceHistory.resource_idColumn]));
                 }
                 set {
-                    this[this.tablepriceHistory.resourceColumn] = value;
+                    this[this.tablePriceHistory.resource_idColumn] = value;
                 }
             }
             
@@ -2765,14 +2933,14 @@ namespace MastercraftWFA {
             public int price {
                 get {
                     try {
-                        return ((int)(this[this.tablepriceHistory.priceColumn]));
+                        return ((int)(this[this.tablePriceHistory.priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'price\' in table \'priceHistory\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'price\' in table \'PriceHistory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepriceHistory.priceColumn] = value;
+                    this[this.tablePriceHistory.priceColumn] = value;
                 }
             }
             
@@ -2780,59 +2948,59 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime date {
                 get {
-                    return ((global::System.DateTime)(this[this.tablepriceHistory.dateColumn]));
+                    return ((global::System.DateTime)(this[this.tablePriceHistory.dateColumn]));
                 }
                 set {
-                    this[this.tablepriceHistory.dateColumn] = value;
+                    this[this.tablePriceHistory.dateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IspriceNull() {
-                return this.IsNull(this.tablepriceHistory.priceColumn);
+                return this.IsNull(this.tablePriceHistory.priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetpriceNull() {
-                this[this.tablepriceHistory.priceColumn] = global::System.Convert.DBNull;
+                this[this.tablePriceHistory.priceColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class consumedResourcesRow : global::System.Data.DataRow {
+        public partial class RecipeCostsRow : global::System.Data.DataRow {
             
-            private consumedResourcesDataTable tableconsumedResources;
+            private RecipeCostsDataTable tableRecipeCosts;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal consumedResourcesRow(global::System.Data.DataRowBuilder rb) : 
+            internal RecipeCostsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableconsumedResources = ((consumedResourcesDataTable)(this.Table));
+                this.tableRecipeCosts = ((RecipeCostsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string recipe {
+            public string recipe_id {
                 get {
-                    return ((string)(this[this.tableconsumedResources.recipeColumn]));
+                    return ((string)(this[this.tableRecipeCosts.recipe_idColumn]));
                 }
                 set {
-                    this[this.tableconsumedResources.recipeColumn] = value;
+                    this[this.tableRecipeCosts.recipe_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string resource {
+            public string resource_id {
                 get {
-                    return ((string)(this[this.tableconsumedResources.resourceColumn]));
+                    return ((string)(this[this.tableRecipeCosts.resource_idColumn]));
                 }
                 set {
-                    this[this.tableconsumedResources.resourceColumn] = value;
+                    this[this.tableRecipeCosts.resource_idColumn] = value;
                 }
             }
             
@@ -2841,52 +3009,52 @@ namespace MastercraftWFA {
             public int amount {
                 get {
                     try {
-                        return ((int)(this[this.tableconsumedResources.amountColumn]));
+                        return ((int)(this[this.tableRecipeCosts.amountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'amount\' in table \'consumedResources\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'amount\' in table \'RecipeCosts\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableconsumedResources.amountColumn] = value;
+                    this[this.tableRecipeCosts.amountColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsamountNull() {
-                return this.IsNull(this.tableconsumedResources.amountColumn);
+                return this.IsNull(this.tableRecipeCosts.amountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetamountNull() {
-                this[this.tableconsumedResources.amountColumn] = global::System.Convert.DBNull;
+                this[this.tableRecipeCosts.amountColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class resultsRow : global::System.Data.DataRow {
+        public partial class RecipeResultsRow : global::System.Data.DataRow {
             
-            private resultsDataTable tableresults;
+            private RecipeResultsDataTable tableRecipeResults;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal resultsRow(global::System.Data.DataRowBuilder rb) : 
+            internal RecipeResultsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableresults = ((resultsDataTable)(this.Table));
+                this.tableRecipeResults = ((RecipeResultsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string recipe {
+            public string recipe_id {
                 get {
-                    return ((string)(this[this.tableresults.recipeColumn]));
+                    return ((string)(this[this.tableRecipeResults.recipe_idColumn]));
                 }
                 set {
-                    this[this.tableresults.recipeColumn] = value;
+                    this[this.tableRecipeResults.recipe_idColumn] = value;
                 }
             }
             
@@ -2894,21 +3062,21 @@ namespace MastercraftWFA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int tier {
                 get {
-                    return ((int)(this[this.tableresults.tierColumn]));
+                    return ((int)(this[this.tableRecipeResults.tierColumn]));
                 }
                 set {
-                    this[this.tableresults.tierColumn] = value;
+                    this[this.tableRecipeResults.tierColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string resource {
+            public string resource_id {
                 get {
-                    return ((string)(this[this.tableresults.resourceColumn]));
+                    return ((string)(this[this.tableRecipeResults.resource_idColumn]));
                 }
                 set {
-                    this[this.tableresults.resourceColumn] = value;
+                    this[this.tableRecipeResults.resource_idColumn] = value;
                 }
             }
             
@@ -2917,63 +3085,63 @@ namespace MastercraftWFA {
             public int amount {
                 get {
                     try {
-                        return ((int)(this[this.tableresults.amountColumn]));
+                        return ((int)(this[this.tableRecipeResults.amountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'amount\' in table \'results\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'amount\' in table \'RecipeResults\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableresults.amountColumn] = value;
+                    this[this.tableRecipeResults.amountColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsamountNull() {
-                return this.IsNull(this.tableresults.amountColumn);
+                return this.IsNull(this.tableRecipeResults.amountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetamountNull() {
-                this[this.tableresults.amountColumn] = global::System.Convert.DBNull;
+                this[this.tableRecipeResults.amountColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class getToolRow : global::System.Data.DataRow {
+        public partial class UpgradesRow : global::System.Data.DataRow {
             
-            private getToolDataTable tablegetTool;
+            private UpgradesDataTable tableUpgrades;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal getToolRow(global::System.Data.DataRowBuilder rb) : 
+            internal UpgradesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablegetTool = ((getToolDataTable)(this.Table));
+                this.tableUpgrades = ((UpgradesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string profession {
+            public string profession_id {
                 get {
-                    return ((string)(this[this.tablegetTool.professionColumn]));
+                    return ((string)(this[this.tableUpgrades.profession_idColumn]));
                 }
                 set {
-                    this[this.tablegetTool.professionColumn] = value;
+                    this[this.tableUpgrades.profession_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string resource {
+            public string resource_id {
                 get {
-                    return ((string)(this[this.tablegetTool.resourceColumn]));
+                    return ((string)(this[this.tableUpgrades.resource_idColumn]));
                 }
                 set {
-                    this[this.tablegetTool.resourceColumn] = value;
+                    this[this.tableUpgrades.resource_idColumn] = value;
                 }
             }
             
@@ -2982,27 +3150,27 @@ namespace MastercraftWFA {
             public int amount {
                 get {
                     try {
-                        return ((int)(this[this.tablegetTool.amountColumn]));
+                        return ((int)(this[this.tableUpgrades.amountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'amount\' in table \'getTool\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'amount\' in table \'Upgrades\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablegetTool.amountColumn] = value;
+                    this[this.tableUpgrades.amountColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsamountNull() {
-                return this.IsNull(this.tablegetTool.amountColumn);
+                return this.IsNull(this.tableUpgrades.amountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetamountNull() {
-                this[this.tablegetTool.amountColumn] = global::System.Convert.DBNull;
+                this[this.tableUpgrades.amountColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3010,22 +3178,22 @@ namespace MastercraftWFA {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class professionsRowChangeEvent : global::System.EventArgs {
+        public class ProfessionsRowChangeEvent : global::System.EventArgs {
             
-            private professionsRow eventRow;
+            private ProfessionsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public professionsRowChangeEvent(professionsRow row, global::System.Data.DataRowAction action) {
+            public ProfessionsRowChangeEvent(ProfessionsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public professionsRow Row {
+            public ProfessionsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3044,22 +3212,22 @@ namespace MastercraftWFA {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class recipesRowChangeEvent : global::System.EventArgs {
+        public class RecipesRowChangeEvent : global::System.EventArgs {
             
-            private recipesRow eventRow;
+            private RecipesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public recipesRowChangeEvent(recipesRow row, global::System.Data.DataRowAction action) {
+            public RecipesRowChangeEvent(RecipesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public recipesRow Row {
+            public RecipesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3078,22 +3246,22 @@ namespace MastercraftWFA {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class resourcesRowChangeEvent : global::System.EventArgs {
+        public class ResourcesRowChangeEvent : global::System.EventArgs {
             
-            private resourcesRow eventRow;
+            private ResourcesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resourcesRowChangeEvent(resourcesRow row, global::System.Data.DataRowAction action) {
+            public ResourcesRowChangeEvent(ResourcesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resourcesRow Row {
+            public ResourcesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3112,22 +3280,22 @@ namespace MastercraftWFA {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class priceHistoryRowChangeEvent : global::System.EventArgs {
+        public class PriceHistoryRowChangeEvent : global::System.EventArgs {
             
-            private priceHistoryRow eventRow;
+            private PriceHistoryRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public priceHistoryRowChangeEvent(priceHistoryRow row, global::System.Data.DataRowAction action) {
+            public PriceHistoryRowChangeEvent(PriceHistoryRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public priceHistoryRow Row {
+            public PriceHistoryRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3146,22 +3314,22 @@ namespace MastercraftWFA {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class consumedResourcesRowChangeEvent : global::System.EventArgs {
+        public class RecipeCostsRowChangeEvent : global::System.EventArgs {
             
-            private consumedResourcesRow eventRow;
+            private RecipeCostsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public consumedResourcesRowChangeEvent(consumedResourcesRow row, global::System.Data.DataRowAction action) {
+            public RecipeCostsRowChangeEvent(RecipeCostsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public consumedResourcesRow Row {
+            public RecipeCostsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3180,22 +3348,22 @@ namespace MastercraftWFA {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class resultsRowChangeEvent : global::System.EventArgs {
+        public class RecipeResultsRowChangeEvent : global::System.EventArgs {
             
-            private resultsRow eventRow;
+            private RecipeResultsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resultsRowChangeEvent(resultsRow row, global::System.Data.DataRowAction action) {
+            public RecipeResultsRowChangeEvent(RecipeResultsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resultsRow Row {
+            public RecipeResultsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3214,22 +3382,22 @@ namespace MastercraftWFA {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class getToolRowChangeEvent : global::System.EventArgs {
+        public class UpgradesRowChangeEvent : global::System.EventArgs {
             
-            private getToolRow eventRow;
+            private UpgradesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public getToolRowChangeEvent(getToolRow row, global::System.Data.DataRowAction action) {
+            public UpgradesRowChangeEvent(UpgradesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public getToolRow Row {
+            public UpgradesRow Row {
                 get {
                     return this.eventRow;
                 }

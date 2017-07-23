@@ -6,3 +6,9 @@
         }
     }
 }
+namespace MastercraftWFA {
+
+
+    partial class DataSet1 {
+    }
+}

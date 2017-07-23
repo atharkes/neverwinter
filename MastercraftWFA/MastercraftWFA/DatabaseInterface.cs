@@ -63,7 +63,7 @@ namespace MastercraftWFA {
         }
 
         public DataTable GetConsumedResourcesTable(string recipe) {
-            return Database.GetRecipesConsumedResources(recipe);
+            return Database.GetRecipesCosts(recipe);
         }
 
         public List<object> GetResourceList() {

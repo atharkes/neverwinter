@@ -9,6 +9,7 @@ namespace MastercraftWFA {
     static class Database {
         static SQLiteConnection dbConnection;
 
+        #region Tables and Columns
         public enum Tables {
             Professions,
             Recipes,
@@ -29,23 +30,51 @@ namespace MastercraftWFA {
             { Tables.Upgrades, "Upgrades" }
         };
 
-        public static Dictionary<Tables, string> TableColumns = new Dictionary<Tables, string>() {
-            { Tables.Professions, "(profession_id, profession, grade)" },
-            { Tables.Recipes, "(recipe_id, recipe, profession_id)" },
-            { Tables.Resources, "(resource_id, resource, price, updated)" },
-            { Tables.PriceHistory, "(resource_id, price, date)" },
-            { Tables.RecipeCosts, "(recipe_id, resource_id, amount)" },
-            { Tables.RecipeResults, "(recipe_id, tier, resource_id, amount)" },
-            { Tables.Upgrades, "(profession_id, grade, resource_id, amount)" }
+        public enum Columns {
+            profession_id,
+            profession,
+            recipe_id,
+            recipe,
+            resource_id,
+            resource,
+            grade,
+            price,
+            date,
+            amount,
+            tier
+        }
+
+        public static Dictionary<Columns, string> ColumnName = new Dictionary<Columns, string>() {
+            { Columns.profession_id, "profession_id" },
+            { Columns.profession, "profession" },
+            { Columns.recipe_id, "recipe_id" },
+            { Columns.recipe, "recipe" },
+            { Columns.resource_id, "resource_id" },
+            { Columns.resource, "resource" },
+            { Columns.grade, "grade" },
+            { Columns.price, "price" },
+            { Columns.date, "date" },
+            { Columns.amount, "amount" },
+            { Columns.tier, "tier" }
         };
 
+        public static Dictionary<Tables, string> TableColumns = new Dictionary<Tables, string>() {
+            { Tables.Professions, $"({ColumnName[Columns.profession_id]}, {ColumnName[Columns.profession]}, {ColumnName[Columns.grade]})" },
+            { Tables.Recipes, $"({ColumnName[Columns.recipe_id]}, {ColumnName[Columns.recipe]}, {ColumnName[Columns.grade]}, {ColumnName[Columns.profession_id]})" },
+            { Tables.Resources, $"({ColumnName[Columns.resource_id]}, {ColumnName[Columns.resource]}, {ColumnName[Columns.price]}, {ColumnName[Columns.date]})" },
+            { Tables.PriceHistory, $"({ColumnName[Columns.resource_id]}, {ColumnName[Columns.price]}, {ColumnName[Columns.date]})" },
+            { Tables.RecipeCosts, $"({ColumnName[Columns.recipe_id]}, {ColumnName[Columns.resource_id]}, {ColumnName[Columns.amount]})" },
+            { Tables.RecipeResults, $"({ColumnName[Columns.recipe_id]}, {ColumnName[Columns.tier]}, {ColumnName[Columns.resource_id]}, {ColumnName[Columns.amount]})" },
+            { Tables.Upgrades, $"({ColumnName[Columns.profession_id]}, {ColumnName[Columns.grade]}, {ColumnName[Columns.resource_id]}, {ColumnName[Columns.amount]})" }
+        };
+        #endregion
 
         public static void StartDatabase(string source) {
             if (!File.Exists(source)) {
                 CreateDatabase(source);
                 OpenDatabase(source);
                 AddTables();
-                AddData();
+                InsertDummyData();
             } else {
                 OpenDatabase(source);
             }
@@ -93,31 +122,31 @@ namespace MastercraftWFA {
 
         #region Populate Methods
         static void AddTables() {
-            AddTable("Professions", "(profession_id INTEGER, profession STRING, grade INT, " +
-                "PRIMARY KEY (profession_id))");
-            AddTable("Recipes", "(recipe_id INTEGER, recipe STRING, profession_id INTEGER, " +
-                "FOREIGN KEY (profession_id) REFERENCES Professions (profession_id), " +
-                "PRIMARY KEY (recipe_id))");
-            AddTable("Resources", "(resource_id INTEGER, resource STRING, price INT, updated DATETIME, " +
-                "PRIMARY KEY (resource_id))");
-            AddTable("PriceHistory", "(resource_id INTEGER, price INT, date DATETIME, " +
-                "FOREIGN KEY (resource_id) REFERENCES Resources (resource_id), " +
-                "PRIMARY KEY (resource_id, date))");
-            AddTable("RecipeCosts", "(recipe_id INTEGER, resource_id INTEGER, amount INT, " +
-                "FOREIGN KEY (recipe_id) REFERENCES Recipes (recipe_id), " +
-                "FOREIGN KEY (resource_id) REFERENCES Resources (resource_id), " +
-                "PRIMARY KEY (recipe_id, resource_id))");
-            AddTable("RecipeResults", "(recipe_id INTEGER, tier INT, resource_id INTEGER, amount INT, " +
-                "FOREIGN KEY (recipe_id) REFERENCES Recipes (recipe_id), " +
-                "FOREIGN KEY (resource_id) REFERENCES Resources (resource_id), " +
-                "PRIMARY KEY (recipe_id, tier, resource_id))");
-            AddTable("Upgrades", "(profession_id INTEGER, grade INT, resource_id INTEGER, amount INT, " +
-                "FOREIGN KEY (profession_id) REFERENCES Professions (profession_id), " +
-                "FOREIGN KEY (resource_id) REFERENCES Resources (resource_id), " +
-                "PRIMARY KEY (profession_id, grade, resource_id))");
+            AddTable(TableName[Tables.Professions], $"({ColumnName[Columns.profession_id]} INTEGER, {ColumnName[Columns.profession]} STRING, {ColumnName[Columns.grade]} INT, " +
+                $"PRIMARY KEY ({ColumnName[Columns.profession_id]}))");
+            AddTable(TableName[Tables.Recipes], $"({ColumnName[Columns.recipe_id]} INTEGER, {ColumnName[Columns.recipe]} STRING, {ColumnName[Columns.grade]} INT, {ColumnName[Columns.profession_id]} INTEGER, " +
+                $"FOREIGN KEY ({ColumnName[Columns.profession_id]}) REFERENCES {TableName[Tables.Professions]} ({ColumnName[Columns.profession_id]}), " +
+                $"PRIMARY KEY ({ColumnName[Columns.recipe_id]}))");
+            AddTable(TableName[Tables.Resources], $"({ColumnName[Columns.resource_id]} INTEGER, {ColumnName[Columns.resource]} STRING, {ColumnName[Columns.price]} INT, {ColumnName[Columns.date]} DATETIME, " +
+                $"PRIMARY KEY ({ColumnName[Columns.resource_id]}))");
+            AddTable(TableName[Tables.PriceHistory], $"({ColumnName[Columns.resource_id]} INTEGER, {ColumnName[Columns.price]} INT, {ColumnName[Columns.date]} DATETIME, " +
+                $"FOREIGN KEY ({ColumnName[Columns.resource_id]}) REFERENCES {TableName[Tables.Professions]} ({ColumnName[Columns.resource_id]}), " +
+                $"PRIMARY KEY ({ColumnName[Columns.resource_id]}, {ColumnName[Columns.date]}))");
+            AddTable(TableName[Tables.RecipeCosts], $"({ColumnName[Columns.recipe_id]} INTEGER, {ColumnName[Columns.resource_id]} INTEGER, {ColumnName[Columns.amount]} INT, " +
+                $"FOREIGN KEY ({ColumnName[Columns.recipe_id]}) REFERENCES {TableName[Tables.Recipes]} ({ColumnName[Columns.recipe_id]}), " +
+                $"FOREIGN KEY ({ColumnName[Columns.resource_id]}) REFERENCES {TableName[Tables.Resources]} ({ColumnName[Columns.resource_id]}), " +
+                $"PRIMARY KEY ({ColumnName[Columns.recipe_id]}, {ColumnName[Columns.resource_id]}))");
+            AddTable(TableName[Tables.RecipeResults], $"({ColumnName[Columns.recipe_id]} INTEGER, {ColumnName[Columns.tier]} INT, {ColumnName[Columns.resource_id]} INTEGER, {ColumnName[Columns.amount]} INT, " +
+                $"FOREIGN KEY ({ColumnName[Columns.recipe_id]}) REFERENCES {TableName[Tables.Recipes]} ({ColumnName[Columns.recipe_id]}), " +
+                $"FOREIGN KEY ({ColumnName[Columns.resource_id]}) REFERENCES {TableName[Tables.Resources]} ({ColumnName[Columns.resource_id]}), " +
+                $"PRIMARY KEY ({ColumnName[Columns.recipe_id]}, tier, {ColumnName[Columns.resource_id]}))");
+            AddTable(TableName[Tables.Upgrades], $"({ColumnName[Columns.profession_id]} INTEGER, {ColumnName[Columns.grade]} INT, {ColumnName[Columns.resource_id]} INTEGER, {ColumnName[Columns.amount]} INT, " +
+                $"FOREIGN KEY ({ColumnName[Columns.profession_id]}) REFERENCES {TableName[Tables.Professions]} ({ColumnName[Columns.profession_id]}), " +
+                $"FOREIGN KEY ({ColumnName[Columns.resource_id]}) REFERENCES {TableName[Tables.Resources]} ({ColumnName[Columns.resource_id]}), " +
+                $"PRIMARY KEY ({ColumnName[Columns.profession_id]}, {ColumnName[Columns.grade]}, {ColumnName[Columns.resource_id]}))");
         }
 
-        static void AddData() {
+        static void InsertDummyData() {
             InsertProfession("Artificing", 3);
             InsertProfession("Leatherworking", 3);
             InsertProfession("Weaponsmithing", 2);
@@ -131,12 +160,12 @@ namespace MastercraftWFA {
             InsertResource("Dark Lacquer", 45000);
             InsertResource("Ebony Wood", 25);
             InsertResource("Lacquered Ebony", 150000);
-            InsertRecipeName("Extract Dark Lacquer", "Artificing");
-            InsertRecipeName("Lacquer Ebony", "Artificing");
-            InsertRecipeConsumedResource("Extract Dark Lacquer", "Lacquer Branch", 4);
-            InsertRecipeConsumedResource("Extract Dark Lacquer", "Charcoal", 2);
-            InsertRecipeConsumedResource("Lacquer Ebony", "Dark Lacquer", 4);
-            InsertRecipeConsumedResource("Lacquer Ebony", "Ebony Wood", 2);
+            InsertRecipeName("Extract Dark Lacquer", "Artificing", 2);
+            InsertRecipeName("Lacquer Ebony", "Artificing", 2);
+            InsertRecipeCost("Extract Dark Lacquer", "Lacquer Branch", 4);
+            InsertRecipeCost("Extract Dark Lacquer", "Charcoal", 2);
+            InsertRecipeCost("Lacquer Ebony", "Dark Lacquer", 4);
+            InsertRecipeCost("Lacquer Ebony", "Ebony Wood", 2);
             InsertRecipeResult("Extract Dark Lacquer", 1, "Charcoal", 1);
             InsertRecipeResult("Extract Dark Lacquer", 2, "Lacquer Branch", 2);
             InsertRecipeResult("Extract Dark Lacquer", 3, "Dark Lacquer", 1);
@@ -150,36 +179,49 @@ namespace MastercraftWFA {
 
         #region Queries
         public static bool HasTool(string profession) {
-            DataTable result = Query("SELECT grade FROM professions WHERE name = '" + profession + "'");
+            DataTable result = Query($"SELECT {ColumnName[Columns.grade]} FROM {TableName[Tables.Professions]} WHERE {ColumnName[Columns.profession]} = '{profession}'");
             if (result.Rows[0].Field<int>("grade") >= 2)
                 return true;
             return false;
         }
 
+        public static long GetProfessionID(string profession) {
+            DataTable result = Query($"SELECT {ColumnName[Columns.profession_id]} FROM {TableName[Tables.Professions]} WHERE {ColumnName[Columns.profession]} = '{profession}'");
+            return result.Rows[0].Field<Int64>("profession_id");
+        }
+
+        public static long GetRecipeID(string recipe) {
+            DataTable result = Query($"SELECT {ColumnName[Columns.recipe_id]} FROM {TableName[Tables.Recipes]} WHERE {ColumnName[Columns.recipe]} = '{recipe}'");
+            return result.Rows[0].Field<Int64>("recipe_id");
+        }
+
+        public static long GetResourceID(string resource) {
+            DataTable result = Query($"SELECT {ColumnName[Columns.resource_id]} FROM {TableName[Tables.Resources]} WHERE {ColumnName[Columns.resource]} = '{resource}'");
+            return result.Rows[0].Field<Int64>("resource_id");
+        }
+
         public static DataTable GetProfessions() {
-            return Query("SELECT * FROM professions");
+            return Query($"SELECT * FROM {TableName[Tables.Professions]}");
         }
 
         public static DataTable GetResources() {
-            return Query(
-                "SELECT name, price, date(updated) AS updated " +
-                "FROM resources"
-            );
+            return Query($"SELECT {ColumnName[Columns.resource]}, {ColumnName[Columns.price]}, date({ColumnName[Columns.date]}) AS updated FROM {TableName[Tables.Resources]}");
         }
 
         public static DataTable GetResources(string recipe) {
+            long recipe_id = GetRecipeID(recipe);
             return Query(
-                "SELECT name, price, date(updated) AS updated " +
-                "FROM resources " +
-                "INNER JOIN (" +
-                    "SELECT resource " +
-                    "FROM consumedResources " +
-                    "WHERE recipe = '" + recipe + "'" +
-                    "UNION " +
-                    "SELECT resource " +
-                    "FROM results " +
-                    "WHERE recipe = '" + recipe + "'" +
-                ") ON resources.name = resource"
+                $"SELECT {ColumnName[Columns.resource]}, {ColumnName[Columns.price]}, date({ColumnName[Columns.date]}) AS updated " +
+                $"FROM {TableName[Tables.Resources]} " +
+                $"INNER JOIN (" +
+                    $"SELECT {ColumnName[Columns.resource_id]} " +
+                    $"FROM {TableName[Tables.RecipeResults]} " +
+                    $"WHERE {ColumnName[Columns.recipe]} = '{recipe_id}'" +
+                    $"UNION " +
+                    $"SELECT {ColumnName[Columns.resource_id]} " +
+                    $"FROM {TableName[Tables.RecipeResults]} " +
+                    $"WHERE {ColumnName[Columns.recipe_id]} = '{recipe_id}'" +
+                $") ON {TableName[Tables.Resources]}.{ColumnName[Columns.resource_id]} = {ColumnName[Columns.resource_id]}"
             );
         }
 
@@ -202,7 +244,7 @@ namespace MastercraftWFA {
             );
         }
 
-        public static DataTable GetRecipesConsumedResources(string recipe) {
+        public static DataTable GetRecipesCosts(string recipe) {
             return Query(
                 "SELECT resource, amount " +
                 "FROM consumedResources " +
@@ -210,7 +252,7 @@ namespace MastercraftWFA {
             );
         }
 
-        public static DataTable GetRecipesConsumedResources(List<string> recipes) {
+        public static DataTable GetRecipesCosts(List<string> recipes) {
             return new DataTable();
         }
 
@@ -277,45 +319,52 @@ namespace MastercraftWFA {
 
 
         #region Insert Methods
-        public static void InsertProfession(string profession, int grade = 0) {
-            string values = "('" + profession + "', " + grade + ")";
-            AddRow(Tables.professions, values);
+        public static void InsertProfession(string name, int grade = 0) {
+            string values = $"(NULL, '{name}', {grade})";
+            AddRow(Tables.Professions, values);
         }
 
-        public static void InsertResource(string resource, int cost) {
-            // ToDo: Add old row to PriceHistory
-            string values = "('" + resource + "', " + cost + ", '" + DateTimeSQLite(DateTime.Now) + "')";
-            AddRow(Tables.resources, values);
+        public static void InsertResource(string name, int cost) {
+            // TODO: Add old row to PriceHistory
+            string values = $"(NULL, '{name}', {cost}, '{DateTimeSQLite(DateTime.Now)}')";
+            AddRow(Tables.Resources, values);
         }
 
-        public static void InsertRecipe(string name, string profession, List<Tuple<string, int>> consumedResources = null, List<Tuple<int, string, int>> results = null) {
-            InsertRecipeName(name, profession);
-            foreach (Tuple<string, int> consumedResource in consumedResources) {
-                InsertRecipeConsumedResource(name, consumedResource.Item1, consumedResource.Item2);
+        public static void InsertRecipe(string name, string profession, int grade, List<Tuple<string, int>> costs, List<Tuple<int, string, int>> results) {
+            InsertRecipeName(name, profession, grade);
+            foreach (Tuple<string, int> cost in costs) {
+                InsertRecipeCost(name, cost.Item1, cost.Item2);
             }
             foreach (Tuple<int, string, int> result in results) {
                 InsertRecipeResult(name, result.Item1, result.Item2, result.Item3);
             }
         }
 
-        public static void InsertRecipeName(string name, string profession) {
-            string values = "('" + name + "', '" + profession + "')";
-            AddRow(Tables.recipes, values);
+        public static void InsertRecipeName(string name, string profession, int grade) {
+            long profession_id = GetProfessionID(profession);
+            string values = $"(NULL, '{name}', '{profession_id}', {grade})";
+            AddRow(Tables.Recipes, values);
         }
 
-        public static void InsertRecipeConsumedResource(string recipe, string resource, int amount) {
-            string values = "('" + recipe + "', '" + resource + "', " + amount + ")";
-            AddRow(Tables.consumedResources, values);
+        public static void InsertRecipeCost(string recipe, string resource, int amount) {
+            long recipe_id = GetRecipeID(recipe);
+            long resource_id = GetResourceID(resource);
+            string values = $"('{recipe_id}', '{resource_id}', {amount})";
+            AddRow(Tables.RecipeCosts, values);
         }
 
         public static void InsertRecipeResult(string recipe, int tier, string resource, int amount) {
-            string values = "('" + recipe + "', '" + resource + "', " + amount + ", " + tier + ")";
-            AddRow(Tables.results, values);
+            long recipe_id = GetRecipeID(recipe);
+            long resource_id = GetResourceID(resource);
+            string values = $"('{recipe_id}', '{resource_id}', {amount}, {tier})";
+            AddRow(Tables.RecipeResults, values);
         }
 
         public static void InsertUpgradeRequirement(string profession, int grade, string resource, int amount) {
-            string values = "('" + profession + "', " + grade + ", '" + resource + "', " + amount + ")";
-            AddRow(Tables.upgrades, values);
+            long profession_id = GetProfessionID(profession);
+            long resource_id = GetResourceID(resource);
+            string values = $"('{profession_id}', {grade}, '{resource_id}', {amount})";
+            AddRow(Tables.Upgrades, values);
         }
         #endregion
 

@@ -12,64 +12,68 @@
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="professions" msprop:Generator_TableClassName="professionsDataTable" msprop:Generator_TableVarName="tableprofessions" msprop:Generator_RowChangedName="professionsRowChanged" msprop:Generator_TablePropName="professions" msprop:Generator_RowDeletingName="professionsRowDeleting" msprop:Generator_RowChangingName="professionsRowChanging" msprop:Generator_RowEvHandlerName="professionsRowChangeEventHandler" msprop:Generator_RowDeletedName="professionsRowDeleted" msprop:Generator_RowClassName="professionsRow" msprop:Generator_UserTableName="professions" msprop:Generator_RowEvArgName="professionsRowChangeEvent">
+        <xs:element name="Professions" msprop:Generator_TableClassName="ProfessionsDataTable" msprop:Generator_TableVarName="tableProfessions" msprop:Generator_TablePropName="Professions" msprop:Generator_RowDeletingName="ProfessionsRowDeleting" msprop:Generator_RowChangingName="ProfessionsRowChanging" msprop:Generator_RowEvHandlerName="ProfessionsRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfessionsRowDeleted" msprop:Generator_UserTableName="Professions" msprop:Generator_RowChangedName="ProfessionsRowChanged" msprop:Generator_RowEvArgName="ProfessionsRowChangeEvent" msprop:Generator_RowClassName="ProfessionsRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="name" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" />
-              <xs:element name="tool" msprop:Generator_ColumnVarNameInTable="columntool" msprop:Generator_ColumnPropNameInRow="tool" msprop:Generator_ColumnPropNameInTable="toolColumn" msprop:Generator_UserColumnName="tool" type="xs:boolean" minOccurs="0" />
+              <xs:element name="profession_id" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="profession_id" msprop:Generator_ColumnVarNameInTable="columnprofession_id" msprop:Generator_ColumnPropNameInTable="profession_idColumn" msprop:Generator_UserColumnName="profession_id" type="xs:string" />
+              <xs:element name="profession" msprop:Generator_ColumnVarNameInTable="columnprofession" msprop:Generator_ColumnPropNameInRow="profession" msprop:Generator_ColumnPropNameInTable="professionColumn" msprop:Generator_UserColumnName="profession" type="xs:boolean" minOccurs="0" />
+              <xs:element name="grade" msprop:Generator_ColumnVarNameInTable="columngrade" msprop:Generator_ColumnPropNameInRow="grade" msprop:Generator_ColumnPropNameInTable="gradeColumn" msprop:Generator_UserColumnName="grade" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="recipes" msprop:Generator_TableClassName="recipesDataTable" msprop:Generator_TableVarName="tablerecipes" msprop:Generator_RowChangedName="recipesRowChanged" msprop:Generator_TablePropName="recipes" msprop:Generator_RowDeletingName="recipesRowDeleting" msprop:Generator_RowChangingName="recipesRowChanging" msprop:Generator_RowEvHandlerName="recipesRowChangeEventHandler" msprop:Generator_RowDeletedName="recipesRowDeleted" msprop:Generator_RowClassName="recipesRow" msprop:Generator_UserTableName="recipes" msprop:Generator_RowEvArgName="recipesRowChangeEvent">
+        <xs:element name="Recipes" msprop:Generator_TableClassName="RecipesDataTable" msprop:Generator_TableVarName="tableRecipes" msprop:Generator_TablePropName="Recipes" msprop:Generator_RowDeletingName="RecipesRowDeleting" msprop:Generator_RowChangingName="RecipesRowChanging" msprop:Generator_RowEvHandlerName="RecipesRowChangeEventHandler" msprop:Generator_RowDeletedName="RecipesRowDeleted" msprop:Generator_UserTableName="Recipes" msprop:Generator_RowChangedName="RecipesRowChanged" msprop:Generator_RowEvArgName="RecipesRowChangeEvent" msprop:Generator_RowClassName="RecipesRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" />
-              <xs:element name="profession" msprop:Generator_ColumnVarNameInTable="columnprofession" msprop:Generator_ColumnPropNameInRow="profession" msprop:Generator_ColumnPropNameInTable="professionColumn" msprop:Generator_UserColumnName="profession" type="xs:string" minOccurs="0" />
+              <xs:element name="recipe_id" msprop:Generator_ColumnVarNameInTable="columnrecipe_id" msprop:Generator_ColumnPropNameInRow="recipe_id" msprop:Generator_ColumnPropNameInTable="recipe_idColumn" msprop:Generator_UserColumnName="recipe_id" type="xs:string" />
+              <xs:element name="recipe" msprop:Generator_ColumnVarNameInTable="columnrecipe" msprop:Generator_ColumnPropNameInRow="recipe" msprop:Generator_ColumnPropNameInTable="recipeColumn" msprop:Generator_UserColumnName="recipe" type="xs:string" minOccurs="0" />
+              <xs:element name="profession_id" msprop:Generator_ColumnVarNameInTable="columnprofession_id" msprop:Generator_ColumnPropNameInRow="profession_id" msprop:Generator_ColumnPropNameInTable="profession_idColumn" msprop:Generator_UserColumnName="profession_id" type="xs:string" minOccurs="0" />
+              <xs:element name="grade" msprop:Generator_ColumnVarNameInTable="columngrade" msprop:Generator_ColumnPropNameInRow="grade" msprop:Generator_ColumnPropNameInTable="gradeColumn" msprop:Generator_UserColumnName="grade" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="resources" msprop:Generator_TableClassName="resourcesDataTable" msprop:Generator_TableVarName="tableresources" msprop:Generator_RowChangedName="resourcesRowChanged" msprop:Generator_TablePropName="resources" msprop:Generator_RowDeletingName="resourcesRowDeleting" msprop:Generator_RowChangingName="resourcesRowChanging" msprop:Generator_RowEvHandlerName="resourcesRowChangeEventHandler" msprop:Generator_RowDeletedName="resourcesRowDeleted" msprop:Generator_RowClassName="resourcesRow" msprop:Generator_UserTableName="resources" msprop:Generator_RowEvArgName="resourcesRowChangeEvent">
+        <xs:element name="Resources" msprop:Generator_TableClassName="ResourcesDataTable" msprop:Generator_TableVarName="tableResources" msprop:Generator_TablePropName="Resources" msprop:Generator_RowDeletingName="ResourcesRowDeleting" msprop:Generator_RowChangingName="ResourcesRowChanging" msprop:Generator_RowEvHandlerName="ResourcesRowChangeEventHandler" msprop:Generator_RowDeletedName="ResourcesRowDeleted" msprop:Generator_UserTableName="Resources" msprop:Generator_RowChangedName="ResourcesRowChanged" msprop:Generator_RowEvArgName="ResourcesRowChangeEvent" msprop:Generator_RowClassName="ResourcesRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" />
-              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:int" minOccurs="0" />
-              <xs:element name="updated" msprop:Generator_ColumnVarNameInTable="columnupdated" msprop:Generator_ColumnPropNameInRow="updated" msprop:Generator_ColumnPropNameInTable="updatedColumn" msprop:Generator_UserColumnName="updated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="resource_id" msprop:Generator_ColumnVarNameInTable="columnresource_id" msprop:Generator_ColumnPropNameInRow="resource_id" msprop:Generator_ColumnPropNameInTable="resource_idColumn" msprop:Generator_UserColumnName="resource_id" type="xs:string" />
+              <xs:element name="resource" msprop:Generator_ColumnVarNameInTable="columnresource" msprop:Generator_ColumnPropNameInRow="resource" msprop:Generator_ColumnPropNameInTable="resourceColumn" msprop:Generator_UserColumnName="resource" type="xs:int" minOccurs="0" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="priceHistory" msprop:Generator_TableClassName="priceHistoryDataTable" msprop:Generator_TableVarName="tablepriceHistory" msprop:Generator_RowChangedName="priceHistoryRowChanged" msprop:Generator_TablePropName="priceHistory" msprop:Generator_RowDeletingName="priceHistoryRowDeleting" msprop:Generator_RowChangingName="priceHistoryRowChanging" msprop:Generator_RowEvHandlerName="priceHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="priceHistoryRowDeleted" msprop:Generator_RowClassName="priceHistoryRow" msprop:Generator_UserTableName="priceHistory" msprop:Generator_RowEvArgName="priceHistoryRowChangeEvent">
+        <xs:element name="PriceHistory" msprop:Generator_TableClassName="PriceHistoryDataTable" msprop:Generator_TableVarName="tablePriceHistory" msprop:Generator_TablePropName="PriceHistory" msprop:Generator_RowDeletingName="PriceHistoryRowDeleting" msprop:Generator_RowChangingName="PriceHistoryRowChanging" msprop:Generator_RowEvHandlerName="PriceHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="PriceHistoryRowDeleted" msprop:Generator_UserTableName="PriceHistory" msprop:Generator_RowChangedName="PriceHistoryRowChanged" msprop:Generator_RowEvArgName="PriceHistoryRowChangeEvent" msprop:Generator_RowClassName="PriceHistoryRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="resource" msdata:Caption="name" msprop:Generator_ColumnVarNameInTable="columnresource" msprop:Generator_ColumnPropNameInRow="resource" msprop:Generator_ColumnPropNameInTable="resourceColumn" msprop:Generator_UserColumnName="resource" type="xs:string" />
+              <xs:element name="resource_id" msdata:Caption="name" msprop:Generator_ColumnVarNameInTable="columnresource_id" msprop:Generator_ColumnPropNameInRow="resource_id" msprop:Generator_ColumnPropNameInTable="resource_idColumn" msprop:Generator_UserColumnName="resource_id" type="xs:string" />
               <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:int" minOccurs="0" />
               <xs:element name="date" msdata:Caption="updated" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="consumedResources" msprop:Generator_TableClassName="consumedResourcesDataTable" msprop:Generator_TableVarName="tableconsumedResources" msprop:Generator_RowChangedName="consumedResourcesRowChanged" msprop:Generator_TablePropName="consumedResources" msprop:Generator_RowDeletingName="consumedResourcesRowDeleting" msprop:Generator_RowChangingName="consumedResourcesRowChanging" msprop:Generator_RowEvHandlerName="consumedResourcesRowChangeEventHandler" msprop:Generator_RowDeletedName="consumedResourcesRowDeleted" msprop:Generator_RowClassName="consumedResourcesRow" msprop:Generator_UserTableName="consumedResources" msprop:Generator_RowEvArgName="consumedResourcesRowChangeEvent">
+        <xs:element name="RecipeCosts" msprop:Generator_TableClassName="RecipeCostsDataTable" msprop:Generator_TableVarName="tableRecipeCosts" msprop:Generator_TablePropName="RecipeCosts" msprop:Generator_RowDeletingName="RecipeCostsRowDeleting" msprop:Generator_RowChangingName="RecipeCostsRowChanging" msprop:Generator_RowEvHandlerName="RecipeCostsRowChangeEventHandler" msprop:Generator_RowDeletedName="RecipeCostsRowDeleted" msprop:Generator_UserTableName="RecipeCosts" msprop:Generator_RowChangedName="RecipeCostsRowChanged" msprop:Generator_RowEvArgName="RecipeCostsRowChangeEvent" msprop:Generator_RowClassName="RecipeCostsRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="recipe" msprop:Generator_ColumnVarNameInTable="columnrecipe" msprop:Generator_ColumnPropNameInRow="recipe" msprop:Generator_ColumnPropNameInTable="recipeColumn" msprop:Generator_UserColumnName="recipe" type="xs:string" />
-              <xs:element name="resource" msprop:Generator_ColumnVarNameInTable="columnresource" msprop:Generator_ColumnPropNameInRow="resource" msprop:Generator_ColumnPropNameInTable="resourceColumn" msprop:Generator_UserColumnName="resource" type="xs:string" />
+              <xs:element name="recipe_id" msprop:Generator_ColumnVarNameInTable="columnrecipe_id" msprop:Generator_ColumnPropNameInRow="recipe_id" msprop:Generator_ColumnPropNameInTable="recipe_idColumn" msprop:Generator_UserColumnName="recipe_id" type="xs:string" />
+              <xs:element name="resource_id" msprop:Generator_ColumnVarNameInTable="columnresource_id" msprop:Generator_ColumnPropNameInRow="resource_id" msprop:Generator_ColumnPropNameInTable="resource_idColumn" msprop:Generator_UserColumnName="resource_id" type="xs:string" />
               <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="results" msprop:Generator_TableClassName="resultsDataTable" msprop:Generator_TableVarName="tableresults" msprop:Generator_RowChangedName="resultsRowChanged" msprop:Generator_TablePropName="results" msprop:Generator_RowDeletingName="resultsRowDeleting" msprop:Generator_RowChangingName="resultsRowChanging" msprop:Generator_RowEvHandlerName="resultsRowChangeEventHandler" msprop:Generator_RowDeletedName="resultsRowDeleted" msprop:Generator_RowClassName="resultsRow" msprop:Generator_UserTableName="results" msprop:Generator_RowEvArgName="resultsRowChangeEvent">
+        <xs:element name="RecipeResults" msprop:Generator_TableClassName="RecipeResultsDataTable" msprop:Generator_TableVarName="tableRecipeResults" msprop:Generator_TablePropName="RecipeResults" msprop:Generator_RowDeletingName="RecipeResultsRowDeleting" msprop:Generator_RowChangingName="RecipeResultsRowChanging" msprop:Generator_RowEvHandlerName="RecipeResultsRowChangeEventHandler" msprop:Generator_RowDeletedName="RecipeResultsRowDeleted" msprop:Generator_UserTableName="RecipeResults" msprop:Generator_RowChangedName="RecipeResultsRowChanged" msprop:Generator_RowEvArgName="RecipeResultsRowChangeEvent" msprop:Generator_RowClassName="RecipeResultsRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="recipe" msprop:Generator_ColumnVarNameInTable="columnrecipe" msprop:Generator_ColumnPropNameInRow="recipe" msprop:Generator_ColumnPropNameInTable="recipeColumn" msprop:Generator_UserColumnName="recipe" type="xs:string" />
+              <xs:element name="recipe_id" msprop:Generator_ColumnVarNameInTable="columnrecipe_id" msprop:Generator_ColumnPropNameInRow="recipe_id" msprop:Generator_ColumnPropNameInTable="recipe_idColumn" msprop:Generator_UserColumnName="recipe_id" type="xs:string" />
               <xs:element name="tier" msdata:Caption="resource" msprop:Generator_ColumnVarNameInTable="columntier" msprop:Generator_ColumnPropNameInRow="tier" msprop:Generator_ColumnPropNameInTable="tierColumn" msprop:Generator_UserColumnName="tier" type="xs:int" />
-              <xs:element name="resource" msdata:Caption="amount" msprop:Generator_ColumnVarNameInTable="columnresource" msprop:Generator_ColumnPropNameInRow="resource" msprop:Generator_ColumnPropNameInTable="resourceColumn" msprop:Generator_UserColumnName="resource" type="xs:string" />
+              <xs:element name="resource_id" msdata:Caption="amount" msprop:Generator_ColumnVarNameInTable="columnresource_id" msprop:Generator_ColumnPropNameInRow="resource_id" msprop:Generator_ColumnPropNameInTable="resource_idColumn" msprop:Generator_UserColumnName="resource_id" type="xs:string" />
               <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="getTool" msprop:Generator_TableClassName="getToolDataTable" msprop:Generator_TableVarName="tablegetTool" msprop:Generator_TablePropName="getTool" msprop:Generator_RowDeletingName="getToolRowDeleting" msprop:Generator_RowChangingName="getToolRowChanging" msprop:Generator_RowEvHandlerName="getToolRowChangeEventHandler" msprop:Generator_RowDeletedName="getToolRowDeleted" msprop:Generator_UserTableName="getTool" msprop:Generator_RowChangedName="getToolRowChanged" msprop:Generator_RowEvArgName="getToolRowChangeEvent" msprop:Generator_RowClassName="getToolRow">
+        <xs:element name="Upgrades" msprop:Generator_TableClassName="UpgradesDataTable" msprop:Generator_TableVarName="tableUpgrades" msprop:Generator_RowChangedName="UpgradesRowChanged" msprop:Generator_TablePropName="Upgrades" msprop:Generator_RowDeletingName="UpgradesRowDeleting" msprop:Generator_RowChangingName="UpgradesRowChanging" msprop:Generator_RowEvHandlerName="UpgradesRowChangeEventHandler" msprop:Generator_RowDeletedName="UpgradesRowDeleted" msprop:Generator_RowClassName="UpgradesRow" msprop:Generator_UserTableName="Upgrades" msprop:Generator_RowEvArgName="UpgradesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="profession" msprop:Generator_ColumnVarNameInTable="columnprofession" msprop:Generator_ColumnPropNameInRow="profession" msprop:Generator_ColumnPropNameInTable="professionColumn" msprop:Generator_UserColumnName="profession" type="xs:string" />
-              <xs:element name="resource" msprop:Generator_ColumnVarNameInTable="columnresource" msprop:Generator_ColumnPropNameInRow="resource" msprop:Generator_ColumnPropNameInTable="resourceColumn" msprop:Generator_UserColumnName="resource" type="xs:string" />
+              <xs:element name="profession_id" msprop:Generator_ColumnVarNameInTable="columnprofession_id" msprop:Generator_ColumnPropNameInRow="profession_id" msprop:Generator_ColumnPropNameInTable="profession_idColumn" msprop:Generator_UserColumnName="profession_id" type="xs:string" />
+              <xs:element name="resource_id" msprop:Generator_ColumnVarNameInTable="columnresource_id" msprop:Generator_ColumnPropNameInRow="resource_id" msprop:Generator_ColumnPropNameInTable="resource_idColumn" msprop:Generator_UserColumnName="resource_id" type="xs:string" />
               <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
@@ -77,73 +81,73 @@
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:professions" />
-      <xs:field xpath="mstns:name" />
+      <xs:selector xpath=".//mstns:Professions" />
+      <xs:field xpath="mstns:profession_id" />
     </xs:unique>
-    <xs:unique name="recipes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:recipes" />
-      <xs:field xpath="mstns:name" />
+    <xs:unique name="Recipes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Recipes" />
+      <xs:field xpath="mstns:recipe_id" />
     </xs:unique>
-    <xs:unique name="resources_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:resources" />
-      <xs:field xpath="mstns:name" />
+    <xs:unique name="Resources_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Resources" />
+      <xs:field xpath="mstns:resource_id" />
     </xs:unique>
-    <xs:unique name="priceHistory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:priceHistory" />
-      <xs:field xpath="mstns:resource" />
+    <xs:unique name="PriceHistory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PriceHistory" />
+      <xs:field xpath="mstns:resource_id" />
       <xs:field xpath="mstns:date" />
     </xs:unique>
-    <xs:unique name="consumedResources_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:consumedResources" />
-      <xs:field xpath="mstns:recipe" />
-      <xs:field xpath="mstns:resource" />
+    <xs:unique name="RecipeCosts_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RecipeCosts" />
+      <xs:field xpath="mstns:recipe_id" />
+      <xs:field xpath="mstns:resource_id" />
     </xs:unique>
-    <xs:unique name="results_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:results" />
-      <xs:field xpath="mstns:recipe" />
+    <xs:unique name="RecipeResults_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RecipeResults" />
+      <xs:field xpath="mstns:recipe_id" />
       <xs:field xpath="mstns:tier" />
-      <xs:field xpath="mstns:resource" />
+      <xs:field xpath="mstns:resource_id" />
     </xs:unique>
     <xs:unique name="Constraint2">
-      <xs:selector xpath=".//mstns:results" />
-      <xs:field xpath="mstns:recipe" />
+      <xs:selector xpath=".//mstns:RecipeResults" />
+      <xs:field xpath="mstns:recipe_id" />
     </xs:unique>
-    <xs:unique name="getTool_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:getTool" />
-      <xs:field xpath="mstns:profession" />
-      <xs:field xpath="mstns:resource" />
+    <xs:unique name="Upgrades_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Upgrades" />
+      <xs:field xpath="mstns:profession_id" />
+      <xs:field xpath="mstns:resource_id" />
     </xs:unique>
-    <xs:keyref name="FK_resources_getTool" refer="resources_Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:getTool" />
-      <xs:field xpath="mstns:resource" />
-    </xs:keyref>
     <xs:keyref name="FK_professions_getTool" refer="Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:getTool" />
-      <xs:field xpath="mstns:profession" />
+      <xs:selector xpath=".//mstns:Upgrades" />
+      <xs:field xpath="mstns:profession_id" />
     </xs:keyref>
-    <xs:keyref name="FK_resources_results" refer="resources_Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:results" />
-      <xs:field xpath="mstns:resource" />
+    <xs:keyref name="FK_resources_getTool" refer="Resources_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:Upgrades" />
+      <xs:field xpath="mstns:resource_id" />
     </xs:keyref>
-    <xs:keyref name="FK_results_recipes" refer="recipes_Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:results" />
-      <xs:field xpath="mstns:recipe" />
+    <xs:keyref name="FK_results_recipes" refer="Recipes_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:RecipeResults" />
+      <xs:field xpath="mstns:recipe_id" />
     </xs:keyref>
-    <xs:keyref name="FK_recipes_consumedResources" refer="recipes_Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:consumedResources" />
-      <xs:field xpath="mstns:recipe" />
+    <xs:keyref name="FK_resources_results" refer="Resources_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:RecipeResults" />
+      <xs:field xpath="mstns:resource_id" />
     </xs:keyref>
-    <xs:keyref name="FK_resources_consumedResources" refer="resources_Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:consumedResources" />
-      <xs:field xpath="mstns:resource" />
+    <xs:keyref name="FK_recipes_consumedResources" refer="Recipes_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:RecipeCosts" />
+      <xs:field xpath="mstns:recipe_id" />
     </xs:keyref>
-    <xs:keyref name="FK_resources_priceHistory" refer="resources_Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:priceHistory" />
-      <xs:field xpath="mstns:resource" />
+    <xs:keyref name="FK_resources_consumedResources" refer="Resources_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:RecipeCosts" />
+      <xs:field xpath="mstns:resource_id" />
+    </xs:keyref>
+    <xs:keyref name="FK_resources_priceHistory" refer="Resources_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:PriceHistory" />
+      <xs:field xpath="mstns:resource_id" />
     </xs:keyref>
     <xs:keyref name="FK_professions_recipes" refer="Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:recipes" />
-      <xs:field xpath="mstns:profession" />
+      <xs:selector xpath=".//mstns:Recipes" />
+      <xs:field xpath="mstns:profession_id" />
     </xs:keyref>
   </xs:element>
 </xs:schema>

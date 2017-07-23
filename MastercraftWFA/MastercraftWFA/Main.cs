@@ -124,7 +124,7 @@ namespace MastercraftWFA {
                 DataGridViewCell cell = row.Cells["name_Recipes"];
                 if (cell.Value == null || cell.Value == DBNull.Value || String.IsNullOrWhiteSpace(cell.Value.ToString()))
                     continue;
-                Database.InsertRecipe((string)cell.Value, activeProfession);
+                Database.InsertRecipeName((string)cell.Value, activeProfession, 0);
             }
             editButton_Recipes.Show();
             insertButton_Recipes.Hide();
