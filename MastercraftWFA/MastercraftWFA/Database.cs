@@ -226,29 +226,32 @@ namespace MastercraftWFA {
         }
 
         public static DataTable GetResources(List<string> recipes) {
-            string recipesConstraint = "recipe = '" + recipes[0] + "'";
-            foreach (string recipe in recipes.Skip(1))
-                recipesConstraint += " OR recipe = '" + recipe + "'";
+            long recipe_id = GetRecipeID(recipes[0]);
+            string recipesConstraint = $"{ColumnName[Columns.recipe_id]} = '{recipe_id}'";
+            foreach (string recipe in recipes.Skip(1)) {
+                recipe_id = GetRecipeID(recipe);
+                recipesConstraint += $" OR {ColumnName[Columns.recipe_id]} = '{recipe_id}'";
+            }
             return Query(
-                "SELECT name, price, date(updated) AS updated " +
-                "FROM resources " +
-                "INNER JOIN (" +
-                    "SELECT resource " +
-                    "FROM consumedResources " +
-                    "WHERE " + recipesConstraint +
-                    "UNION " +
-                    "SELECT resource " +
-                    "FROM results " +
-                    "WHERE " + recipesConstraint +
-                ") ON resources.name = resource"
+                $"SELECT {ColumnName[Columns.resource]}, {ColumnName[Columns.price]}, date({ColumnName[Columns.date]}) AS updated " +
+                $"FROM {TableName[Tables.Resources]} " +
+                $"INNER JOIN (" +
+                    $"SELECT {ColumnName[Columns.resource_id]} " +
+                    $"FROM {TableName[Tables.RecipeResults]} " +
+                    $"WHERE {recipesConstraint}" +
+                    $"UNION " +
+                    $"SELECT {ColumnName[Columns.resource_id]} " +
+                    $"FROM {TableName[Tables.RecipeResults]} " +
+                    $"WHERE {recipesConstraint}" +
+                $") ON {TableName[Tables.Resources]}.{ColumnName[Columns.resource_id]} = {ColumnName[Columns.resource_id]}"
             );
         }
 
         public static DataTable GetRecipesCosts(string recipe) {
             return Query(
-                "SELECT resource, amount " +
-                "FROM consumedResources " +
-                "WHERE recipe = '" + recipe + "'"
+                $"SELECT {ColumnName[Columns.resource]}, {ColumnName[Columns.amount]} " +
+                $"FROM {TableName[Tables.RecipeResults]} " +
+                $"WHERE {ColumnName[Columns.recipe]} = '{recipe}'"
             );
         }
 
@@ -258,9 +261,9 @@ namespace MastercraftWFA {
 
         public static DataTable GetRecipesResults(string recipe) {
             return Query(
-                "SELECT tier, resource, amount " +
-                "FROM results " +
-                "WHERE recipe = '" + recipe + "'"
+                $"SELECT {ColumnName[Columns.tier]}, {ColumnName[Columns.resource]}, {ColumnName[Columns.amount]} " +
+                $"FROM {TableName[Tables.RecipeResults]} " +
+                $"WHERE {ColumnName[Columns.recipe]} = '{recipe}'"
             );
         }
 
@@ -301,7 +304,7 @@ namespace MastercraftWFA {
             );
         }
 
-        public static DataTable GetRecipesReward(string profession, int tier) {
+        public static DataTable GetRecipesResult(string profession, int tier) {
             return Query(
                 "SELECT recipe, SUM(price * amount) AS tier" + tier + "reward " +
                 "FROM (" +

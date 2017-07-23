@@ -13,9 +13,9 @@ namespace MastercraftWFA {
 
         public DataTable GetRecipesTable(string profession) {
             DataTable costTable = Database.GetRecipesCost(profession);
-            DataTable tier1Table = Database.GetRecipesReward(profession, 1);
-            DataTable tier2Table = Database.GetRecipesReward(profession, 2);
-            DataTable tier3Table = Database.GetRecipesReward(profession, 3);
+            DataTable tier1Table = Database.GetRecipesResult(profession, 1);
+            DataTable tier2Table = Database.GetRecipesResult(profession, 2);
+            DataTable tier3Table = Database.GetRecipesResult(profession, 3);
             costTable.Merge(tier1Table);
             costTable.Merge(tier2Table);
             costTable.Merge(tier3Table);

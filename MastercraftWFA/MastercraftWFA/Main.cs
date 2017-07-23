@@ -29,7 +29,7 @@ namespace MastercraftWFA {
         }
 
         private void DataGridViewProfessions_CellClick(object sender, DataGridViewCellEventArgs e) {
-            if (dataGridViewProfessions.Columns["name"].Index == e.ColumnIndex && e.RowIndex >= 0 && e.RowIndex < dataGridViewProfessions.RowCount - 1) {
+            if (dataGridViewProfessions.Columns[Database.ColumnName[Database.Columns.profession]].Index == e.ColumnIndex && e.RowIndex >= 0 && e.RowIndex < dataGridViewProfessions.RowCount - 1) {
                 // Filter on Profession
                 DataGridViewCell field = dataGridViewProfessions[e.ColumnIndex, e.RowIndex];
                 string query = field.Value.ToString();
@@ -43,29 +43,27 @@ namespace MastercraftWFA {
 
             DataGridViewSelectedCellCollection selectedCells = dataGridViewProfessions.SelectedCells;
             foreach (DataGridViewCell cell in selectedCells) {
-                if (dataGridViewProfessions.Columns["name"].Index == cell.ColumnIndex && cell.RowIndex >= 0 && cell.RowIndex < dataGridViewProfessions.RowCount - 1)
+                if (dataGridViewProfessions.Columns[Database.ColumnName[Database.Columns.profession]].Index == cell.ColumnIndex && cell.RowIndex >= 0 && cell.RowIndex < dataGridViewProfessions.RowCount - 1)
                     query.Add(cell.Value.ToString());
             }
 
-            if (query.Count == 0)
-                return;
-
-            FillDataRecipes(query);
+            if (query.Count > 0)
+                FillDataRecipes(query);
         }
 
         private void EditButtonProfessions_Click(object sender, EventArgs e) {
-            dataGridViewProfessions.Columns["name"].ReadOnly = false;
-            dataGridViewProfessions.Columns["grade"].ReadOnly = false;
+            dataGridViewProfessions.Columns[Database.ColumnName[Database.Columns.profession]].ReadOnly = false;
+            dataGridViewProfessions.Columns[Database.ColumnName[Database.Columns.grade]].ReadOnly = false;
             insertButton_Professions.Show();
             editButton_Professions.Hide();
         }
 
-        private void InsertButtonProfessions_Click(object sender, System.EventArgs e) {
-            dataGridViewProfessions.Columns["name"].ReadOnly = true;
-            dataGridViewProfessions.Columns["grade"].ReadOnly = true;
+        private void InsertButtonProfessions_Click(object sender, EventArgs e) {
+            dataGridViewProfessions.Columns[Database.ColumnName[Database.Columns.profession]].ReadOnly = true;
+            dataGridViewProfessions.Columns[Database.ColumnName[Database.Columns.grade]].ReadOnly = true;
             foreach (DataGridViewRow row in dataGridViewProfessions.Rows) {
-                DataGridViewCell cellName = row.Cells["name"];
-                DataGridViewCell cellTool = row.Cells["grade"];
+                DataGridViewCell cellName = row.Cells[Database.ColumnName[Database.Columns.profession]];
+                DataGridViewCell cellTool = row.Cells[Database.ColumnName[Database.Columns.grade]];
                 if (cellName.Value == null || cellName.Value == DBNull.Value || String.IsNullOrWhiteSpace(cellName.Value.ToString()))
                     continue;
                 Database.InsertProfession((string)cellName.Value, (int)cellTool.Value);
@@ -86,7 +84,7 @@ namespace MastercraftWFA {
         }
 
         private void DataGridViewRecipes_CellClick(object sender, DataGridViewCellEventArgs e) {
-            if (dataGridViewRecipes.Columns["name_Recipes"].Index == e.ColumnIndex && e.RowIndex >= 0 && e.RowIndex < dataGridViewRecipes.RowCount - 1) {
+            if (dataGridViewRecipes.Columns[Database.ColumnName[Database.Columns.recipe]].Index == e.ColumnIndex && e.RowIndex >= 0 && e.RowIndex < dataGridViewRecipes.RowCount - 1) {
                 // Filter on Recipe
                 DataGridViewCell field = dataGridViewRecipes[e.ColumnIndex, e.RowIndex];
                 string query = field.Value.ToString();
@@ -100,34 +98,16 @@ namespace MastercraftWFA {
             List<string> recipes = new List<string>();
             DataGridViewSelectedCellCollection selectedCells = dataGridViewRecipes.SelectedCells;
             foreach (DataGridViewCell cell in selectedCells) {
-                if (dataGridViewRecipes.Columns["name_Recipes"].Index == cell.ColumnIndex && cell.RowIndex >= 0 && cell.RowIndex < dataGridViewRecipes.RowCount - 1)
+                if (dataGridViewRecipes.Columns[Database.ColumnName[Database.Columns.recipe]].Index == cell.ColumnIndex && cell.RowIndex >= 0 && cell.RowIndex < dataGridViewRecipes.RowCount - 1)
                     recipes.Add(cell.Value.ToString());
             }
 
-            if (recipes.Count == 0)
-                return;
-            
-            FillDataResourcesConsumed(recipes);
-            FillDataResourcesResults(recipes);
-            FillDataResources(recipes);
-        }
-
-        private void EditButton_Recipes_Click(object sender, EventArgs e) {
-            dataGridViewRecipes.Columns["name_Recipes"].ReadOnly = false;
-            insertButton_Recipes.Show();
-            editButton_Recipes.Hide();
-        }
-
-        private void InsertButton_Recipes_Click(object sender, EventArgs e) {
-            dataGridViewRecipes.Columns["name_Recipes"].ReadOnly = true;
-            foreach (DataGridViewRow row in dataGridViewRecipes.Rows) {
-                DataGridViewCell cell = row.Cells["name_Recipes"];
-                if (cell.Value == null || cell.Value == DBNull.Value || String.IsNullOrWhiteSpace(cell.Value.ToString()))
-                    continue;
-                Database.InsertRecipeName((string)cell.Value, activeProfession, 0);
+            if (recipes.Count > 0) {
+                FillDataResourcesConsumed(recipes);
+                FillDataResourcesResults(recipes);
+                FillDataResources(recipes);
             }
-            editButton_Recipes.Show();
-            insertButton_Recipes.Hide();
+            
         }
         #endregion
 
@@ -139,27 +119,6 @@ namespace MastercraftWFA {
 
         void FillDataResources(List<string> recipes) {
             dataGridViewResources.DataSource = database.GetResourcesTable(recipes);
-        }
-
-        private void EditButton_Resources_Click(object sender, EventArgs e) {
-            dataGridViewResources.Columns["name_Resources"].ReadOnly = false;
-            dataGridViewResources.Columns["price_Resources"].ReadOnly = false;
-            insertButton_Resources.Show();
-            editButton_Resources.Hide();
-        }
-
-        private void InsertButton_Resources_Click(object sender, EventArgs e) {
-            dataGridViewResources.Columns["name_Resources"].ReadOnly = true;
-            dataGridViewResources.Columns["price_Resources"].ReadOnly = true;
-            foreach (DataGridViewRow row in dataGridViewResources.Rows) {
-                DataGridViewCell cellResource = row.Cells["name_Resources"];
-                DataGridViewCell cellPrice = row.Cells["price_Resources"];
-                if (cellResource.Value == null || cellResource.Value == DBNull.Value || String.IsNullOrWhiteSpace(cellResource.Value.ToString()))
-                    continue;
-                Database.InsertResource((string)cellResource.Value, (int)cellPrice.Value);
-            }
-            editButton_Resources.Show();
-            insertButton_Resources.Hide();
         }
         #endregion
 

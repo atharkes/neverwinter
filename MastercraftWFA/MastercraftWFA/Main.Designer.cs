@@ -23,13 +23,8 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewProfessions = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grade = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.upgrade1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.upgrade2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.upgrade3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleProfessions = new System.Windows.Forms.Label();
             this.insertButton_Professions = new System.Windows.Forms.Label();
             this.editButton_Professions = new System.Windows.Forms.Label();
@@ -58,10 +53,10 @@
             this.titleResources = new System.Windows.Forms.Label();
             this.titleResourcesConsumed = new System.Windows.Forms.Label();
             this.titleResourcesResults = new System.Windows.Forms.Label();
-            this.editButton_Recipes = new System.Windows.Forms.Label();
-            this.insertButton_Recipes = new System.Windows.Forms.Label();
-            this.editButton_Resources = new System.Windows.Forms.Label();
-            this.insertButton_Resources = new System.Windows.Forms.Label();
+            this.grade = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.upgrade1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.upgrade2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.upgrade3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfessions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResourcesConsumed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRecipes)).BeginInit();
@@ -75,19 +70,18 @@
             this.dataGridViewProfessions.AllowUserToResizeRows = false;
             this.dataGridViewProfessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewProfessions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.name,
             this.grade,
             this.upgrade1,
             this.upgrade2,
             this.upgrade3});
-            dataGridViewCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProfessions.DefaultCellStyle = dataGridViewCellStyle;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewProfessions.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewProfessions.Location = new System.Drawing.Point(12, 32);
             this.dataGridViewProfessions.Name = "dataGridViewProfessions";
             this.dataGridViewProfessions.RowHeadersVisible = false;
@@ -98,49 +92,6 @@
             this.dataGridViewProfessions.TabIndex = 0;
             this.dataGridViewProfessions.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewProfessions_CellClick);
             this.dataGridViewProfessions.SelectionChanged += new System.EventHandler(this.DataGridViewProfessions_SelectionChanged);
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Profession";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.name.Width = 120;
-            // 
-            // grade
-            // 
-            this.grade.DataPropertyName = "grade";
-            this.grade.HeaderText = "Grade";
-            this.grade.Name = "grade";
-            this.grade.ReadOnly = true;
-            this.grade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.grade.Width = 50;
-            // 
-            // upgrade1
-            // 
-            this.upgrade1.DataPropertyName = "upgrade1";
-            this.upgrade1.HeaderText = "I";
-            this.upgrade1.Name = "upgrade1";
-            this.upgrade1.ReadOnly = true;
-            this.upgrade1.Width = 60;
-            // 
-            // upgrade2
-            // 
-            this.upgrade2.DataPropertyName = "upgrade2";
-            this.upgrade2.HeaderText = "II";
-            this.upgrade2.Name = "upgrade2";
-            this.upgrade2.ReadOnly = true;
-            this.upgrade2.Width = 60;
-            // 
-            // upgrade3
-            // 
-            this.upgrade3.DataPropertyName = "upgrade3";
-            this.upgrade3.HeaderText = "III";
-            this.upgrade3.Name = "upgrade3";
-            this.upgrade3.ReadOnly = true;
-            this.upgrade3.Width = 60;
             // 
             // titleProfessions
             // 
@@ -186,14 +137,7 @@
             this.dataGridViewResourcesConsumed.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.resource_Consumed,
             this.amount_Consumed});
-            dataGridViewCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewResourcesConsumed.DefaultCellStyle = dataGridViewCellStyle;
+            this.dataGridViewResourcesConsumed.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewResourcesConsumed.Location = new System.Drawing.Point(329, 359);
             this.dataGridViewResourcesConsumed.Name = "dataGridViewResourcesConsumed";
             this.dataGridViewResourcesConsumed.RowHeadersVisible = false;
@@ -235,14 +179,7 @@
             this.tier1reward,
             this.tier2reward,
             this.tier3reward});
-            dataGridViewCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRecipes.DefaultCellStyle = dataGridViewCellStyle;
+            this.dataGridViewRecipes.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewRecipes.Location = new System.Drawing.Point(402, 32);
             this.dataGridViewRecipes.Name = "dataGridViewRecipes";
             this.dataGridViewRecipes.RowHeadersVisible = false;
@@ -358,14 +295,7 @@
             this.name_Resources,
             this.price_Resources,
             this.updated_Resources});
-            dataGridViewCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewResources.DefaultCellStyle = dataGridViewCellStyle;
+            this.dataGridViewResources.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewResources.Location = new System.Drawing.Point(12, 359);
             this.dataGridViewResources.Name = "dataGridViewResources";
             this.dataGridViewResources.RowHeadersVisible = false;
@@ -409,14 +339,7 @@
             this.tier_Results,
             this.resource_Results,
             this.amount_Results});
-            dataGridViewCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewResourcesResults.DefaultCellStyle = dataGridViewCellStyle;
+            this.dataGridViewResourcesResults.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewResourcesResults.Location = new System.Drawing.Point(562, 359);
             this.dataGridViewResourcesResults.Name = "dataGridViewResourcesResults";
             this.dataGridViewResourcesResults.RowHeadersVisible = false;
@@ -489,53 +412,39 @@
             this.titleResourcesResults.TabIndex = 15;
             this.titleResourcesResults.Text = "Results";
             // 
-            // editButton_Recipes
+            // grade
             // 
-            this.editButton_Recipes.AutoSize = true;
-            this.editButton_Recipes.BackColor = System.Drawing.Color.Gray;
-            this.editButton_Recipes.Location = new System.Drawing.Point(797, 16);
-            this.editButton_Recipes.Name = "editButton_Recipes";
-            this.editButton_Recipes.Size = new System.Drawing.Size(25, 13);
-            this.editButton_Recipes.TabIndex = 16;
-            this.editButton_Recipes.Text = "Edit";
-            this.editButton_Recipes.Click += new System.EventHandler(this.EditButton_Recipes_Click);
+            this.grade.DataPropertyName = "grade";
+            this.grade.HeaderText = "Grade";
+            this.grade.Name = "grade";
+            this.grade.ReadOnly = true;
+            this.grade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.grade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.grade.Width = 50;
             // 
-            // insertButton_Recipes
+            // upgrade1
             // 
-            this.insertButton_Recipes.AutoSize = true;
-            this.insertButton_Recipes.BackColor = System.Drawing.Color.Gray;
-            this.insertButton_Recipes.ForeColor = System.Drawing.Color.Black;
-            this.insertButton_Recipes.Location = new System.Drawing.Point(758, 16);
-            this.insertButton_Recipes.Name = "insertButton_Recipes";
-            this.insertButton_Recipes.Size = new System.Drawing.Size(33, 13);
-            this.insertButton_Recipes.TabIndex = 17;
-            this.insertButton_Recipes.Text = "Insert";
-            this.insertButton_Recipes.Visible = false;
-            this.insertButton_Recipes.Click += new System.EventHandler(this.InsertButton_Recipes_Click);
+            this.upgrade1.DataPropertyName = "upgrade1";
+            this.upgrade1.HeaderText = "I";
+            this.upgrade1.Name = "upgrade1";
+            this.upgrade1.ReadOnly = true;
+            this.upgrade1.Width = 60;
             // 
-            // editButton_Resources
+            // upgrade2
             // 
-            this.editButton_Resources.AutoSize = true;
-            this.editButton_Resources.BackColor = System.Drawing.Color.Gray;
-            this.editButton_Resources.Location = new System.Drawing.Point(267, 343);
-            this.editButton_Resources.Name = "editButton_Resources";
-            this.editButton_Resources.Size = new System.Drawing.Size(25, 13);
-            this.editButton_Resources.TabIndex = 18;
-            this.editButton_Resources.Text = "Edit";
-            this.editButton_Resources.Click += new System.EventHandler(this.EditButton_Resources_Click);
+            this.upgrade2.DataPropertyName = "upgrade2";
+            this.upgrade2.HeaderText = "II";
+            this.upgrade2.Name = "upgrade2";
+            this.upgrade2.ReadOnly = true;
+            this.upgrade2.Width = 60;
             // 
-            // insertButton_Resources
+            // upgrade3
             // 
-            this.insertButton_Resources.AutoSize = true;
-            this.insertButton_Resources.BackColor = System.Drawing.Color.Gray;
-            this.insertButton_Resources.ForeColor = System.Drawing.Color.Black;
-            this.insertButton_Resources.Location = new System.Drawing.Point(228, 343);
-            this.insertButton_Resources.Name = "insertButton_Resources";
-            this.insertButton_Resources.Size = new System.Drawing.Size(33, 13);
-            this.insertButton_Resources.TabIndex = 19;
-            this.insertButton_Resources.Text = "Insert";
-            this.insertButton_Resources.Visible = false;
-            this.insertButton_Resources.Click += new System.EventHandler(this.InsertButton_Resources_Click);
+            this.upgrade3.DataPropertyName = "upgrade3";
+            this.upgrade3.HeaderText = "III";
+            this.upgrade3.Name = "upgrade3";
+            this.upgrade3.ReadOnly = true;
+            this.upgrade3.Width = 60;
             // 
             // Main
             // 
@@ -543,10 +452,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(834, 661);
-            this.Controls.Add(this.insertButton_Resources);
-            this.Controls.Add(this.editButton_Resources);
-            this.Controls.Add(this.insertButton_Recipes);
-            this.Controls.Add(this.editButton_Recipes);
             this.Controls.Add(this.titleResourcesResults);
             this.Controls.Add(this.titleResourcesConsumed);
             this.Controls.Add(this.titleResources);
@@ -589,18 +494,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn updated_Resources;
         private System.Windows.Forms.DataGridViewComboBoxColumn resource_Consumed;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount_Consumed;
-        private System.Windows.Forms.Label editButton_Recipes;
-        private System.Windows.Forms.Label insertButton_Recipes;
-        private System.Windows.Forms.Label editButton_Resources;
-        private System.Windows.Forms.Label insertButton_Resources;
         private System.Windows.Forms.DataGridViewComboBoxColumn tier_Results;
         private System.Windows.Forms.DataGridViewComboBoxColumn resource_Results;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewComboBoxColumn grade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn upgrade1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn upgrade2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn upgrade3;
         private System.Windows.Forms.DataGridViewTextBoxColumn name_Recipes;
         private System.Windows.Forms.DataGridViewTextBoxColumn cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn profit;
@@ -610,6 +506,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tier1reward;
         private System.Windows.Forms.DataGridViewTextBoxColumn tier2reward;
         private System.Windows.Forms.DataGridViewTextBoxColumn tier3reward;
+        private System.Windows.Forms.DataGridViewComboBoxColumn grade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn upgrade1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn upgrade2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn upgrade3;
     }
 }
 
