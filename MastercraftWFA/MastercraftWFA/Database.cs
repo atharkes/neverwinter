@@ -10,33 +10,33 @@ namespace MastercraftWFA {
         static SQLiteConnection dbConnection;
 
         public enum Tables {
-            professions,
-            recipes,
-            resources,
-            priceHistory,
-            consumedResources,
-            results,
-            upgrades
+            Professions,
+            Recipes,
+            Resources,
+            PriceHistory,
+            RecipeCosts,
+            RecipeResults,
+            Upgrades
         };
 
         public static Dictionary<Tables, string> TableName = new Dictionary<Tables, string>() {
-            { Tables.professions, "professions" },
-            { Tables.recipes, "recipes" },
-            { Tables.resources, "resources" },
-            { Tables.priceHistory, "priceHistory" },
-            { Tables.consumedResources, "consumedResources" },
-            { Tables.results, "results" },
-            { Tables.upgrades, "upgrades" }
+            { Tables.Professions, "Professions" },
+            { Tables.Recipes, "Recipes" },
+            { Tables.Resources, "Resources" },
+            { Tables.PriceHistory, "PriceHistory" },
+            { Tables.RecipeCosts, "RecipeCosts" },
+            { Tables.RecipeResults, "RecipeResults" },
+            { Tables.Upgrades, "Upgrades" }
         };
 
         public static Dictionary<Tables, string> TableColumns = new Dictionary<Tables, string>() {
-            { Tables.professions, "(name, grade)" },
-            { Tables.recipes, "(name, profession)" },
-            { Tables.resources, "(name, price, updated)" },
-            { Tables.priceHistory, "(resource, price, date)" },
-            { Tables.consumedResources, "(recipe, resource, amount)" },
-            { Tables.results, "(recipe, tier, resource, amount)" },
-            { Tables.upgrades, "(profession, grade, resource, amount)" }
+            { Tables.Professions, "(profession_id, profession, grade)" },
+            { Tables.Recipes, "(recipe_id, recipe, profession_id)" },
+            { Tables.Resources, "(resource_id, resource, price, updated)" },
+            { Tables.PriceHistory, "(resource_id, price, date)" },
+            { Tables.RecipeCosts, "(recipe_id, resource_id, amount)" },
+            { Tables.RecipeResults, "(recipe_id, tier, resource_id, amount)" },
+            { Tables.Upgrades, "(profession_id, grade, resource_id, amount)" }
         };
 
 
@@ -93,39 +93,39 @@ namespace MastercraftWFA {
 
         #region Populate Methods
         static void AddTables() {
-            AddTable("professions", "(name STRING, grade INT, " +
-                "PRIMARY KEY (name))");
-            AddTable("recipes", "(name STRING, profession STRING, " +
-                "FOREIGN KEY (profession) REFERENCES professions (name), " +
-                "PRIMARY KEY (name))");
-            AddTable("resources", "(name STRING, price INT, updated DATETIME, " +
-                "PRIMARY KEY (name))");
-            AddTable("priceHistory", "(resource STRING, price INT, date DATETIME, " +
-                "FOREIGN KEY (resource) REFERENCES resources (name), " +
-                "PRIMARY KEY (resource, date))");
-            AddTable("consumedResources", "(recipe STRING, resource STRING, amount INT, " +
-                "FOREIGN KEY (recipe) REFERENCES recipes (name), " +
-                "FOREIGN KEY (resource) REFERENCES resources (name), " +
-                "PRIMARY KEY (recipe, resource))");
-            AddTable("results", "(recipe STRING, tier INT, resource STRING, amount INT, " +
-                "FOREIGN KEY (recipe) REFERENCES recipes (name), " +
-                "FOREIGN KEY (resource) REFERENCES resources (name), " +
-                "PRIMARY KEY (recipe, tier, resource))");
-            AddTable("upgrades", "(profession STRING, grade INT, resource STRING, amount INT, " +
-                "FOREIGN KEY (profession) REFERENCES professions (name), " +
-                "FOREIGN KEY (resource) REFERENCES resources (name), " +
-                "PRIMARY KEY (profession, grade, resource))");
+            AddTable("Professions", "(profession_id INTEGER, profession STRING, grade INT, " +
+                "PRIMARY KEY (profession_id))");
+            AddTable("Recipes", "(recipe_id INTEGER, recipe STRING, profession_id INTEGER, " +
+                "FOREIGN KEY (profession_id) REFERENCES Professions (profession_id), " +
+                "PRIMARY KEY (recipe_id))");
+            AddTable("Resources", "(resource_id INTEGER, resource STRING, price INT, updated DATETIME, " +
+                "PRIMARY KEY (resource_id))");
+            AddTable("PriceHistory", "(resource_id INTEGER, price INT, date DATETIME, " +
+                "FOREIGN KEY (resource_id) REFERENCES Resources (resource_id), " +
+                "PRIMARY KEY (resource_id, date))");
+            AddTable("RecipeCosts", "(recipe_id INTEGER, resource_id INTEGER, amount INT, " +
+                "FOREIGN KEY (recipe_id) REFERENCES Recipes (recipe_id), " +
+                "FOREIGN KEY (resource_id) REFERENCES Resources (resource_id), " +
+                "PRIMARY KEY (recipe_id, resource_id))");
+            AddTable("RecipeResults", "(recipe_id INTEGER, tier INT, resource_id INTEGER, amount INT, " +
+                "FOREIGN KEY (recipe_id) REFERENCES Recipes (recipe_id), " +
+                "FOREIGN KEY (resource_id) REFERENCES Resources (resource_id), " +
+                "PRIMARY KEY (recipe_id, tier, resource_id))");
+            AddTable("Upgrades", "(profession_id INTEGER, grade INT, resource_id INTEGER, amount INT, " +
+                "FOREIGN KEY (profession_id) REFERENCES Professions (profession_id), " +
+                "FOREIGN KEY (resource_id) REFERENCES Resources (resource_id), " +
+                "PRIMARY KEY (profession_id, grade, resource_id))");
         }
 
         static void AddData() {
-            InsertProfession("Artificing", 2);
-            InsertProfession("Leatherworking", 2);
-            InsertProfession("Weaponsmithing", 3);
+            InsertProfession("Artificing", 3);
+            InsertProfession("Leatherworking", 3);
+            InsertProfession("Weaponsmithing", 2);
             InsertProfession("Tailoring", 2);
             InsertProfession("Platesmithing", 2);
             InsertProfession("Mailsmithing", 2);
             InsertProfession("Jewelcrafting", 2);
-            InsertProfession("Alchemy", 2);
+            InsertProfession("Alchemy", 3);
             InsertResource("Lacquer Branch", 9000);
             InsertResource("Charcoal", 10);
             InsertResource("Dark Lacquer", 45000);
