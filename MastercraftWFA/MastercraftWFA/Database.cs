@@ -273,49 +273,49 @@ namespace MastercraftWFA {
 
         public static DataTable GetRecipesCost(string profession) {
             return Query(
-                "SELECT recipe, SUM(price * amount) AS cost " +
-                "FROM (" +
-                    "SELECT recipe, resource, price, amount " +
-                    "FROM recipes " +
-                    "INNER JOIN consumedResources " +
-                    "ON recipes.name = consumedResources.recipe " +
-                    "INNER JOIN resources " +
-                    "ON consumedResources.resource = resources.name " +
-                    "WHERE recipes.profession = '" + profession + "'" +
-                ") GROUP BY recipe"
+                $"SELECT {ColumnName[Columns.recipe]}, SUM({ColumnName[Columns.price]} * {ColumnName[Columns.amount]}) AS cost " +
+                $"FROM (" +
+                    $"SELECT {ColumnName[Columns.recipe]}, {ColumnName[Columns.resource]}, {ColumnName[Columns.price]}, {ColumnName[Columns.amount]} " +
+                    $"FROM {TableName[Tables.Recipes]} " +
+                    $"INNER JOIN {TableName[Tables.RecipeCosts]} " +
+                    $"ON recipes.{ColumnName[Columns.recipe]} = {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.recipe]} " +
+                    $"INNER JOIN {TableName[Tables.Resources]} " +
+                    $"ON {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.resource]} = {TableName[Tables.Resources]}.{ColumnName[Columns.resource]} " +
+                    $"WHERE {TableName[Tables.Recipes]}.{ColumnName[Columns.profession]} = '{profession}'" +
+                $") GROUP BY {ColumnName[Columns.recipe]}"
             );
         }
 
         public static DataTable GetRecipesCost(List<string> professions) {
-            string professionConstraint = "profession = '" + professions[0] + "'";
+            string professionConstraint = $"profession = '{professions[0]}'";
             foreach (string profession in professions.Skip(1))
-                professionConstraint += " OR profession = '" + profession + "'";
+                professionConstraint += $" OR profession = '{profession}'";
             return Query(
-                "SELECT recipe, SUM(price * amount) AS cost " +
-                "FROM (" +
-                    "SELECT recipe, resource, price, amount " +
-                    "FROM recipes " +
-                    "INNER JOIN consumedResources " +
-                    "ON recipes.name = consumedResources.recipe " +
-                    "INNER JOIN resources " +
-                    "ON consumedResources.resource = resources.name " +
-                    "WHERE " + professionConstraint +
-                ") GROUP BY recipe"
+                $"SELECT {ColumnName[Columns.recipe]}, SUM({ColumnName[Columns.price]} * {ColumnName[Columns.amount]}) AS cost " +
+                $"FROM (" +
+                    $"SELECT {ColumnName[Columns.recipe]}, {ColumnName[Columns.resource]}, {ColumnName[Columns.price]}, {ColumnName[Columns.amount]} " +
+                    $"FROM {TableName[Tables.Recipes]} " +
+                    $"INNER JOIN {TableName[Tables.RecipeCosts]} " +
+                    $"ON recipes.{ColumnName[Columns.recipe]} = {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.recipe]} " +
+                    $"INNER JOIN {TableName[Tables.Resources]} " +
+                    $"ON {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.resource]} = {TableName[Tables.Resources]}.{ColumnName[Columns.resource]} " +
+                    $"WHERE {professionConstraint}" +
+                $") GROUP BY {ColumnName[Columns.recipe]}"
             );
         }
 
         public static DataTable GetRecipesResult(string profession, int tier) {
             return Query(
-                "SELECT recipe, SUM(price * amount) AS tier" + tier + "reward " +
-                "FROM (" +
-                    "SELECT recipe, resource, price, amount " +
-                    "FROM recipes " +
-                    "INNER JOIN results " +
-                    "ON recipes.name = results.recipe " +
-                    "INNER JOIN resources " +
-                    "ON results.resource = resources.name " +
-                    "WHERE recipes.profession = '" + profession + "' AND tier = " + tier +
-                ") GROUP BY recipe"
+                $"SELECT {ColumnName[Columns.recipe]}, SUM({ColumnName[Columns.price]} * {ColumnName[Columns.amount]}) AS tier{tier}reward " +
+                $"FROM (" +
+                    $"SELECT {ColumnName[Columns.recipe]}, {ColumnName[Columns.resource]}, {ColumnName[Columns.price]}, {ColumnName[Columns.amount]} " +
+                    $"FROM {TableName[Tables.Recipes]} " +
+                    $"INNER JOIN {TableName[Tables.RecipeResults]} " +
+                    $"ON {TableName[Tables.Recipes]}.{ColumnName[Columns.recipe]} = {TableName[Tables.RecipeResults]}.{ColumnName[Columns.recipe]} " +
+                    $"INNER JOIN {TableName[Tables.Resources]} " +
+                    $"ON {TableName[Tables.RecipeResults]}.{ColumnName[Columns.resource]} = {TableName[Tables.Resources]}.{ColumnName[Columns.resource]} " +
+                    $"WHERE {TableName[Tables.Recipes]}.{ColumnName[Columns.profession]} = '{profession}' AND {ColumnName[Columns.tier]} = {tier}" +
+                $") GROUP BY {ColumnName[Columns.recipe]}"
             );
         }
         #endregion
