@@ -77,6 +77,7 @@ namespace MastercraftWFA {
         #region Recipes Methods
         void FillDataRecipes(string profession) {
             dataGridViewRecipes.DataSource = database.GetRecipesTable(profession);
+            dataGridViewRecipes.DataSource = Database.GetRecipes();
         }
 
         void FillDataRecipes(List<string> professions) {
@@ -98,7 +99,7 @@ namespace MastercraftWFA {
             List<string> recipes = new List<string>();
             DataGridViewSelectedCellCollection selectedCells = dataGridViewRecipes.SelectedCells;
             foreach (DataGridViewCell cell in selectedCells) {
-                if (dataGridViewRecipes.Columns[Database.ColumnName[Database.Columns.recipe]].Index == cell.ColumnIndex && cell.RowIndex >= 0 && cell.RowIndex < dataGridViewRecipes.RowCount - 1)
+                if (dataGridViewRecipes.Columns["name_recipes"].Index == cell.ColumnIndex && cell.RowIndex >= 0 && cell.RowIndex < dataGridViewRecipes.RowCount - 1)
                     recipes.Add(cell.Value.ToString());
             }
 

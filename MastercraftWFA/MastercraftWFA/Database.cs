@@ -87,7 +87,7 @@ namespace MastercraftWFA {
         }
 
         static void OpenDatabase(string source) {
-            dbConnection = new SQLiteConnection("Data Source=" + source + ";Version=3;");
+            dbConnection = new SQLiteConnection($"Data Source={source};Version=3;");
             dbConnection.Open();
         }
 
@@ -96,7 +96,7 @@ namespace MastercraftWFA {
         }
 
         public static void AddTable(string name, string columns) {
-            string sql = "CREATE TABLE " + name + " " + columns;
+            string sql = $"CREATE TABLE " + name + " " + columns;
             SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
             command.ExecuteNonQuery();
         }
@@ -105,7 +105,7 @@ namespace MastercraftWFA {
             if (columns == null)
                 columns = TableColumns[table];
             string tableName = TableName[table];
-            string sql = "INSERT OR REPLACE INTO " + tableName + " " + columns + " values " + values;
+            string sql = $"INSERT OR REPLACE INTO {tableName} {columns} values {values}";
             SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
             command.ExecuteNonQuery();
         }
@@ -208,6 +208,10 @@ namespace MastercraftWFA {
             return Query($"SELECT {ColumnName[Columns.resource]}, {ColumnName[Columns.price]}, date({ColumnName[Columns.date]}) AS updated FROM {TableName[Tables.Resources]}");
         }
 
+        public static DataTable GetRecipes() {
+            return Query($"SELECT * FROM {TableName[Tables.Recipes]}");
+        }
+
         public static DataTable GetResources(string recipe) {
             long recipe_id = GetRecipeID(recipe);
             return Query(
@@ -249,26 +253,26 @@ namespace MastercraftWFA {
 
         public static DataTable GetRecipesCosts(string recipe) {
             return Query(
-                $"SELECT {ColumnName[Columns.resource]}, {ColumnName[Columns.amount]} " +
+                $"SELECT {ColumnName[Columns.resource_id]}, {ColumnName[Columns.amount]} " +
                 $"FROM {TableName[Tables.RecipeResults]} " +
-                $"WHERE {ColumnName[Columns.recipe]} = '{recipe}'"
+                $"WHERE {ColumnName[Columns.recipe_id]} = {GetRecipeID(recipe)}"
             );
         }
 
         public static DataTable GetRecipesCosts(List<string> recipes) {
-            return new DataTable();
+            throw new NotImplementedException();
         }
 
         public static DataTable GetRecipesResults(string recipe) {
             return Query(
-                $"SELECT {ColumnName[Columns.tier]}, {ColumnName[Columns.resource]}, {ColumnName[Columns.amount]} " +
+                $"SELECT {ColumnName[Columns.tier]}, {ColumnName[Columns.resource_id]}, {ColumnName[Columns.amount]} " +
                 $"FROM {TableName[Tables.RecipeResults]} " +
-                $"WHERE {ColumnName[Columns.recipe]} = '{recipe}'"
+                $"WHERE {ColumnName[Columns.recipe_id]} = {GetRecipeID(recipe)}"
             );
         }
 
         public static DataTable GetRecipesResults(List<string> recipes) {
-            return new DataTable();
+            throw new NotImplementedException();
         }
 
         public static DataTable GetRecipesCost(string profession) {
@@ -278,27 +282,27 @@ namespace MastercraftWFA {
                     $"SELECT {ColumnName[Columns.recipe]}, {ColumnName[Columns.resource]}, {ColumnName[Columns.price]}, {ColumnName[Columns.amount]} " +
                     $"FROM {TableName[Tables.Recipes]} " +
                     $"INNER JOIN {TableName[Tables.RecipeCosts]} " +
-                    $"ON recipes.{ColumnName[Columns.recipe]} = {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.recipe]} " +
+                    $"ON {TableName[Tables.Recipes]}.{ColumnName[Columns.recipe_id]} = {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.recipe_id]} " +
                     $"INNER JOIN {TableName[Tables.Resources]} " +
-                    $"ON {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.resource]} = {TableName[Tables.Resources]}.{ColumnName[Columns.resource]} " +
-                    $"WHERE {TableName[Tables.Recipes]}.{ColumnName[Columns.profession]} = '{profession}'" +
+                    $"ON {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.resource_id]} = {TableName[Tables.Resources]}.{ColumnName[Columns.resource_id]} " +
+                    $"WHERE {TableName[Tables.Recipes]}.{ColumnName[Columns.profession_id]} = '{GetProfessionID(profession)}'" +
                 $") GROUP BY {ColumnName[Columns.recipe]}"
             );
         }
 
         public static DataTable GetRecipesCost(List<string> professions) {
-            string professionConstraint = $"profession = '{professions[0]}'";
+            string professionConstraint = $"{ColumnName[Columns.profession_id]} = '{GetProfessionID(professions[0])}'";
             foreach (string profession in professions.Skip(1))
-                professionConstraint += $" OR profession = '{profession}'";
+                professionConstraint += $" OR {ColumnName[Columns.profession_id]} = '{GetProfessionID(profession)}'";
             return Query(
                 $"SELECT {ColumnName[Columns.recipe]}, SUM({ColumnName[Columns.price]} * {ColumnName[Columns.amount]}) AS cost " +
                 $"FROM (" +
                     $"SELECT {ColumnName[Columns.recipe]}, {ColumnName[Columns.resource]}, {ColumnName[Columns.price]}, {ColumnName[Columns.amount]} " +
                     $"FROM {TableName[Tables.Recipes]} " +
                     $"INNER JOIN {TableName[Tables.RecipeCosts]} " +
-                    $"ON recipes.{ColumnName[Columns.recipe]} = {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.recipe]} " +
+                    $"ON {TableName[Tables.Recipes]}.{ColumnName[Columns.recipe_id]} = {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.recipe_id]} " +
                     $"INNER JOIN {TableName[Tables.Resources]} " +
-                    $"ON {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.resource]} = {TableName[Tables.Resources]}.{ColumnName[Columns.resource]} " +
+                    $"ON {TableName[Tables.RecipeCosts]}.{ColumnName[Columns.resource_id]} = {TableName[Tables.Resources]}.{ColumnName[Columns.resource_id]} " +
                     $"WHERE {professionConstraint}" +
                 $") GROUP BY {ColumnName[Columns.recipe]}"
             );
@@ -311,10 +315,10 @@ namespace MastercraftWFA {
                     $"SELECT {ColumnName[Columns.recipe]}, {ColumnName[Columns.resource]}, {ColumnName[Columns.price]}, {ColumnName[Columns.amount]} " +
                     $"FROM {TableName[Tables.Recipes]} " +
                     $"INNER JOIN {TableName[Tables.RecipeResults]} " +
-                    $"ON {TableName[Tables.Recipes]}.{ColumnName[Columns.recipe]} = {TableName[Tables.RecipeResults]}.{ColumnName[Columns.recipe]} " +
+                    $"ON {TableName[Tables.Recipes]}.{ColumnName[Columns.recipe_id]} = {TableName[Tables.RecipeResults]}.{ColumnName[Columns.recipe_id]} " +
                     $"INNER JOIN {TableName[Tables.Resources]} " +
-                    $"ON {TableName[Tables.RecipeResults]}.{ColumnName[Columns.resource]} = {TableName[Tables.Resources]}.{ColumnName[Columns.resource]} " +
-                    $"WHERE {TableName[Tables.Recipes]}.{ColumnName[Columns.profession]} = '{profession}' AND {ColumnName[Columns.tier]} = {tier}" +
+                    $"ON {TableName[Tables.RecipeResults]}.{ColumnName[Columns.resource_id]} = {TableName[Tables.Resources]}.{ColumnName[Columns.resource_id]} " +
+                    $"WHERE {TableName[Tables.Recipes]}.{ColumnName[Columns.profession_id]} = '{GetProfessionID(profession)}' AND {ColumnName[Columns.tier]} = {tier}" +
                 $") GROUP BY {ColumnName[Columns.recipe]}"
             );
         }

@@ -67,8 +67,8 @@ namespace MastercraftWFA {
         }
 
         public List<object> GetResourceList() {
-            DataTable resources = Database.Query("SELECT name FROM resources");
-            return resources.AsEnumerable().Select(x => x["name"]).ToList();
+            DataTable resources = Database.Query($"SELECT {Database.ColumnName[Database.Columns.resource]} FROM {Database.TableName[Database.Tables.Resources]}");
+            return resources.AsEnumerable().Select(x => x[Database.ColumnName[Database.Columns.resource]]).ToList();
         }
 
         public List<int> GetTiers() {
