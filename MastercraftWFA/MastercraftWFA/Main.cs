@@ -10,6 +10,7 @@ namespace MastercraftWFA {
         public Main() {
             InitializeComponent();
             database = new DatabaseInterface();
+            SetDataPropertyNames();
             FillDataProfessions();
             dataGridViewProfessions.AutoGenerateColumns = false;
             dataGridViewRecipes.AutoGenerateColumns = false;
@@ -18,6 +19,10 @@ namespace MastercraftWFA {
             dataGridViewResourcesResults.AutoGenerateColumns = false;
         }
 
+        void SetDataPropertyNames() {
+            grade.DataPropertyName = Database.ColumnName[Database.Columns.grade];
+            profession.DataPropertyName = Database.ColumnName[Database.Columns.profession];
+        }
 
         #region Professions Methods
         void FillDataProfessions() {
@@ -77,7 +82,6 @@ namespace MastercraftWFA {
         #region Recipes Methods
         void FillDataRecipes(string profession) {
             dataGridViewRecipes.DataSource = database.GetRecipesTable(profession);
-            dataGridViewRecipes.DataSource = Database.GetRecipes();
         }
 
         void FillDataRecipes(List<string> professions) {

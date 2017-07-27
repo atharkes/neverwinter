@@ -126,6 +126,8 @@
       <DependentUpon>DataDrawIO.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Database.Columns.datasource" />
+    <None Include="Properties\DataSources\Database.Tables.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

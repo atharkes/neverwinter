@@ -53,6 +53,7 @@
             this.titleResources = new System.Windows.Forms.Label();
             this.titleResourcesConsumed = new System.Windows.Forms.Label();
             this.titleResourcesResults = new System.Windows.Forms.Label();
+            this.profession = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grade = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.upgrade1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.upgrade2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +71,7 @@
             this.dataGridViewProfessions.AllowUserToResizeRows = false;
             this.dataGridViewProfessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewProfessions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.profession,
             this.grade,
             this.upgrade1,
             this.upgrade2,
@@ -412,9 +414,15 @@
             this.titleResourcesResults.TabIndex = 15;
             this.titleResourcesResults.Text = "Results";
             // 
+            // profession
+            // 
+            this.profession.HeaderText = "Profession";
+            this.profession.Name = "profession";
+            this.profession.ReadOnly = true;
+            this.profession.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // grade
             // 
-            this.grade.DataPropertyName = "grade";
             this.grade.HeaderText = "Grade";
             this.grade.Name = "grade";
             this.grade.ReadOnly = true;
@@ -506,6 +514,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tier1reward;
         private System.Windows.Forms.DataGridViewTextBoxColumn tier2reward;
         private System.Windows.Forms.DataGridViewTextBoxColumn tier3reward;
+        private System.Windows.Forms.DataGridViewTextBoxColumn profession;
         private System.Windows.Forms.DataGridViewComboBoxColumn grade;
         private System.Windows.Forms.DataGridViewTextBoxColumn upgrade1;
         private System.Windows.Forms.DataGridViewTextBoxColumn upgrade2;
