@@ -1,0 +1,138 @@
+Masterwork Jewelcrafting Recipes I[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Smelt Gold Nugget;Requires:;[Jewelcrafter], [Grinding Wheel], [Crucible];2x Personor Tool;3h;Tier 1:;[Rock Salt];None;0
+;;;Consumes:;2x [Gold Ore], [Rock Salt];;;Tier 2:;[Gold Ore], [Rock Salt];;
+;;;;;;;Tier 3:;[Gold Nugget];;
+25;Common;Purify Gold Ingot;Requires:;[Jewelcrafter], [Grinding Wheel], [Crucible];2x Personor Tool;3h;Tier 1:;2x [Gold Ore];None;0
+;;;Consumes:;3x [Gold Nugget], [Concentrated Aqua Regia];;;Tier 2:;[Gold Nugget];;
+;;;;;;;Tier 3:;[Gold Ingot];;
+25;Common;Copper Coin;Requires:;[Jewelcrafter], [Grinding Wheel], [Hammer];2x Personor Tool;3h;Tier 1:;1Copper;None;0
+;;;Consumes:;2x [Copper Ingot], [Aqua Fortis];;;Tier 2:;[Copper Ingot];;
+;;;;;;;Tier 3:;"[Newly ""Minted"" Copper Coin]";;
+25;Common;Silver Coin;Requires:;[Jewelcrafter], [Grinding Wheel], [Hammer];2x Personor Tool;3h;Tier 1:;1Silver;None;0
+;;;Consumes:;2x [Silver Ingot], [Aqua Fortis];;;Tier 2:;[Silver Ingot];;
+;;;;;;;Tier 3:;"[Newly ""Minted"" Silver Coin]";;
+25;Common;Gold Coin;Requires:;[Jewelcrafter], [Grinding Wheel], [Hammer];2x Personor Tool;3h;Tier 1:;1Gold;None;0
+;;;Consumes:;[Gold Ingot], [Concentrated Aqua Regia];;;Tier 2:;[Gold Nugget];;
+;;;;;;;Tier 3:;"[Newly ""Minted"" Gold Coin]";;
+25;Common;Mint Set;Requires:;[Jewelcrafter], [Grinding Wheel], [File];2x Personor Tool;3h;Tier 1:;1Gold, 1Silver, 1Copper;None;0
+;;;Consumes:;"[Newly ""Minted"" Gold Coin], [Newly ""Minted"" Silver Coin], [Newly ""Minted"" Copper Coin]";;;Tier 2:;[Gold Ingot], [Silver Ingot], [Copper Ingot];;
+;;;;;;;Tier 3:;"[Set of Newly ""Minted"" Coins]";;
+Masterwork Jewelcrafting Recipes II[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Electrum Assault Necklace;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Silver Ingot], [Adamant Rivets];;;Tier 2:;[Gold Ingot], [Silver Ingot];;
+;;;;;;;Tier 3:;[Electrum Assault Necklace];;
+25;Common;Electrum Duelist Necklace;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Silver Ingot], [Adamant Rivets];;;Tier 2:;[Gold Ingot], [Silver Ingot];;
+;;;;;;;Tier 3:;[Electrum Duelist Necklace];;
+25;Common;Electrum Executioner Necklace;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Silver Ingot], [Adamant Rings];;;Tier 2:;[Gold Ingot], [Silver Ingot];;
+;;;;;;;Tier 3:;[Electrum Executioner Necklace];;
+25;Common;Electrum Gladiator Necklace;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Silver Ingot], [Magicked Enamel];;;Tier 2:;[Gold Ingot], [Silver Ingot];;
+;;;;;;;Tier 3:;[Electrum Gladiator Necklace];;
+25;Common;Electrum Medic Necklace;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Silver Ingot], [Cashmere Spellthread];;;Tier 2:;[Gold Ingot], [Silver Ingot];;
+;;;;;;;Tier 3:;[Electrum Medic Necklace];;
+25;Common;Electrum Raid Necklace;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Silver Ingot], [Adamant Rings];;;Tier 2:;[Gold Ingot], [Silver Ingot];;
+;;;;;;;Tier 3:;[Electrum Raid Necklace];;
+25;Common;Electrum Restoration Necklace;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Silver Ingot], [Cashmere Spellthread];;;Tier 2:;[Gold Ingot], [Silver Ingot];;
+;;;;;;;Tier 3:;[Electrum Restoration Necklace];;
+25;Common;Electrum Ward Necklace;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Silver Ingot], [Magicked Enamel];;;Tier 2:;[Gold Ingot], [Silver Ingot];;
+;;;;;;;Tier 3:;[Electrum Ward Necklace];;
+25;Common;Rosegold Assault Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Copper Ingot], [Adamant Rivets];;;Tier 2:;[Gold Ingot], [Copper Ingot];;
+;;;;;;;Tier 3:;[Rosegold Assault Ring];;
+25;Common;Rosegold Duelist Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Copper Ingot], [Adamant Rivets];;;Tier 2:;[Gold Ingot], [Copper Ingot];;
+;;;;;;;Tier 3:;[Rosegold Duelist Ring];;
+25;Common;Rosegold Executioner Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Copper Ingot], [Adamant Rings];;;Tier 2:;[Gold Ingot], [Copper Ingot];;
+;;;;;;;Tier 3:;[Rosegold Executioner Ring];;
+25;Common;Rosegold Gladiator Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Copper Ingot], [Magicked Enamel];;;Tier 2:;[Gold Ingot], [Copper Ingot];;
+;;;;;;;Tier 3:;[Rosegold Gladiator Ring];;
+25;Common;Rosegold Medic Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Copper Ingot], [Cashmere Spellthread];;;Tier 2:;[Gold Ingot], [Copper Ingot];;
+;;;;;;;Tier 3:;[Rosegold Medic Ring];;
+25;Common;Rosegold Raid Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Copper Ingot], [Adamant Rings];;;Tier 2:;[Gold Ingot], [Copper Ingot];;
+;;;;;;;Tier 3:;[Rosegold Raid Ring];;
+25;Common;Rosegold Restoration Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Copper Ingot], [Cashmere Spellthread];;;Tier 2:;[Gold Ingot], [Copper Ingot];;
+;;;;;;;Tier 3:;[Rosegold Restoration Ring];;
+25;Common;Rosegold Ward Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Gold Ingot];None;0
+;;;Consumes:;2x [Gold Ingot], [Copper Ingot], [Magicked Enamel];;;Tier 2:;[Gold Ingot], [Copper Ingot];;
+;;;;;;;Tier 3:;[Rosegold Ward Ring];;
+25;Common;Create Large Stone Fireplace;Requires:;[Jewelcrafter], [Grinding Wheel], [Chisel];2x Personor Tool;3h;Tier 1:;7x [Fieldstone];None;0
+;;;Consumes:;20x [Fieldstone], 5x [Oak Lumber];;;Tier 2:;12x [Fieldstone], 2x [Oak Lumber];;
+;;;;;;;Tier 3:;[Large Stone Fireplace];;
+25;Common;Create Roaring Lion Statue;Requires:;[Jewelcrafter], [Grinding Wheel], [Chisel];2x Personor Tool;3h;Tier 1:;7x [Marble];None;0
+;;;Consumes:;20x [Marble], 5x [Red Rouge];;;Tier 2:;12x [Marble], 2x [Red Rouge];;
+;;;;;;;Tier 3:;[Roaring Lion Statue];;
+25;Common;Create Towering Guardian Statue;Requires:;[Jewelcrafter], [Grinding Wheel], [Chisel];2x Personor Tool;3h;Tier 1:;7x [Marble];None;0
+;;;Consumes:;20x [Marble], 5x [Red Rouge];;;Tier 2:;12x [Marble], 2x [Red Rouge];;
+;;;;;;;Tier 3:;[Towering Guardian Statue];;
+Masterwork Jewelcrafting Recipes III[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Create Deathly Guardian Statue;Requires:;[Jewelcrafter], [Grinding Wheel], [Chisel];2x Personor Tool;3h;Tier 1:;7x [Marble];None;0
+;;;Consumes:;20x [Marble], 5x [Red Rouge];;;Tier 2:;12x [Marble], 2x [Red Rouge];;
+;;;;;;;Tier 3:;[Deathly Guardian Statue];;
+25;Common;Create Golden Lion Fireplace;Requires:;[Jewelcrafter], [Grinding Wheel], [Chisel];2x Personor Tool;3h;Tier 1:;7x [Marble];None;0
+;;;Consumes:;20x [Marble], 5x [Oak Lumber], 5x [Gold Ingot];;;Tier 2:;12x [Marble], 2x [Oak Lumber];;
+;;;;;;;Tier 3:;[Golden Lion Fireplace];;
+25;Common;Create Rearing Unicorn Statue;Requires:;[Jewelcrafter], [Grinding Wheel], [Chisel];2x Personor Tool;3h;Tier 1:;7x [Marble];None;0
+;;;Consumes:;20x [Marble], 5x [Red Rouge];;;Tier 2:;12x [Marble], 2x [Red Rouge];;
+;;;;;;;Tier 3:;[Rearing Unicorn Statue];;
+25;Common;Polish Rubellite;Requires:;[Jewelcrafter], [Grinding Wheel], [Chisel];2x Personor Tool;3h;Tier 1:;2x [Raw Rubellite];None;0
+;;;Consumes:;4x [Raw Rubellite], [Red Rouge];;;Tier 2:;[Rubellite];;
+;;;;;;;Tier 3:;5x [Rubellite];;
+25;Common;Polish Sphene;Requires:;[Jewelcrafter], [Grinding Wheel], [Chisel];2x Personor Tool;3h;Tier 1:;2x [Raw Sphene];None;0
+;;;Consumes:;4x [Raw Sphene], [Red Rouge];;;Tier 2:;[Sphene];;
+;;;;;;;Tier 3:;5x [Sphene];;
+25;Common;Smelt Brightsilver Ingot;Requires:;[Jewelcrafter], [Grinding Wheel], [Crucible];2x Personor Tool;3h;Tier 1:;[Hardsand];None;0
+;;;Consumes:;10x [Native Silver], 2x [Hardsand], [Scintillant Glass], [Red Rouge];;;Tier 2:;[Brightsilver Ingot];;
+;;;;;;;Tier 3:;5x [Brightsilver Ingot];;
+25;Common;Rubellite Amulet;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;2x [Titansteel Rings];None;0
+;;;Consumes:;5x [Titansteel Rings], 3x [Brightsilver Ingot], 5x [Rubellite], [Artisan's Putty];;;Tier 2:;4x [Titansteel Rings], 2x [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Rubellite Amulet];;
+25;Common;Rubellite Assault Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Brightsilver Ingot];None;0
+;;;Consumes:;3x [Brightsilver Ingot], 4x [Rubellite], [Artisan's Putty];;;Tier 2:;2x [Brightsilver Ingot], 2x [Rubellite];;
+;;;;;;;Tier 3:;[Rubellite Assault Ring];;
+25;Common;Scintillant Amulet;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;2x [Titansteel Rings];None;0
+;;;Consumes:;5x [Titansteel Rings], 3x [Brightsilver Ingot], 5x [Scintillant Glass], [Artisan's Putty];;;Tier 2:;4x [Titansteel Rings], 2x [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Scintillant Amulet];;
+25;Common;Scintillant Raid Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Brightsilver Ingot];None;0
+;;;Consumes:;3x [Brightsilver Ingot], 4x [Scintillant Glass], [Artisan's Putty];;;Tier 2:;2x [Brightsilver Ingot], 2x [Scintillant Glass];;
+;;;;;;;Tier 3:;[Scintillant Raid Ring];;
+25;Common;Silverspruce Amulet;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;2x [Titansteel Rings];None;0
+;;;Consumes:;5x [Titansteel Rings], 3x [Brightsilver Ingot], 5x [Spruce Lumber], [Artisan's Putty];;;Tier 2:;4x [Titansteel Rings], 2x [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Silverspruce Amulet];;
+25;Common;Silverspruce Ward Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Brightsilver Ingot];None;0
+;;;Consumes:;3x [Brightsilver Ingot], 4x [Spruce Lumber], [Artisan's Putty];;;Tier 2:;2x [Brightsilver Ingot], 2x [Spruce Lumber];;
+;;;;;;;Tier 3:;[Silverspruce Ward Ring];;
+25;Common;Sphene Amulet;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;2x [Titansteel Rings];None;0
+;;;Consumes:;5x [Titansteel Rings], 3x [Brightsilver Ingot], 5x [Sphene], [Artisan's Putty];;;Tier 2:;4x [Titansteel Rings], 2x [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Sphene Amulet];;
+25;Common;Sphene Restoration Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Brightsilver Ingot];None;0
+;;;Consumes:;3x [Brightsilver Ingot], 4x [Sphene], [Artisan's Putty];;;Tier 2:;2x [Brightsilver Ingot], 2x [Sphene];;
+;;;;;;;Tier 3:;[Sphene Restoration Ring];;
+25;Common;Rubellite Duelist Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Brightsilver Ingot];None;0
+;;;Consumes:;3x [Brightsilver Ingot], 4x [Rubellite], [Artisan's Putty];;;Tier 2:;2x [Brightsilver Ingot], 2x [Rubellite];;
+;;;;;;;Tier 3:;[Rubellite Duelist Ring];;
+25;Common;Scintillant Executioner Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Brightsilver Ingot];None;0
+;;;Consumes:;3x [Brightsilver Ingot], 4x [Scintillant Glass], [Artisan's Putty];;;Tier 2:;2x [Brightsilver Ingot], 2x [Scintillant Glass];;
+;;;;;;;Tier 3:;[Scintillant Executioner Ring];;
+25;Common;Silverspruce Gladiator Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Brightsilver Ingot];None;0
+;;;Consumes:;3x [Brightsilver Ingot], 4x [Spruce Lumber], [Artisan's Putty];;;Tier 2:;2x [Brightsilver Ingot], 2x [Spruce Lumber];;
+;;;;;;;Tier 3:;[Silverspruce Gladiator Ring];;
+25;Common;Sphene Medic Ring;Requires:;[Jewelcrafter], [Grinding Wheel];3x Personor Tool;1h;Tier 1:;[Brightsilver Ingot];None;0
+;;;Consumes:;3x [Brightsilver Ingot], 4x [Sphene], [Artisan's Putty];;;Tier 2:;2x [Brightsilver Ingot], 2x [Sphene];;
+;;;;;;;Tier 3:;[Sphene Medic Ring];;

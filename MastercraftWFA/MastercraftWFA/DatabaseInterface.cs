@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace MastercraftWFA {
     class DatabaseInterface {
@@ -26,12 +25,12 @@ namespace MastercraftWFA {
             // Compute profit value
             for (int i = 0; i < costTable.Rows.Count; i++) {
                 bool tool = Database.HasTool(profession);
-                Int64 cost = costTable.Rows[i].Field<Int64>("cost");
-                Int64 tier1Reward = costTable.Rows[i].Field<Int64>("tier1reward");
-                Int64 tier2Reward = costTable.Rows[i].Field<Int64>("tier2reward");
-                Int64 tier3Reward = costTable.Rows[i].Field<Int64>("tier3reward");
-                Int64 tier3ChanceReward = (int)(tool ? 0.75 * tier3Reward + 0.25 * tier2Reward : 0.35 * tier3Reward + 0.65 * tier2Reward);
-                Int64 profit = Math.Max(tier1Reward, tier2Reward);
+                long cost = costTable.Rows[i].Field<long>("cost");
+                long tier1Reward = costTable.Rows[i].Field<long>("tier1reward");
+                long tier2Reward = costTable.Rows[i].Field<long>("tier2reward");
+                long tier3Reward = costTable.Rows[i].Field<long>("tier3reward");
+                long tier3ChanceReward = (int)(tool ? 0.75 * tier3Reward + 0.25 * tier2Reward : 0.35 * tier3Reward + 0.65 * tier2Reward);
+                long profit = Math.Max(tier1Reward, tier2Reward);
                 profit = Math.Max(profit, tier3ChanceReward);
                 profit -= cost;
                 costTable.Rows[i].SetField("profit", profit);

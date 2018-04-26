@@ -1,0 +1,99 @@
+Masterwork Artificing Recipes I[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Extract Dark Lacquer;Requires:;[Artificer], [Artificer's Picatrix], [Chisel];2x Personor Tool;3h;Tier 1:;[Charcoal];None;0
+;;;Consumes:;4x [Lacquer Branch], 2x [Charcoal];;;Tier 2:;2x [Lacquer Branch];;
+;;;;;;;Tier 3:;[Dark Lacquer];;
+25;Common;Lacquer Ebony;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;[Ebony Wood];None;0
+;;;Consumes:;2x [Dark Lacquer], 2x [Ebony Wood];;;Tier 2:;[Ebony Wood], [Dark Lacquer];;
+;;;;;;;Tier 3:;[Lacquered Ebony];;
+25;Common;Enchant Cashmere Spellthread;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;[Wool Scraps];None;0
+;;;Consumes:;2x [Cashmere Yarn], 2x [Concentrated Residuum];;;Tier 2:;[Cashmere Yarn];;
+;;;;;;;Tier 3:;[Cashmere Spellthread];;
+25;Common;Enchant Magicked Enamel;Requires:;[Artificer], [Artificer's Picatrix], [Mortar];2x Personor Tool;3h;Tier 1:;[Silex];None;0
+;;;Consumes:;2x [Silex], 2x [Concentrated Residuum], [Dragon's Blood];;;Tier 2:;[Silex], [Concentrated Residuum];;
+;;;;;;;Tier 3:;[Magicked Enamel];;
+25;Common;Drums of Panic;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;2x [Ebony Wood];None;0
+;;;Consumes:;2x [Lacquered Ebony], [Vellum], [Adamant Rivets], [Copper Ingot], [Concentrated Residuum];;;Tier 2:;[Lacquered Ebony];;
+;;;;;;;Tier 3:;[Drums of Panic];;
+Masterwork Artificing Recipes II[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Stronghold Cleric's Armaments;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;1h;Tier 1:;[Concentrated Residuum], [Gold Ingot];None;0
+;;;Consumes:;4x [Gold Ingot], 2x [Gold Wire], 2x [Adamant Ingot], 2x [Adamant Rings], 2x [Concentrated Residuum];;;Tier 2:;2x [Concentrated Residuum], 3x [Gold Ingot], 2x [Adamant Rings];;
+;;;;;;;Tier 3:;[Stronghold Cleric's Armaments];;
+25;Common;Stronghold Hunter's Armaments;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;1h;Tier 1:;2x [Lacquered Ebony];None;0
+;;;Consumes:;5x [Lacquered Ebony], 3x [Lacquered Aberrant Leather], 2x [Laminated Adamant Blade], 2x [Adamant Ingot];;;Tier 2:;5x [Lacquered Ebony], 2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Stronghold Hunter's Armaments];;
+25;Common;Stronghold Warlock's Armaments;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;1h;Tier 1:;2x [Concentrated Residuum];None;0
+;;;Consumes:;[Laminated Adamant Blade], 3x [Gold Ingot], 2x [Lacquered Aberrant Leather], 4x [Vellum], 2x [Concentrated Residuum];;;Tier 2:;2x [Concentrated Residuum], 2x [Lacquered Aberrant Leather], 3x [Gold Ingot];;
+;;;;;;;Tier 3:;[Stronghold Warlock's Armaments];;
+25;Common;Stronghold Wizard's Armaments;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;1h;Tier 1:;2x [Concentrated Residuum];None;0
+;;;Consumes:;6x [Gold Ingot], 2x [Gold Wire], 4x [Concentrated Residuum];;;Tier 2:;4x [Concentrated Residuum], 3x [Gold Ingot];;
+;;;;;;;Tier 3:;[Stronghold Wizard's Armaments];;
+25;Common;Create Ebony Dining Table;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;12x [Lacquered Ebony];None;0
+;;;Consumes:;40x [Lacquered Ebony], 2x [Iron Nails];;;Tier 2:;20x [Lacquered Ebony];;
+;;;;;;;Tier 3:;[Ebony Dining Table];;
+25;Common;Create Elm Highback Carrel;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;4x [Elm Lumber];None;0
+;;;Consumes:;10x [Elm Lumber], [Beeswax], [Adamant Nails];;;Tier 2:;7x [Elm Lumber], [Beeswax];;
+;;;;;;;Tier 3:;[Elm Highback Carrel];;
+25;Common;Create Oak Dining Table;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;12x [Oak Lumber];None;0
+;;;Consumes:;40x [Oak Lumber], [Beeswax], 2x [Iron Nails];;;Tier 2:;20x [Oak Lumber], [Beeswax];;
+;;;;;;;Tier 3:;[Oak Dining Table];;
+25;Common;Create Upholstered Oak Cathedra;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;2x [Oak Lumber];None;0
+;;;Consumes:;5x [Oak Lumber], [Cashmere], [Cashmere Yarn], [Adamant Nails];;;Tier 2:;3x [Oak Lumber], [Cashmere];;
+;;;;;;;Tier 3:;[Upholstered Oak Cathedra];;
+Masterwork Artificing Recipes III[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Cut Elm Lumber;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;[Elm Lumber];None;0
+;;;Consumes:;5x [Elm Log];;;Tier 2:;2x [Elm Lumber];;
+;;;;;;;Tier 3:;5x [Elm Lumber];;
+25;Common;Cut Spruce Lumber;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;2x [Spruce Log];None;0
+;;;Consumes:;4x [Spruce Log], 3x [Dark Lacquer];;;Tier 2:;[Spruce Lumber];;
+;;;;;;;Tier 3:;5x [Spruce Lumber];;
+25;Common;Enchant Artisan's Enamel;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;[Scintillant Glass];None;0
+;;;Consumes:;[Fartouched Residuum], 2x [Scintillant Glass], [Alkali];;;Tier 2:;[Artisan's Enamel];;
+;;;;;;;Tier 3:;5x [Artisan's Enamel];;
+25;Common;Smelt Scintillant Glass;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;[Raw Sphene];None;0
+;;;Consumes:;[Raw Sphene], [Raw Rubellite], [Gold Wire];;;Tier 2:;[Scintillant Glass];;
+;;;;;;;Tier 3:;5x [Scintillant Glass];;
+25;Common;Brightsilver Longbow;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;1h;Tier 1:;2x [Brightsilver Ingot];None;0
+;;;Consumes:;5x [Brightsilver Ingot], 3x [Manticore Leather], [Manticore Felt], 2x [Rubellite], [Artisan's Putty];;;Tier 2:;4x [Brightsilver Ingot], 2x [Manticore Leather];;
+;;;;;;;Tier 3:;[Brightsilver Longbow];;
+25;Common;Brightsilver Symbol;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;1h;Tier 1:;2x [Brightsilver Ingot];None;0
+;;;Consumes:;5x [Brightsilver Ingot], 2x [Fartouched Residuum], [Manticore Felt], [Rubellite], [Artisan's Putty];;;Tier 2:;4x [Brightsilver Ingot], [Fartouched Residuum];;
+;;;;;;;Tier 3:;[Brightsilver Holy Symbol];;
+25;Common;Fartouched Orb;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;1h;Tier 1:;[Fartouched Residuum], [Brightsilver Ingot];None;0
+;;;Consumes:;3x [Fartouched Residuum], 2x [Brightsilver Ingot], [Manticore Felt], 4x [Scintillant Glass], [Artisan's Putty];;;Tier 2:;2x [Fartouched Residuum], 2x [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Fartouched Orb];;
+25;Common;Fartouched Pact Blade;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;1h;Tier 1:;[Fartouched Residuum], [Titansteel Ingot];None;0
+;;;Consumes:;3x [Fartouched Residuum], 2x [Titansteel Ingot], 2x [Manticore Felt], 3x [Aberrant Leather Strap], [Artisan's Enamel];;;Tier 2:;2x [Fartouched Residuum], 2x [Titansteel Ingot];;
+;;;;;;;Tier 3:;[Fartouched Pact Blade];;
+25;Common;Brightsilver Icon;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;1h;Tier 1:;2x [Brightsilver Ingot];None;0
+;;;Consumes:;4x [Brightsilver Ingot], 2x [Titansteel Rings], [Scintillant Glass], [Artisan's Putty];;;Tier 2:;3x [Brightsilver Ingot], [Titansteel Rings];;
+;;;;;;;Tier 3:;[Brightsilver Icon];;
+25;Common;Brightsilver Talisman;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;1h;Tier 1:;2x [Brightsilver Ingot];None;0
+;;;Consumes:;4x [Brightsilver Ingot], 2x [Manticore Felt], [Rubellite], [Artisan's Putty];;;Tier 2:;3x [Brightsilver Ingot], [Manticore Felt];;
+;;;;;;;Tier 3:;[Brightsilver Talisman];;
+25;Common;Manticore Grimoire;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];None;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Vellum], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Grimoire];;
+25;Common;Create Elm Dining Table;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;12x [Elm Lumber];None;0
+;;;Consumes:;40x [Elm Lumber], [Beeswax], [Titansteel Nails];;;Tier 2:;20x [Elm Lumber], [Beeswax];;
+;;;;;;;Tier 3:;[Elm Dining Table];;
+25;Common;Create Elm Highback Chair;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;2x [Elm Lumber];None;0
+;;;Consumes:;5x [Elm Lumber], [Samite], [Gold Wire], [Titansteel Nails];;;Tier 2:;3x [Elm Lumber], [Samite];;
+;;;;;;;Tier 3:;[Elm Highback Chair];;
+25;Common;Create Spruce Armchair;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;2x [Spruce Lumber];None;0
+;;;Consumes:;5x [Spruce Lumber], [Manticore Leather], [Cashmere Yarn], [Titansteel Nails];;;Tier 2:;3x [Spruce Lumber], [Manticore Leather];;
+;;;;;;;Tier 3:;[Spruce Armchair];;
+25;Common;Create Spruce Dining Table;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;6x [Spruce Lumber], 6x [Carved Pine Wood];None;0
+;;;Consumes:;20x [Spruce Lumber], 20x [Carved Pine Wood], [Burgundy Pitch], [Terebinth], [Titansteel Nails];;;Tier 2:;10x [Spruce Lumber], 10x [Carved Pine Wood], [Terebinth];;
+;;;;;;;Tier 3:;[Spruce Dining Table];;
+25;Common;Create Stained Spruce Bookcase;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;7x [Spruce Lumber];None;0
+;;;Consumes:;20x [Spruce Lumber], [Terebinth], 5x [Charcoal], [Assorted Volumes];;;Tier 2:;12x [Spruce Lumber], [Terebinth];;
+;;;;;;;Tier 3:;[Stained Spruce Bookcase];;
+25;Common;Create Stained Spruce Bookshelf;Requires:;[Artificer], [Artificer's Picatrix];3x Personor Tool;3h;Tier 1:;7x [Spruce Lumber];None;0
+;;;Consumes:;20x [Spruce Lumber], [Terebinth], 5x [Charcoal], [Assorted Volumes];;;Tier 2:;12x [Spruce Lumber], [Terebinth];;
+;;;;;;;Tier 3:;[Stained Spruce Bookshelf];;

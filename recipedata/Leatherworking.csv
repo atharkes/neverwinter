@@ -1,0 +1,327 @@
+Masterwork Leatherworking Recipes I[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Taw Hard Aberrant Leather;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;3h;Tier 1:;[Aberrant Leather];none;0
+;;;Consumes:;2x [Aberrant Pelt], 3x [Alum];;;Tier 2:;2x [Aberrant Leather], [Alum];;
+;;;;;;;Tier 3:;[Hard Aberrant Leather];;
+25;Common;Tan Soft Aberrant Leather;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;3h;Tier 1:;[Aberrant Leather];none;0
+;;;Consumes:;2x [Aberrant Pelt], 3x [Dark Alum];;;Tier 2:;2x [Aberrant Leather], [Dark Alum];;
+;;;;;;;Tier 3:;[Soft Aberrant Leather];;
+25;Common;Lacquer Aberrant Leather;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;3h;Tier 1:;[Aberrant Leather];none;0
+;;;Consumes:;[Hard Aberrant Leather], 2x [Dark Lacquer];;;Tier 2:;2x [Aberrant Leather], [Dark Lacquer];;
+;;;;;;;Tier 3:;[Lacquered Aberrant Leather];;
+25;Common;Line Aberrant Leather;Requires:;[Leatherworker], [Round Knife], [Needle];2x Personor Tool;3h;Tier 1:;[Aberrant Leather];none;0
+;;;Consumes:;[Soft Aberrant Leather], [Cashmere Wool], [Cashmere Yarn];;;Tier 2:;2x [Aberrant Leather], [Cashmere Wool];;
+;;;;;;;Tier 3:;[Lined Aberrant Leather];;
+25;Common;Vellum;Requires:;[Leatherworker], [Round Knife], [Grindstone];2x Personor Tool;3h;Tier 1:;[Simple Pelt];none;0
+;;;Consumes:;[Calf Skin], [Slaked Lime];;;Tier 2:;[Simple Leather];;
+;;;;;;;Tier 3:;[Vellum];;
+25;Common;Calishite Saddle;Requires:;[Leatherworker], [Round Knife], [Shears];2x Personor Tool;3h;Tier 1:;[Hard Aberrant Leather];none;0
+;;;Consumes:;3x [Lacquered Aberrant Leather], [Lined Aberrant Leather], [Cashmere], [Adamant Rings];;;Tier 2:;2x [Hard Aberrant Leather], [Soft Aberrant Leather];;
+;;;;;;;Tier 3:;[Calishite Saddle];;
+Masterwork Leatherworking Recipes II[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Umbral Assault Boots;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lacquered Aberrant Leather];none;0
+;;;Consumes:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Jute];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Assault Boots];;
+25;Common;Umbral Assault Bracers;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Assault Bracers];;
+25;Common;Umbral Assault Coat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lacquered Aberrant Leather];none;0
+;;;Consumes:;5x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], 2x [Adamant Rings], 2x [Cashmere];;;Tier 2:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Cashmere];;
+;;;;;;;Tier 3:;[Umbral Assault Coat];;
+25;Common;Umbral Assault Cowl;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;3x [Lined Aberrant Leather], [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Assault Cowl];;
+25;Common;Umbral Assault Gaiters;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Assault Gaiters];;
+25;Common;Umbral Assault Gloves;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lacquered Aberrant Leather];none;0
+;;;Consumes:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Adamant Rivets];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Assault Gloves];;
+25;Common;Umbral Assault Hood;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Soft Aberrant Leather];none;0
+;;;Consumes:;2x [Soft Aberrant Leather], 3x [Lacquered Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Soft Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Assault Hood];;
+25;Common;Umbral Assault Longcoat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lined Aberrant Leather];none;0
+;;;Consumes:;3x [Lined Aberrant Leather], 2x [Lacquered Aberrant Leather], 4x [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;3x [Lined Aberrant Leather], 3x [Cashmere];;
+;;;;;;;Tier 3:;[Umbral Assault Longcoat];;
+25;Common;Umbral Assault Mask;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Soft Aberrant Leather];none;0
+;;;Consumes:;2x [Soft Aberrant Leather], 2x [Lacquered Aberrant Leather], 2x [Cashmere];;;Tier 2:;2x [Soft Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Assault Mask];;
+25;Common;Umbral Assault Pigaches;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Cashmere], [Cashmere Spellthread];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Assault Pigaches];;
+25;Common;Umbral Assault Vest;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lacquered Aberrant Leather];none;0
+;;;Consumes:;5x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], 2x [Adamant Rivets], 2x [Cashmere];;;Tier 2:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Adamant Rivets];;
+;;;;;;;Tier 3:;[Umbral Assault Vest];;
+25;Common;Umbral Assault Wristguards;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Cashmere], [Cashmere Spellthread];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Assault Wristguards];;
+25;Common;Umbral Duelist Boots;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lacquered Aberrant Leather];none;0
+;;;Consumes:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Jute];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Duelist Boots];;
+25;Common;Umbral Duelist Bracers;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Duelist Bracers];;
+25;Common;Umbral Duelist Coat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lacquered Aberrant Leather];none;0
+;;;Consumes:;5x [Lined Aberrant Leather], 2x [Lined Aberrant Leather], 2x [Adamant Rings], 2x [Cashmere];;;Tier 2:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Cashmere];;
+;;;;;;;Tier 3:;[Umbral Duelist Coat];;
+25;Common;Umbral Duelist Cowl;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;3x [Lacquered Aberrant Leather], [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Duelist Cowl];;
+25;Common;Umbral Duelist Gaiters;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Duelist Gaiters];;
+25;Common;Umbral Duelist Gloves;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lacquered Aberrant Leather];none;0
+;;;Consumes:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Adamant Rivets];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Duelist Gloves];;
+25;Common;Umbral Duelist Hood;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Soft Aberrant Leather];none;0
+;;;Consumes:;2x [Soft Aberrant Leather], 3x [Lacquered Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Soft Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Duelist Hood];;
+25;Common;Umbral Duelist Longcoat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lined Aberrant Leather];none;0
+;;;Consumes:;3x [Lined Aberrant Leather], 2x [Lacquered Aberrant Leather], 4x [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;3x [Lined Aberrant Leather], 3x [Cashmere];;
+;;;;;;;Tier 3:;[Umbral Duelist Longcoat];;
+25;Common;Umbral Duelist Mask;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Soft Aberrant Leather];none;0
+;;;Consumes:;2x [Soft Aberrant Leather], 2x [Lacquered Aberrant Leather], 2x [Cashmere];;;Tier 2:;2x [Soft Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Duelist Mask];;
+25;Common;Umbral Duelist Pigaches;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Cashmere], [Cashmere Spellthread];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Duelist Pigaches];;
+25;Common;Umbral Duelist Vest;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lacquered Aberrant Leather];none;0
+;;;Consumes:;5x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], 2x [Adamant Rivets], 2x [Cashmere];;;Tier 2:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Adamant Rivets];;
+;;;;;;;Tier 3:;[Umbral Duelist Vest];;
+25;Common;Umbral Duelist Wristguards;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Cashmere], [Cashmere Spellthread];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Duelist Wristguards];;
+25;Common;Umbral Executioner Boots;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lacquered Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], [Jute];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Executioner Boots];;
+25;Common;Umbral Executioner Bracers;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Executioner Bracers];;
+25;Common;Umbral Executioner Coat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lacquered Aberrant Leather];none;0
+;;;Consumes:;4x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], 2x [Adamant Rings], 2x [Cashmere];;;Tier 2:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Cashmere];;
+;;;;;;;Tier 3:;[Umbral Executioner Coat];;
+25;Common;Umbral Executioner Cowl;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;2x [Lined Aberrant Leather], 2x [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Executioner Cowl];;
+25;Common;Umbral Executioner Gaiters;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Executioner Gaiters];;
+25;Common;Umbral Executioner Gloves;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lacquered Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], [Adamant Rivets];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Executioner Gloves];;
+25;Common;Umbral Executioner Hood;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Soft Aberrant Leather];none;0
+;;;Consumes:;3x [Soft Aberrant Leather], 2x [Lacquered Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Soft Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Executioner Hood];;
+25;Common;Umbral Executioner Longcoat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lined Aberrant Leather];none;0
+;;;Consumes:;4x [Lined Aberrant Leather], [Lacquered Aberrant Leather], 4x [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;3x [Lined Aberrant Leather], 3x [Cashmere];;
+;;;;;;;Tier 3:;[Umbral Executioner Longcoat];;
+25;Common;Umbral Executioner Mask;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Soft Aberrant Leather];none;0
+;;;Consumes:;3x [Soft Aberrant Leather], [Lacquered Aberrant Leather], 2x [Cashmere];;;Tier 2:;2x [Soft Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Executioner Mask];;
+25;Common;Umbral Executioner Pigaches;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;[Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], [Cashmere], [Cashmere Spellthread];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Executioner Pigaches];;
+25;Common;Umbral Executioner Vest;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lacquered Aberrant Leather];none;0
+;;;Consumes:;4x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], 2x [Adamant Rivets], 2x [Cashmere];;;Tier 2:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Adamant Rivets];;
+;;;;;;;Tier 3:;[Umbral Executioner Vest];;
+25;Common;Umbral Executioner Wristguards;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;[Lacquered Aberrant Leather],3x [Lined Aberrant Leather], [Cashmere], [Cashmere Spellthread];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Executioner Wristguards];;
+25;Common;Umbral Raid Boots;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lacquered Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], [Jute];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Raid Boots];;
+25;Common;Umbral Raid Bracers;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Raid Bracers];;
+25;Common;Umbral Raid Coat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lacquered Aberrant Leather];none;0
+;;;Consumes:;4x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], 2x [Adamant Rings], 2x [Cashmere];;;Tier 2:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Cashmere];;
+;;;;;;;Tier 3:;[Umbral Raid Coat];;
+25;Common;Umbral Raid Cowl;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;2x [Lined Aberrant Leather], 2x [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Raid Cowl];;
+25;Common;Umbral Raid Gaiters;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Raid Gaiters];;
+25;Common;Umbral Raid Gloves;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lacquered Aberrant Leather];none;0
+;;;Consumes:;2x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], [Adamant Rivets];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Raid Gloves];;
+25;Common;Umbral Raid Hood;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Soft Aberrant Leather];none;0
+;;;Consumes:;3x [Soft Aberrant Leather], 2x [Lacquered Aberrant Leather], [Adamant Ingot];;;Tier 2:;2x [Soft Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Raid Hood];;
+25;Common;Umbral Raid Longcoat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lined Aberrant Leather];none;0
+;;;Consumes:;4x [Lined Aberrant Leather], [Lacquered Aberrant Leather], 4x [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;3x [Lined Aberrant Leather], 3x [Cashmere];;
+;;;;;;;Tier 3:;[Umbral Raid Longcoat];;
+25;Common;Umbral Raid Mask;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Soft Aberrant Leather];none;0
+;;;Consumes:;3x [Soft Aberrant Leather], [Lacquered Aberrant Leather], 2x [Cashmere];;;Tier 2:;2x [Soft Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Raid Mask];;
+25;Common;Umbral Raid Pigaches;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;[Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], [Cashmere], [Cashmere Spellthread];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Raid Pigaches];;
+25;Common;Umbral Raid Vest;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;3x [Lacquered Aberrant Leather];none;0
+;;;Consumes:;4x [Lacquered Aberrant Leather], 3x [Lined Aberrant Leather], 2x [Adamant Rivets], 2x [Cashmere];;;Tier 2:;3x [Lacquered Aberrant Leather], 2x [Lined Aberrant Leather], [Adamant Rivets];;
+;;;;;;;Tier 3:;[Umbral Raid Vest];;
+25;Common;Umbral Raid Wristguards;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Lined Aberrant Leather];none;0
+;;;Consumes:;[Lacquered Aberrant Leather],3x [Lined Aberrant Leather], [Cashmere], [Cashmere Spellthread];;;Tier 2:;2x [Lined Aberrant Leather];;
+;;;;;;;Tier 3:;[Umbral Raid Wristguards];;
+25;Common;Create Assorted Pelt Rug;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;3h;Tier 1:;[Cashmere Yarn];none;0
+;;;Consumes:;[Deer Skin], [Bear Skin], 2x [Jute], 6x [Alum], 2x [Cashmere Yarn];;;Tier 2:;2x [Cashmere Yarn], 2x [Alum];;
+;;;;;;;Tier 3:;[Pelts];;
+Masterwork Leatherworking Recipes III[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Create Winter Pelt Rug;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;3h;Tier 1:;[Cashmere Yarn];none;0
+;;;Consumes:;[Pelts], [Polar Bear Skin], 2x [Dark Alum], [Jute], [Cashmere Yarn];;;Tier 2:;[Cashmere Yarn], 2x [Dark Alum];;
+;;;;;;;Tier 3:;[Winter Pelts];;
+25;Common;Make Aberrant Leather Strap;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;3h;Tier 1:;[Snowhare Wool];none;0
+;;;Consumes:;3x [Snowhare Wool], [Dark Alum], [Soft Aberrant Leather];;;Tier 2:;[Aberrant Leather Strap];;
+;;;;;;;Tier 3:;5x [Aberrant Leather Strap];;
+25;Common;Tan Manticore Leather;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;3h;Tier 1:;2x [Spruce Log];none;0
+;;;Consumes:;3x [Spruce Log], [Manticore Hide], [Burgundy Pitch], [Tanner's Liquor];;;Tier 2:;[Manticore Leather];;
+;;;;;;;Tier 3:;5x [Manticore Leather];;
+25;Common;Manticore Assault Boots;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Assault Boots];;
+25;Common;Manticore Assault Bracers;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Assault Bracers];;
+25;Common;Manticore Assault Coat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Assault Coat];;
+25;Common;Manticore Assault Cowl;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Assault Cowl];;
+25;Common;Manticore Assault Gaiters;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Assault Gaiters];;
+25;Common;Manticore Assault Gloves;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Assault Gloves];;
+25;Common;Manticore Assault Hood;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Assault Hood];;
+25;Common;Manticore Assault Longcoat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Assault Longcoat];;
+25;Common;Manticore Assault Mask;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Assault Mask];;
+25;Common;Manticore Assault Pigaches;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Assault Pigaches];;
+25;Common;Manticore Assault Vest;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Assault Vest];;
+25;Common;Manticore Assault Wristguards;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Assault Wristguards];;
+25;Common;Manticore Duelist Boots;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Duelist Boots];;
+25;Common;Manticore Duelist Bracers;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Duelist Bracers];;
+25;Common;Manticore Duelist Coat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Duelist Coat];;
+25;Common;Manticore Duelist Cowl;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Duelist Cowl];;
+25;Common;Manticore Duelist Gaiters;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Duelist Gaiters];;
+25;Common;Manticore Duelist Gloves;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Duelist Gloves];;
+25;Common;Manticore Duelist Hood;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Duelist Hood];;
+25;Common;Manticore Duelist Longcoat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Duelist Longcoat];;
+25;Common;Manticore Duelist Mask;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Duelist Mask];;
+25;Common;Manticore Duelist Pigaches;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Duelist Pigaches];;
+25;Common;Manticore Duelist Vest;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Duelist Vest];;
+25;Common;Manticore Duelist Wristguards;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Duelist Wristguards];;
+25;Common;Manticore Executioner Boots;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Executioner Boots];;
+25;Common;Manticore Executioner Bracers;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Executioner Bracers];;
+25;Common;Manticore Executioner Coat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Executioner Coat];;
+25;Common;Manticore Executioner Cowl;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Executioner Cowl];;
+25;Common;Manticore Executioner Gaiters;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Executioner Gaiters];;
+25;Common;Manticore Executioner Gloves;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Executioner Gloves];;
+25;Common;Manticore Executioner Hood;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Executioner Hood];;
+25;Common;Manticore Executioner Longcoat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Executioner Longcoat];;
+25;Common;Manticore Executioner Mask;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Executioner Mask];;
+25;Common;Manticore Executioner Pigaches;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Executioner Pigaches];;
+25;Common;Manticore Executioner Vest;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Executioner Vest];;
+25;Common;Manticore Executioner Wristguards;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Executioner Wristguards];;
+25;Common;Manticore Raid Boots;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Raid Boots];;
+25;Common;Manticore Raid Bracers;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Raid Bracers];;
+25;Common;Manticore Raid Coat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Raid Coat];;
+25;Common;Manticore Raid Cowl;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Raid Cowl];;
+25;Common;Manticore Raid Gaiters;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Raid Gaiters];;
+25;Common;Manticore Raid Gloves;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Raid Gloves];;
+25;Common;Manticore Raid Hood;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Raid Hood];;
+25;Common;Manticore Raid Longcoat;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Raid Longcoat];;
+25;Common;Manticore Raid Mask;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Raid Mask];;
+25;Common;Manticore Raid Pigaches;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Raid Pigaches];;
+25;Common;Manticore Raid Vest;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;2x [Manticore Leather];none;0
+;;;Consumes:;4x [Manticore Leather], 2x [Manticore Felt], 2x [Brightsilver Ingot], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Raid Vest];;
+25;Common;Manticore Raid Wristguards;Requires:;[Leatherworker], [Round Knife];3x Personor Tool;1h;Tier 1:;[Manticore Leather];none;0
+;;;Consumes:;2x [Manticore Leather], 2x [Manticore Felt], 3x [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;2x [Manticore Leather], [Manticore Felt];;
+;;;;;;;Tier 3:;[Manticore Raid Wristguards];;

@@ -149,19 +149,19 @@ namespace MastercraftWFA {
         static void InsertDummyData() {
             InsertProfession("Artificing", 3);
             InsertProfession("Leatherworking", 3);
-            InsertProfession("Weaponsmithing", 2);
-            InsertProfession("Tailoring", 2);
-            InsertProfession("Platesmithing", 2);
-            InsertProfession("Mailsmithing", 2);
-            InsertProfession("Jewelcrafting", 2);
+            InsertProfession("Weaponsmithing", 3);
+            InsertProfession("Tailoring", 3);
+            InsertProfession("Platesmithing", 3);
+            InsertProfession("Mailsmithing", 3);
+            InsertProfession("Jewelcrafting", 3);
             InsertProfession("Alchemy", 3);
             InsertResource("Lacquer Branch", 9000);
             InsertResource("Charcoal", 10);
             InsertResource("Dark Lacquer", 45000);
             InsertResource("Ebony Wood", 25);
             InsertResource("Lacquered Ebony", 150000);
-            InsertRecipeName("Extract Dark Lacquer", "Artificing", 2);
-            InsertRecipeName("Lacquer Ebony", "Artificing", 2);
+            InsertRecipeName("Extract Dark Lacquer", "Artificing", 1);
+            InsertRecipeName("Lacquer Ebony", "Artificing", 1);
             InsertRecipeCost("Extract Dark Lacquer", "Lacquer Branch", 4);
             InsertRecipeCost("Extract Dark Lacquer", "Charcoal", 2);
             InsertRecipeCost("Lacquer Ebony", "Dark Lacquer", 4);

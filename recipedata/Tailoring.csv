@@ -1,0 +1,186 @@
+Masterwork Tailoring Recipes I[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Spin Cashmere Yarn;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;3h;Tier 1:;2x [Wool Scraps];none;0
+;;;Consumes:;2x [Cashmere Wool], [Oil of Vitriol];;;Tier 2:;[Cashmere Wool];;
+;;;;;;;Tier 3:;[Cashmere Yarn];;
+25;Common;Weave Cashmere;Requires:;[Tailor], [Spinning Wheel], [Needle];2x Personor Tool;3h;Tier 1:;2x [Bolt of Wool Cloth];none;0
+;;;Consumes:;3x [Cashmere Yarn];;;Tier 2:;[Cashmere Yarn];;
+;;;;;;;Tier 3:;[Cashmere];;
+25;Common;Weave Samite;Requires:;[Tailor], [Spinning Wheel], [Needle];2x Personor Tool;3h;Tier 1:;2x [Spool of Fine Silk Thread];none;0
+;;;Consumes:;2x [Gold Wire], 6x [Spool of Fine Silk Thread];;;Tier 2:;2x [Spool of Fine Silk Thread], [Gold Wire];;
+;;;;;;;Tier 3:;[Samite];;
+25;Common;Cashmere Carpet;Requires:;[Tailor], [Spinning Wheel], [Needle];2x Personor Tool;3h;Tier 1:;[Jute];none;0
+;;;Consumes:;3x [Cashmere], 3x [Jute], [Gold Wire], [Spool of Fine Silk Thread];;;Tier 2:;3x [Cashmere Yarn], [Jute];;
+;;;;;;;Tier 3:;[Cashmere Carpet];;
+Masterwork Tailoring Recipes II[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Samite Assault Armlets;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Samite];none;0
+;;;Consumes:;[Samite], 2x [Cashmere], 2x [Lacquered Aberrant Leather], [Cashmere Spellthread];;;Tier 2:;2x [Samite];;
+;;;;;;;Tier 3:;[Samite Assault Armlets];;
+25;Common;Samite Assault Cap;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;[Samite], 3x [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;2x [Cashmere];;
+;;;;;;;Tier 3:;[Samite Assault Cap];;
+25;Common;Samite Assault Robes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;3x [Cashmere];none;0
+;;;Consumes:;2x [Samite], 5x [Cashmere], 2x [Lacquered Aberrant Leather], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;3x [Cashmere], 2x [Samite], [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Samite Assault Robes];;
+25;Common;Samite Assault Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;2x [Samite], [Cashmere Yarn], [Dragon's Blood];;;Tier 2:;[Cashmere], [Cashmere Yarn];;
+;;;;;;;Tier 3:;[Samite Assault Sash];;
+25;Common;Samite Assault Shoes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;[Cashmere], 3x [Lacquered Aberrant Leather], [Cashmere Spellthread], [Gold Nugget];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Samite Assault Shoes];;
+25;Common;Samite Duelist Armlets;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Samite];none;0
+;;;Consumes:;[Samite], 2x [Cashmere], 2x [Lacquered Aberrant Leather], [Cashmere Spellthread];;;Tier 2:;2x [Samite];;
+;;;;;;;Tier 3:;[Samite Duelist Armlets];;
+25;Common;Samite Duelist Cap;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;[Samite], 3x [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;2x [Cashmere];;
+;;;;;;;Tier 3:;[Samite Duelist Cap];;
+25;Common;Samite Duelist Robes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;3x [Cashmere];none;0
+;;;Consumes:;2x [Samite], 5x [Cashmere], 2x [Lacquered Aberrant Leather], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;3x [Cashmere], 2x [Samite], [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Samite Duelist Robes];;
+25;Common;Samite Duelist Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;2x [Samite], [Cashmere Yarn], [Dragon's Blood];;;Tier 2:;[Cashmere], [Cashmere Yarn];;
+;;;;;;;Tier 3:;[Samite Duelist Sash];;
+25;Common;Samite Duelist Shoes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;[Cashmere], 3x [Lacquered Aberrant Leather], [Cashmere Spellthread], [Gold Nugget];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Samite Duelist Shoes];;
+25;Common;Samite Executioner Armlets;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;2x [Samite], [Cashmere], 2x [Lacquered Aberrant Leather], [Cashmere Spellthread];;;Tier 2:;2x [Cashmere];;
+;;;;;;;Tier 3:;[Samite Executioner Armlets];;
+25;Common;Samite Executioner Cap;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;2x [Samite], 2x [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;2x [Cashmere];;
+;;;;;;;Tier 3:;[Samite Executioner Cap];;
+25;Common;Samite Executioner Robes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;3x [Cashmere];none;0
+;;;Consumes:;3x [Samite], 4x [Cashmere], 2x [Lacquered Aberrant Leather], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;3x [Cashmere], 2x [Samite], [Gold Ingot];;
+;;;;;;;Tier 3:;[Samite Executioner Robes];;
+25;Common;Samite Executioner Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Samite];none;0
+;;;Consumes:;2x [Samite], [Cashmere Yarn], [Gold Wire];;;Tier 2:;[Samite], [Cashmere Yarn];;
+;;;;;;;Tier 3:;[Samite Executioner Sash];;
+25;Common;Samite Executioner Shoes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Lacquered Aberrant Leather];none;0
+;;;Consumes:;2x [Cashmere], 2x [Lacquered Aberrant Leather], [Cashmere Spellthread], [Gold Nugget];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Samite Executioner Shoes];;
+25;Common;Samite Gladiator Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Samite];none;0
+;;;Consumes:;2x [Samite], [Cashmere Yarn], [Lacquered Aberrant Leather];;;Tier 2:;[Samite], [Cashmere Yarn];;
+;;;;;;;Tier 3:;[Samite Gladiator Sash];;
+25;Common;Samite Medic Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Samite];none;0
+;;;Consumes:;2x [Samite], [Cashmere Yarn], [Cashmere Spellthread];;;Tier 2:;[Samite], [Cashmere Yarn];;
+;;;;;;;Tier 3:;[Samite Medic Sash];;
+25;Common;Samite Raid Armlets;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;2x [Samite], [Cashmere], 2x [Lacquered Aberrant Leather], [Cashmere Spellthread];;;Tier 2:;2x [Cashmere];;
+;;;;;;;Tier 3:;[Samite Raid Armlets];;
+25;Common;Samite Raid Cap;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;2x [Samite], 2x [Cashmere], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;2x [Cashmere];;
+;;;;;;;Tier 3:;[Samite Raid Cap];;
+25;Common;Samite Raid Robes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;3x [Cashmere];none;0
+;;;Consumes:;3x [Samite], 4x [Cashmere], 2x [Lacquered Aberrant Leather], [Cashmere Spellthread], [Gold Ingot];;;Tier 2:;3x [Cashmere], 2x [Samite], [Gold Ingot];;
+;;;;;;;Tier 3:;[Samite Raid Robes];;
+25;Common;Samite Raid Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Samite];none;0
+;;;Consumes:;2x [Samite], [Cashmere Yarn], [Gold Wire];;;Tier 2:;[Samite], [Cashmere Yarn];;
+;;;;;;;Tier 3:;[Samite Raid Sash];;
+25;Common;Samite Raid Shoes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Lacquered Aberrant Leather];none;0
+;;;Consumes:;2x [Cashmere], 2x [Lacquered Aberrant Leather], [Cashmere Spellthread], [Gold Nugget];;;Tier 2:;2x [Lacquered Aberrant Leather];;
+;;;;;;;Tier 3:;[Samite Raid Shoes];;
+25;Common;Samite Restoration Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Samite];none;0
+;;;Consumes:;2x [Samite], [Cashmere Yarn], [Cashmere Spellthread];;;Tier 2:;[Samite], [Cashmere Yarn];;
+;;;;;;;Tier 3:;[Samite Restoration Sash];;
+25;Common;Samite Ward Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Samite];none;0
+;;;Consumes:;2x [Samite], [Cashmere Yarn], [Lacquered Aberrant Leather];;;Tier 2:;[Samite], [Cashmere Yarn];;
+;;;;;;;Tier 3:;[Samite Ward Sash];;
+25;Common;Create Elegant Emerald Rug;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;3h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;4x [Cashmere], 4x [Cashmere Yarn], 4x [Jute], [Emerald Fabric Dye];;;Tier 2:;2x [Cashmere], 2x [Jute];;
+;;;;;;;Tier 3:;[Elegant Emerald Rug];;
+25;Common;Create Vermilion Fringed Rug;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;3h;Tier 1:;[Cashmere];none;0
+;;;Consumes:;4x [Cashmere], 4x [Cashmere Yarn], 4x [Jute], [Vermilion Fabric Dye];;;Tier 2:;2x [Cashmere], 2x [Jute];;
+;;;;;;;Tier 3:;[Vermilion Fringed Rug];;
+25;Common;Create Vermilion Fringed Runner;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;3h;Tier 1:;3x [Cashmere];none;0
+;;;Consumes:;8x [Cashmere], 8x [Cashmere Yarn], 8x [Jute], [Vermilion Fabric Dye];;;Tier 2:;5x [Cashmere], 3x [Jute];;
+;;;;;;;Tier 3:;[Vermilion Fringed Runner];;
+Masterwork Tailoring Recipes III[edit | edit source];;;;;;;;;;
+Level Req.;Rarity;Name;Requires / Consumes;;Opt. Asset;Time;Produces (Tier 1-3);;Prof. XP;XP per Time (h)
+;;;;;;;;;;
+25;Common;Create Elegant Crimson Runner;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;3h;Tier 1:;3x [Samite];none;0
+;;;Consumes:;8x [Samite], 8x [Spool of Silk Thread], 8x [Jute], [Crimson Fabric Dye];;;Tier 2:;5x [Samite], 3x [Jute];;
+;;;;;;;Tier 3:;[Elegant Crimson Runners];;
+25;Common;Create Elegant Emerald Runner;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;3h;Tier 1:;3x [Cashmere];none;0
+;;;Consumes:;8x [Cashmere], 8x [Cashmere Yarn], 8x [Jute], [Emerald Fabric Dye];;;Tier 2:;5x [Cashmere], 3x [Jute];;
+;;;;;;;Tier 3:;[Elegant Emerald Runners];;
+25;Common;Create Elegant Vermilion Runner;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;3h;Tier 1:;3x [Manticore Felt];none;0
+;;;Consumes:;8x [Manticore Felt], 8x [Cashmere Yarn], 8x [Jute], [Vermilion Fabric Dye];;;Tier 2:;5x [Manticore Felt], 3x [Jute];;
+;;;;;;;Tier 3:;[Elegant Vermilion Runners];;
+25;Common;Roll Manticore Felt;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;3h;Tier 1:;2x [Effervescent Water];none;0
+;;;Consumes:;3x [Effervescent Water], [Manticore Mane], [Burgundy Pitch], [Potash];;;Tier 2:;[Manticore Felt];;
+;;;;;;;Tier 3:;5x [Manticore Felt];;
+25;Common;Spin Snowhare Yarn;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;3h;Tier 1:;2x [Snowhare Wool];none;0
+;;;Consumes:;3x [Snowhare Wool], [Cashmere Yarn];;;Tier 2:;[Snowhare Yarn];;
+;;;;;;;Tier 3:;5x [Snowhare Yarn];;
+25;Common;Manticore Sword Knot;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;2x [Manticore Felt];none;0
+;;;Consumes:;4x [Manticore Felt], 2x [Manticore Leather], 2x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;3x [Manticore Felt], [Manticore Leather];;
+;;;;;;;Tier 3:;[Manticore Sword Knot];;
+25;Common;Manticore Assault Armlets;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Manticore Leather], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Manticore Leather];;
+;;;;;;;Tier 3:;[Manticore Assault Armlets];;
+25;Common;Manticore Assault Cap;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Assault Cap];;
+25;Common;Manticore Assault Robes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;2x [Manticore Felt];none;0
+;;;Consumes:;4x [Manticore Felt], 2x [Titansteel Ingot], 2x [Manticore Leather], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Felt], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Assault Robes];;
+25;Common;Manticore Assault Shoes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Manticore Leather], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Manticore Leather];;
+;;;;;;;Tier 3:;[Manticore Assault Shoes];;
+25;Common;Manticore Duelist Armlets;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Manticore Leather], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Manticore Leather];;
+;;;;;;;Tier 3:;[Manticore Duelist Armlets];;
+25;Common;Manticore Duelist Cap;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Duelist Cap];;
+25;Common;Manticore Duelist Robes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;2x [Manticore Felt];none;0
+;;;Consumes:;4x [Manticore Felt], 2x [Titansteel Ingot], 2x [Manticore Leather], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Felt], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Duelist Robes];;
+25;Common;Manticore Duelist Shoes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Manticore Leather], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Manticore Leather];;
+;;;;;;;Tier 3:;[Manticore Duelist Shoes];;
+25;Common;Manticore Executioner Armlets;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Manticore Leather], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Manticore Leather];;
+;;;;;;;Tier 3:;[Manticore Executioner Armlets];;
+25;Common;Manticore Executioner Cap;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Executioner Cap];;
+25;Common;Manticore Executioner Robes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;2x [Manticore Felt];none;0
+;;;Consumes:;4x [Manticore Felt], 2x [Titansteel Ingot], 2x [Manticore Leather], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Felt], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Executioner Robes];;
+25;Common;Manticore Executioner Shoes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Manticore Leather], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Manticore Leather];;
+;;;;;;;Tier 3:;[Manticore Executioner Shoes];;
+25;Common;Manticore Raid Armlets;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Manticore Leather], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Manticore Leather];;
+;;;;;;;Tier 3:;[Manticore Raid Armlets];;
+25;Common;Manticore Raid Cap;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Brightsilver Ingot], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Raid Cap];;
+25;Common;Manticore Raid Robes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;2x [Manticore Felt];none;0
+;;;Consumes:;4x [Manticore Felt], 2x [Titansteel Ingot], 2x [Manticore Leather], [Aberrant Leather Strap], [Artisan's Putty];;;Tier 2:;3x [Manticore Felt], [Brightsilver Ingot];;
+;;;;;;;Tier 3:;[Manticore Raid Robes];;
+25;Common;Manticore Raid Shoes;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;2x [Manticore Felt], 2x [Manticore Leather], 3x [Snowhare Yarn], [Artisan's Putty];;;Tier 2:;2x [Manticore Felt], [Manticore Leather];;
+;;;;;;;Tier 3:;[Manticore Raid Shoes];;
+25;Common;Rubellite Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;2x [Manticore Felt];none;0
+;;;Consumes:;5x [Manticore Felt], 3x [Titansteel Rings], 5x [Rubellite], [Artisan's Putty];;;Tier 2:;4x [Manticore Felt], [Titansteel Rings];;
+;;;;;;;Tier 3:;[Rubellite Sash];;
+25;Common;Scintillant Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;2x [Manticore Felt];none;0
+;;;Consumes:;5x [Manticore Felt], 3x [Titansteel Rings], 5x [Scintillant Glass], [Artisan's Putty];;;Tier 2:;4x [Manticore Felt], [Titansteel Rings];;
+;;;;;;;Tier 3:;[Scintillant Sash];;
+25;Common;Silverspruce Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;2x [Manticore Felt];none;0
+;;;Consumes:;5x [Manticore Felt], 3x [Titansteel Rings], 5x [Spruce Lumber], [Artisan's Putty];;;Tier 2:;4x [Manticore Felt], [Titansteel Rings];;
+;;;;;;;Tier 3:;[Silverspruce Sash];;
+25;Common;Sphene Sash;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;1h;Tier 1:;2x [Manticore Felt];none;0
+;;;Consumes:;5x [Manticore Felt], 3x [Titansteel Rings], 5x [Sphene], [Artisan's Putty];;;Tier 2:;4x [Manticore Felt], [Titansteel Rings];;
+;;;;;;;Tier 3:;[Sphene Sash];;
+25;Common;Create Elegant Crimson Rug;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;3h;Tier 1:;[Samite];none;0
+;;;Consumes:;4x [Samite], 4x [Spool of Silk Thread], 4x [Jute], [Crimson Fabric Dye];;;Tier 2:;2x [Samite], 2x [Jute];;
+;;;;;;;Tier 3:;[Elegant Crimson Rug];;
+25;Common;Create Elegant Vermilion Rug;Requires:;[Tailor], [Spinning Wheel];3x Personor Tool;3h;Tier 1:;[Manticore Felt];none;0
+;;;Consumes:;4x [Manticore Felt], 4x [Cashmere Yarn], 4x [Jute], [Vermilion Fabric Dye];;;Tier 2:;2x [Manticore Felt], 2x [Jute];;
+;;;;;;;Tier 3:;[Elegant Vermilion Rug];;
