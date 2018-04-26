@@ -1,8 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeDataParser", "RecipedataParser\RecipeDataParser.csproj", "{2B62344D-1A56-4D9B-BCC9-ECF50E5EE6CA}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MastercraftWFA", "MastercraftWFA\MastercraftWFA.csproj", "{5E41559C-72C8-47B6-93C2-3E8F3B27D6A5}"
 EndProject
 Global
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B62344D-1A56-4D9B-BCC9-ECF50E5EE6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B62344D-1A56-4D9B-BCC9-ECF50E5EE6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B62344D-1A56-4D9B-BCC9-ECF50E5EE6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B62344D-1A56-4D9B-BCC9-ECF50E5EE6CA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5E41559C-72C8-47B6-93C2-3E8F3B27D6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5E41559C-72C8-47B6-93C2-3E8F3B27D6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E41559C-72C8-47B6-93C2-3E8F3B27D6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -18,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D53650B6-73FB-4FC8-AB7D-FB5D8E80DA44}
 	EndGlobalSection
 EndGlobal
