@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeDataParser", "Reciped
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MastercraftWFA", "MastercraftWFA\MastercraftWFA.csproj", "{5E41559C-72C8-47B6-93C2-3E8F3B27D6A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseInterface", "DatabaseInterface\DatabaseInterface.csproj", "{4D9388A1-C70F-4CAF-B086-29C5DD39492D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5E41559C-72C8-47B6-93C2-3E8F3B27D6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E41559C-72C8-47B6-93C2-3E8F3B27D6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E41559C-72C8-47B6-93C2-3E8F3B27D6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D9388A1-C70F-4CAF-B086-29C5DD39492D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9388A1-C70F-4CAF-B086-29C5DD39492D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D9388A1-C70F-4CAF-B086-29C5DD39492D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D9388A1-C70F-4CAF-B086-29C5DD39492D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
