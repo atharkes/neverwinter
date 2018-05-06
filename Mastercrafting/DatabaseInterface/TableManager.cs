@@ -13,10 +13,12 @@ namespace DatabaseInterface {
         Upgrade
     }
 
+    /// <summary> Manages the table objects in the database </summary>
     static class TableManager {
-        /// <summary> The tables in the database. The order of initialization matters </summary>
+        /// <summary> The tables currently being managed </summary>
         internal readonly static Dictionary<Tables, Table> Table = new Dictionary<Tables, Table>();
 
+        /// <summary> Creates the table objects </summary>
         internal static void InitializeTableStructure() {
             Table.Add(Tables.Profession, new ProfessionTable());
             Table.Add(Tables.Recipe, new RecipeTable());
@@ -25,6 +27,15 @@ namespace DatabaseInterface {
             Table.Add(Tables.RecipeResult, new RecipeResultTable());
             Table.Add(Tables.ResourcePrice, new ResourcePriceTable());
             Table.Add(Tables.Upgrade, new UpgradeTable());
+        }
+
+        /// <summary> Adds the tables to the database that currently don't exist </summary>
+        internal static void AddTablesToDatabase() {
+            foreach (Table table in Table.Values) {
+                if (!table.Exists) {
+                    table.Create();
+                }
+            }
         }
 
         internal static ProfessionTable Profession => Table[Tables.Profession] as ProfessionTable;

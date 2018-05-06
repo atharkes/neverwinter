@@ -1,5 +1,4 @@
-﻿using DatabaseInterface.Structure;
-using System.Data;
+﻿using System.Data;
 using System.Data.SQLite;
 using System.IO;
 
@@ -15,15 +14,9 @@ namespace DatabaseInterface {
             TableManager.InitializeTableStructure();
             if (!File.Exists(path)) {
                 CreateDatabase(path);
-                OpenDatabase(path);
-            } else {
-                OpenDatabase(path);
             }
-            foreach (Table table in TableManager.Table.Values) {
-                if (!table.Exists) {
-                    table.Create();
-                }
-            }
+            OpenDatabase(path);
+            TableManager.AddTablesToDatabase();
         }
 
         /// <summary> Close the connection to the database </summary>
