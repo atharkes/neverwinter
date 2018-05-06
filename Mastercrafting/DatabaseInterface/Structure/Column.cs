@@ -1,6 +1,7 @@
 ﻿using System;
 
 namespace DatabaseInterface.Structure {
+    /// <summary> A column managing the type, name, and constraints </summary>
     class Column {
         /// <summary> The name of this column </summary>
         public string Name { get; }
@@ -22,17 +23,17 @@ namespace DatabaseInterface.Structure {
 
         /// <summary> The columns in the database </summary>
         public enum Columns {
-            profession_id,
-            profession,
-            recipe_id,
-            recipe,
-            resource_id,
-            resource,
-            grade,
-            price,
-            date,
-            amount,
-            tier
+            ProfessionId,
+            Profession,
+            RecipeId,
+            Recipe,
+            ResourceId,
+            Resource,
+            Amount,
+            Price,
+            Date,
+            Grade,
+            Tier
         }
 
         /// <summary> Gets the name for a column </summary>
@@ -40,28 +41,29 @@ namespace DatabaseInterface.Structure {
         /// <returns>The name of the column</returns>
         public static string GetName(Columns column) {
             switch (column) {
-                case Columns.profession_id:
+                case Columns.ProfessionId:
                     return "profession_id";
-                case Columns.recipe_id:
+                case Columns.RecipeId:
                     return "recipe_id";
-                case Columns.resource_id:
+                case Columns.ResourceId:
                     return "resource_id";
-                case Columns.profession:
+                case Columns.Profession:
                     return "profession";
-                case Columns.recipe:
+                case Columns.Recipe:
                     return "recipe";
-                case Columns.resource:
+                case Columns.Resource:
                     return "resource";
-                case Columns.amount:
+                case Columns.Amount:
                     return "amount";
-                case Columns.grade:
-                    return "grade";
-                case Columns.price:
+                case Columns.Price:
                     return "price";
-                case Columns.tier:
-                    return "tier";
-                case Columns.date:
+                case Columns.Date:
                     return "date";
+                case Columns.Grade:
+                    return "grade";
+                case Columns.Tier:
+                    return "tier";
+                
                 default:
                     throw new NotImplementedException("Column Name not found");
             }
@@ -72,20 +74,20 @@ namespace DatabaseInterface.Structure {
         /// <returns>The type of the column</returns>
         public static string GetType(Columns column) {
             switch (column) {
-                case Columns.profession_id:
-                case Columns.recipe_id:
-                case Columns.resource_id:
+                case Columns.ProfessionId:
+                case Columns.RecipeId:
+                case Columns.ResourceId:
                     return "INTEGER";
-                case Columns.profession:
-                case Columns.recipe:
-                case Columns.resource:
+                case Columns.Profession:
+                case Columns.Recipe:
+                case Columns.Resource:
                     return "STRING";
-                case Columns.amount:
-                case Columns.grade:
-                case Columns.price:
-                case Columns.tier:
+                case Columns.Amount:
+                case Columns.Price:
+                case Columns.Grade:
+                case Columns.Tier:
                     return "INT";
-                case Columns.date:
+                case Columns.Date:
                     return "DATETIME";
                 default:
                     throw new NotImplementedException("Column Type not found");
