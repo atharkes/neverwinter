@@ -6,13 +6,15 @@ using System.Data;
 namespace DatabaseInterface.Structure.TableStructure {
     /// <summary> A table managing resources and their costs </summary>
     class ResourceTable : Table {
+        public override string Name => "Resources";
+        public override string Constraints => "";
         public Column ResourceID { get; }
         public Column ResourceName { get; }
         public Column Price { get; }
         public Column Date { get; }
 
         /// <summary> Create a new resource table object </summary>
-        public ResourceTable() : base("Resources") {
+        public ResourceTable() {
             ResourceID = new Column(Column.Columns.ResourceId, "NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
             ResourceName = new Column(Column.Columns.ResourceName, "NOT NULL UNIQUE");
             Price = new Column(Column.Columns.Price, "NOT NULL DEFAULT (1)");

@@ -6,16 +6,18 @@ using System.Data;
 namespace DatabaseInterface.Structure.TableStructure {
     /// <summary> A table managing recipes </summary>
     class RecipeTable : Table {
+        public override string Name => "Recipes";
+        public override string Constraints => "";
         public Column RecipeID { get; }
         public Column RecipeName { get; }
         public Column ProfessionID { get; }
         public Column Grade { get; }
 
         /// <summary> Create a new recipe table object </summary>
-        public RecipeTable() : base("Recipes") {
+        public RecipeTable() {
             RecipeID = new Column(Column.Columns.RecipeId, "NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
             RecipeName = new Column(Column.Columns.RecipeName, "NOT NULL UNIQUE");
-            ProfessionID = new Column(Column.Columns.ProfessionId, "NOT NULL REFERENCES Professions (profession_id) ON DELETE RESTRICT ON UPDATE CASCADE");
+            ProfessionID = new Column(Column.Columns.ProfessionId, $"NOT NULL REFERENCES {TableManager.Profession.Name} ({TableManager.Profession.ProfessionID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
             Grade = new Column(Column.Columns.Grade, "NOT NULL");
         }
 

@@ -12,14 +12,17 @@ namespace DatabaseInterface {
         /// <summary> Initializes the database. Either connecting to an existing one, or creating it new </summary>
         /// <param name="path">The location of the database (also expects name.sqlite)</param>
         public static void InitializeDatabase(string path) {
+            TableManager.InitializeTableStructure();
             if (!File.Exists(path)) {
                 CreateDatabase(path);
                 OpenDatabase(path);
-                foreach (Table table in TableManager.Table.Values) {
-                    table.Create();
-                }
             } else {
                 OpenDatabase(path);
+            }
+            foreach (Table table in TableManager.Table.Values) {
+                if (!table.Exists) {
+                    table.Create();
+                }
             }
         }
 

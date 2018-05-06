@@ -6,12 +6,14 @@ using System.Data;
 namespace DatabaseInterface.Structure.TableStructure {
     /// <summary> A table managing professsions and their grades </summary>
     class ProfessionTable : Table {
+        public override string Name => "Professions";
+        public override string Constraints => "";
         public Column ProfessionID { get; }
         public Column ProfessionName { get; }
         public Column Grade { get; }
 
         /// <summary> Create a new profession table object </summary>
-        public ProfessionTable() : base("Professions") {
+        public ProfessionTable() {
             ProfessionID = new Column(Column.Columns.ProfessionId, "NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
             ProfessionName = new Column(Column.Columns.ProfessionName, "NOT NULL UNIQUE");
             Grade = new Column(Column.Columns.Grade, "NOT NULL DEFAULT (0)");

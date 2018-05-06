@@ -5,19 +5,12 @@ namespace DatabaseInterface.Structure {
     /// <summary> Abstract table class that has a name, column definitions, and datarows </summary>
     abstract class Table {
         /// <summary> Name of the table </summary>
-        public string Name { get; }
+        public abstract string Name { get; }
         /// <summary> The primary and foreign key constraints of the table </summary>
-        public string Constraints { get; }
-
-        /// <summary> Create a new table object </summary>
-        /// <param name="name">The name of the table</param>
-        public Table(string name, string constraints = "") {
-            Name = name;
-            Constraints = constraints;
-        }
+        public abstract string Constraints { get; }
 
         /// <summary> Whether this table exists in the database </summary>
-        public bool Exists => Database.Query($"SELECT name FROM sqlite_master WHERE type = 'table' AND name = {Name}").Rows.Count > 0;
+        public bool Exists => Database.Query($"SELECT name FROM sqlite_master WHERE type = 'table' AND name = '{Name}'").Rows.Count > 0;
 
         /// <summary> Creates the table in the database </summary>
         public abstract void Create();
@@ -26,13 +19,17 @@ namespace DatabaseInterface.Structure {
         /// <param name="columns">The columns of the table to create</param>
         protected void Create(List<Column> columns) {
             // Create Columns string
-            string cols = "(";
+            string cols = "";
             foreach (Column column in columns) {
                 cols += column.CreationString + ", ";
             }
-            cols = cols.Remove(cols.Length - 2) + ")";
+            if (Constraints == "") {
+                cols = cols.Remove(cols.Length - 2);
+            } else {
+                cols += Constraints;
+            }
             // Execute Command
-            Database.NonQuery($"CREATE TABLE {Name} {cols}");
+            Database.NonQuery($"CREATE TABLE {Name} ({cols})");
         }
 
         /// <summary> Gets all data from this table </summary>
@@ -58,16 +55,16 @@ namespace DatabaseInterface.Structure {
         /// <param name="row">The list with column and values pairs</param>
         protected void InsertDataRow(List<(Column, object)> row) {
             // Create Columns and Values string
-            string columns = "(";
-            string values = "(";
+            string columns = "";
+            string values = "";
             foreach ((Column column, object value) in row) {
                 columns += column.Name + ", ";
                 values += value.ToString() + ", ";
             }
-            columns = columns.Remove(columns.Length - 2) + ")";
-            values = values.Remove(columns.Length - 2) + ")";
+            columns = columns.Remove(columns.Length - 2);
+            values = values.Remove(columns.Length - 2);
             // Execute Command
-            Database.NonQuery($"INSERT OR REPLACE INTO {Name} {columns} VALUES {values}");
+            Database.NonQuery($"INSERT OR REPLACE INTO {Name} ({columns}) VALUES ({values})");
         }
 
         /// <summary> Remove a data row with certain constraints. Currently only works with equality checking </summary>

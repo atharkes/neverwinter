@@ -3,16 +3,18 @@
 namespace DatabaseInterface.Structure.TableStructure {
     /// <summary> A table managing the resource results of recipes </summary>
     class RecipeResultTable : Table {
+        public override string Name => "RecipeResults";
+        public override string Constraints => $"PRIMARY KEY ({RecipeID.Name}, {Tier.Name}, {ResourceID.Name})";
         public Column RecipeID { get; }
         public Column Tier { get; }
         public Column ResourceID { get; }
         public Column Amount { get; }
 
         /// <summary> Create a recipe result table object </summary>
-        public RecipeResultTable() : base("RecipeResults", " PRIMARY KEY (recipe_id, resource_id)") {
-            RecipeID = new Column(Column.Columns.RecipeId, "NOT NULL REFERENCES Recipes (recipe_id) ON DELETE RESTRICT ON UPDATE CASCADE");
+        public RecipeResultTable() {
+            RecipeID = new Column(Column.Columns.RecipeId, $"NOT NULL REFERENCES {TableManager.Recipe.Name} ({TableManager.Recipe.RecipeID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
             Tier = new Column(Column.Columns.Tier, "NOT NULL");
-            ResourceID = new Column(Column.Columns.ResourceId, "NOT NULL REFERENCES Resources (resource_id) ON DELETE RESTRICT ON UPDATE CASCADE");
+            ResourceID = new Column(Column.Columns.ResourceId, $"NOT NULL REFERENCES {TableManager.Resource.Name} ({TableManager.Resource.ResourceID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
             Amount = new Column(Column.Columns.Amount, "NOT NULL DEFAULT (1)");
         }
 

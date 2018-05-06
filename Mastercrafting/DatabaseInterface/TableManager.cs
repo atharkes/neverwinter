@@ -14,16 +14,18 @@ namespace DatabaseInterface {
     }
 
     static class TableManager {
-        /// <summary> The tables in the database </summary>
-        internal readonly static Dictionary<Tables, Table> Table = new Dictionary<Tables, Table> {
-            { Tables.Profession, new ProfessionTable() },
-            { Tables.Recipe, new RecipeTable() },
-            { Tables.RecipeCost, new RecipeCostTable() },
-            { Tables.RecipeResult, new RecipeResultTable() },
-            { Tables.Resource, new ResourceTable() },
-            { Tables.ResourcePrice, new ResourcePriceTable() },
-            { Tables.Upgrade, new UpgradeTable() }
-        };
+        /// <summary> The tables in the database. The order of initialization matters </summary>
+        internal readonly static Dictionary<Tables, Table> Table = new Dictionary<Tables, Table>();
+
+        internal static void InitializeTableStructure() {
+            Table.Add(Tables.Profession, new ProfessionTable());
+            Table.Add(Tables.Recipe, new RecipeTable());
+            Table.Add(Tables.Resource, new ResourceTable());
+            Table.Add(Tables.RecipeCost, new RecipeCostTable());
+            Table.Add(Tables.RecipeResult, new RecipeResultTable());
+            Table.Add(Tables.ResourcePrice, new ResourcePriceTable());
+            Table.Add(Tables.Upgrade, new UpgradeTable());
+        }
 
         internal static ProfessionTable Profession => Table[Tables.Profession] as ProfessionTable;
         internal static RecipeTable Recipe => Table[Tables.Recipe] as RecipeTable;
