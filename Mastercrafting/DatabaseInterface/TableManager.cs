@@ -3,23 +3,24 @@ using DatabaseInterface.Structure.TableStructure;
 using System.Collections.Generic;
 
 namespace DatabaseInterface {
-    enum Tables {
-        Profession,
-        Recipe,
-        RecipeCost,
-        RecipeResult,
-        Resource,
-        ResourcePrice,
-        Upgrade
-    }
-
     /// <summary> Manages the table objects in the database </summary>
     static class TableManager {
+        /// <summary> Enum for getting to the tables in the dictionary </summary>
+        public enum Tables {
+            Profession,
+            Recipe,
+            RecipeCost,
+            RecipeResult,
+            Resource,
+            ResourcePrice,
+            Upgrade
+        }
+
         /// <summary> The tables currently being managed </summary>
-        internal readonly static Dictionary<Tables, Table> Table = new Dictionary<Tables, Table>();
+        public readonly static Dictionary<Tables, Table> Table = new Dictionary<Tables, Table>();
 
         /// <summary> Creates the table objects </summary>
-        internal static void InitializeTableStructure() {
+        public static void InitializeTableStructure() {
             Table.Add(Tables.Profession, new ProfessionTable());
             Table.Add(Tables.Recipe, new RecipeTable());
             Table.Add(Tables.Resource, new ResourceTable());
@@ -30,7 +31,7 @@ namespace DatabaseInterface {
         }
 
         /// <summary> Adds the tables to the database that currently don't exist </summary>
-        internal static void AddTablesToDatabase() {
+        public static void AddTablesToDatabase() {
             foreach (Table table in Table.Values) {
                 if (!table.Exists) {
                     table.Create();

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using DatabaseInterface;
 
 namespace RecipeDataParser {
     class Program {
         static void Main(string[] args) {
-            DatabaseInterface.Database.InitializeDatabase("test.sqlite");
-            DatabaseInterface.Database.CloseDatabase();
+            Database.InitializeDatabase("test.sqlite");
+            Database.CloseDatabase();
         }
     }
 }
