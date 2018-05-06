@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DatabaseInterface.Structure.Tables {
+namespace DatabaseInterface.Structure.TableStructure {
     /// <summary> A table managing the resource results of recipes </summary>
     class RecipeResultTable : Table {
         public Column RecipeID { get; }

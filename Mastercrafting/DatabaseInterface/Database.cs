@@ -1,38 +1,21 @@
 ﻿using DatabaseInterface.Structure;
-using DatabaseInterface.Structure.Tables;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.IO;
 
 namespace DatabaseInterface {
+    /// <summary> Database manages the communication to the sqlite database </summary>
     public static class Database {
         /// <summary> The sqlite connection to the database. Available after the initialization </summary>
         static SQLiteConnection connection { get; set; }
-        /// <summary> The tables in the database </summary>
-        static List<Table> tables => new List<Table>() { ProfessionTable, RecipeTable, ResourceTable, RecipeCostTable, RecipeResultTable, ResourcePriceTable, UpgradeTable };
-
-        internal static ProfessionTable ProfessionTable;
-        internal static RecipeTable RecipeTable;
-        internal static ResourceTable ResourceTable;
-
-        internal static RecipeCostTable RecipeCostTable;
-        internal static RecipeResultTable RecipeResultTable;
-        internal static PriceHistoryTable ResourcePriceTable;
-        internal static UpgradeTable UpgradeTable;
 
         /// <summary> Initializes the database. Either connecting to an existing one, or creating it new </summary>
         /// <param name="path">The location of the database (also expects name.sqlite)</param>
         public static void InitializeDatabase(string path) {
-            if (connection != null) {
-                throw new Exception("There is already a connection to a database");
-            }
-
             if (!File.Exists(path)) {
                 CreateDatabase(path);
                 OpenDatabase(path);
-                foreach (Table table in tables) {
+                foreach (Table table in TableManager.Table.Values) {
                     table.Create();
                 }
             } else {
@@ -75,21 +58,6 @@ namespace DatabaseInterface {
             DataTable table = new DataTable();
             table.Load(reader);
             return table;
-        }
-
-        /// <summary> Create a sqlite string from a datetime </summary>
-        /// <param name="dateTime">The datetime to create the string from</param>
-        /// <returns>The created string</returns>
-        public static string DateTimeSQLite(DateTime dateTime) {
-            const string dateTimeFormat = "{0}-{1}-{2} {3}:{4}:{5}.{6}";
-            return string.Format(dateTimeFormat,
-            dateTime.Year.ToString().PadLeft(4, '0'),
-            dateTime.Month.ToString().PadLeft(2, '0'),
-            dateTime.Day.ToString().PadLeft(2, '0'),
-            dateTime.Hour.ToString().PadLeft(2, '0'),
-            dateTime.Minute.ToString().PadLeft(2, '0'),
-            dateTime.Second.ToString().PadLeft(2, '0'),
-            dateTime.Millisecond.ToString().PadLeft(4, '0'));
         }
     }
 }

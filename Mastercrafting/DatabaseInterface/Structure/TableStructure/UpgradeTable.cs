@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DatabaseInterface.Structure.Tables {
+namespace DatabaseInterface.Structure.TableStructure {
     class UpgradeTable : Table {
         public Column ProfessionID { get; }
         public Column Grade { get; }

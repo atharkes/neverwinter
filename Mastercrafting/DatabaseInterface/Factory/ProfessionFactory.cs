@@ -5,30 +5,38 @@ using System.Linq;
 
 namespace DatabaseInterface.Factory {
     /// <summary> Creates professions, making sure there are no multiple objects of the same profession </summary>
-    public static class ProfessionFactory {
+    public class ProfessionFactory {
         /// <summary> The set of all profession objects </summary>
-        static HashSet<Profession> professions = new HashSet<Profession>();
+        internal HashSet<Profession> Professions = new HashSet<Profession>();
+        /// <summary> The function to create profession with </summary>
+        Func<string, int, Profession> createProfession;
+
+        /// <summary> Create a new profession factory </summary>
+        /// <param name="createProfession">The function to create professions with</param>
+        internal ProfessionFactory(Func<string, int, Profession> createProfession) {
+            this.createProfession = createProfession;
+        }
 
         /// <summary> Create a new profession, or get a reference to the already existing object </summary>
         /// <param name="name">The name of the profession</param>
         /// <returns>The profession object corresponding to the name</returns>
-        public static Profession CreateProfession(string name) {
-            Profession prof = professions.FirstOrDefault(p => p.Name == name);
-            if (Equals(prof, default(Profession))) {
-                prof = new Profession(name);
-                professions.Add(prof);
+        public Profession CreateProfession(string name, int grade = 0) {
+            Profession profession = Professions.FirstOrDefault(p => p.Name == name);
+            if (Equals(profession, default(Profession))) {
+                profession = createProfession.Invoke(name, grade);
+                Professions.Add(profession);
             }
-            return prof;
+            return profession;
         }
 
         /// <summary> Remove a profession </summary>
         /// <param name="profession">The profession to remove</param>
-        public static void RemoveProfession(Profession profession) {
-            if (profession.Recipes.Count > 0) {
+        public void RemoveProfession(Profession profession) {
+            if (Recipe.Factory.Recipes.Count > 0) {
                 throw new ArgumentException("There are still recipes in this profession");
             }
-            professions.Remove(profession);
-            Database.ProfessionTable.RemoveProfession(profession.ID);
+            Professions.Remove(profession);
+            TableManager.Profession.RemoveProfession(profession.ID);
             (profession as IDisposable).Dispose();
         }
     }

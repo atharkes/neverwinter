@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -59,16 +61,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="Data\Profession.cs" />
+    <Compile Include="Data\Recipe.cs" />
+    <Compile Include="Data\Resource.cs" />
+    <Compile Include="Factory\ProfessionFactory.cs" />
+    <Compile Include="Factory\RecipeFactory.cs" />
+    <Compile Include="Factory\ResourceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structure\Column.cs" />
     <Compile Include="Structure\Table.cs" />
-    <Compile Include="Structure\Tables\PriceHistoryTable.cs" />
-    <Compile Include="Structure\Tables\ProfessionTable.cs" />
-    <Compile Include="Structure\Tables\RecipeCostTable.cs" />
-    <Compile Include="Structure\Tables\RecipeResultTable.cs" />
-    <Compile Include="Structure\Tables\RecipeTable.cs" />
-    <Compile Include="Structure\Tables\ResourceTable.cs" />
-    <Compile Include="Structure\Tables\UpgradeTable.cs" />
+    <Compile Include="Structure\TableStructure\ResourcePriceTable.cs" />
+    <Compile Include="Structure\TableStructure\ProfessionTable.cs" />
+    <Compile Include="Structure\TableStructure\RecipeCostTable.cs" />
+    <Compile Include="Structure\TableStructure\RecipeResultTable.cs" />
+    <Compile Include="Structure\TableStructure\RecipeTable.cs" />
+    <Compile Include="Structure\TableStructure\ResourceTable.cs" />
+    <Compile Include="Structure\TableStructure\UpgradeTable.cs" />
+    <Compile Include="TableManager.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

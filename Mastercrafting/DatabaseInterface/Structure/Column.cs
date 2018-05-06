@@ -24,11 +24,11 @@ namespace DatabaseInterface.Structure {
         /// <summary> The columns in the database </summary>
         public enum Columns {
             ProfessionId,
-            Profession,
+            ProfessionName,
             RecipeId,
-            Recipe,
+            RecipeName,
             ResourceId,
-            Resource,
+            ResourceName,
             Amount,
             Price,
             Date,
@@ -47,11 +47,11 @@ namespace DatabaseInterface.Structure {
                     return "recipe_id";
                 case Columns.ResourceId:
                     return "resource_id";
-                case Columns.Profession:
+                case Columns.ProfessionName:
                     return "profession";
-                case Columns.Recipe:
+                case Columns.RecipeName:
                     return "recipe";
-                case Columns.Resource:
+                case Columns.ResourceName:
                     return "resource";
                 case Columns.Amount:
                     return "amount";
@@ -78,9 +78,9 @@ namespace DatabaseInterface.Structure {
                 case Columns.RecipeId:
                 case Columns.ResourceId:
                     return "INTEGER";
-                case Columns.Profession:
-                case Columns.Recipe:
-                case Columns.Resource:
+                case Columns.ProfessionName:
+                case Columns.RecipeName:
+                case Columns.ResourceName:
                     return "STRING";
                 case Columns.Amount:
                 case Columns.Price:

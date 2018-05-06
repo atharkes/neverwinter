@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using DatabaseInterface.Data;
+using System.Collections.Generic;
+using System.Data;
 
-namespace DatabaseInterface.Structure.Tables {
+namespace DatabaseInterface.Structure.TableStructure {
     /// <summary> A table managing the resource costs of recipes </summary>
     class RecipeCostTable : Table {
         public Column RecipeID { get; }
@@ -16,6 +18,20 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create the recipe cost table in the database </summary>
         public override void Create() => Create(new List<Column>() { RecipeID, ResourceID, Amount });
+
+        /// <summary> Load all profession from the database </summary>
+        /// <returns>The professions loaded from the database</returns>
+        public void LoadRecipeCosts() {
+            DataTable table = GetAllData();
+            foreach (DataRow row in table.Rows) {
+                int recipeId = row.Field<int>(RecipeID.Name);
+                Recipe recipe = null;
+                int resourceId = row.Field<int>(ResourceID.Name);
+                Resource resource = null;
+                int amount = row.Field<int>(Amount.Name);
+                recipe.AddConsumed(resource, amount);
+            }
+        }
 
         /// <summary> Add a resource cost to a recipe in the table </summary>
         /// <param name="recipeId">The id of the recipe to add the resource to</param>
