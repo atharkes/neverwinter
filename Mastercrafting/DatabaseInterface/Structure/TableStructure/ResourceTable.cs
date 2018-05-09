@@ -35,6 +35,17 @@ namespace DatabaseInterface.Structure.TableStructure {
             return resources;
         }
 
+        /// <summary> Get a recipe on a certain id </summary>
+        /// <param name="resourceId">The id of the recipe to get</param>
+        /// <returns>The recipe corresponding to the id</returns>
+        public Resource GetResource(int resourceId) {
+            DataTable table = GetDataRows(new List<(Column, object)>() { (ResourceID, resourceId) });
+            if (table.Rows.Count == 0) {
+                throw new ArgumentException("The requested resource does not exist in the database");
+            }
+            return LoadResource(table.Rows[0]);
+        }
+
         /// <summary> Load a resource from a datarow from the table </summary>
         /// <param name="row">The datarow. Must be from this table</param>
         /// <returns>The resource corresponding to the datarow</returns>

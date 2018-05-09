@@ -35,6 +35,17 @@ namespace DatabaseInterface.Structure.TableStructure {
             return recipes;
         }
 
+        /// <summary> Get a recipe on a certain id </summary>
+        /// <param name="recipeId">The id of the recipe to get</param>
+        /// <returns>The recipe corresponding to the id</returns>
+        public Recipe GetRecipe(int recipeId) {
+            DataTable table = GetDataRows(new List<(Column, object)>() { (RecipeID, recipeId) });
+            if (table.Rows.Count == 0) {
+                throw new ArgumentException("The requested recipe does not exist in the database");
+            }
+            return LoadRecipe(table.Rows[0]);
+        }
+
         /// <summary> Load a recipe from a datarow from the table </summary>
         /// <param name="row">The datarow. Must be from this table</param>
         /// <returns>The recipe corresponding to the datarow</returns>
@@ -56,7 +67,9 @@ namespace DatabaseInterface.Structure.TableStructure {
 
         /// <summary> Remove a recipe from the table </summary>
         /// <param name="recipeId">The id of the recipe to remove</param>
-        public void RemoveRecipe(int recipeId) => RemoveDataRow(new List<(Column, object)>() { (RecipeID, recipeId) });
+        public void RemoveRecipe(int recipeId) {
+            RemoveDataRow(new List<(Column, object)>() { (RecipeID, recipeId) });
+        }
 
         /// <summary> Get the id of a recipe </summary>
         /// <param name="recipe">The name of the recipe to get the id for</param>

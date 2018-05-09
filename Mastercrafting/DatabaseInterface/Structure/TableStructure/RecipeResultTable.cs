@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using DatabaseInterface.Data;
+using System.Collections.Generic;
+using System.Data;
 
 namespace DatabaseInterface.Structure.TableStructure {
     /// <summary> A table managing the resource results of recipes </summary>
@@ -20,6 +22,20 @@ namespace DatabaseInterface.Structure.TableStructure {
 
         /// <summary> Create the recipe result table in the database </summary>
         public override void Create() => Create(new List<Column>() { RecipeID, Tier, ResourceID, Amount });
+
+        /// <summary> Load all recipe results from the database </summary>
+        public void LoadRecipeResults() {
+            DataTable table = GetAllData();
+            foreach (DataRow row in table.Rows) {
+                int tier = row.Field<int>(Tier.Name);
+                int recipeId = row.Field<int>(RecipeID.Name);
+                Recipe recipe = TableManager.Recipe.GetRecipe(recipeId);
+                int resourceId = row.Field<int>(ResourceID.Name);
+                Resource resource = TableManager.Resource.GetResource(resourceId);
+                int amount = row.Field<int>(Amount.Name);
+                recipe.AddResultResource(tier, resource, amount);
+            }
+        }
 
         /// <summary> Insert a resource to the result tier of a recipe in the table </summary>
         /// <param name="recipeId">The recipe id to add the resource to</param>

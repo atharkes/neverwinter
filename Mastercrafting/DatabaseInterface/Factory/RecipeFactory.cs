@@ -17,6 +17,22 @@ namespace DatabaseInterface.Factory {
             this.createRecipe = createRecipe;
         }
 
+        /// <summary> Load all the recipes from the recipe table </summary>
+        /// <returns>A list of all the recipes</returns>
+        public List<Recipe> LoadRecipes() {
+            return TableManager.Recipe.LoadRecipes();
+        }
+
+        /// <summary> Loads the costs of recipes </summary>
+        public void LoadRecipeCosts() {
+            TableManager.RecipeCost.LoadRecipeCosts();
+        }
+
+        /// <summary> Loads the results of recipes </summary>
+        public void LoadRecipeResults() {
+            TableManager.RecipeResult.LoadRecipeResults();
+        }
+
         /// <summary> Create a new recipe, or get a reference to the already existing object </summary>
         /// <param name="name">The name of the recipe</param>
         /// <param name="profession">The profession this recipe belongs to</param>

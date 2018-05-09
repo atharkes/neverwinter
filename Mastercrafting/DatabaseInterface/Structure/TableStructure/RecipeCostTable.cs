@@ -21,15 +21,14 @@ namespace DatabaseInterface.Structure.TableStructure {
         /// <summary> Create the recipe cost table in the database </summary>
         public override void Create() => Create(new List<Column>() { RecipeID, ResourceID, Amount });
 
-        /// <summary> Load all profession from the database </summary>
-        /// <returns>The professions loaded from the database</returns>
+        /// <summary> Load all recipe costs from the database </summary>
         public void LoadRecipeCosts() {
             DataTable table = GetAllData();
             foreach (DataRow row in table.Rows) {
                 int recipeId = row.Field<int>(RecipeID.Name);
-                Recipe recipe = null;
+                Recipe recipe = TableManager.Recipe.GetRecipe(recipeId);
                 int resourceId = row.Field<int>(ResourceID.Name);
-                Resource resource = null;
+                Resource resource = TableManager.Resource.GetResource(resourceId);
                 int amount = row.Field<int>(Amount.Name);
                 recipe.AddConsumed(resource, amount);
             }
