@@ -1,8 +1,24 @@
 ﻿using System;
+using System.Data;
 
 namespace DatabaseInterface.Structure {
+    /// <summary> The columns in the database </summary>
+    public enum Columns {
+        ProfessionId,
+        ProfessionName,
+        RecipeId,
+        RecipeName,
+        ResourceId,
+        ResourceName,
+        Amount,
+        Price,
+        Date,
+        Grade,
+        Tier
+    }
+
     /// <summary> A column managing the type, name, and constraints </summary>
-    class Column {
+    class Column<T> : IColumn {
         /// <summary> The name of this column </summary>
         public string Name { get; }
         /// <summary> The data type of this column </summary>
@@ -21,19 +37,22 @@ namespace DatabaseInterface.Structure {
             Constraints = constraints;
         }
 
-        /// <summary> The columns in the database </summary>
-        public enum Columns {
-            ProfessionId,
-            ProfessionName,
-            RecipeId,
-            RecipeName,
-            ResourceId,
-            ResourceName,
-            Amount,
-            Price,
-            Date,
-            Grade,
-            Tier
+        /// <summary> Converts a value from this column to a string </summary>
+        /// <param name="value">The value in this column</param>
+        /// <returns>The string created from the value</returns>
+        public string ToString(object value) {
+            if (value is string) {
+                return $"'{value}'";
+            } else {
+                return value.ToString();
+            }
+        }
+
+        /// <summary> Parses a value from a datarow </summary>
+        /// <param name="dataRow">The datarow to get the value from</param>
+        /// <returns>The value in the datarow from this column</returns>
+        public T Parse(DataRow dataRow) {
+            return dataRow.Field<T>(Name);
         }
 
         /// <summary> Gets the name for a column </summary>

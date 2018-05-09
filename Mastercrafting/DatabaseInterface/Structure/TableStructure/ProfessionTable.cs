@@ -8,19 +8,19 @@ namespace DatabaseInterface.Structure.TableStructure {
     class ProfessionTable : Table {
         public override string Name => "Professions";
         public override string Constraints => "";
-        public Column ProfessionID { get; }
-        public Column ProfessionName { get; }
-        public Column Grade { get; }
+        public Column<long> ProfessionID { get; }
+        public Column<string> ProfessionName { get; }
+        public Column<int> Grade { get; }
 
         /// <summary> Create a new profession table object </summary>
         public ProfessionTable() {
-            ProfessionID = new Column(Column.Columns.ProfessionId, "NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
-            ProfessionName = new Column(Column.Columns.ProfessionName, "NOT NULL UNIQUE");
-            Grade = new Column(Column.Columns.Grade, "NOT NULL DEFAULT (0)");
+            ProfessionID = new Column<long>(Columns.ProfessionId, "NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
+            ProfessionName = new Column<string>(Columns.ProfessionName, "NOT NULL UNIQUE");
+            Grade = new Column<int>(Columns.Grade, "NOT NULL DEFAULT (0)");
         }
 
         /// <summary> Create the profession table in the database </summary>
-        public override void Create() => Create(new List<Column>() { ProfessionName, ProfessionID, Grade });
+        public override void Create() => Create(new List<IColumn>() { ProfessionName, ProfessionID, Grade });
 
         /// <summary> Load all profession from the database </summary>
         /// <returns>The professions loaded from the database</returns>
@@ -36,8 +36,8 @@ namespace DatabaseInterface.Structure.TableStructure {
         /// <summary> Get a profession on a certain id </summary>
         /// <param name="professionId">The id of the profession to get</param>
         /// <returns>The profession corresponding to the id</returns>
-        public Profession GetProfession(int professionId) {
-            DataTable table = GetDataRows(new List<(Column, object)>() { (ProfessionID, professionId) });
+        public Profession GetProfession(long professionId) {
+            DataTable table = GetDataRows(new List<(IColumn, object)>() { (ProfessionID, professionId) });
             if (table.Rows.Count == 0) {
                 throw new ArgumentException("The requested profession does not exist in the database");
             }
@@ -48,31 +48,31 @@ namespace DatabaseInterface.Structure.TableStructure {
         /// <param name="row">The datarow. Must be from this table</param>
         /// <returns>The profession corresponding to the datarow</returns>
         Profession LoadProfession(DataRow row) {
-            string name = row.Field<string>(ProfessionName.Name);
-            int grade = row.Field<int>(Grade.Name);
+            string name = ProfessionName.Parse(row);
+            int grade = Grade.Parse(row);
             return Profession.Factory.CreateProfession(name, grade);
         }
 
         /// <summary> Insert a new profession into the table </summary>
         /// <param name="name">The name of the profession</param>
         /// <param name="grade">The grade of the profession</param>
-        public void InsertProfession(string name, int grade = 0) => InsertDataRow(new List<(Column, object)>() { (ProfessionName, name), (Grade, grade) });
+        public void InsertProfession(string name, int grade = 0) => InsertDataRow(new List<(IColumn, object)>() { (ProfessionName, name), (Grade, grade) });
 
         /// <summary> Remove a profession from the table </summary>
         /// <param name="name">The id of the profession to remove</param>
-        public void RemoveProfession(int professionId) => RemoveDataRow(new List<(Column, object)>() { (ProfessionID, professionId) });
+        public void RemoveProfession(long professionId) => RemoveDataRow(new List<(IColumn, object)>() { (ProfessionID, professionId) });
 
         /// <summary> Get the id of a profession </summary>
         /// <param name="profession">The name of the profession</param>
         /// <returns>The id of the profession</returns>
-        public int GetProfessionID(string profession) {
-            DataTable table = GetDataRows(new List<(Column, object)>() { (ProfessionName, profession) });
+        public long GetProfessionID(string profession) {
+            DataTable table = GetDataRows(new List<(IColumn, object)>() { (ProfessionName, profession) });
             if (table.Rows.Count == 0) {
                 throw new ArgumentException("The requested profession does not exist in the database");
             } else if (table.Rows.Count > 1) {
                 throw new ArgumentException("There are multiple entries of the profession in the database");
             }
-            return table.Rows[0].Field<int>(ProfessionID.Name);
+            return ProfessionID.Parse(table.Rows[0]);
         }
     }
 }

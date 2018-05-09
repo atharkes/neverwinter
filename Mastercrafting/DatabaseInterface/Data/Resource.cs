@@ -1,5 +1,4 @@
 ﻿using DatabaseInterface.Factory;
-using DatabaseInterface.Structure.TableStructure;
 using System;
 using System.Collections.Generic;
 
@@ -7,7 +6,7 @@ namespace DatabaseInterface.Data {
     /// <summary> A resource that is used by recipes </summary>
     public class Resource {
         /// <summary> The id of the resource </summary>
-        internal int ID { get; }
+        internal long ID { get; }
         /// <summary> The name of this resource </summary>
         public string Name { get; }
         /// <summary> The price of this resource in astral diamonds </summary>

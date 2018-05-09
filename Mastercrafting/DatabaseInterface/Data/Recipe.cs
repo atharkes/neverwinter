@@ -6,7 +6,7 @@ namespace DatabaseInterface.Data {
     /// <summary> A recipe that consumes resources to create results </summary>
     public class Recipe {
         /// <summary> The id of the recipe </summary>
-        internal int ID { get; }
+        internal long ID { get; }
         /// <summary> The name of this recipe </summary>
         public string Name { get; }
         /// <summary> The profession this recipe belongs to </summary>

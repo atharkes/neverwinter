@@ -5,7 +5,7 @@ namespace DatabaseInterface.Data {
     /// <summary> A profession has recipes and certain grade </summary>
     public class Profession {
         /// <summary> The id of the profession </summary>
-        internal int ID { get; }
+        internal long ID { get; }
         /// <summary> The name of this profession </summary>
         public string Name { get; }
         /// <summary> The grade of this profession </summary>
