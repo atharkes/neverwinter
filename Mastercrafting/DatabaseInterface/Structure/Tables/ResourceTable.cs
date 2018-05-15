@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace DatabaseInterface.Structure.TableStructure {
+namespace DatabaseInterface.Structure.Tables {
     /// <summary> A table managing resources and their costs </summary>
     class ResourceTable : Table {
         public override string Name => "Resources";

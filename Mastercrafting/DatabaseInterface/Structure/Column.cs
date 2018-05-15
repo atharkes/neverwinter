@@ -84,7 +84,7 @@ namespace DatabaseInterface.Structure {
                     return "tier";
                 
                 default:
-                    throw new NotImplementedException("Column Name not found");
+                    throw new NotImplementedException($"Name of column {column} not found");
             }
         }
 
@@ -109,7 +109,7 @@ namespace DatabaseInterface.Structure {
                 case Columns.Date:
                     return "DATETIME";
                 default:
-                    throw new NotImplementedException("Column Type not found");
+                    throw new NotImplementedException($"Type of column {column} not found");
             }
         }
     }

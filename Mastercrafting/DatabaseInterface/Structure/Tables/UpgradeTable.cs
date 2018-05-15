@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DatabaseInterface.Structure.TableStructure {
+namespace DatabaseInterface.Structure.Tables {
     /// <summary> A table managing the cost of upgrading professions </summary>
     class UpgradeTable : Table {
         public override string Name => "ProfessionUpgrades";

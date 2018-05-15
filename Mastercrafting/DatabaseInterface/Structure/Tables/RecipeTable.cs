@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace DatabaseInterface.Structure.TableStructure {
+namespace DatabaseInterface.Structure.Tables {
     /// <summary> A table managing recipes </summary>
     class RecipeTable : Table {
         public override string Name => "Recipes";

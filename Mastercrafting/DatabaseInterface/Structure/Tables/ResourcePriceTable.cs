@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DatabaseInterface.Structure.TableStructure {
+namespace DatabaseInterface.Structure.Tables {
     /// <summary> A table managing the price history of resources </summary>
     class ResourcePriceTable : Table {
         public override string Name => "ResourcePrices";

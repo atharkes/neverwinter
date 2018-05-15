@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 
-namespace DatabaseInterface.Structure.TableStructure {
+namespace DatabaseInterface.Structure.Tables {
     /// <summary> A table managing the resource costs of recipes </summary>
     class RecipeCostTable : Table {
         public override string Name => "RecipeCosts";

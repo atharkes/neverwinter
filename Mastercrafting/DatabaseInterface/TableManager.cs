@@ -1,5 +1,5 @@
 ﻿using DatabaseInterface.Structure;
-using DatabaseInterface.Structure.TableStructure;
+using DatabaseInterface.Structure.Tables;
 using System.Collections.Generic;
 
 namespace DatabaseInterface {
