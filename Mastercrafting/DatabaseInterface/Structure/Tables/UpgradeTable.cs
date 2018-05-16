@@ -12,10 +12,10 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a new profession upgrade table object </summary>
         public UpgradeTable() {
-            ProfessionID = new Column<long>(Columns.ProfessionId, $"NOT NULL REFERENCES {TableManager.Profession.Name} ({TableManager.Profession.ProfessionID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            Grade = new Column<int>(Columns.Grade, "NOT NULL");
-            ResourceID = new Column<long>(Columns.ResourceId, $"NOT NULL REFERENCES {TableManager.Resource.Name} ({TableManager.Resource.ResourceID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            Amount = new Column<int>(Columns.Amount, "NOT NULL DEFAULT (1)");
+            ProfessionID = new Column<long>(ColumnType.ProfessionId, $"NOT NULL REFERENCES {TableManager.Profession.Name} ({TableManager.Profession.ProfessionID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
+            Grade = new Column<int>(ColumnType.Grade, "NOT NULL");
+            ResourceID = new Column<long>(ColumnType.ResourceId, $"NOT NULL REFERENCES {TableManager.Resource.Name} ({TableManager.Resource.ResourceID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
+            Amount = new Column<int>(ColumnType.Amount, "NOT NULL DEFAULT (1)");
         }
 
         /// <summary> Create the profession upgrade table in the database </summary>

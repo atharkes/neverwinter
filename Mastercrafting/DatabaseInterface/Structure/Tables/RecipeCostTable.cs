@@ -13,9 +13,9 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a recipe cost table object </summary>
         public RecipeCostTable() {
-            RecipeID = new Column<long>(Columns.RecipeId, $"NOT NULL REFERENCES {TableManager.Recipe.Name} ({TableManager.Recipe.RecipeID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            ResourceID = new Column<long>(Columns.ResourceId, $"NOT NULL REFERENCES {TableManager.Resource.Name} ({TableManager.Resource.ResourceID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            Amount = new Column<int>(Columns.Amount, "NOT NULL DEFAULT (1)");
+            RecipeID = new Column<long>(ColumnType.RecipeId, $"NOT NULL REFERENCES {TableManager.Recipe.Name} ({TableManager.Recipe.RecipeID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
+            ResourceID = new Column<long>(ColumnType.ResourceId, $"NOT NULL REFERENCES {TableManager.Resource.Name} ({TableManager.Resource.ResourceID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
+            Amount = new Column<int>(ColumnType.Amount, "NOT NULL DEFAULT (1)");
         }
 
         /// <summary> Create the recipe cost table in the database </summary>

@@ -15,10 +15,10 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a new resource table object </summary>
         public ResourceTable() {
-            ResourceID = new Column<long>(Columns.ResourceId, "NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
-            ResourceName = new Column<string>(Columns.ResourceName, "NOT NULL UNIQUE");
-            Price = new Column<int>(Columns.Price, "NOT NULL DEFAULT (1)");
-            Date = new Column<DateTime>(Columns.Date, "NOT NULL DEFAULT (CURRENT_TIMESTAMP)");
+            ResourceID = new Column<long>(ColumnType.ResourceId, "NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
+            ResourceName = new Column<string>(ColumnType.ResourceName, "NOT NULL UNIQUE");
+            Price = new Column<int>(ColumnType.Price, "NOT NULL DEFAULT (1)");
+            Date = new Column<DateTime>(ColumnType.Date, "NOT NULL DEFAULT (CURRENT_TIMESTAMP)");
         }
 
         /// <summary> Creates the resource table in the database </summary>

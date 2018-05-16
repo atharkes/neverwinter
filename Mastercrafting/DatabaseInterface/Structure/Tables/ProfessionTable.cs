@@ -14,9 +14,9 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a new profession table object </summary>
         public ProfessionTable() {
-            ProfessionID = new Column<long>(Columns.ProfessionId, "NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
-            ProfessionName = new Column<string>(Columns.ProfessionName, "NOT NULL UNIQUE");
-            Grade = new Column<int>(Columns.Grade, "NOT NULL DEFAULT (0)");
+            ProfessionID = new Column<long>(ColumnType.ProfessionId, "NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
+            ProfessionName = new Column<string>(ColumnType.ProfessionName, "NOT NULL UNIQUE");
+            Grade = new Column<int>(ColumnType.Grade, "NOT NULL DEFAULT (0)");
         }
 
         /// <summary> Create the profession table in the database </summary>

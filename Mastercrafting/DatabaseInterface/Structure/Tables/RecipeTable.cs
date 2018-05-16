@@ -15,10 +15,10 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a new recipe table object </summary>
         public RecipeTable() {
-            RecipeID = new Column<long>(Columns.RecipeId, "NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
-            RecipeName = new Column<string>(Columns.RecipeName, "NOT NULL UNIQUE");
-            ProfessionID = new Column<long>(Columns.ProfessionId, $"NOT NULL REFERENCES {TableManager.Profession.Name} ({TableManager.Profession.ProfessionID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            Grade = new Column<int>(Columns.Grade, "NOT NULL");
+            RecipeID = new Column<long>(ColumnType.RecipeId, "NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
+            RecipeName = new Column<string>(ColumnType.RecipeName, "NOT NULL UNIQUE");
+            ProfessionID = new Column<long>(ColumnType.ProfessionId, $"NOT NULL REFERENCES {TableManager.Profession.Name} ({TableManager.Profession.ProfessionID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
+            Grade = new Column<int>(ColumnType.Grade, "NOT NULL");
         }
 
         /// <summary> Create the recipe table in the database </summary>

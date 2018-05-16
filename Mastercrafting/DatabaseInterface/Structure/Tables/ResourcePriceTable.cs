@@ -12,9 +12,9 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a new resource price history table object </summary>
         public ResourcePriceTable() {
-            ResourceID = new Column<long>(Columns.ResourceId, $"NOT NULL REFERENCES {TableManager.Resource.Name} ({TableManager.Resource.ResourceID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            Price = new Column<int>(Columns.Price, "NOT NULL");
-            Date = new Column<DateTime>(Columns.Date, "NOT NULL");
+            ResourceID = new Column<long>(ColumnType.ResourceId, $"NOT NULL REFERENCES {TableManager.Resource.Name} ({TableManager.Resource.ResourceID.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
+            Price = new Column<int>(ColumnType.Price, "NOT NULL");
+            Date = new Column<DateTime>(ColumnType.Date, "NOT NULL");
         }
 
         /// <summary> Create the resource price history table in the database </summary>

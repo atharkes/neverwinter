@@ -1,17 +1,31 @@
 ﻿using System;
 
-namespace DatabaseInterface.Structure.Constraints {
+namespace DatabaseInterface.Structure {
     /// <summary> abstract co </summary>
     abstract class Constraint {
+        /// <summary> The name of the constraint </summary>
+        public string Name { get; }
+        
+        /// <summary> Create a new constraint with a name </summary>
+        /// <param name="name">The name of the constraint</param>
+        protected Constraint(string name = "") {
+            Name = name;
+        }
+
+        /// <summary> Get the string corresponding to this constraint </summary>
+        /// <returns>The string in sqlite format</returns>
+        public abstract string GetString();
+
+        [Flags]
         /// <summary> Types of constraints possible </summary>
         public enum Type {
-            PrimaryKey,
-            ForeignKey,
-            Unique,
-            Check,
-            NotNull,
-            Collate,
-            Default
+            PrimaryKey = 1,
+            ForeignKey = 2,
+            Unique = 4,
+            Check = 8,
+            NotNull = 16,
+            Collate = 32,
+            Default = 64
         }
 
         /// <summary> Get a string representing the constraint </summary>
