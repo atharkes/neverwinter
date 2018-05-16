@@ -1,5 +1,6 @@
 ﻿using DatabaseInterface.Data;
 using DatabaseInterface.Structure.Columns;
+using DatabaseInterface.Structure.Constraints;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,10 +17,10 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a new recipe table object </summary>
         public RecipeTable() {
-            RecipeId = new RecipeId("NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
-            RecipeName = new RecipeName("NOT NULL UNIQUE");
-            ProfessionId = new ProfessionId($"NOT NULL REFERENCES {TableManager.Profession.Name} ({TableManager.Profession.ProfessionId.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            Grade = new Grade("NOT NULL");
+            RecipeId = new RecipeId(new NotNull(), new Unique(), new PrimaryKey(true));
+            RecipeName = new RecipeName(new NotNull(), new Unique());
+            ProfessionId = new ProfessionId(new NotNull(), new ForeignKey(TableManager.Profession, TableManager.Profession.ProfessionId));
+            Grade = new Grade(new NotNull());
         }
 
         /// <summary> Create the recipe table in the database </summary>

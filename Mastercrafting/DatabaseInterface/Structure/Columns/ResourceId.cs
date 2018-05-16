@@ -2,6 +2,6 @@
     class ResourceId : Column<long> {
         public override string Name => "resource_id";
 
-        public ResourceId(string constraints = "") : base(constraints) { }
+        public ResourceId(params Constraint[] constraints) : base(constraints) { }
     }
 }

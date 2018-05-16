@@ -1,5 +1,6 @@
 ﻿using DatabaseInterface.Data;
 using DatabaseInterface.Structure.Columns;
+using DatabaseInterface.Structure.Constraints;
 using System.Collections.Generic;
 using System.Data;
 
@@ -14,9 +15,9 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a recipe cost table object </summary>
         public RecipeCostTable() {
-            RecipeId = new RecipeId($"NOT NULL REFERENCES {TableManager.Recipe.Name} ({TableManager.Recipe.RecipeId.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            ResourceId = new ResourceId($"NOT NULL REFERENCES {TableManager.Resource.Name} ({TableManager.Resource.ResourceId.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            Amount = new Amount("NOT NULL DEFAULT (1)");
+            RecipeId = new RecipeId(new NotNull(), new ForeignKey(TableManager.Recipe, TableManager.Recipe.RecipeId));
+            ResourceId = new ResourceId(new NotNull(), new ForeignKey(TableManager.Resource, TableManager.Resource.ResourceId));
+            Amount = new Amount(new NotNull(), new Default<int>(1));
         }
 
         /// <summary> Create the recipe cost table in the database </summary>

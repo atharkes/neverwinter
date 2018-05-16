@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace DatabaseInterface.Structure {
-    /// <summary> abstract co </summary>
+    /// <summary> abstract constraint type </summary>
     abstract class Constraint {
         /// <summary> The name of the constraint </summary>
         public string Name { get; }
@@ -12,8 +12,8 @@ namespace DatabaseInterface.Structure {
             Name = name;
         }
 
-        /// <summary> Get the string corresponding to this constraint </summary>
-        /// <returns>The string in sqlite format</returns>
+        /// <summary> Get the sqlite string of this constraint </summary>
+        /// <returns>The sqlite string corresponding to this constraint</returns>
         public abstract string GetString();
 
         [Flags]

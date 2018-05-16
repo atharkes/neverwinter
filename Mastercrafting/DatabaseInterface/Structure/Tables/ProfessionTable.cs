@@ -1,5 +1,6 @@
 ﻿using DatabaseInterface.Data;
 using DatabaseInterface.Structure.Columns;
+using DatabaseInterface.Structure.Constraints;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,9 +16,9 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a new profession table object </summary>
         public ProfessionTable() {
-            ProfessionId = new ProfessionId("NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
-            ProfessionName = new ProfessionName("NOT NULL UNIQUE");
-            Grade = new Grade("NOT NULL DEFAULT (0)");
+            ProfessionId = new ProfessionId(new NotNull(), new Unique(), new PrimaryKey(true));
+            ProfessionName = new ProfessionName(new NotNull(), new Unique());
+            Grade = new Grade(new NotNull(), new Default<int>(0));
         }
 
         /// <summary> Create the profession table in the database </summary>

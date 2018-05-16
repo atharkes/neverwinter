@@ -2,6 +2,6 @@
     class Tier : Column<int> {
         public override string Name => "tier";
 
-        public Tier(string constraints = "") : base(constraints) { }
+        public Tier(params Constraint[] constraints) : base(constraints) { }
     }
 }

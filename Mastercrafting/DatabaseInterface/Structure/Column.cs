@@ -16,9 +16,13 @@ namespace DatabaseInterface.Structure {
         /// <summary> Creates a new column object </summary>
         /// <param name="column">The type of column</param>
         /// <param name="constraints">The constraints of the column</param>
-        public Column(string constraints = "") {
+        public Column(params Constraint[] constraints) {
             Type = GetTypeString();
-            Constraints = constraints;
+            Constraints = "";
+            foreach (Constraint constraint in constraints) {
+                Constraints += constraint.GetString() + " ";
+            }
+            Constraints.Trim();
         }
 
         /// <summary> Converts a value from this column to a string </summary>

@@ -81,8 +81,11 @@
     <Compile Include="Structure\Columns\ResourceName.cs" />
     <Compile Include="Structure\Columns\Tier.cs" />
     <Compile Include="Structure\Constraint.cs" />
+    <Compile Include="Structure\Constraints\Default.cs" />
     <Compile Include="Structure\Constraints\ForeignKey.cs" />
+    <Compile Include="Structure\Constraints\NotNull.cs" />
     <Compile Include="Structure\Constraints\PrimaryKey.cs" />
+    <Compile Include="Structure\Constraints\Unique.cs" />
     <Compile Include="Structure\IColumn.cs" />
     <Compile Include="Structure\Table.cs" />
     <Compile Include="Structure\Tables\ResourcePriceTable.cs" />

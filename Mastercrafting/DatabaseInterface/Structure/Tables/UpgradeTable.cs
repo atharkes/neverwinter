@@ -1,4 +1,5 @@
 ﻿using DatabaseInterface.Structure.Columns;
+using DatabaseInterface.Structure.Constraints;
 using System.Collections.Generic;
 
 namespace DatabaseInterface.Structure.Tables {
@@ -13,10 +14,10 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a new profession upgrade table object </summary>
         public UpgradeTable() {
-            ProfessionId = new ProfessionId($"NOT NULL REFERENCES {TableManager.Profession.Name} ({TableManager.Profession.ProfessionId.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            Grade = new Grade("NOT NULL");
-            ResourceId = new ResourceId($"NOT NULL REFERENCES {TableManager.Resource.Name} ({TableManager.Resource.ResourceId.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            Amount = new Amount("NOT NULL DEFAULT (1)");
+            ProfessionId = new ProfessionId(new NotNull(), new ForeignKey(TableManager.Profession, TableManager.Profession.ProfessionId));
+            Grade = new Grade(new NotNull());
+            ResourceId = new ResourceId(new NotNull(), new ForeignKey(TableManager.Resource, TableManager.Resource.ResourceId));
+            Amount = new Amount(new NotNull(), new Default<int>(1));
         }
 
         /// <summary> Create the profession upgrade table in the database </summary>

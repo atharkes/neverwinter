@@ -1,4 +1,5 @@
 ﻿using DatabaseInterface.Structure.Columns;
+using DatabaseInterface.Structure.Constraints;
 using System.Collections.Generic;
 
 namespace DatabaseInterface.Structure.Tables {
@@ -12,9 +13,9 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a new resource price history table object </summary>
         public ResourcePriceTable() {
-            ResourceId = new ResourceId($"NOT NULL REFERENCES {TableManager.Resource.Name} ({TableManager.Resource.ResourceId.Name}) ON DELETE RESTRICT ON UPDATE CASCADE");
-            Price = new Price("NOT NULL");
-            Date = new Date("NOT NULL");
+            ResourceId = new ResourceId(new NotNull(), new ForeignKey(TableManager.Resource, TableManager.Resource.ResourceId));
+            Price = new Price(new NotNull());
+            Date = new Date(new NotNull());
         }
 
         /// <summary> Create the resource price history table in the database </summary>

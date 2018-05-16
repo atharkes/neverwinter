@@ -2,6 +2,6 @@
     class ProfessionName : Column<string> {
         public override string Name => "profession";
 
-        public ProfessionName(string constraints = "") : base(constraints) { }
+        public ProfessionName(params Constraint[] constraints) : base(constraints) { }
     }
 }

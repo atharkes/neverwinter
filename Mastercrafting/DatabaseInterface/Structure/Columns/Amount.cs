@@ -2,6 +2,6 @@
     class Amount : Column<int> {
         public override string Name => "amount";
 
-        public Amount(string constraints = "") : base(constraints) { }
+        public Amount(params Constraint[] constraints) : base(constraints) { }
     }
 }

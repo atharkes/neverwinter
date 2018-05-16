@@ -2,6 +2,6 @@
     class Price : Column<int> {
         public override string Name => "price";
 
-        public Price(string constraints = "") : base(constraints) { }
+        public Price(params Constraint[] constraints) : base(constraints) { }
     }
 }

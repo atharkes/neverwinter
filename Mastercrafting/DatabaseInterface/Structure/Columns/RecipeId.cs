@@ -2,6 +2,6 @@
     class RecipeId : Column<long> {
         public override string Name => "recipe_id";
 
-        public RecipeId(string constraints = "") : base(constraints) { }
+        public RecipeId(params Constraint[] constraints) : base(constraints) { }
     }
 }

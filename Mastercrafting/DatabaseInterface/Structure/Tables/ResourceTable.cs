@@ -1,5 +1,6 @@
 ﻿using DatabaseInterface.Data;
 using DatabaseInterface.Structure.Columns;
+using DatabaseInterface.Structure.Constraints;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,10 +17,10 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Create a new resource table object </summary>
         public ResourceTable() {
-            ResourceId = new ResourceId("NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT");
-            ResourceName = new ResourceName("NOT NULL UNIQUE");
-            Price = new Price("NOT NULL DEFAULT (1)");
-            Date = new Date("NOT NULL DEFAULT (CURRENT_TIMESTAMP)");
+            ResourceId = new ResourceId(new NotNull(), new Unique(), new PrimaryKey(true));
+            ResourceName = new ResourceName(new NotNull(), new Unique());
+            Price = new Price(new NotNull(), new Default<int>(1));
+            Date = new Date(new NotNull(), new Default<string>("(CURRENT_TIMESTAMP)"));
         }
 
         /// <summary> Creates the resource table in the database </summary>
