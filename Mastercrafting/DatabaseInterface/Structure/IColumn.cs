@@ -1,4 +1,5 @@
 ﻿namespace DatabaseInterface.Structure {
+    /// <summary> Interface for column objects </summary>
     interface IColumn {
         /// <summary> The name of this column </summary>
         string Name { get; }

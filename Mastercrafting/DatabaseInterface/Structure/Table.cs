@@ -63,8 +63,10 @@ namespace DatabaseInterface.Structure {
             }
             columns = columns.Remove(columns.Length - 2);
             values = values.Remove(values.Length - 2);
-            // Execute Command
-            Database.NonQuery($"INSERT OR REPLACE INTO {Name} ({columns}) VALUES ({values})");
+            // Execute Command if row doesn't already exist
+            if (GetDataRows(row).Rows.Count == 0) {
+                Database.NonQuery($"INSERT INTO {Name} ({columns}) VALUES ({values})");
+            }
         }
 
         /// <summary> Remove a data row with certain constraints. Currently only works with equality checking </summary>

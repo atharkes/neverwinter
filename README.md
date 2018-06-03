@@ -1,5 +1,6 @@
 Some tools for mastercrafting in Cryptic Studios' Neverwinter
 
 TODO:
- - Column (Constraints)
+ - Model different constraints
+ - Split Constraints into TableConstraints & ColumnsConstraints
  - Parse Recipe Data
