@@ -28,8 +28,6 @@ namespace RecipeDataParser {
             List<Profession> professions = Profession.Factory.LoadProfessions();
             List<Resource> resources = Resource.Factory.LoadResources();
             List<Recipe> recipes = Recipe.Factory.LoadRecipes();
-            Recipe.Factory.LoadRecipeCosts();
-            Recipe.Factory.LoadRecipeResults();
 
             // Parse profession data
             foreach (string filePath in Directory.EnumerateFiles(ProfessionDataFolder)) {

@@ -20,17 +20,9 @@ namespace DatabaseInterface.Factory {
         /// <summary> Load all the recipes from the recipe table </summary>
         /// <returns>A list of all the recipes</returns>
         public List<Recipe> LoadRecipes() {
-            return TableManager.Recipe.LoadRecipes();
-        }
-
-        /// <summary> Loads the costs of recipes </summary>
-        public void LoadRecipeCosts() {
             TableManager.RecipeCost.LoadRecipeCosts();
-        }
-
-        /// <summary> Loads the results of recipes </summary>
-        public void LoadRecipeResults() {
             TableManager.RecipeResult.LoadRecipeResults();
+            return TableManager.Recipe.LoadRecipes();
         }
 
         /// <summary> Create a new recipe, or get a reference to the already existing object </summary>
