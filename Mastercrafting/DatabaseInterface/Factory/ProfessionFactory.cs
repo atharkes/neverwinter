@@ -43,7 +43,6 @@ namespace DatabaseInterface.Factory {
             }
             Professions.Remove(profession);
             TableManager.Profession.RemoveProfession(profession.ID);
-            (profession as IDisposable).Dispose();
         }
     }
 }

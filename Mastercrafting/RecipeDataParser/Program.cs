@@ -23,14 +23,7 @@ namespace RecipeDataParser {
         /// <param name="args">The arguments given on execution</param>
         static void Main(string[] args) {
             Database.InitializeDatabase("test.sqlite");
-
-            foreach (Recipe recipe in Recipe.Factory.GetRecipes()) {
-                Recipe.Factory.RemoveRecipe(recipe);
-            }
-
-            // Parse profession data
             ParseProfessionData();
-
             Database.CloseDatabase();
         }
 

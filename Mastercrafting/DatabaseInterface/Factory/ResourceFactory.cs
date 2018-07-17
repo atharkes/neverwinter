@@ -44,7 +44,6 @@ namespace DatabaseInterface.Factory {
             }
             Resources.Remove(resource);
             TableManager.Resource.RemoveResource(resource.ID);
-            (resource as IDisposable).Dispose();
         }
     }
 }

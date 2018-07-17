@@ -1,6 +1,7 @@
 ﻿using DatabaseInterface.Factory;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DatabaseInterface.Data {
     /// <summary> A resource that is used by recipes </summary>
@@ -46,13 +47,15 @@ namespace DatabaseInterface.Data {
         /// <summary> Gets the recipes in which this resource is consumed </summary>
         /// <returns>A list of the recipes this resource is consumed by</returns>
         public List<Recipe> ConsumedBy() {
-            throw new NotImplementedException();
+            List<Recipe> recipes = Recipe.Factory.GetRecipes();
+            return recipes.Where(r => r.ConsumedResources().Contains(this)).ToList();
         }
 
         /// <summary> Gets the recipes in which this resource is a result </summary>
         /// <returns>A list of recipes this resource is a result of</returns>
         public List<Recipe> ResultOf() {
-            throw new NotImplementedException();
+            List<Recipe> recipes = Recipe.Factory.GetRecipes();
+            return recipes.Where(r => r.ResultResources(2).Contains(this)).ToList();
         }
     }
 }

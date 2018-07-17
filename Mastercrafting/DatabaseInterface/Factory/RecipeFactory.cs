@@ -46,7 +46,6 @@ namespace DatabaseInterface.Factory {
             }
             Recipes.Remove(recipe);
             TableManager.Recipe.RemoveRecipe(recipe.ID);
-            (recipe as IDisposable).Dispose();
         }
     }
 }
