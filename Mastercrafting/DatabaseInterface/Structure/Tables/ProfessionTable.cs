@@ -25,14 +25,11 @@ namespace DatabaseInterface.Structure.Tables {
         public override void Create() => Create(new List<IColumn>() { ProfessionName, ProfessionId, Grade });
 
         /// <summary> Load all profession from the database </summary>
-        /// <returns>The professions loaded from the database</returns>
-        public List<Profession> LoadProfessions() {
-            List<Profession> professions = new List<Profession>();
+        public override void LoadData() {
             DataTable table = GetAllData();
             foreach (DataRow row in table.Rows) {
-                professions.Add(LoadProfession(row));
+                LoadProfession(row);
             }
-            return professions;
         }
 
         /// <summary> Get a profession on a certain id </summary>

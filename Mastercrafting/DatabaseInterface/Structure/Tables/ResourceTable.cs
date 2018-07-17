@@ -27,14 +27,11 @@ namespace DatabaseInterface.Structure.Tables {
         public override void Create() => Create(new List<IColumn>() { ResourceName, ResourceId, Price, Date });
 
         /// <summary> Load all resources from the database </summary>
-        /// <returns>The resources loaded from the database</returns>
-        public List<Resource> LoadResources() {
-            List<Resource> resources = new List<Resource>();
+        public override void LoadData() {
             DataTable table = GetAllData();
             foreach (DataRow row in table.Rows) {
-                resources.Add(LoadResource(row));
+                LoadResource(row);
             }
-            return resources;
         }
 
         /// <summary> Get a recipe on a certain id </summary>

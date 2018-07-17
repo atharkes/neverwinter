@@ -17,10 +17,10 @@ namespace DatabaseInterface.Factory {
             this.createProfession = createProfession;
         }
 
-        /// <summary> Loads all profession from the profession table </summary>
-        /// <returns>A list of all the professions</returns>
-        public List<Profession> LoadProfessions() {
-            return TableManager.Profession.LoadProfessions();
+        /// <summary> Gets all the professions currently in memory </summary>
+        /// <returns>A list of the professions in memory</returns>
+        public List<Profession> GetProfessions() {
+            return Professions.ToList();
         }
 
         /// <summary> Create a new profession, or get a reference to the already existing object </summary>

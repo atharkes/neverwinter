@@ -1,7 +1,6 @@
 ﻿using DatabaseInterface;
 using DatabaseInterface.Data;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -25,10 +24,9 @@ namespace RecipeDataParser {
         static void Main(string[] args) {
             Database.InitializeDatabase("test.sqlite");
 
-            // Load all data currently in the database
-            List<Profession> professions = Profession.Factory.LoadProfessions();
-            List<Resource> resources = Resource.Factory.LoadResources();
-            List<Recipe> recipes = Recipe.Factory.LoadRecipes();
+            foreach (Recipe recipe in Recipe.Factory.GetRecipes()) {
+                Recipe.Factory.RemoveRecipe(recipe);
+            }
 
             // Parse profession data
             ParseProfessionData();

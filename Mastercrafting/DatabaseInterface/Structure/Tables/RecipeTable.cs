@@ -28,13 +28,11 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Load all profession from the database </summary>
         /// <returns>The professions loaded from the database</returns>
-        public List<Recipe> LoadRecipes() {
-            List<Recipe> recipes = new List<Recipe>();
+        public override void LoadData() {
             DataTable table = GetAllData();
             foreach (DataRow row in table.Rows) {
-                recipes.Add(LoadRecipe(row));
+                LoadRecipe(row);
             }
-            return recipes;
         }
 
         /// <summary> Get a recipe on a certain id </summary>

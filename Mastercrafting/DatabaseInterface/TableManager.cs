@@ -39,6 +39,13 @@ namespace DatabaseInterface {
             }
         }
 
+        /// <summary> Load the data in all the tables </summary>
+        public static void LoadTableData() {
+            foreach (Table table in Table.Values) {
+                table.LoadData();
+            }
+        }
+
         internal static ProfessionTable Profession => Table[Tables.Profession] as ProfessionTable;
         internal static RecipeTable Recipe => Table[Tables.Recipe] as RecipeTable;
         internal static RecipeCostTable RecipeCost => Table[Tables.RecipeCost] as RecipeCostTable;

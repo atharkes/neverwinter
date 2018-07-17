@@ -42,5 +42,17 @@ namespace DatabaseInterface.Data {
         public void AddPriceHistory(DateTime date, int price) {
             priceHistory.Add((date, price));
         }
+
+        /// <summary> Gets the recipes in which this resource is consumed </summary>
+        /// <returns>A list of the recipes this resource is consumed by</returns>
+        public List<Recipe> ConsumedBy() {
+            throw new NotImplementedException();
+        }
+
+        /// <summary> Gets the recipes in which this resource is a result </summary>
+        /// <returns>A list of recipes this resource is a result of</returns>
+        public List<Recipe> ResultOf() {
+            throw new NotImplementedException();
+        }
     }
 }

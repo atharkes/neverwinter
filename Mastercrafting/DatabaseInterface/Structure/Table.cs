@@ -14,6 +14,8 @@ namespace DatabaseInterface.Structure {
 
         /// <summary> Creates the table in the database </summary>
         public abstract void Create();
+        /// <summary> Load the data in the table </summary>
+        public abstract void LoadData();
 
         /// <summary> Creates the table in the database </summary>
         /// <param name="columns">The columns of the table to create</param>

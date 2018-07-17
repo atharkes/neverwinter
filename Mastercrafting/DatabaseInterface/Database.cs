@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using DatabaseInterface.Data;
+using System.Data;
 using System.Data.SQLite;
 using System.IO;
 
@@ -17,6 +18,7 @@ namespace DatabaseInterface {
             }
             OpenDatabase(path);
             TableManager.AddTablesToDatabase();
+            TableManager.LoadTableData();
         }
 
         /// <summary> Close the connection to the database </summary>

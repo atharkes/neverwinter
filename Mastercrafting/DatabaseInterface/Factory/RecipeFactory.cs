@@ -17,12 +17,10 @@ namespace DatabaseInterface.Factory {
             this.createRecipe = createRecipe;
         }
 
-        /// <summary> Load all the recipes from the recipe table </summary>
-        /// <returns>A list of all the recipes</returns>
-        public List<Recipe> LoadRecipes() {
-            TableManager.RecipeCost.LoadRecipeCosts();
-            TableManager.RecipeResult.LoadRecipeResults();
-            return TableManager.Recipe.LoadRecipes();
+        /// <summary> Gets all the recipes currently in memory </summary>
+        /// <returns>A list of all the recipes in memory</returns>
+        public List<Recipe> GetRecipes() {
+            return Recipes.ToList();
         }
 
         /// <summary> Create a new recipe, or get a reference to the already existing object </summary>

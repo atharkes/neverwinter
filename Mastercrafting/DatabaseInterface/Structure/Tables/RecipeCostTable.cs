@@ -24,7 +24,7 @@ namespace DatabaseInterface.Structure.Tables {
         public override void Create() => Create(new List<IColumn>() { RecipeId, ResourceId, Amount });
 
         /// <summary> Load all recipe costs from the database </summary>
-        public void LoadRecipeCosts() {
+        public override void LoadData() {
             DataTable table = GetAllData();
             foreach (DataRow row in table.Rows) {
                 long recipeId = RecipeId.Parse(row);

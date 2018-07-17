@@ -17,10 +17,10 @@ namespace DatabaseInterface.Factory {
             this.createResource = createResource;
         }
 
-        /// <summary> Loads all resources from the resource table </summary>
-        /// <returns>A list of all the resources</returns>
-        public List<Resource> LoadResources() {
-            return TableManager.Resource.LoadResources();
+        /// <summary> Gets the resources currently in memory </summary>
+        /// <returns>A list of the resources in memory</returns>
+        public List<Resource> GetResources() {
+            return Resources.ToList();
         }
 
         /// <summary> Create a new resource, or get a reference to the already existing object </summary>
