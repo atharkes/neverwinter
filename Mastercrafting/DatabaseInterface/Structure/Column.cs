@@ -29,8 +29,8 @@ namespace DatabaseInterface.Structure {
         /// <param name="value">The value in this column</param>
         /// <returns>The string created from the value</returns>
         public string ToString(object value) {
-            if (value is string) {
-                return $"'{value}'";
+            if (value is string s) {
+                return $"'{s.Replace("'", "''")}'";
             } else {
                 return value.ToString();
             }

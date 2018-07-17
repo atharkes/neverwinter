@@ -48,6 +48,12 @@ namespace DatabaseInterface.Data {
             ID = TableManager.Recipe.GetRecipeID(name);
         }
 
+        /// <summary> The string representing this recipe </summary>
+        /// <returns>The name of the recipe</returns>
+        public override string ToString() {
+            return Name;
+        }
+
         /// <summary> The resources consumed by this recipe </summary>
         /// <returns>A copy of the list of resources</returns>
         public List<Resource> ConsumedResources() => new List<Resource>(consumed.Keys);
@@ -72,6 +78,12 @@ namespace DatabaseInterface.Data {
         /// <param name="resource">The resource to add</param>
         /// <param name="amount">The amount of the resource</param>
         public void AddConsumed(Resource resource, int amount) {
+            if (consumed.ContainsKey(resource)) {
+                if (consumed[resource] == amount) {
+                    return;
+                }
+                RemoveConsumed(resource);
+            }
             consumed.Add(resource, amount);
             TableManager.RecipeCost.InsertRecipeCost(ID, resource.ID, amount);
         }
@@ -88,6 +100,12 @@ namespace DatabaseInterface.Data {
         /// <param name="resource">The resource to add to the result tier</param>
         /// <param name="amount">The amount of the resource to add</param>
         public void AddResultResource(int tier, Resource resource, int amount) {
+            if (result[tier].ContainsKey(resource)) {
+                if (result[tier][resource] == amount) {
+                    return;
+                }
+                RemoveResultResource(tier, resource);
+            }
             result[tier].Add(resource, amount);
             TableManager.RecipeResult.InsertRecipeResult(ID, tier, resource.ID, amount);
         }

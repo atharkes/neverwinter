@@ -26,6 +26,12 @@ namespace DatabaseInterface.Data {
             ID = TableManager.Resource.GetResourceID(name);
         }
 
+        /// <summary> The string representing this resource </summary>
+        /// <returns>The name of the resource</returns>
+        public override string ToString() {
+            return Name;
+        }
+
         /// <summary> Return a copy of the price history </summary>
         /// <returns>The copy of the history</returns>
         public List<(DateTime Date, int Price)> GetPriceHistory() {

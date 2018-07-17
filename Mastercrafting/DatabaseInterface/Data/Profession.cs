@@ -37,6 +37,12 @@ namespace DatabaseInterface.Data {
             ID = TableManager.Profession.GetProfessionID(name);
         }
 
+        /// <summary> The string representing this profession </summary>
+        /// <returns>The name of the profession</returns>
+        public override string ToString() {
+            return Name;
+        }
+
         /// <summary> Gets the recipes in this profession </summary>
         /// <returns>A copy of the list of recipes</returns>
         public List<Recipe> GetRecipes() => new List<Recipe>(recipes);
