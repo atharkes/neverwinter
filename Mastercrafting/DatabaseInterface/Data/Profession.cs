@@ -45,6 +45,14 @@ namespace DatabaseInterface.Data {
 
         /// <summary> Gets the recipes in this profession </summary>
         /// <returns>A copy of the list of recipes</returns>
-        public List<Recipe> GetRecipes() => new List<Recipe>(recipes);
+        public List<Recipe> Recipes => new List<Recipe>(recipes);
+
+        /// <summary> Add a recipe to profession </summary>
+        /// <param name="recipe">The recipe to add to the profession</param>
+        internal void AddRecipe(Recipe recipe) => recipes.Add(recipe);
+
+        /// <summary> Remove a recipe from the profession </summary>
+        /// <param name="recipe">The recipe to remove</param>
+        internal void Removerecipe(Recipe recipe) => recipes.Remove(recipe);
     }
 }

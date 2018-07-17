@@ -36,6 +36,7 @@ namespace DatabaseInterface.Data {
         private Recipe(string name, Profession profession, int grade, int guildMarks) {
             Name = name;
             Profession = profession;
+            profession.AddRecipe(this);
             Grade = grade;
             GuildMarks = guildMarks;
             AstralDiamonds = 20_000;

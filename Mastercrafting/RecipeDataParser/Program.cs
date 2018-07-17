@@ -31,6 +31,13 @@ namespace RecipeDataParser {
             List<Recipe> recipes = Recipe.Factory.LoadRecipes();
 
             // Parse profession data
+            ParseProfessionData();
+
+            Database.CloseDatabase();
+        }
+
+        /// <summary> Parse data in the profession files </summary>
+        static void ParseProfessionData() {
             foreach (string filePath in Directory.EnumerateFiles(ProfessionDataFolder)) {
                 Console.WriteLine("Reading File: {0}", Path.GetFileName(filePath));
                 string professionName = Path.GetFileNameWithoutExtension(filePath);
@@ -47,7 +54,7 @@ namespace RecipeDataParser {
                                 grade = row[0].Count(c => c == 'I');
                                 break;
                             }
-                            
+
                             case RowType.RecipeInitial: {
                                 // Create Recipe
                                 string recipeName = row[2];
@@ -88,8 +95,6 @@ namespace RecipeDataParser {
                     }
                 }
             }
-
-            Database.CloseDatabase();
         }
 
         /// <summary> Identify the type a row </summary>
