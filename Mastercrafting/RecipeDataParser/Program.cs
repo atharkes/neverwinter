@@ -54,7 +54,6 @@ namespace RecipeDataParser {
                                 grade = row[0].Count(c => c == 'I');
                                 break;
                             }
-
                             case RowType.RecipeInitial: {
                                 // Create Recipe
                                 string recipeName = row[2];

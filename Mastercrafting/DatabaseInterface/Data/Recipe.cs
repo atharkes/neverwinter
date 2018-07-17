@@ -51,9 +51,7 @@ namespace DatabaseInterface.Data {
 
         /// <summary> The string representing this recipe </summary>
         /// <returns>The name of the recipe</returns>
-        public override string ToString() {
-            return Name;
-        }
+        public override string ToString() => Name;
 
         /// <summary> The resources consumed by this recipe </summary>
         /// <returns>A copy of the list of resources</returns>

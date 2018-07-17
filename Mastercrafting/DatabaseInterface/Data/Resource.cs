@@ -28,9 +28,7 @@ namespace DatabaseInterface.Data {
 
         /// <summary> The string representing this resource </summary>
         /// <returns>The name of the resource</returns>
-        public override string ToString() {
-            return Name;
-        }
+        public override string ToString() => Name;
 
         /// <summary> Return a copy of the price history </summary>
         /// <returns>The copy of the history</returns>
