@@ -1,7 +1,6 @@
 ﻿using DatabaseInterface;
 using DatabaseInterface.Data;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -26,11 +25,6 @@ namespace RecipeDataParser {
         static void Main(string[] args) {
             Database.InitializeDatabase("test.sqlite");
             ParseProfessionData();
-
-            List<Resource> resources = Resource.Factory.GetResources();
-            resources[0].Name = "Test";
-            resources[0].Price = 101;
-
             Database.CloseDatabase();
         }
 

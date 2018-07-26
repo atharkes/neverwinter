@@ -8,11 +8,11 @@ namespace DatabaseInterface.Data {
         /// <summary> The id of the recipe </summary>
         internal long ID { get; }
         /// <summary> The name of this recipe </summary>
-        public string Name { get; }
+        public string Name { get => name; set { TableManager.Recipe.UpdateRecipeName(ID, value); name = value; } }
         /// <summary> The profession this recipe belongs to </summary>
-        public Profession Profession { get; }
+        public Profession Profession { get => profession; set { TableManager.Recipe.UpdateRecipeProfessionId(ID, value.ID); profession = value; } }
         /// <summary> The grade of this recipe </summary>
-        public int Grade { get; }
+        public int Grade { get => grade; set { TableManager.Recipe.UpdateRecipeGrade(ID, value); grade = value; } }
         /// <summary> The cost in guildmarks to instantly get a tier 3 result. 0 indicates it can't be done </summary>
         public int GuildMarks { get; }
         /// <summary> The cost to instantly complete this recipe </summary>
@@ -23,8 +23,21 @@ namespace DatabaseInterface.Data {
         /// <summary> Whether the recipe is deletable yet </summary>
         internal bool Deletable => consumed.Count == 0 && result.All(dic => dic.Count == 0);
         /// <summary> All resources used or rewarded by this recipe </summary>
-        internal List<Resource> Resources => consumed.Keys.Concat(result.Aggregate((a, b) => a.Concat(b).ToDictionary(x => x.Key, x => x.Value)).Keys).ToList();
+        public List<Resource> Resources {
+            get {
+                HashSet<Resource> resources = new HashSet<Resource>(consumed.Keys);
+                foreach (Dictionary<Resource, int> dic in result) {
+                    foreach (Resource resource in dic.Keys) {
+                        resources.Add(resource);
+                    }
+                }
+                return resources.ToList();
+            }
+        }
 
+        string name;
+        Profession profession;
+        int grade;
         /// <summary> The resources and the amount that are consumed by this recipe </summary>
         Dictionary<Resource, int> consumed { get; }
         /// <summary> The results per tier of this recipe </summary>

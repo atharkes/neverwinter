@@ -63,6 +63,13 @@ namespace DatabaseInterface.Structure.Tables {
             UpdateDataRow((false, RecipeId, recipeId), (true, RecipeName, name));
         }
 
+        /// <summary> Update the profession of a recipe </summary>
+        /// <param name="recipeId">The id of the recipe to update the profession of</param>
+        /// <param name="professionId">The id of the new profession</param>
+        public void UpdateRecipeProfessionId(long recipeId, long professionId) {
+            UpdateDataRow((false, RecipeId, recipeId), (true, ProfessionId, professionId));
+        }
+
         /// <summary> Update the grade of a recipe </summary>
         /// <param name="recipeId">The id of the recipe to update the grade of</param>
         /// <param name="grade">The new grade of the recipe</param>
