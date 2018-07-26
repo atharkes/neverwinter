@@ -20,7 +20,7 @@ namespace DatabaseInterface.Data {
         /// <summary> The recipes in this profession </summary>
         List<Recipe> recipes { get; }
         /// <summary> The resources that are needed to upgrade this profession </summary>
-        List<(Resource Resource, int Amount)>[] upgrade { get; }
+        Dictionary<Resource, int>[] upgrade { get; }
 
         /// <summary> The factory used to create professions </summary>
         public static readonly ProfessionFactory Factory = new ProfessionFactory((n, g) => new Profession(n, g));
@@ -29,9 +29,9 @@ namespace DatabaseInterface.Data {
             Name = name;
             Grade = grade;
             recipes = new List<Recipe>();
-            upgrade = new List<(Resource, int)>[Grades];
+            upgrade = new Dictionary<Resource, int>[Grades];
             for (int i = 0; i < Grades; i++) {
-                upgrade[i] = new List<(Resource, int)>();
+                upgrade[i] = new Dictionary<Resource, int>();
             }
             TableManager.Profession.InsertProfession(name, grade);
             ID = TableManager.Profession.GetProfessionID(name);
@@ -44,6 +44,10 @@ namespace DatabaseInterface.Data {
         /// <summary> Gets the recipes in this profession </summary>
         /// <returns>A copy of the list of recipes</returns>
         public List<Recipe> Recipes => new List<Recipe>(recipes);
+
+        public void AddUpgradeCost(int grade, Resource resource, int amount) {
+            upgrade[grade].Add(resource, amount);
+        }
 
         /// <summary> Add a recipe to profession </summary>
         /// <param name="recipe">The recipe to add to the profession</param>

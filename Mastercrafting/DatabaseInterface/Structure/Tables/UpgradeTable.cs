@@ -1,6 +1,8 @@
-﻿using DatabaseInterface.Structure.Columns;
+﻿using DatabaseInterface.Data;
+using DatabaseInterface.Structure.Columns;
 using DatabaseInterface.Structure.Constraints;
 using System.Collections.Generic;
+using System.Data;
 
 namespace DatabaseInterface.Structure.Tables {
     /// <summary> A table managing the cost of upgrading professions </summary>
@@ -25,7 +27,14 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Loads the data in this table </summary>
         public override void LoadData() {
-
+            DataTable table = GetAllData();
+            foreach (DataRow row in table.Rows) {
+                Profession profession = TableManager.Profession.GetProfession(ProfessionId.Parse(row));
+                int grade = Grade.Parse(row);
+                Resource resource = TableManager.Resource.GetResource(ResourceId.Parse(row));
+                int amount = Amount.Parse(row);
+                profession.AddUpgradeCost(grade, resource, amount);
+            }
         }
     }
 }
