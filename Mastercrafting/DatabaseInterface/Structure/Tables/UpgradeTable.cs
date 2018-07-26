@@ -1,7 +1,6 @@
 ﻿using DatabaseInterface.Data;
 using DatabaseInterface.Structure.Columns;
 using DatabaseInterface.Structure.Constraints;
-using System.Collections.Generic;
 using System.Data;
 
 namespace DatabaseInterface.Structure.Tables {

@@ -27,7 +27,6 @@ namespace DatabaseInterface.Data {
             this.price = price;
             TableManager.Resource.InsertResource(name, price);
             ID = TableManager.Resource.GetResourceID(name);
-            Price = price;
         }
 
         /// <summary> The string representing this resource </summary>

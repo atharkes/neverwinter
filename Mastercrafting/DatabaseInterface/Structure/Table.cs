@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 
 namespace DatabaseInterface.Structure {
     /// <summary> Abstract table class that has a name, column definitions, and datarows </summary>
