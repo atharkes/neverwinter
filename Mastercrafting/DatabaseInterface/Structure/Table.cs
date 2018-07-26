@@ -42,7 +42,7 @@ namespace DatabaseInterface.Structure {
 
         /// <summary> Get data from this table based on some equality constraints </summary>
         /// <param name="constraints">The constraints</param>
-        protected DataTable GetDataRows(List<(IColumn, object)> constraints) {
+        protected DataTable GetDataRows(params (IColumn, object)[] constraints) {
             // Create Constraint string
             string where = "";
             foreach ((IColumn column, object constraint) in constraints) {
@@ -55,7 +55,7 @@ namespace DatabaseInterface.Structure {
 
         /// <summary> Inserts a row of data into the table </summary>
         /// <param name="row">The list with column and values pairs</param>
-        protected void InsertDataRow(List<(IColumn, object)> row) {
+        protected void InsertDataRow(params (IColumn, object)[] row) {
             // Create Columns and Values string
             string columns = "";
             string values = "";
@@ -70,22 +70,21 @@ namespace DatabaseInterface.Structure {
                 Database.NonQuery($"INSERT INTO {Name} ({columns}) VALUES ({values})");
             }
         }
-
+        
         /// <summary> Update a row of data in the table </summary>
-        /// <param name="constraints">The constraints the row has to satisfy</param>
-        /// <param name="updates">The columns to update in the row</param>
-        protected void UpdateDataRow(List<(IColumn, object)> constraints, List<(IColumn, object)> updates) {
-            // Create Constraint string
+        /// <param name="row">The row to update. True indicates the value in the column should be updated. False indicates a constraint</param>
+        protected void UpdateDataRow(params (bool, IColumn, object)[] row) {
+            // Create Set and Where string
             string where = "";
-            foreach ((IColumn column, object constraint) in constraints) {
-                where += $"{column.Name} = {column.ToString(constraint)} AND ";
+            string set = "";
+            foreach ((bool update, IColumn column, object value) in row) {
+                if (update) {
+                    set += $"{column.Name} = {column.ToString(value)}, ";
+                } else {
+                    where += $"{column.Name} = {column.ToString(value)} AND ";
+                }
             }
             where = where.Remove(where.Length - 5);
-            // Create Update string
-            string set = "";
-            foreach ((IColumn column, object update) in updates) {
-                set += $"{column.Name} = {column.ToString(update)}, ";
-            }
             set = set.Remove(set.Length - 2);
             // Execute Command
             Database.NonQuery($"UPDATE {Name} SET {set} WHERE {where}");
@@ -93,7 +92,7 @@ namespace DatabaseInterface.Structure {
 
         /// <summary> Remove a data row with certain constraints. Currently only works with equality checking </summary>
         /// <param name="constraints">The constraints the row has to satisfy</param>
-        protected void RemoveDataRow(List<(IColumn, object)> constraints) {
+        protected void RemoveDataRow(params (IColumn, object)[] constraints) {
             // Create Constraint string
             string where = "";
             foreach ((IColumn column, object constraint) in constraints) {

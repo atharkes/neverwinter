@@ -41,14 +41,14 @@ namespace DatabaseInterface.Structure.Tables {
         /// <param name="resourceId">The id of the resource to add to the recipe</param>
         /// <param name="amount">The amount of the resource</param>
         public void InsertRecipeCost(long recipeId, long resourceId, int amount) {
-            InsertDataRow(new List<(IColumn, object)>() { (RecipeId, recipeId), (ResourceId, resourceId), (Amount, amount) });
+            InsertDataRow((RecipeId, recipeId), (ResourceId, resourceId), (Amount, amount));
         }
 
         /// <summary> Remove a resource cost from a recipe in the table </summary>
         /// <param name="recipeId">The id of the recipe to remove the resource from</param>
         /// <param name="resourceId">The id of the resource to remove from the recipe</param>
         public void RemoveRecipeCost(long recipeId, long resourceId) {
-            RemoveDataRow(new List<(IColumn, object)>() { (RecipeId, recipeId), (ResourceId, resourceId) });
+            RemoveDataRow((RecipeId, recipeId), (ResourceId, resourceId));
         }
     }
 }

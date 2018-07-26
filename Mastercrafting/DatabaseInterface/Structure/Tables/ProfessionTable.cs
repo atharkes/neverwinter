@@ -36,7 +36,7 @@ namespace DatabaseInterface.Structure.Tables {
         /// <param name="professionId">The id of the profession to get</param>
         /// <returns>The profession corresponding to the id</returns>
         public Profession GetProfession(long professionId) {
-            DataTable table = GetDataRows(new List<(IColumn, object)>() { (ProfessionId, professionId) });
+            DataTable table = GetDataRows((ProfessionId, professionId));
             if (table.Rows.Count == 0) {
                 throw new ArgumentException("The requested profession does not exist in the database");
             }
@@ -55,17 +55,17 @@ namespace DatabaseInterface.Structure.Tables {
         /// <summary> Insert a new profession into the table </summary>
         /// <param name="name">The name of the profession</param>
         /// <param name="grade">The grade of the profession</param>
-        public void InsertProfession(string name, int grade = 0) => InsertDataRow(new List<(IColumn, object)>() { (ProfessionName, name), (Grade, grade) });
+        public void InsertProfession(string name, int grade = 0) => InsertDataRow((ProfessionName, name), (Grade, grade));
 
         /// <summary> Remove a profession from the table </summary>
         /// <param name="name">The id of the profession to remove</param>
-        public void RemoveProfession(long professionId) => RemoveDataRow(new List<(IColumn, object)>() { (ProfessionId, professionId) });
+        public void RemoveProfession(long professionId) => RemoveDataRow((ProfessionId, professionId));
 
         /// <summary> Get the id of a profession </summary>
         /// <param name="profession">The name of the profession</param>
         /// <returns>The id of the profession</returns>
         public long GetProfessionID(string profession) {
-            DataTable table = GetDataRows(new List<(IColumn, object)>() { (ProfessionName, profession) });
+            DataTable table = GetDataRows((ProfessionName, profession));
             if (table.Rows.Count == 0) {
                 throw new ArgumentException("The requested profession does not exist in the database");
             } else if (table.Rows.Count > 1) {

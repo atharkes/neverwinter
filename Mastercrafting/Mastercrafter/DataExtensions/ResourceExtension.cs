@@ -3,10 +3,11 @@
 namespace Mastercrafter.DataExtensions {
     /// <summary> Extension methods for the Resource data class </summary>
     public static class ResourceExtension {
-        public int CraftCost(this Resource resource) {
+        public static int CraftCost(this Resource resource) {
             foreach (Recipe recipe in resource.ResultOf()) {
 
             }
+            throw new System.NotImplementedException();
         }
     }
 }

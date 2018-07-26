@@ -40,7 +40,7 @@ namespace DatabaseInterface.Structure.Tables {
         /// <param name="resourceId">The id of the resource to find the price for</param>
         /// <returns>The most recent price of the resource in the table</returns>
         public int MostRecentPrice(long resourceId) {
-            DataTable table = GetDataRows(new List<(IColumn, object)>() { (ResourceId, resourceId) });
+            DataTable table = GetDataRows((ResourceId, resourceId));
             DateTime currentDate = DateTime.MinValue;
             int price = int.MinValue;
             foreach (DataRow row in table.Rows) {
@@ -58,14 +58,14 @@ namespace DatabaseInterface.Structure.Tables {
         /// <param name="date">The date to log the price to</param>
         /// <param name="price">The price of the resource at the specified date</param>
         public void InsertResourcePrice(long resourceId, DateTime date, int price) {
-            InsertDataRow(new List<(IColumn, object)>() { (ResourceId, resourceId), (Date, date), (Price, price) });
+            InsertDataRow((ResourceId, resourceId), (Date, date), (Price, price));
         }
 
         /// <summary> Remove a resource price from the table </summary>
         /// <param name="resourceId">The id of the resource to remove the price from</param>
         /// <param name="date">The date of the price log to remove</param>
         public void RemoveResourcePrice(long resourceId, DateTime date) {
-            RemoveDataRow(new List<(IColumn, object)>() { (ResourceId, resourceId), (Date, date) });
+            RemoveDataRow((ResourceId, resourceId), (Date, date));
         }
     }
 }

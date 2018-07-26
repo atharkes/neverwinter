@@ -38,7 +38,7 @@ namespace DatabaseInterface.Structure.Tables {
         /// <param name="resourceId">The id of the recipe to get</param>
         /// <returns>The recipe corresponding to the id</returns>
         public Resource GetResource(long resourceId) {
-            DataTable table = GetDataRows(new List<(IColumn, object)>() { (ResourceId, resourceId) });
+            DataTable table = GetDataRows((ResourceId, resourceId));
             if (table.Rows.Count == 0) {
                 throw new ArgumentException("The requested resource does not exist in the database");
             }
@@ -58,31 +58,31 @@ namespace DatabaseInterface.Structure.Tables {
         /// <param name="resourceId">The id of the resource to update the name for</param>
         /// <param name="name">The new name of the resource</param>
         public void UpdateResourceName(long resourceId, string name) {
-            UpdateDataRow(new List<(IColumn, object)>() { (ResourceId, resourceId) }, new List<(IColumn, object)>() { (ResourceName, name) });
+            UpdateDataRow((false, ResourceId, resourceId), (true, ResourceName, name));
         }
 
         /// <summary> Update the price of a resource in the table </summary>
         /// <param name="resourceId">The id of the resrouce to update the price of</param>
         /// <param name="price">The new price of the resource</param>
         public void UpdateResourcePrice(long resourceId, int price) {
-            UpdateDataRow(new List<(IColumn, object)>() { (ResourceId, resourceId) }, new List<(IColumn, object)>() { (Price, price) });
+            UpdateDataRow((false, ResourceId, resourceId), (true, Price, price));
             TableManager.ResourcePrice.InsertResourcePrice(resourceId, DateTime.Now, price);
         }
 
         /// <summary> Add a new resource to the table </summary>
         /// <param name="name">The name of the resource</param>
         /// <param name="cost">The cost of the resource in astral diamonds</param>
-        public void InsertResource(string name, int cost = 1) => InsertDataRow(new List<(IColumn, object)>() { (ResourceName, name), (Price, cost) });
+        public void InsertResource(string name, int cost = 1) => InsertDataRow((ResourceName, name), (Price, cost));
 
         /// <summary> Remove a resource from the table </summary>
         /// <param name="resourceId">The id of the resource to remove</param>
-        public void RemoveResource(long resourceId) => RemoveDataRow(new List<(IColumn, object)>() { (ResourceId, resourceId) });
+        public void RemoveResource(long resourceId) => RemoveDataRow((ResourceId, resourceId));
 
         /// <summary> Get the id of a resource </summary>
         /// <param name="resource">The name of the resource</param>
         /// <returns>The id of the resource</returns>
         public long GetResourceID(string resource) {
-            DataTable result = GetDataRows(new List<(IColumn, object)>() { (ResourceName, resource) });
+            DataTable result = GetDataRows((ResourceName, resource));
             if (result.Rows.Count == 0) {
                 throw new ArgumentException("The resource does not exist in the database");
             } else if (result.Rows.Count > 1) {

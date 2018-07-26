@@ -45,7 +45,7 @@ namespace DatabaseInterface.Structure.Tables {
         /// <param name="resourceId">The resource to add to the result tier</param>
         /// <param name="amount">The amount of the resource to add</param>
         public void InsertRecipeResult(long recipeId, int tier, long resourceId, int amount) {
-            InsertDataRow(new List<(IColumn, object)>() { (RecipeId, recipeId), (Tier, tier), (ResourceId, resourceId), (Amount, amount) });
+            InsertDataRow((RecipeId, recipeId), (Tier, tier), (ResourceId, resourceId), (Amount, amount));
         }
 
         /// <summary> Remove a resource from the result tier of a recipe in the table </summary>
@@ -53,7 +53,7 @@ namespace DatabaseInterface.Structure.Tables {
         /// <param name="tier">The result tier to remove the resource from</param>
         /// <param name="resourceId">The resource to remove from the result tier</param>
         public void RemoveRecipeResult(long recipeId, int tier, long resourceId) {
-            RemoveDataRow(new List<(IColumn, object)>() { (RecipeId, recipeId), (Tier, tier), (ResourceId, resourceId) });
+            RemoveDataRow((RecipeId, recipeId), (Tier, tier), (ResourceId, resourceId));
         }
     }
 }

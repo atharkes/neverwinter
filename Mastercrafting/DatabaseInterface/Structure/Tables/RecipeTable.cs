@@ -39,7 +39,7 @@ namespace DatabaseInterface.Structure.Tables {
         /// <param name="recipeId">The id of the recipe to get</param>
         /// <returns>The recipe corresponding to the id</returns>
         public Recipe GetRecipe(long recipeId) {
-            DataTable table = GetDataRows(new List<(IColumn, object)>() { (RecipeId, recipeId) });
+            DataTable table = GetDataRows((RecipeId, recipeId));
             if (table.Rows.Count == 0) {
                 throw new ArgumentException("The requested recipe does not exist in the database");
             }
@@ -57,12 +57,18 @@ namespace DatabaseInterface.Structure.Tables {
             return Recipe.Factory.CreateRecipe(name, profession, grade);
         }
 
+        /// <summary> Update the name of a recipe </summary>
+        /// <param name="recipeId">The id of the recipe to update to name of</param>
+        /// <param name="name">The new name of the recipe</param>
         public void UpdateRecipeName(long recipeId, string name) {
-            UpdateDataRow(new List<(IColumn, object)>() { (RecipeId, recipeId) }, new List<(IColumn, object)>() { (RecipeName, name) });
+            UpdateDataRow((false, RecipeId, recipeId), (true, RecipeName, name));
         }
 
+        /// <summary> Update the grade of a recipe </summary>
+        /// <param name="recipeId">The id of the recipe to update the grade of</param>
+        /// <param name="grade">The new grade of the recipe</param>
         public void UpdateRecipeGrade(long recipeId, int grade) {
-            UpdateDataRow(new List<(IColumn, object)>() { (RecipeId, recipeId) }, new List<(IColumn, object)>() { (Grade, grade) });
+            UpdateDataRow((false, RecipeId, recipeId), (true, Grade, grade));
         }
 
         /// <summary> Add a new recipe to the table </summary>
@@ -70,20 +76,20 @@ namespace DatabaseInterface.Structure.Tables {
         /// <param name="professionID">The id of the profession the recipe belongs to</param>
         /// <param name="grade">The grade of the recipe</param>
         public void InsertRecipe(string name, long professionID, int grade) {
-            InsertDataRow(new List<(IColumn, object)>() { (RecipeName, name), (ProfessionId, professionID), (Grade, grade) });
+            InsertDataRow((RecipeName, name), (ProfessionId, professionID), (Grade, grade));
         }
 
         /// <summary> Remove a recipe from the table </summary>
         /// <param name="recipeId">The id of the recipe to remove</param>
         public void RemoveRecipe(long recipeId) {
-            RemoveDataRow(new List<(IColumn, object)>() { (RecipeId, recipeId) });
+            RemoveDataRow((RecipeId, recipeId));
         }
 
         /// <summary> Get the id of a recipe </summary>
         /// <param name="recipe">The name of the recipe to get the id for</param>
         /// <returns>The id of the recipe</returns>
         public long GetRecipeID(string recipe) {
-            DataTable result = GetDataRows(new List<(IColumn, object)>() { (RecipeName, recipe) });
+            DataTable result = GetDataRows((RecipeName, recipe));
             if (result.Rows.Count == 0) {
                 throw new ArgumentException("The recipe does not exist in the database");
             } else if (result.Rows.Count > 1) {
