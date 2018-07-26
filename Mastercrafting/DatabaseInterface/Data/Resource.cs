@@ -11,22 +11,22 @@ namespace DatabaseInterface.Data {
         /// <summary> The name of this resource </summary>
         public string Name { get => name; set { TableManager.Resource.UpdateResourceName(ID, value); name = value; } }
         /// <summary> The price of this resource in astral diamonds </summary>
-        public int Price { get => price; set { TableManager.Resource.UpdateResourcePrice(ID, value); price = value; } }
+        public int Price { get => priceHistory.FirstOrDefault().Value; set => UpdatePrice(value); }
+        /// <summary> The date the resource price was last logged at </summary>
+        public DateTime Date => priceHistory.FirstOrDefault().Key;
 
         string name;
-        int price;
         /// <summary> All known prices of this resource with the time they are recorded </summary>
         SortedList<DateTime, int> priceHistory { get; }
 
         /// <summary> The factory used to create resources </summary>
-        public static readonly ResourceFactory Factory = new ResourceFactory((n, p) => new Resource(n, p));
+        public static readonly ResourceFactory Factory = new ResourceFactory((n) => new Resource(n));
         /// <summary> Create a new resource object </summary>
-        private Resource(string name, int price) {
-            priceHistory = new SortedList<DateTime, int>();
+        private Resource(string name) {
             this.name = name;
-            this.price = price;
-            TableManager.Resource.InsertResource(name, price);
+            TableManager.Resource.InsertResource(name);
             ID = TableManager.Resource.GetResourceID(name);
+            priceHistory = new SortedList<DateTime, int>();
         }
 
         /// <summary> The string representing this resource </summary>
@@ -35,14 +35,22 @@ namespace DatabaseInterface.Data {
 
         /// <summary> Return a copy of the price history </summary>
         /// <returns>The copy of the history</returns>
-        public Dictionary<DateTime, int> GetPriceHistory() {
-            return new Dictionary<DateTime, int>(priceHistory);
+        public SortedList<DateTime, int> GetPriceHistory() {
+            return new SortedList<DateTime, int>(priceHistory);
         }
 
         /// <summary> Add a price to the history </summary>
         /// <param name="date">The date the price is logged at</param>
         /// <param name="price">The price at the specific date</param>
         internal void AddPriceHistory(DateTime date, int price) {
+            priceHistory.Add(date, price);
+        }
+        
+        /// <summary> Update the price of this resource </summary>
+        /// <param name="price">The new price of the resource</param>
+        public void UpdatePrice(int price) {
+            DateTime date = DateTime.Now;
+            TableManager.ResourcePrice.InsertResourcePrice(ID, date, price);
             priceHistory.Add(date, price);
         }
 

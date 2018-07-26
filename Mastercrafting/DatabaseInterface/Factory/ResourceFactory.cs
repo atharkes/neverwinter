@@ -9,11 +9,11 @@ namespace DatabaseInterface.Factory {
         /// <summary> The set of all resource objects </summary>
         internal HashSet<Resource> Resources = new HashSet<Resource>();
         /// <summary> The function used to create resources </summary>
-        Func<string, int, Resource> createResource;
+        Func<string, Resource> createResource;
 
         /// <summary> Create a new resource factory </summary>
         /// <param name="createResource">The function used to create resources with</param>
-        internal ResourceFactory(Func<string, int, Resource> createResource) {
+        internal ResourceFactory(Func<string, Resource> createResource) {
             this.createResource = createResource;
         }
 
@@ -27,10 +27,10 @@ namespace DatabaseInterface.Factory {
         /// <param name="name">The name of the resource</param>
         /// <param name="price">The price of the resource</param>
         /// <returns>The resource object corresponding to the name</returns>
-        public Resource CreateResource(string name, int price = 1) {
+        public Resource CreateResource(string name) {
             Resource resource = Resources.FirstOrDefault(r => r.Name == name);
             if (Equals(resource, default(Profession))) {
-                resource = createResource.Invoke(name, price);
+                resource = createResource.Invoke(name);
                 Resources.Add(resource);
             }
             return resource;

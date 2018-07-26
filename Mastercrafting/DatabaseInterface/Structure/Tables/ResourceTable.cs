@@ -11,19 +11,15 @@ namespace DatabaseInterface.Structure.Tables {
         public override string Constraints => "";
         public ResourceId ResourceId { get; }
         public ResourceName ResourceName { get; }
-        public Price Price { get; }
-        public Date Date { get; }
 
         /// <summary> Create a new resource table object </summary>
         public ResourceTable() {
             ResourceId = new ResourceId(new NotNull(), new Unique(), new PrimaryKey(true));
             ResourceName = new ResourceName(new NotNull(), new Unique());
-            Price = new Price(new NotNull(), new Default<int>(1));
-            Date = new Date(new NotNull(), new Default<string>("(CURRENT_TIMESTAMP)"));
         }
 
         /// <summary> Creates the resource table in the database </summary>
-        public override void Create() => Create(ResourceName, ResourceId, Price, Date);
+        public override void Create() => Create(ResourceName, ResourceId);
 
         /// <summary> Load all resources from the database </summary>
         public override void LoadData() {
@@ -49,8 +45,7 @@ namespace DatabaseInterface.Structure.Tables {
         /// <returns>The resource corresponding to the datarow</returns>
         Resource LoadResource(DataRow row) {
             string name = ResourceName.Parse(row);
-            int price = Price.Parse(row);
-            return Resource.Factory.CreateResource(name, price);
+            return Resource.Factory.CreateResource(name);
         }
 
         /// <summary> Updates a name of a resource in the table </summary>
@@ -64,14 +59,12 @@ namespace DatabaseInterface.Structure.Tables {
         /// <param name="resourceId">The id of the resrouce to update the price of</param>
         /// <param name="price">The new price of the resource</param>
         public void UpdateResourcePrice(long resourceId, int price) {
-            UpdateDataRow((false, ResourceId, resourceId), (true, Price, price));
             TableManager.ResourcePrice.InsertResourcePrice(resourceId, DateTime.Now, price);
         }
 
         /// <summary> Add a new resource to the table </summary>
         /// <param name="name">The name of the resource</param>
-        /// <param name="cost">The cost of the resource in astral diamonds</param>
-        public void InsertResource(string name, int cost = 1) => InsertDataRow((ResourceName, name), (Price, cost));
+        public void InsertResource(string name) => InsertDataRow((ResourceName, name));
 
         /// <summary> Remove a resource from the table </summary>
         /// <param name="resourceId">The id of the resource to remove</param>
