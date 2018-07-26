@@ -36,5 +36,22 @@ namespace DatabaseInterface.Structure.Tables {
                 profession.AddUpgradeCost(grade, resource, amount);
             }
         }
+
+        /// <summary> Insert an upgrade cost into the table </summary>
+        /// <param name="professionId">The id of the profession to insert the upgrade cost of</param>
+        /// <param name="grade">The grade to insert it at</param>
+        /// <param name="resourceId">The id of the resource that is required</param>
+        /// <param name="amount">The amount of the resource</param>
+        public void InsertUpgradeCost(long professionId, int grade, long resourceId, int amount) {
+            InsertDataRow(new List<(IColumn, object)>() { (ProfessionId, professionId), (Grade, grade), (ResourceId, resourceId), (Amount, amount) });
+        }
+
+        /// <summary> Remove an upgrade cost from the table </summary>
+        /// <param name="professionId">The id of the profession to remove the upgrade cost of</param>
+        /// <param name="grade">The grade the remove it at</param>
+        /// <param name="resourceId">The id of the resource to remove</param>
+        public void RemoveUpgradeCost(long professionId, int grade, long resourceId) {
+            RemoveDataRow(new List<(IColumn, object)>() { (ProfessionId, professionId), (Grade, grade), (ResourceId, resourceId) });
+        }
     }
 }

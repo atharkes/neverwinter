@@ -90,7 +90,7 @@
     <Compile Include="Structure\Table.cs" />
     <Compile Include="Structure\Tables\ResourcePriceTable.cs" />
     <Compile Include="Structure\Tables\ProfessionTable.cs" />
-    <Compile Include="Structure\Tables\RecipeCostTable.cs" />
+    <Compile Include="Structure\Tables\RecipeConsumedTable.cs" />
     <Compile Include="Structure\Tables\RecipeResultTable.cs" />
     <Compile Include="Structure\Tables\RecipeTable.cs" />
     <Compile Include="Structure\Tables\ResourceTable.cs" />

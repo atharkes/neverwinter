@@ -11,8 +11,8 @@ namespace DatabaseInterface.Structure.Tables {
         public override string Name => "ResourcePrices";
         public override string Constraints => $"PRIMARY KEY ({ResourceId.Name}, {Date.Name})";
         public ResourceId ResourceId { get; }
-        public Price Price { get; }
         public Date Date { get; }
+        public Price Price { get; }
 
         /// <summary> Create a new resource price history table object </summary>
         public ResourcePriceTable() {
@@ -34,6 +34,21 @@ namespace DatabaseInterface.Structure.Tables {
                 int price = Price.Parse(row);
                 resource.AddPriceHistory(date, price);
             }
+        }
+
+        /// <summary> Insert a resource price into the table </summary>
+        /// <param name="resourceId">The id of the resource to insert a price from</param>
+        /// <param name="date">The date to log the price to</param>
+        /// <param name="price">The price of the resource at the specified date</param>
+        public void InsertResourcePrice(long resourceId, DateTime date, int price) {
+            InsertDataRow(new List<(IColumn, object)>() { (ResourceId, resourceId), (Date, date), (Price, price) });
+        }
+
+        /// <summary> Remove a resource price from the table </summary>
+        /// <param name="resourceId">The id of the resource to remove the price from</param>
+        /// <param name="date">The date of the price log to remove</param>
+        public void RemoveResourcePrice(long resourceId, DateTime date) {
+            RemoveDataRow(new List<(IColumn, object)>() { (ResourceId, resourceId), (Date, date) });
         }
     }
 }

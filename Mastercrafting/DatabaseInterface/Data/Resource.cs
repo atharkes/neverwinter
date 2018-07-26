@@ -42,11 +42,12 @@ namespace DatabaseInterface.Data {
         /// <param name="price">The price at the specific date</param>
         public void AddPriceHistory(DateTime date, int price) {
             priceHistory.Add((date, price));
+            TableManager.ResourcePrice.InsertResourcePrice(ID, date, price);
         }
 
-        public void UpdatePrice(int price) {
-            priceHistory.Add((DateTime.Now, price));
-        }
+        /// <summary> Update the current price of this resource </summary>
+        /// <param name="price">The new price of the resource</param>
+        public void UpdatePrice(int price) => AddPriceHistory(DateTime.Now, price);
 
         /// <summary> Gets the recipes in which this resource is consumed </summary>
         /// <returns>A list of the recipes this resource is consumed by</returns>

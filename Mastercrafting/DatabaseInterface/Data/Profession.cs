@@ -45,8 +45,21 @@ namespace DatabaseInterface.Data {
         /// <returns>A copy of the list of recipes</returns>
         public List<Recipe> Recipes => new List<Recipe>(recipes);
 
+        /// <summary> Adds an upgrade cost to the profession </summary>
+        /// <param name="grade">The grade the cost is required at to upgrade</param>
+        /// <param name="resource">The resource that is required</param>
+        /// <param name="amount">The amount of the resource that is required</param>
         public void AddUpgradeCost(int grade, Resource resource, int amount) {
             upgrade[grade].Add(resource, amount);
+            TableManager.Upgrade.InsertUpgradeCost(ID, grade, resource.ID, amount);
+        }
+
+        /// <summary> Removes an upgrade cost from the profession </summary>
+        /// <param name="grade">The grade to remove the upgrade cost at</param>
+        /// <param name="resource">The resource to remove from the upgrade cost</param>
+        public void RemoveUpgradeCost(int grade, Resource resource) {
+            upgrade[grade].Remove(resource);
+            TableManager.Upgrade.RemoveUpgradeCost(ID, grade, resource.ID);
         }
 
         /// <summary> Add a recipe to profession </summary>
