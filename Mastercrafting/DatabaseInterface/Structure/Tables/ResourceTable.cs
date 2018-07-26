@@ -54,6 +54,13 @@ namespace DatabaseInterface.Structure.Tables {
             return Resource.Factory.CreateResource(name, price);
         }
 
+        /// <summary> Updates a name of a resource in the table </summary>
+        /// <param name="resourceId">The id of the resource to update the name for</param>
+        /// <param name="name">The new name of the resource</param>
+        public void UpdateResourceName(long resourceId, string name) {
+            UpdateDataRow(new List<(IColumn, object)>() { (ResourceId, resourceId) }, new List<(IColumn, object)>() { (ResourceName, name) });
+        }
+
         /// <summary> Add a new resource to the table </summary>
         /// <param name="name">The name of the resource</param>
         /// <param name="cost">The cost of the resource in astral diamonds</param>

@@ -9,20 +9,22 @@ namespace DatabaseInterface.Data {
         /// <summary> The id of the resource </summary>
         internal long ID { get; }
         /// <summary> The name of this resource </summary>
-        public string Name { get; }
+        public string Name { get => name; set { TableManager.Resource.UpdateResourceName(ID, value); name = value; } }
         /// <summary> The price of this resource in astral diamonds </summary>
-        public int Price { get; }
+        public int Price { get => price; set => AddPriceHistory(DateTime.Now, value); }
 
+        string name;
+        int price;
         /// <summary> All known prices of this resource with the time they are recorded </summary>
-        List<(DateTime Date, int Price)> priceHistory { get; }
+        SortedList<DateTime, int> priceHistory { get; }
 
         /// <summary> The factory used to create resources </summary>
         public static readonly ResourceFactory Factory = new ResourceFactory((n, p) => new Resource(n, p));
         /// <summary> Create a new resource object </summary>
-        private Resource(string name, int price = 1) {
+        private Resource(string name, int price) {
             Name = name;
             Price = price;
-            priceHistory = new List<(DateTime, int)>();
+            priceHistory = new SortedList<DateTime, int>();
             TableManager.Resource.InsertResource(name, price);
             ID = TableManager.Resource.GetResourceID(name);
         }
@@ -33,21 +35,20 @@ namespace DatabaseInterface.Data {
 
         /// <summary> Return a copy of the price history </summary>
         /// <returns>The copy of the history</returns>
-        public List<(DateTime Date, int Price)> GetPriceHistory() {
-            return new List<(DateTime, int)>(priceHistory);
+        public Dictionary<DateTime, int> GetPriceHistory() {
+            return new Dictionary<DateTime, int>(priceHistory);
         }
 
         /// <summary> Add a price to the history </summary>
         /// <param name="date">The date the price is logged at</param>
         /// <param name="price">The price at the specific date</param>
         public void AddPriceHistory(DateTime date, int price) {
-            priceHistory.Add((date, price));
             TableManager.ResourcePrice.InsertResourcePrice(ID, date, price);
+            priceHistory.Add(date, price);
+            if (priceHistory.IndexOfKey(date) == 0) {
+                this.price = price;
+            }
         }
-
-        /// <summary> Update the current price of this resource </summary>
-        /// <param name="price">The new price of the resource</param>
-        public void UpdatePrice(int price) => AddPriceHistory(DateTime.Now, price);
 
         /// <summary> Gets the recipes in which this resource is consumed </summary>
         /// <returns>A list of the recipes this resource is consumed by</returns>

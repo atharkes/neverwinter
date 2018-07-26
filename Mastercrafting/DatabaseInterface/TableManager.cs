@@ -51,7 +51,7 @@ namespace DatabaseInterface {
         internal static RecipeConsumedTable RecipeConsumed => Table[Tables.RecipeCost] as RecipeConsumedTable;
         internal static RecipeResultTable RecipeResult => Table[Tables.RecipeResult] as RecipeResultTable;
         internal static ResourceTable Resource => Table[Tables.Resource] as ResourceTable;
-        internal static ResourcePriceTable ResourcePrice => Table[Tables.Resource] as ResourcePriceTable;
+        internal static ResourcePriceTable ResourcePrice => Table[Tables.ResourcePrice] as ResourcePriceTable;
         internal static UpgradeTable Upgrade => Table[Tables.Upgrade] as UpgradeTable;
     }
 }

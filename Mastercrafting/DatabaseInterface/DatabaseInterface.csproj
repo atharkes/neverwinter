@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="Data\PriceSnapshot.cs" />
     <Compile Include="Data\Profession.cs" />
     <Compile Include="Data\Recipe.cs" />
     <Compile Include="Data\Resource.cs" />

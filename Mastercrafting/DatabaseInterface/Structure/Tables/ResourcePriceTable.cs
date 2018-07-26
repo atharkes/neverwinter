@@ -36,6 +36,23 @@ namespace DatabaseInterface.Structure.Tables {
             }
         }
 
+        /// <summary> Get the most recent price for a resource </summary>
+        /// <param name="resourceId">The id of the resource to find the price for</param>
+        /// <returns>The most recent price of the resource in the table</returns>
+        public int MostRecentPrice(long resourceId) {
+            DataTable table = GetDataRows(new List<(IColumn, object)>() { (ResourceId, resourceId) });
+            DateTime currentDate = DateTime.MinValue;
+            int price = int.MinValue;
+            foreach (DataRow row in table.Rows) {
+                DateTime date = Date.Parse(row);
+                if (date > currentDate) {
+                    price = Price.Parse(row);
+                    currentDate = date;
+                }
+            }
+            return price;
+        }
+
         /// <summary> Insert a resource price into the table </summary>
         /// <param name="resourceId">The id of the resource to insert a price from</param>
         /// <param name="date">The date to log the price to</param>

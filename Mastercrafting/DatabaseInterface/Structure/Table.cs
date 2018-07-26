@@ -71,8 +71,28 @@ namespace DatabaseInterface.Structure {
             }
         }
 
+        /// <summary> Update a row of data in the table </summary>
+        /// <param name="constraints">The constraints the row has to satisfy</param>
+        /// <param name="updates">The columns to update in the row</param>
+        protected void UpdateDataRow(List<(IColumn, object)> constraints, List<(IColumn, object)> updates) {
+            // Create Constraint string
+            string where = "";
+            foreach ((IColumn column, object constraint) in constraints) {
+                where += $"{column.Name} = {column.ToString(constraint)} AND ";
+            }
+            where = where.Remove(where.Length - 5);
+            // Create Update string
+            string set = "";
+            foreach ((IColumn column, object update) in updates) {
+                set += $"{column.Name} = {column.ToString(update)}, ";
+            }
+            set = set.Remove(set.Length - 2);
+            // Execute Command
+            Database.NonQuery($"UPDATE {Name} SET {set} WHERE {where}");
+        }
+
         /// <summary> Remove a data row with certain constraints. Currently only works with equality checking </summary>
-        /// <param name="constraints">The constraints</param>
+        /// <param name="constraints">The constraints the row has to satisfy</param>
         protected void RemoveDataRow(List<(IColumn, object)> constraints) {
             // Create Constraint string
             string where = "";
