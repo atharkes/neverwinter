@@ -51,6 +51,6 @@ namespace DatabaseInterface.Data {
 
         /// <summary> Remove a recipe from the profession </summary>
         /// <param name="recipe">The recipe to remove</param>
-        internal void Removerecipe(Recipe recipe) => recipes.Remove(recipe);
+        internal void RemoveRecipe(Recipe recipe) => recipes.Remove(recipe);
     }
 }

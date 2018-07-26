@@ -1,6 +1,9 @@
-﻿using DatabaseInterface.Structure.Columns;
+﻿using DatabaseInterface.Data;
+using DatabaseInterface.Structure.Columns;
 using DatabaseInterface.Structure.Constraints;
+using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace DatabaseInterface.Structure.Tables {
     /// <summary> A table managing the price history of resources </summary>
@@ -23,7 +26,14 @@ namespace DatabaseInterface.Structure.Tables {
 
         /// <summary> Load the data in the table </summary>
         public override void LoadData() {
-            
+            DataTable table = GetAllData();
+            foreach (DataRow row in table.Rows) {
+                long resourceId = ResourceId.Parse(row);
+                Resource resource = TableManager.Resource.GetResource(resourceId);
+                DateTime date = Date.Parse(row);
+                int price = Price.Parse(row);
+                resource.AddPriceHistory(date, price);
+            }
         }
     }
 }

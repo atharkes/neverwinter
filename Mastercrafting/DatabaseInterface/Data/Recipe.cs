@@ -84,14 +84,14 @@ namespace DatabaseInterface.Data {
                 RemoveConsumed(resource);
             }
             consumed.Add(resource, amount);
-            TableManager.RecipeCost.InsertRecipeCost(ID, resource.ID, amount);
+            TableManager.RecipeConsumed.InsertRecipeCost(ID, resource.ID, amount);
         }
 
         /// <summary> Remove a resouce from the recipe cost</summary>
         /// <param name="resource">The resource to remove</param>
         public void RemoveConsumed(Resource resource) {
             consumed.Remove(resource);
-            TableManager.RecipeCost.RemoveRecipeCost(ID, resource.ID);
+            TableManager.RecipeConsumed.RemoveRecipeCost(ID, resource.ID);
         }
 
         /// <summary> Add a resource to a result of the recipe </summary>

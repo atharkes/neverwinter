@@ -44,6 +44,10 @@ namespace DatabaseInterface.Data {
             priceHistory.Add((date, price));
         }
 
+        public void UpdatePrice(int price) {
+            priceHistory.Add((DateTime.Now, price));
+        }
+
         /// <summary> Gets the recipes in which this resource is consumed </summary>
         /// <returns>A list of the recipes this resource is consumed by</returns>
         public List<Recipe> ConsumedBy() {

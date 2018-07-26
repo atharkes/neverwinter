@@ -6,7 +6,7 @@ using System.Data;
 
 namespace DatabaseInterface.Structure.Tables {
     /// <summary> A table managing the resource costs of recipes </summary>
-    class RecipeCostTable : Table {
+    class RecipeConsumedTable : Table {
         public override string Name => "RecipeCosts";
         public override string Constraints => $"PRIMARY KEY ({RecipeId.Name}, {ResourceId.Name})";
         public RecipeId RecipeId { get; }
@@ -14,7 +14,7 @@ namespace DatabaseInterface.Structure.Tables {
         public Amount Amount { get; }
 
         /// <summary> Create a recipe cost table object </summary>
-        public RecipeCostTable() {
+        public RecipeConsumedTable() {
             RecipeId = new RecipeId(new NotNull(), new ForeignKey(TableManager.Recipe, TableManager.Recipe.RecipeId));
             ResourceId = new ResourceId(new NotNull(), new ForeignKey(TableManager.Resource, TableManager.Resource.ResourceId));
             Amount = new Amount(new NotNull(), new Default<int>(1));

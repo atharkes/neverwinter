@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 
 namespace RecipeDataParser {
+    /// <summary> Top level class of the application </summary>
     class Program {
         /// <summary> The folder in which the data files of the different professions are stored </summary>
         public static string ProfessionDataFolder => Path.Combine(Environment.CurrentDirectory, @"RecipeData");
