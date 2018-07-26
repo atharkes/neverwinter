@@ -24,7 +24,7 @@ namespace DatabaseInterface.Structure.Tables {
         }
 
         /// <summary> Create the recipe table in the database </summary>
-        public override void Create() => Create(new List<IColumn>() { RecipeName, ProfessionId, Grade, RecipeId });
+        public override void Create() => Create(RecipeName, ProfessionId, Grade, RecipeId);
 
         /// <summary> Load all profession from the database </summary>
         /// <returns>The professions loaded from the database</returns>

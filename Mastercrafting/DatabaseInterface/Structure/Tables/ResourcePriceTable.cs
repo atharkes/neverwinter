@@ -22,7 +22,7 @@ namespace DatabaseInterface.Structure.Tables {
         }
 
         /// <summary> Create the resource price history table in the database </summary>
-        public override void Create() => Create(new List<IColumn>() { ResourceId, Price, Date });
+        public override void Create() => Create(ResourceId, Price, Date);
 
         /// <summary> Load the data in the table </summary>
         public override void LoadData() {

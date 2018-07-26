@@ -21,7 +21,7 @@ namespace DatabaseInterface.Structure.Tables {
         }
 
         /// <summary> Create the recipe cost table in the database </summary>
-        public override void Create() => Create(new List<IColumn>() { RecipeId, ResourceId, Amount });
+        public override void Create() => Create(RecipeId, ResourceId, Amount);
 
         /// <summary> Load all recipe costs from the database </summary>
         public override void LoadData() {

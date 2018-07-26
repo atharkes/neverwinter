@@ -24,7 +24,7 @@ namespace DatabaseInterface.Structure.Tables {
         }
 
         /// <summary> Creates the resource table in the database </summary>
-        public override void Create() => Create(new List<IColumn>() { ResourceName, ResourceId, Price, Date });
+        public override void Create() => Create(ResourceName, ResourceId, Price, Date);
 
         /// <summary> Load all resources from the database </summary>
         public override void LoadData() {

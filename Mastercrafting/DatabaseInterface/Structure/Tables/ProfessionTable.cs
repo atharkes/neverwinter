@@ -22,7 +22,7 @@ namespace DatabaseInterface.Structure.Tables {
         }
 
         /// <summary> Create the profession table in the database </summary>
-        public override void Create() => Create(new List<IColumn>() { ProfessionName, ProfessionId, Grade });
+        public override void Create() => Create(ProfessionName, ProfessionId, Grade);
 
         /// <summary> Load all profession from the database </summary>
         public override void LoadData() {

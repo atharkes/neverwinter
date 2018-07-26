@@ -23,7 +23,7 @@ namespace DatabaseInterface.Structure.Tables {
         }
 
         /// <summary> Create the recipe result table in the database </summary>
-        public override void Create() => Create(new List<IColumn>() { RecipeId, Tier, ResourceId, Amount });
+        public override void Create() => Create(RecipeId, Tier, ResourceId, Amount);
 
         /// <summary> Load all recipe results from the database </summary>
         public override void LoadData() {
