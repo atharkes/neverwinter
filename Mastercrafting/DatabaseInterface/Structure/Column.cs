@@ -31,6 +31,8 @@ namespace DatabaseInterface.Structure {
         public string ToString(object value) {
             if (value is string s) {
                 return $"'{s.Replace("'", "''")}'";
+            } else if (value is DateTime d) {
+                return $"'{d.ToString("yyyy-MM-dd HH:mm:ss.fff")}'";
             } else {
                 return value.ToString();
             }

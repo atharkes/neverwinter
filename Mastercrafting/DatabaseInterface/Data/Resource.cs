@@ -11,7 +11,7 @@ namespace DatabaseInterface.Data {
         /// <summary> The name of this resource </summary>
         public string Name { get => name; set { TableManager.Resource.UpdateResourceName(ID, value); name = value; } }
         /// <summary> The price of this resource in astral diamonds </summary>
-        public int Price { get => price; set => AddPriceHistory(DateTime.Now, value); }
+        public int Price { get => price; set { TableManager.Resource.UpdateResourcePrice(ID, value); price = value; } }
 
         string name;
         int price;
@@ -22,11 +22,12 @@ namespace DatabaseInterface.Data {
         public static readonly ResourceFactory Factory = new ResourceFactory((n, p) => new Resource(n, p));
         /// <summary> Create a new resource object </summary>
         private Resource(string name, int price) {
-            Name = name;
-            Price = price;
             priceHistory = new SortedList<DateTime, int>();
+            this.name = name;
+            this.price = price;
             TableManager.Resource.InsertResource(name, price);
             ID = TableManager.Resource.GetResourceID(name);
+            Price = price;
         }
 
         /// <summary> The string representing this resource </summary>
@@ -42,12 +43,8 @@ namespace DatabaseInterface.Data {
         /// <summary> Add a price to the history </summary>
         /// <param name="date">The date the price is logged at</param>
         /// <param name="price">The price at the specific date</param>
-        public void AddPriceHistory(DateTime date, int price) {
-            TableManager.ResourcePrice.InsertResourcePrice(ID, date, price);
+        internal void AddPriceHistory(DateTime date, int price) {
             priceHistory.Add(date, price);
-            if (priceHistory.IndexOfKey(date) == 0) {
-                this.price = price;
-            }
         }
 
         /// <summary> Gets the recipes in which this resource is consumed </summary>

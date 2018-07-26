@@ -57,6 +57,14 @@ namespace DatabaseInterface.Structure.Tables {
             return Recipe.Factory.CreateRecipe(name, profession, grade);
         }
 
+        public void UpdateRecipeName(long recipeId, string name) {
+            UpdateDataRow(new List<(IColumn, object)>() { (RecipeId, recipeId) }, new List<(IColumn, object)>() { (RecipeName, name) });
+        }
+
+        public void UpdateRecipeGrade(long recipeId, int grade) {
+            UpdateDataRow(new List<(IColumn, object)>() { (RecipeId, recipeId) }, new List<(IColumn, object)>() { (Grade, grade) });
+        }
+
         /// <summary> Add a new recipe to the table </summary>
         /// <param name="name">The name of the recipe</param>
         /// <param name="professionID">The id of the profession the recipe belongs to</param>

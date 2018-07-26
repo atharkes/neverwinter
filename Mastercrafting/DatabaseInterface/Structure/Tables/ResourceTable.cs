@@ -61,6 +61,14 @@ namespace DatabaseInterface.Structure.Tables {
             UpdateDataRow(new List<(IColumn, object)>() { (ResourceId, resourceId) }, new List<(IColumn, object)>() { (ResourceName, name) });
         }
 
+        /// <summary> Update the price of a resource in the table </summary>
+        /// <param name="resourceId">The id of the resrouce to update the price of</param>
+        /// <param name="price">The new price of the resource</param>
+        public void UpdateResourcePrice(long resourceId, int price) {
+            UpdateDataRow(new List<(IColumn, object)>() { (ResourceId, resourceId) }, new List<(IColumn, object)>() { (Price, price) });
+            TableManager.ResourcePrice.InsertResourcePrice(resourceId, DateTime.Now, price);
+        }
+
         /// <summary> Add a new resource to the table </summary>
         /// <param name="name">The name of the resource</param>
         /// <param name="cost">The cost of the resource in astral diamonds</param>
